@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+   <channel>
+      <title>Laidout</title>
+      <link>http://www.laidout.org</link>
+      <description>Laidout</description>
+      <language>en-us</language>
+      <pubDate>15 June 2006</pubDate>                 <!-- time of last publication -->
+      <lastBuildDate>15 June 2006</lastBuildDate>    <!-- time of last update      -->
+      <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+      <webMaster>tomlechner@users.sourceforge.net</webMaster>
+      <image>
+          <title>Laidout</title>
+          <url>http://www.laidout.org/laidout-icon-16x16.png</url>
+          <link>http://www.laidout.org</link>
+          <width>16</width>
+          <height>16</height>
+          <description>Laidout</description>
+      </image>
+
+
+      <item>
+         <title>Spring...</title>
+         <link>http://www.laidout.org</link>
+         <description>
+
+	&lt;br&gt;
+	Here&apos;s a short video tour of a freshly debugged clone tiler in Laidout. Unfortunately,
+	I am unable to attend the &lt;a href=&quot;http://www.libregraphicsmeeting.org&quot;&gt;Libre Graphics Meeting&lt;/a&gt; this year, so instead, in sympathy I&apos;m doing a 
+	bit of a debugging sprint. Next on the list is debugging the new text tools, and	implementing proper file exporters for them.&lt;br&gt;
+	&lt;br&gt;
+	&lt;iframe width=&quot;280&quot; height=&quot;157&quot; src=&quot;https://www.youtube.com/embed/p7QHnWeN-Ys&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+		 </description>
+         <pubDate>15 April 2017</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 15 April 2017</guid>
+      </item>
+
+
+
+      <item>
+         <title>Libre Graphics Meeting Recap</title>
+         <link>http://www.laidout.org</link>
+         <description>
+This year&apos;s &lt;a href=&quot;http://www.laidout.org&quot;&gt;LGM&lt;/a&gt; in London has come and gone. It&apos;s always
+interesting to see what other projects are working on, and get a feel for how things
+can interoperate.
+&lt;br /&gt;&lt;br /&gt;
+
+Thanks to everyone who came to the Laidout Engraving
+workshop! A few glitches, but at least a few people were able to get Laidout running enough to play
+around with. It was a lesson to me to not take things for granted, and thoroughly test the stuff
+you will present, not just expect things that have worked for years to still be working! 
+&lt;br /&gt;&lt;br /&gt;
+
+I also presented the new text tools I&apos;ve been working on, particularly the brand new text on path tool.
+Just in the nick of time, I was able to make variable width stroking adjust text glyph heights. Now I
+need to smooth out all the shortcuts I took making the tool, and make it work properly with the
+rest of Laidout. Also in the works was color font usage. I didn&apos;t quite get my opentype svg color font
+functional before LGM, and I&apos;m still working on it. Special thanks to Hin-Tak Leung, who figured
+out what was going wrong with my font (obscure unicode mapping difficulties), and also offered
+many pointers on how to make Laidout&apos;s build process a little more streamlined. 
+         
+		 </description>
+         <pubDate>23 May 2015</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 23 May 2015</guid>
+      </item>
+
+
+
+
+
+
+      <item>
+         <title>Laidout 0.096 Released! Wa-hoo!</title>
+         <link>http://www.laidout.org</link>
+         <description>
+The biggest change this time is finally switching to &lt;a href=&quot;http://cairographics.org&quot;&gt;cairo&lt;/a&gt; for rendering,
+instead of cobbling together hideous Xlib based methods. 
+This opens up a variety of rendering finesse, such as the ability for transparent paths, and perhaps more interestingly, a text tool.
+I&apos;m sure there are many cairo rendering related bugs hiding out around the edges of Laidout, so please let me know if and when you find them! 
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Text caption tool&lt;/b&gt;&lt;br /&gt;
+After a mere 10 years of Laidout&apos;s existence, there is now a native text tool! It is a bit of a prototype right now. Expect
+major improvements as I learn to navigate the huge mass of issues surrounding encoding, rendering, and
+exporting text. Currently, each text object must have the same font, color, and size. Exporting to SVG works best. Export to
+PDF and Scribus is mediocre, as those suffer from text sizing issues I haven&apos;t figured out yet.
+&lt;/li&gt;&lt;br /&gt;
+
+&lt;li&gt;&lt;b&gt;More export arrangement options&lt;/b&gt;&lt;br /&gt;
+Now there are options to export only even or odd spread numbers, as well as rotate each 
+by 90 degree increments or rotate every other spread by 180 degrees. Also, you can export
+in reverse order.
+&lt;/li&gt;&lt;br /&gt;
+
+&lt;li&gt;&lt;b&gt;Engraver tool&lt;/b&gt;&lt;br /&gt;
+This tool has numerous refinements, such as being able to use the different modes on many engraver objects at once.
+The group stacking has more control over visibility, and groups can now more easily share style resources, like dash patterns
+and tracing. Also new is a kind of random field offset applied to the auto line types like radial, circular, linear, and the
+new spiral type. One bad thing about the switch to cairo is that the engraver tool is slightly less responsive. The old fast xlib 
+screen render does not translate to a fast cairo render, and I need to totally reprogram the previewer.
+ That&apos;ll have to wait for the next release. 
+&lt;/li&gt;&lt;br /&gt;
+
+&lt;li&gt;&lt;b&gt;Spread Editor enhancements&lt;/b&gt;&lt;br /&gt;
+The spread editor is now a little more flexible with page number markers. You can now easily tag pages with markers of different shapes
+and colors for simple visual cues to indicate how done you are as you work on them.
+&lt;/li&gt;&lt;br /&gt;
+
+&lt;li&gt;&lt;b&gt;New file dialog&lt;/b&gt;&lt;br /&gt;
+The File Dialog has been totally reprogrammed, and hopefully is easier to use now, with clearer access to
+recent files and bookmarks, and allowing easy change to the preview window size. 
+&lt;/li&gt;&lt;br /&gt;
+         
+		 </description>
+         <pubDate>18 December 2015</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 18 December 2015</guid>
+      </item>
+
+
+
+
+
+      <item>
+         <title>Proto text tool</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         I&apos;m taking a break from working on the Engraving tool to finish conversion to rendering with cairo,
+which makes possible not only better rendering of paths and meshes, but also a text tool! &lt;a href=&quot;https://www.youtube.com/watch?v=SjSixSxBW_g&quot;&gt;Here&apos;s a very
+basic text tool experiment&lt;/a&gt;, to get my feet wet with the myriad coding issues involved in text layout and fonts.
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;a href=&quot;https://www.youtube.com/watch?v=SjSixSxBW_g&quot;&gt;&lt;img src=&quot;http://www.laidout.org/screenshots/images/text-tool-start-0.095.1.png&quot; border=&quot;1&quot; width=&quot;232&quot; height=&quot;130&quot; alt=&quot;Simple text tool video demo&quot; /&gt;&lt;/a&gt;
+		 </description>
+         <pubDate>9 October 2015</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 9 October 2015</guid>
+      </item>
+
+
+
+
+      <item>
+         <title>Engraver tool development</title>
+         <link>http://www.laidout.org</link>
+         <description>
+There have been numerous refinements happening in the engraving tool, including being able to apply
+line profiles, and a kind of fluid random offset. You can see some of this in action in &lt;a href=&quot;https://www.youtube.com/watch?v=H8IHg7opOQ4&quot;&gt;this tutorial&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;http://www.laidout.org/screenshots/images/eels-s.png&quot; width=&quot;150&quot; height=&quot;150&quot; alt=&quot;Eels&quot; /&gt;
+&lt;img src=&quot;http://www.laidout.org/screenshots/images/lineprofiles-0.095.1-s.png&quot; width=&quot;175&quot; height=&quot;150&quot; alt=&quot;Line profiles&quot; /&gt;
+&lt;img src=&quot;http://www.laidout.org/screenshots/images/wavy-monument-s.png&quot; width=&quot;150&quot; height=&quot;150&quot; alt=&quot;Wavy lines&quot; /&gt;         
+		 </description>
+         <pubDate>26 July 2015</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 26 July 2015</guid>
+      </item>
+
+
+
+
+
+      
+
+
+      <item>
+         <title>Laidout 0.095a Released!</title>
+         <link>http://www.laidout.org</link>
+         <description>
+This release I have to call a quasi-&quot;stable&quot; release, not quite tested enough to be called just &quot;stable&quot;, 
+because I wanted to have something more current than the last release before this
+year&apos;s &lt;a href=&quot;http://libregraphicsmeeting.org/2015/&quot;&gt;Libre Graphics Meeting&lt;/a&gt;, in Toronto, April 29 to May 2.
+I will be giving a talk about lines on Friday May 1. So, if you are not too tired from dancing around the maypole,
+come on down to the University of Toronto to see this and many other interesting talks about open source graphics!   
+&lt;br /&gt;&lt;br /&gt;
+New this time is many improvements to the engraving tool, a revamped spread editor to allow easy page label
+marking, and a brand new Path mechanism, which has path offset, variable width, and angle built in.
+		 </description>
+         <pubDate>22 April 2015</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 22 April 2015</guid>
+      </item>
+
+
+
+
+      
+      <item>
+         <title>Laidout 0.094b bug fix...</title>
+         <link>http://www.laidout.org</link>
+         <description>
+Just released a kind of bug fix for version 0.094. In this one:
+&lt;ul&gt;
+&lt;li&gt;Fixed loading bug for tile files for use in the clone tiler&lt;/li&gt;
+&lt;li&gt;Added a spiral tiling&lt;/li&gt;
+&lt;li&gt;Added ability to define custom page sizes in the Signature Interface. Just click the
+   numbers next to the paper name to set up custom width and height.&lt;/li&gt;
+&lt;li&gt;Added a freehand interface to create lines, &quot;stroked&quot; lines, or mesh along lines.
+   This is more proof of concept right now, and is only accessible when you run
+   &lt;tt&gt;&lt;b&gt;laidout --experimental&lt;/b&gt;&lt;/tt&gt;. Look for better integration of freehand capability in future releases.&lt;/li&gt;
+&lt;/ul&gt;
+		 </description>
+         <pubDate>14 March 2014</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 14 March 2014</guid>
+      </item>
+
+
+
+
+
+      <item>
+         <title>Laidout 0.094 released!</title>
+         <link>http://www.laidout.org</link>
+         <description>
+Laidout Version 0.094 is at last 
+&lt;a href=&quot;http://www.laidout.org/#download&quot;&gt;available&lt;/a&gt;, as source or an  
+amd64 precompiled deb package, for you to experiment with. As always, Laidout is very much a work in progress.
+I finally stopped myself from starting to implement more new tools, in order to squeeze out this release.
+Consequently this release is more like a rough draft of many new things. Save often.
+I try to fix any bugs people tell me about, so when you find some, you can let me know via &lt;a href=&quot;https://lists.sourceforge.net/lists/listinfo/laidout-general&quot;&gt;the mailing list&lt;/a&gt;, 
+or &lt;a href=&quot;#contact&quot;&gt;email&lt;/a&gt;.
+&lt;br /&gt;
+&lt;br/&gt;
+This release has taken so long on account of a lot of under the hood refactoring, and investigating its potential.
+Also there are rough implementations of a variety of new tools.
+New in this release:&lt;br/&gt;
+mesh based engraver fill, clone tiler, anchor alignment, graphical shell, and more!
+		 </description>
+         <pubDate>20 February 2014</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 20 February 2014</guid>
+      </item>
+
+
+
+
+      <item>
+         <title>Development update</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         My current new goal is to have a new release of Laidout by the end of this month. It is amazing to me how
+quickly time appears to be passing. There are a few relatively simple &lt;a href=&quot;http://www.laidout.org/roadmap.html&quot;&gt;items to tick off&lt;/a&gt;.
+With any luck, I will reach the goal!
+&lt;br /&gt;&lt;br /&gt;
+In the meantime, please enjoy &lt;a href=&quot;https://www.youtube.com/watch?v=VN9L8UYZgGA&amp;feature=c4-overview-vl&amp;list=PL22F7148142927C13&quot;&gt;this tutorial&lt;/a&gt;
+of the substantially reworked signature folder, which allows
+stacking and inserting signatures with different base page sizes and different folding patterns,
+to form a single book. 
+
+		 </description>
+         <pubDate>6 December 2013</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 6 December 2013</guid>
+      </item>
+
+
+
+
+      <item>
+         <title>Fold paper on the web!! Now!!</title>
+         <link>http://www.laidout.org</link>
+         <description>
+Fold paper for books on the web! I&apos;m pleased to release a port of the signature folder of Laidout 
+to Html5 via &lt;a href=&quot;http://www.processingjs.org&quot;&gt;Processing.js 1.4.1&lt;/a&gt;. So, any browser on any platform that can run that reasonable well
+ should be able to run this! You might have a few quirks on tiny mobile devices, but hey, 
+ this is my first html5 port.
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.laidout.org/folder&quot;&gt;Click here to start!&lt;/a&gt; It may take a second to load, as it&apos;s a little over half a meg.&lt;br /&gt;
+         
+		 </description>
+         <pubDate>14 August 2013</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 14 August 2013</guid>
+      </item>
+
+
+
+
+      <item>
+         <title>Laidout 0.093 released! Yippee!</title>
+         <link>http://www.laidout.org</link>
+         <description>
+Laidout Version 0.093 is at last 
+available, as source or an  
+amd64 precompiled deb package, for you to experiment with. As always, Laidout is very much a work in progress,
+so please let me know of any bugs you encounter!&lt;br/&gt;
+
+&lt;br/&gt;
+What&apos;s not new is that there is still no native text tool. I swear I&apos;m working on it. What IS new in this release:&lt;br/&gt;
+
+&lt;ul&gt;
+&lt;li&gt; A new alignment tool, allowing you to align objects to edges, on lay them out along paths, with various forms of rotation.
+       &lt;a href=&quot;http://www.youtube.com/watch?v=Gs8k4KUSkJw&quot;&gt;See here&lt;/a&gt; for a video tutorial&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt; A new n-up tool, which is used for laying out objects into rows and columns. Currently, you may only lay out in
+	    grids where each cell is the same size, or grids where row heights and columns widths may vary. Also you may randomize
+	    within the bounds of a rectangle. Future versions will let you flow objects into areas also.&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt; The path tool has gotten some much needed attention. It hopefully crashes less, and is actually usable now. Improving that
+       also debugged svg import so that paths import with an actual resemblance to the original svg!&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt; The object tool now has little on canvas flip controls. Click on them to easily flip vertically or horizontally, or drag out
+       one of them to define a flip line.&lt;/li&gt; &lt;br /&gt;
+&lt;li&gt; You may now define your own keyboard shortcuts. If you run &quot;laidout -S&quot;, it will output a dump of all currently bound
+       shortcuts in text format, or &quot;laidout -H&quot; for an html dump. A downside currently is there is no editor in the program.
+       You have to manually edit that dump, then put a line in
+       your ~/.config/laidout/()version)/laidoutrc to say where the new shortcuts are. I&apos;m working on an editor.&lt;/li&gt;&lt;br /&gt;
+&lt;/ul&gt;
+I have also been &lt;a href=&quot;http://www.flickr.com/photos/tomlechner/3838153212&quot;&gt;working&lt;/a&gt; on a polyhedron unwrapper to be used with 
+net impositions, but integration with Laidout is still not working. In the meantime, you could try the standalone unwrapper,
+found in src/polyptych in downloaded source.
+		 </description>
+         <pubDate>17 July 2012</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 17 July 2012</guid>
+      </item>
+
+
+
+      <item>
+         <title>Development update</title>
+         <link>http://www.laidout.org</link>
+         <description>
+So the new alignment tool is basically working, and the path tool has gotten some much needed attention.
+Next up before a new Laidout release is a row-column arranging tool, and making the new opengl based
+polyhedron unwrapper be usable for net impositions. Hopefully this will be "soon"!
+In the meantime, here's a video demonstrating the current state of meshes. There are quirks and 
+bugs here and there, but it is improving!
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.youtube.com/watch?v=9YT5JIFEqm0&quot;&gt;&lt;img src=&quot;http:/www.laidout.org/screenshots/thumbs/meshes-0.093-s.png&quot; width=&quot;175&quot; height=&quot;137&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;		 
+		 </description>
+         <pubDate>6 July 2012</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 6 July 2012</guid>
+      </item>
+
+
+      
+       <item>
+         <title>Alignment tool preview, and this year's LGM</title>
+         <link>http://www.laidout.org</link>
+         <description>
+&lt;a href=&quot;http://www.youtube.com/watch?v=APGguBZOl10&quot;&gt;Behold&lt;/a&gt; a preview of a new alignment tool in Laidout! With it,
+you may distribute sets of objects along paths. 
+I hope someday to port (or help someone else port) this tool or some equivalent to Inkscape, where it would be most useful. 
+I hope to smooth it out to show a less buggy version of this alignment tool at the Libre Graphics Meeting in early May
+in Vienna, which I&apos;ll be going to.
+&lt;br /&gt;&lt;br /&gt;
+The &lt;a href=&quot;http://www.libregraphicsmeeting.org&quot;&gt;Libre Graphics Meeting&lt;/a&gt; is an annual gathering of users and developers of 
+all kinds of open source graphics software.
+This allows a kind of cross fertilization across projects resulting from face to face contact that might not otherwise happen
+just from developing over the internet. &lt;a href=&quot;http://pledgie.com/campaigns/16614&quot;&gt;They are trying to raise money enough&lt;/a&gt; 
+to cover travel costs of developers who otherwise could not afford to come.
+
+	
+		 </description>
+         <pubDate>8 April 2012</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 8 April 2012</guid>
+      </item>
+
+
+      
+      <item>
+         <title>Laidout +1</title>
+         <link>http://www.laidout.org</link>
+         <description>
+There is now a new fangled &lt;a href=&quot;https://plus.google.com/u/0/117350226436132405223&quot;&gt;Laidout Google+ page&lt;/a&gt;, for your amusement!
+&lt;br /&gt;&lt;br /&gt;
+Also, Tom will be in Brussels soon for the &lt;a href=&quot;http://www.lgru.net&quot;&gt;Libre Graphics Research Unit&apos;s&lt;/a&gt;
+Co-Position meeting, to brainstorm with fellow interface explorers about possible futures of open source layout tools.
+Click &lt;a href=&quot;http://lgru.net/archives/305&quot;&gt;here to
+read an interview&lt;/a&gt; some of those folks did with Tom back in May on Laidout and related topics. 
+&lt;br /&gt;&lt;br /&gt;
+One last item, I uploaded new 0.092 versions to the download area, which fix a couple of bugs. One helps compiling on i386 systems,
+which was breaking upon checking for Cups. The other is a greying out problem on the default Ubuntu desktop. Hopefully those
+are fixed now. Let me know of other bugs you may encounter!
+	
+		 </description>
+         <pubDate>11 February 2012</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 11 February 2012</guid>
+      </item>
+
+
+      
+      <item>
+         <title>Laidout 0.092 Released. Woowoo!</title>
+         <link>http://www.laidout.org</link>
+         <description>
+Laidout Version 0.092 is at last 
+&lt;a href=&quot;http://www.laidout.org/#download&quot;&gt;available&lt;/a&gt;, as source or an  
+amd64 precompiled deb package, for you to experiment with.&lt;br&gt;
+&lt;br&gt;
+What&apos;s not new is that there is still no native text tool. What IS new in this release:&lt;br&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is now an interface for modifying page labels. 
+See a &lt;a href=&quot;https://www.youtube.com/watch?v=6nViHfkPPjE&amp;list=UUbC0vtMKz_iq0AI1oXlJ42g&quot;&gt;video tutorial here&lt;/a&gt;.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;You may now add custom printer marks, including some automatic marks if using signatures. Automarks are cut and fold
+lines just outside the printable area, and/or tiny dots just inside the pages. The dots are useful in case you have no inset
+in your signature. 
+Work will be done hopefully soon to be able to customize various gaps, colors, and line widths of the automarks.
+For custom marks, future versions will also provide much more control over which printer spreads get which printer marks. 
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;There is now a very basic path editing tool. It is somewhat new, and probably inadequate and buggy, but you can at least
+build paths, and change the stroke and fill color with it. You cannot currently see transparency on screen in paths, but
+it will export with transparency.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;You can now select different units in the rulers. You can select a few common small units like inches, points, cm, mm, m, and yards.
+Also you can select what units should be default units from the new document creation dialog.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Scribus import has been slightly improved to handle page number labels, and master pages. Note however that the master pages
+are converted to actual page objects on import. This simplifies exporting back out to a Scribus document after imposing onto
+some bizarre layout. For the Scribus plugin, there are now a couple of Scribus based dialogs that can popup to try to get
+settings to simplify calling laidout when things are not where they are expected. The automatic marks are available from
+the Scribus plugin, but you cannot currently add your own custom ones. For that, you still have to import into a
+running Laidout, not from the plugin. 
+Read more about &lt;a href=&quot;http://www.laidout.org/scribus/index.html&quot;&gt;Laidout with Scribus here&lt;/a&gt;.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Now uses ~/.config/laidout to store options, rather than ~/.laidout. Also there is a Laidout .desktop file provided
+to make it easier to access for those who don&apos;t like the command line.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;Unsnarled some really convoluted behind the scenes object movement code. This finally makes moving groups of objects from
+one page to another (or off of pages) actually work almost like one would expect it to. Still some serious problems moving objects
+that are nested in groups though! A prime example of Laidout being a work in progress. I swear I&apos;m working on it.
+&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;A few interface polishes, such as being able to click outside of a menu to make it go away, and tiny text writing in
+the rulers that might make them actually useable.
+&lt;/li&gt;&lt;br /&gt;
+&lt;/ul&gt;
+	
+		 </description>
+         <pubDate>30 December 2011</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 30 December 2011</guid>
+      </item>
+
+
+      
+      <item>
+         <title>Development Update</title>
+         <link>http://www.laidout.org</link>
+         <description>
+My goal is a new release of Laidout before January 1. Most changes are bug fixes and seemingly small interface smoothing,
+the actual implementation of which is taking an annoyingly long time. The last major hurdle before releasing is to fix a very
+mysterious paper tiling interface bug. It doesn&apos;t help that I&apos;m not quite sure when during the last nine months it stopped
+working. You know you&apos;re in trouble when neither ddd nor valgrind give meaningful clues! Off to relearn
+svn log/diff/co/update. If you don&apos;t know what that means, suffice it to say, it&apos;s really, really tedious!
+&lt;br /&gt;&lt;br /&gt;
+New features that are basically ready are the ability to use units other than inches, an interface to change page labels, rudimentary 
+ability to add custom printer marks, and a more versatile Scribus importer. 
+		 </description>
+         <pubDate>30 November 2011</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 30 November 2011</guid>
+      </item>
+
+
+      
+      <item>
+         <title>New stuff and Libre Graphics Meeting recap</title>
+         <link>http://www.laidout.org</link>
+         <description>
+&lt;b&gt;Recent Additions&lt;/b&gt;&lt;br /&gt;
+As seen in &lt;a href=&quot;http://www.flickr.com/photos/tomlechner/3838153212/in/set-72157605559821149/&quot;&gt;video&lt;/a&gt;,
+I&apos;ve been developing a 3-d polyhedron unwrapper, and panorama projector. I&apos;m slowly, bit by agonizing bit, 
+making it directly available within Laidout. It is called Polyptych, and currently lives only in the 
+Laidout svn. Once you &lt;a href=&quot;http://laidout.org/dev.html&quot;&gt;grab the Laidout svn&lt;/a&gt;,
+go to src/impositions/polyptych, and you can build the standalone version. 
+&lt;br /&gt;&lt;br /&gt;
+Also, there does not appear to be an easy XInput2 configurator, so as to simply set up the use of
+more than one mouse at the same time. Such a thing is needed to play with the newest faux multi-touch
+capabilities of Laidout. To that end, I&apos;ve created a simple drag and drop configurator. This is
+currently a part of the &lt;a href=&quot;http://laxkit.sourceforge.net/&quot;&gt;Laxkit&lt;/a&gt; source code. Grab the
+Laxkit svn, and go to the laxinput directory, and viola! Laxinput currently implements only the device
+hierarchy changes, so for more complicated input mapping, you will still probably need xinput,
+the command line utility that comes with the X window system, and perhaps xrandr.
+Now if only Laxinput helped map strange input devices like IR spots from wiimotes, or tuio input to 
+something usable for applications!
+&lt;br /&gt;&lt;br /&gt;
+Laxinput is definitely experimental software. Use at your own risk!!
+Both Polyptych (standalone and as a Laidout plugin), and Laxinput should be a little more stable
+by the next release of Laidout, whenever that is! 
+&lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;Libre Graphics Meeting recap&lt;/b&gt;&lt;br /&gt;
+This year&apos;s &lt;a href=&quot;http://www.libregraphicsmeeting.org&quot;&gt;Libre Graphics Meeting&lt;/a&gt; in Montreal was again filled
+with people from all over the world who make the software that I use all the time. I presented a short talk on
+developments in Laidout during the last year. Also, I showed how I used a combination of Laidout, Inkscape, Gimp,
+Blender, Polyptych, fabric and 40 iron on transfers to project a panoramic image onto a t-shirt. I&apos;m working
+on a kind of tutorial of the process. People laughed, I am assuming at my jokes.
+		 </description>
+         <pubDate>30 May 2011</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 30 May 2011</guid>
+      </item>
+
+
+      <item>
+         <title>Libre Graphics Meeting</title>
+         <link>http://www.laidout.org</link>
+         <description>
+Tom will be going to the &lt;a href=&quot;http://www.libregraphicsmeeting.org&quot;&gt;Libre Graphics Meeting&lt;/a&gt; this year in Montreal.
+ If you can plan to be in Montreal May 10-13, you should come too!
+ This meeting brings together free open source graphics software makers and users, to talk about what's going
+on and what&apos;s to come, to collaborate and strategize.
+ You can see the Laidout &lt;a href=&quot;http://river-valley.tv/laidout-and-desktop-publishing/&quot;&gt;presentation from last year here&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;
+If you want to help support such an event, and also help those who want to come but can&apos;t otherwise afford the plane ticket,
+you can donate to the Pledgie camipaign to raise money for it:&lt;br /&gt;
+		 </description>
+         <pubDate>13 April 2011</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 13 April 2011</guid>
+      </item>
+
+
+      <item>
+         <title>Laidout 0.091 Released</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         Feast your eyes upon the latest release of Laidout! The hottest new things this time around
+         are an on-screen folder to create signatures for imposing pages. There is a special command line
+         flag that jumps you straight to this folding editor, which lets you do things like impose a Scribus
+         document into a booklet, without ever leaving Scribus! There are also minor enhancements to
+         the Spread Editor. Look for more on that front in the next release. Finally, there is a new
+         exporter for PLAN files that podofoimpose can use to impose already existing pdf files. Yehaw!
+		 </description>
+         <pubDate>13 November 2010</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 13 November 2010</guid>
+      </item>
+
+      <item>
+         <title>Still coming soon...</title>
+         <link>http://www.laidout.org</link>
+         <description>
+Here's a progress update. The signature editor is now in place, with fancy on screen folding. All that's left
+before a release is debugging the Spread editor, and ironing out a few interface and
+scripting annoyances. 
+&lt;br /&gt;&lt;br /&gt;
+Doing that should take about 2 weeks plus or minus a few weeks.
+I swear. I really mean it this time. You can trust me. Is 
+&lt;a href=&quot;http://www.flickr.com/photos/metakephoto/5119193643/&quot;&gt;this&lt;/a&gt; not a face you can trust? (Happy Halloween!)
+		 </description>
+         <pubDate>31 October 2010</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 31 October 2010</guid>
+      </item>
+
+      <item>
+         <title>Coming soon...</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         Just a few notes on coming changes to Laidout. Almost done is a folding signature imposition, where you can fold
+the signature right on screen, and adjust trim and margin values, and which edge is supposed to be the binding
+edge in a final book. This allows easy creation of both calendars and books with a single interface, as well as books
+whose page numbers increase right to left.&lt;br /&gt;
+&lt;br /&gt;
+Also in the works are the beginnings of multitouch capabilities. This is done with Xinput2, which lets you use
+multiple mice at the same time, simulating touching a screen twice to do scaling and rotation by dragging
+2 points around at the same time. The next Laidout version will only have this in the object tool, but
+future versions will have that sort of thing more thoroughly available.&lt;br /&gt;
+&lt;br /&gt;
+If I can stop being so lazy, the next version will come out within about a month. If I keep telling myself that,
+it will be true someday, right?
+		 </description>
+         <pubDate>18 September 2010</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 18 September 2010</guid>
+      </item>
+
+
+      <item>
+         <title>Laidout in Brussels</title>
+         <link>http://www.laidout.org</link>
+         <description>
+The annual &lt;a href=&quot;http://www.libregraphicsmeeting.org&quot;&gt;Libre Graphics Meeting&lt;/a&gt; for 2010 was held in Brussels,
+ Belgium, and I was fortunate enough to be able to go and meet many of the makers of the software I use all the time.
+  There were about 170 people from 47 different countries, each day was action packed with interesting talks about 
+  lots of different programs and subjects. When navigating the streets of Brussels early in the morning trying to 
+  find the conference, you simply have to throw out any preconceived ideas about urban planning, and this really 
+  puts you in a great, open frame of mind when you finally get there and listen to the talks!
+&lt;br /&gt;&lt;br /&gt;
+
+I &lt;a href=&quot;http://river-valley.tv/laidout-and-desktop-publishing/&quot;&gt;presented Laidout&lt;/a&gt; 
+and my interactive polyhedron unwrapper
+ on the second day of the conference. People seemed 
+to enjoy it. You can watch my talk, and all the other talks online, thanks to 
+&lt;a href=&quot;http://river-valley.tv/conferences/lgm-2010&quot;&gt;River Valley TV&lt;/a&gt;. The LGM was certainly
+ inspiration to get me to spend more time developing Laidout!
+		 </description>
+         <pubDate>9 June 2010</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 9 June 2010</guid>
+      </item>
+      
+      <item>
+         <title>Laidout 0.09 Released</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         	Laidout 0.09 has just been released.
+
+            New this time around are importers for Scribus, Svg, and Passepartout files.
+            Also the ability to pass in rudimentary commands, letting you import, reimpose,
+            and export all from the command line, without opening up any windows.
+
+		 </description>
+         <pubDate>21 February 2010</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 21 February 2007</guid>
+      </item>
+      
+      <item>
+         <title>Laidout 0.08 Released</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         	Laidout 0.08 has just been released.
+
+            New this time around are several new exporters for Pdf, Scribus, and transparent images.
+            Also there is now a paper tiler for making large prints of a group of things using 
+            many smaller pieces of paper.
+
+		 </description>
+         <pubDate>15 September 2007</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 15 September 2007</guid>
+      </item>
+      
+      <item>
+         <title>Laidout 0.06 Released</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         	Laidout 0.06 has just been released.
+         	
+            Really not so very much is new, but there are a few notable improvements, such as the
+            ability to import and print out EPS files. This lets you use pages made with other programs
+            inside a Laidout document. Also new is the ability to start Laidout from a template document.
+
+		 </description>
+         <pubDate>21 April 2007</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 21 April 2007</guid>
+      </item>
+      
+      <item>
+         <title>Laidout 0.05 Released</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         	Laidout 0.05 has just been released.
+         	
+         	Only one month late this time, now you can work using preview images,
+         	so that you don't run out of memory moving around hundreds of huge tiffs. 
+         	Also, you can now import multiple images at once from a file list. Plus the
+         	object tool now uses a three point transform for speedy positioning. See
+         	the website for more.
+
+		 </description>
+         <pubDate>4 November 2006</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 4 November 2006</guid>
+      </item>
+      
+      <item>
+         <title>Laidout 0.04 Released</title>
+         <link>http://www.laidout.org</link>
+         <description>
+         	So just in case anyone's watching, Laidout 0.04 has just been released.
+         	
+         	The biggest news for this much delayed release is a Palette window, in 
+            which you can select a color, and have that color immediately applied 
+            to whatever you're working on. Also, Laidout now uses icons, and the 
+            splittable window system has been improved. 
+
+		 </description>
+         <pubDate>4 September 2006</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 4 September 2006</guid>
+      </item>
+      
+      <item>
+         <title>Making zines with open source software</title>
+         <link>http://www.laidout.org/index.html#events</link>
+         <description>
+         	Laidout development will be rather slow until mid-August. The development
+         	team (consisting of a one Tom Lechner) is spending most of his time finishing
+         	a book of cartoons (which he's put off finishing for about 6 months) in time
+         	 to show off at the Portland Zine Syposium August 11-13 in
+         	Portland, Oregon (http://www.pdxzines.com).
+         	At the symposium I'll also be giving a workshop on how to
+        	 	make zines using all open source software including Laidout, Scribus, the Gimp,
+        	 	Inkscape, and more.
+		 </description>
+         <pubDate>9 July 2006</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>Laidout 9 July 2006</guid>
+      </item>
+      
+      <item>
+         <title>New screenshot of a rhombic triacontahedron</title>
+         <link>http://www.laidout.org/shots/screenshots.html#triacontahedron</link>
+         <description>
+				This screenshot shows a Net Imposition as seen in the development version.
+				This particular net is a 30 sided Rhombic Triacontahedron layout, that 
+				one might use to make spherical panoramas..
+		 </description>
+         <pubDate>18 June 2006</pubDate> <!-- Tue, 03 Jun 2003 09:39:21 GMT -->
+         <guid>18 June 2006</guid>
+      </item>
+   </channel>
+</rss>

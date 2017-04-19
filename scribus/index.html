@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta charset="utf-8">
+
+<title>Laidout, Scribus, and You</title>
+
+<meta name="description" content="Laidout, desktop publishing software.">
+<meta name="keywords" content="Cartoons, Prints, Drawings, Polyhedra, Polyhedron, Calendar, 
+Desktop, Publishing, Page, Layout, Multipage, Booklet, Books, Imposition, Linux, Software,
+Tensor, Product, Patch, Laidout, Folded, Pamphlet, Screenshots,
+Dodecahedron,">
+
+<link rel="icon" href="../laidout-icon-16x16.png" type="image/png">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+
+</head>
+
+
+<body>
+
+<div class="whole">
+
+  <div id="side">
+    <ul class='sidenav'>
+	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="../images/gplus.png" alt="Google+"/></a></li>
+	   <li><a class="feeds" href="../rss.xml"><img src="../images/rss.png" alt="RSS feed"/></a></li>
+	   &nbsp;&nbsp;
+      <li><a href="../dev.html">Dev</a></li>
+      <li><a href="../index.html#download">Download</a></li>
+      <li><a href="../links.html">Links</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+      <li><a href="../screenshots/">Screenshots</a></li>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+  
+
+  </div><!-- side -->
+
+  <div id="main">
+
+<h1>Laidout, Scribus, and You!</h1>
+
+This page will, over time, contain little bits and pieces of code and wisdom that
+are designed to help you play nice with a combination of Scribus and Laidout.<br />
+<br />
+<br />
+<b>Scribus File Format</b><br />
+<br />
+In the course of making an importer/exporter for Scribus files, I made a chart of the Scribus file format,
+as the existing format descriptions were horribly out of date.
+You can see this <a href="Scribus-Current-fileformat.att.html">Scribus file format chart here</a>.
+This was built from <a href="Scribus-Current-fileformat.att">this config file</a>, 
+using <a href="build-format-table.txt">this script</a>. For the most current official Scribus file format work,
+see <a href="http://wiki.scribus.net/index.php/File_Format_Specification_for_Scribus_1.4">their wiki here</a>. 
+<br />
+<br />
+
+<a name="scripts"></a>
+<b>Scribus Scripts For Imposition</b><br />
+<br />
+Here's a couple of scripts you can use to reimpose Scribus documents, such as for making booklets.
+After installing Laidout, just download the scripts, and call them up
+from the "Scripts-&gt;Execute Script..." option from Scribus' menu.
+<br />
+<br />
+These scripts are limited by the deficiencies of Laidout's Scribus
+importer. Known issues include:
+<ul>
+<li>Objects that bleed over onto other pages are not handled properly.</li>
+<li>Also, Scribus page bleed values are basically ignored. Really they should be applied upon import to something
+meaningful to the signature.</li>
+<li>Furthermore, Laidout assumes the first page of the Scribus document is the cover of the booklet. This is not
+always the case, depending on how your spreads are set up in the Scribus document.</li>
+<li>And just so you know, master pages are applied on import to simplify exporting.</li>
+
+</ul>
+
+I have not tested very thoroughly, so there are probably other quirks. Please let me know of any other snags you encounter!
+I will at some point make all of Laidout's impositioning abilities available, rather than
+just signature based impositions. This will probably happen when net based impositions get a little stabilized.
+
+<br />
+<br />
+<table cellpadding="5">
+<tr>
+<td>
+<a href="http://www.youtube.com/watch?v=biLrfyHMXzU"><img src="scribus-laidout-plugin-demo-s.png" width="142" height="150" alt="Scribus calling Laidout" /></a>
+</td>
+<td>
+<a href="scribus-call-laidout-to-impose-gui.txt"><b>Signature Editor Launcher</b>.</a><br />
+<a href="scribus-call-laidout-to-impose-gui.txt">Here</a> is a script that calls Laidout's 
+Signature Editor from within Scribus, which lets you fold paper right on screen to reimpose a Scribus document,
+and a new reimposed document will be opened in Scribus. As of Laidout 0.092, you can add
+automatic cut and fold marks appear on you document when you export it, assuming you have area
+between the printed pages and the edge of the paper! One limitation is that you cannot currently add your own custom marks
+from the plugin.
+For that, you must import a Scribus document from Laidout itself, add the marks, and export. This will be changed eventually! 
+<br /><br />
+Click the image at left to watch a video tutorial.
+</td>
+</tr>
+</table>
+
+
+<br />
+<br />
+<a href="scribus-call-laidout-to-impose.txt"><b>Inivisible Reimposer</b>.</a><br />
+<a href="scribus-call-laidout-to-impose.txt">Here</a> is a text only script that calls Laidout from within Scribus,
+which allows you to reimpose a Scribus document, and the reimposed document will be opened into Scribus.
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ 
+</div><!-- main -->
+</div><!-- whole --> 
+
+</body>
+</html>

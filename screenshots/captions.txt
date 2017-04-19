@@ -1,0 +1,243 @@
+# This is makegallery's captions.txt file, first generated Thu Nov 11 07:26:33 2010.
+# Initial comments can be used to define previous and next galleries:
+#    #> nextgallery path/to/gallery
+#    #> prevgallery path/to/gallery
+# This will cause there to be links to path/to/gallery/img--first.html and
+# path/to/gallery/img--last.html.
+#
+# To the left of the separator are the image file names relative to imagedir. 
+# Next are formatting flags for the index thumb layout
+# which can be - for insert break, or _=~ for bottom, middle,top
+# Next is an optional thumbnail file relative to ./thumbs. 
+# If it is not supplied, then the thumbnail is generated. 
+# Next is a date field (YYYY M D H:M:S), such as for when the image was added.
+# Finally is the alttext which should be plain text, as they are also the alt text.
+# To add any comments to this file or to exclude any images from the slide 
+# show, add a # sign at the beginning of their respective lines.  You may
+# also change the order of images in your slide show at this time.
+# You can define groups that are looped over with <!--LOOP GroupName--> by prefacing with a line:
+#	 #> GroupName 
+#	[#>grouptitle=Group Title, string of plain text
+#	[#>groupdir=path/to/dir]
+#	[#>grouptemplate=grouptemplatefile]
+#	[#>groupbasename=sculptures]  <-- so group index dirs are named sculptures2.html for instance, numbers starting at 1
+# The group name must be letters, no numbers, and the things in [] are optional (do not include the [] 
+# To sum up: imagefile ---- formating ---- thumbfile ---- date ---- alttext
+
+
+#>altvgroupformat=<b><!--IMAGE-ALTTEXT--></b><br/><!--IMAGE-TYPE-->
+
+
+
+
+colorfonts-0.095.1-m.jpg ---- ---- colorfonts-0.095.1.png ---- ---- Layered Color Text
+#>type=video
+#>url=https://www.youtube.com/watch?v=7i0uhAjtQm4
+#>embed=<iframe width="560" height="315" src="https://www.youtube.com/embed/7i0uhAjtQm4" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.095.1)
+#... Here's another development update, showing how to use a layered color font, where each font file is a different colored layer 
+#... in the final font. It's my hope to someday support opentype based color fonts, but this will have to do for now. Also new is
+#... the ability to grab Fontmatrix font tags (if you have Fontmatrix installed), and use them to narrow a search for font.
+#... <br><br>
+#... Also demonstrated is the new Character Selection interface, which lets you insert any of the characters defined in
+#... the font. This is only characters, not glyphs, so no access to opentype alternate styling yet, but I'm working on it.
+
+
+text-tool-start-0.095.1.png ---- ---- text-tool-start-0.095.1.png ---- ---- Text in the Caption Tool
+#>type=video
+#>url=https://www.youtube.com/watch?v=SjSixSxBW_g
+#>embed=<iframe width="560" height="315" src="https://www.youtube.com/embed/SjSixSxBW_g" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.095.1)
+#... Debut of a very primitive text tool in Laidout, showing some basic on canvas controls. Found in the dev version 0.095.1 of Laidout,
+#... this tool represents mere baby steps toward getting an adequate text tool in Laidout. The loooong term goal for adequacy is TeX
+#... like line breaking in arbitrarily shaped areas, capable of right to left, left to right and vertical text, as well as OpenType features.
+
+
+engraver-update-0.095.1.png ---- ---- engraver-update-0.095.1-s.png ---- ---- Engraver Tool, part 2
+#>type=video
+#>url=http://www.youtube.com/watch?v=H8IHg7opOQ4
+#>embed= <iframe width="560" height="315" src="https://www.youtube.com/embed/H8IHg7opOQ4" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.095.1)
+#... A demonstration of several more of the new engraver tool features. This one includes 
+#... new direction options for the engraver tool, which allows a access to linear, circular, radial and now spiral 
+#... lines without having to know keyboard shortcuts. Also a brief description of the new ability to share settings
+#... between different line groups and engraver objects
+
+
+engraver-withpaths-0.095.1.jpg ---- ---- engraver-withpaths-0.095.1-s.png ---- ---- Engraver Tool
+#>type=video
+#>url=http://www.youtube.com/watch?v=zgIkkDaj-HA
+#>embed=<iframe width="560" height="315" src="https://www.youtube.com/embed/zgIkkDaj-HA" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.095.1)
+#... A demonstration of several of the new engraver tool features.
+
+
+bookletvideo.png ---- ---- bookletvideo.png ---- ---- How to make booklets
+#>type=video
+#>url=http://www.youtube.com/watch?v=3hBUz89N1q0
+#>embed=<iframe width="560" height="315" src="https://www.youtube.com/embed/3hBUz89N1q0" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.094.1)
+#... A demonstration from start to finish of using Laidout to make a minicomic in booklet form.
+
+
+signatureeditor.png ---- ---- signatureeditor-s.png ---- ---- Signature Editor
+#>type=video
+#>url=http://www.youtube.com/watch?v=VN9L8UYZgGA
+#>embed=<iframe width="560" height="315" src="https://www.youtube.com/embed/VN9L8UYZgGA" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.094)
+#... A demonstration of Laidout's Signature Editor.
+
+
+paths-0.093.png ---- ---- paths-0.093-s.png ---- ---- Paths
+#>type=video
+#>url=https://www.youtube.com/watch?v=lPhzrUc6bq0
+#>embed=<iframe width="420" height="315" src="https://www.youtube.com/embed/lPhzrUc6bq0" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.093)
+#... A demonstration of Laidout's Path Tool, as it appeared in version 0.093.
+
+
+align.png ---- ---- alignment-0.093-s.png ---- ---- Alignment Tool
+#>type=video
+#>url=https://www.youtube.com/watch?v=Gs8k4KUSkJw
+#>embed=<iframe width="420" height="315" src="https://www.youtube.com/embed/Gs8k4KUSkJw" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.093)
+#... A demonstration of Laidout's Alignment Tool, first appearing in version 0.093.
+#... With this tool, you can align selected objects along any path, and adjust various ways to position them,
+#... by simply dragging around various on canvas controls.
+
+
+pagerange.png ---- ---- pagerange-s.png ---- ---- Page Range Interface
+#>type=video
+#>url=https://www.youtube.com/watch?v=6nViHfkPPjE
+#>embed=<iframe width="420" height="315" src="http://www.youtube.com/embed/6nViHfkPPjE" frameborder="0" allowfullscreen></iframe>
+#>smallcaption=(version 0.092)
+#... A demonstration of Laidout's Page Range Interface. You can drag out sections visually along a strip to apply
+#... custom page range types, such as page numbers like "A-10".
+
+
+basics-0.091.png ---- ---- ---- ---- Viewport and Object Basics
+#>type=video
+#>url=http://www.youtube.com/watch?v=6jfu6aaryvg
+#>embed=<object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/6jfu6aaryvg?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6jfu6aaryvg?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+#>smallcaption=(version 0.091)
+#... Brief overview of what's in a viewport, and how to scale, rotate, and shear objects in various ways.
+
+
+papertiler.png ---- ---- ---- ---- Paper Tiler
+#>type=video
+#>url=http://www.youtube.com/v/N79bFZmlKLU
+#>smallcaption=(version 0.08)
+#... How to make one page be printed across several pieces of paper.
+
+
+monkeypatch.png ---- ---- ---- 2010 11 12 7:26:33 ---- Color patch gradients
+#>smallcaption=(version 0.07)
+#... The newly improved patch editing interface is getting to the point where it is actually a useful tool! At version 0.07, it's still
+#... more or less at the proof of concept stage of development. In another couple of versions, it should get easier and easier to use.<br>
+#... <br>
+#... Version 0.07 saw major enhancements to the patch controls, but much work needs to be done still. The basic controls are 
+#... as follows. Hovering over an outer
+#... edge, then click and drag lets you drag that edge around. Shift-click-drag adds a new row or column off the side. Inside,
+#... control-hover lets you select which inner edges you want to delete, and shift-control-hover shows where to subdivide a row
+#... and/or column. Pressing 'j' (for jagged) toggles whether dragging vertex points will also drag the adjacent control points. 
+#... Pressing 'd' will toggle between various ways to display control decorations. Finally, 'b' will toggle through various ways
+#... to interpolate controls so that you don't have to.
+
+
+radial-gradients.png ---- ---- ---- 2010 11 12 7:26:33 ---- Linear and radial gradients
+#>smallcaption=(version 0.07)
+#>url=http://www.youtube.com/v/YWg41fMWSX8
+#>type=video
+#... Click on the image to see a video tutorial that shows how linear
+#... and radial gradients function now. To sum up, hovering over an edge then clicking and
+#... dragging will let you resize the linear gradient, or change the start or end 
+#... radius of a radial gradient. You can select and move the color
+#... control points on screen, and change their colors by fiddling with the viewer's color box below. 
+
+
+# epsshot.png ---- ---- ---- 2010 11 12 7:26:33 ---- EPS importing
+# #>smallcaption=(version 0.06)
+# #...Here we see how to fake having text and other exotic features, by importing EPS files generated by other programs.
+# #...On the left is text imported from a page exported from <a href="http://www.scribus.net">Scribus</a>, 
+# #...and on the right is a page of Bach's Partita 6 generated by the <a href="http://www.lilypond.org">Lilypond</a>
+# #...music typesetting engine. These imported EPS files can then be repositioned to suit your fancy.
+# #...Please note that when you import EPS into Laidout, you
+# #...cannot manipulate the components of that EPS, only the EPS as a whole.<br>
+# #... <br>
+# #...Alternately, you can still export Laidout pages as EPS, then import them into, for instance, Scribus, after a fashion. There is no
+# #...inherent way that I know of to import mass quanities of EPS files into
+# #...Scribus, though I imagine it could be done in a script similar to 
+# #... <a href="http://wiki.scribus.net/index.php/Automatic_import_of_images:_Versions_not_requiring_Tkinter">this one</a>, 
+# #...When importing single EPS files to Scribus, remember to NOT
+# #...use the File->Import->EPS! That seems to insist on breaking apart the EPS into its components, and can't deal with color patches, and
+# #...I've noticed that objects that use masks, such as an ImagePatch object, seem to crash the import.  The way that does
+# #...work in Scribus is to create an Image frame, and then right-click and "Get Image", which grabs the EPS as a whole, and 
+# #...preserves the color patch gradients and warped images. 
+# #...Then you can lay on text if you want, print out, and even make PDFs with patch gradients and warped images!
+
+
+
+tatamishot.png ---- ---- ---- 2010 11 12 7:26:33 ---- Window arrangements
+#>smallcaption=(version 0.05)
+#... Here is a shot that shows various features of Laidout, including a splittable main window, shown as a tatami mat sort of layout.
+#... You'll notice in the upper left that the whole view of the page is a bit rotated. In Laidout, you are not restricted to viewing pages 
+#... as only portrait or landscape, like every other program in existence [note: there's been a
+#... <a href="http://sourceforge.net/mailarchive/forum.php?thread_name=8d5721e60704240754u26ac4f79rf6d5be33224855ee%40mail.gmail.com&forum_name=inkscape-devel">recent flurry</a> on Inkscape's dev mailing list in April 2007 about
+#... adding this feature]. 
+#... Also in the upper left is the Object tool, which allows scaling, shearing, and rotating of multiple objects.
+#... It has handles to drag around, as seen in Inkscape, but there is also what I call a three point transform, in which you can define the
+#... center of scaling/rotation (control-left click), then click and drag any
+#... other point, and the objects are scaled and rotated to match where you drag. Or you
+#... can define the center, and also one other constant point (a second control-left click), then clicking and dragging a third arbitrary
+#... point will shear the image to match where you drag this third point, with the first two points staying where they are.
+#... <br/><br/>
+#... Another feature seen in the lower right are definable page labels. The pages for this document are normally 0, 1, 2, 3, 4, and 5, but
+#... here you see the custom i, ii, 1, 2, 3, and 4. This is two page ranges, one
+#... with roman numerals, and the other with arabic numerals. The only drawback currently is that 
+#... you have to enter the labels manually to a saved file. There isn't quite a
+#... point and click way to add page ranges. That will probably come in 
+#... version 0.092.
+
+
+
+triacontahedron-0.03.1-2.png ---- ---- ---- 2010 11 12 7:26:33 ---- Nets
+#>smallcaption=(version 0.03.1)
+#... This is an example of a Net Imposition.
+#... This particular net is a 30 sided Rhombic Triacontahedron layout, with a picture on 
+#... each page. Each &quot;page&quot; is a kind of squashed square (rhombus). 
+#... Also notice that each page clips the picture contained in the page. If you
+#... look in the pagestyle element of each page in a saved document, you can include or delete 'pageclips' to
+#... toggle whether or not a page will clip its contents. This also allows easy creation of centerfolds, for instance.
+#... In that case, you might want your picture to span 2 pages, so you would not want 'pageclips' set on those pages.
+#... Manipulating net impositions is very primitive in Laidout at the moment, but I have big plans in that direction, such as
+#... being able to unfold something like this triacontahedron any way that it can be unfolded.
+#... <br/><br/>
+#... Cut this thing out, and you can fold it into
+#... a spherical-ish polyhedron. As you can see, I mounted a camera inside one of these things so that I can photograph spherical
+#... panoramas, such as this scenic staircase at the edge of the Portland, Oregon Rose Gardens.
+#... The colors would match more but for my impatience with the partly cloudy sky that day.<br>
+
+
+imagepach-0.02.1.png ---- ---- ---- 2010 11 12 7:26:33 ---- Image warping
+#>smallcaption=(version 0.03)
+#... You can distort images based on the same sort of bezier patch as the patch gradients above,
+#... only using an image as the color source, rather
+#... than a gradient. The current implementation of this feature still needs a bit of optimization, 
+#... but it is enough to allow displaying and printing out the results. What it needs is
+#... attention from someone who is actually skilled in low level rasterizing to speed it up a bit.
+
+
+
+screenshot5.png ---- ---- ---- 2010 11 12 7:26:33 ---- Spread editor
+#>smallcaption=(version 0.02)
+#... This shot shows the splitable main window in action. It contains a 40-some page booklet on legal sized paper
+#... that gets folded down the middle. The pane on the bottom is the spread editor, where you can swap pages, one with
+#... another, or move a page to another spot so that the pages in between the old and new spots get shifted over. Also, 
+#... you can drag a page up to a view window to set the view to that page. 
+#... You will notice in this screen shot that a 'page' is half of a legal sized paper,
+#... and you can rearrange the half-legal pages in the spread editor. 
+#... You can also change how the page numbers are circled in the
+#... spread editor, as a shorthand for how done you are with those pages.
+#... When it prints, it will print out master pages on full legal sized paper:
+#... 1 sheet with the last on the left and the first on the right, on the back of which goes a paper with
+#... the second on the left and the next to last page on the right, and so on. Make double sided copies, fold and staple, and off you go! 

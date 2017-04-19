@@ -1,0 +1,5695 @@
+''This is an ongoing effort to create a complete documentation of the file formats of Scribus 1.3.5&ndash;1.4. Once it is completed, it will be added to the Scribus Help Browser Documentation. Anyone who wants to contribute should be aware of the fact that we reserve the right to relicense this document under the Open Documentation License with elected options as used for the majority of the Help Browser documents.''
+
+=Scribus Documents (SLA)=
+
+==Document Structure==
+
+==Tags==
+{| class="wikitable" border="1"
+| <center>TAGS</center>
+| 
+| 
+| 
+| 
+| <center>EXPLANATION</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| <center>SCRIBUSUTF8NEW</center>
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>DOCUMENT</center>
+| 
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANZPAGES</center>
+| 
+| 
+| <center>Count of Pages</center>
+
+|-
+| 
+| 
+| <center>PAGEWIDTH</center>
+| 
+| 
+| <center>Default Page Width</center>
+
+|-
+| 
+| 
+| <center>PAGEHEIGHT</center>
+| 
+| 
+| <center>Default Page Height</center>
+
+|-
+| 
+| 
+| <center>BORDERLEFT</center>
+| 
+| 
+| <center>Default left margin of a page</center>
+
+|-
+| 
+| 
+| <center>BORDERRIGHT</center>
+| 
+| 
+| <center>Default right margin of a page</center>
+
+|-
+| 
+| 
+| <center>BORDERTOP</center>
+| 
+| 
+| <center>Default top margin of a page</center>
+
+|-
+| 
+| 
+| <center>BORDERBOTTOM</center>
+| 
+| 
+| <center>Default bottom margin of a page</center>
+
+|-
+| 
+| 
+| <center>PRESET</center>
+| 
+| 
+| <center>Margin Preset</center>
+
+|-
+| 
+| 
+| <center>BleedTop</center>
+| 
+| 
+| <center>Top Bleed Measure</center>
+
+|-
+| 
+| 
+| <center>BleedLeft</center>
+| 
+| 
+| <center>Left Bleed Measure</center>
+
+|-
+| 
+| 
+| <center>BleedRight</center>
+| 
+| 
+| <center>Right Bleed Measure</center>
+
+|-
+| 
+| 
+| <center>BleedBottom</center>
+| 
+| 
+| <center>Bottom Bleed Measure</center>
+
+|-
+| 
+| 
+| <center>ORIENTATION</center>
+| 
+| 
+| <center>Default orientation of the pages: 0 = Portrait 1 = Landscape</center>
+
+|-
+| 
+| 
+| <center>PAGESIZE</center>
+| 
+| 
+| <center>Default page name, such as "A4" or "Letter"</center>
+
+|-
+| 
+| 
+| <center>FIRSTNUM</center>
+| 
+| 
+| <center>First Page Number</center>
+
+|-
+| 
+| 
+| <center>BOOK</center>
+| 
+| 
+| <center>Current Page Layout</center>
+
+|-
+| 
+| 
+| <center>AUTOTEXT</center>
+| 
+| 
+| <center>Uses automatic textframes if value = 1</center>
+
+|-
+| 
+| 
+| <center>AUTOSPALTEN</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ABSTSPALTEN</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>UNITS</center>
+| 
+| 
+| <center>Unit Index</center>
+
+|-
+| 
+| 
+| <center>DFONT</center>
+| 
+| 
+| <center>Text Font</center>
+
+|-
+| 
+| 
+| <center>DSIZE</center>
+| 
+| 
+| <center>Text Size</center>
+
+|-
+| 
+| 
+| <center>DCOL</center>
+| 
+| 
+| <center>Text Columns</center>
+
+|-
+| 
+| 
+| <center>DGAP</center>
+| 
+| 
+| <center>Text Column Gap</center>
+
+|-
+| 
+| 
+| <center>TabFill</center>
+| 
+| 
+| <center>Text Tab fill character</center>
+
+|-
+| 
+| 
+| <center>TabWidth</center>
+| 
+| 
+| <center>Text tab width</center>
+
+|-
+| 
+| 
+| <center>AUTHOR</center>
+| 
+| 
+| <center>Author Name</center>
+
+|-
+| 
+| 
+| <center>PUBLISHER</center>
+| 
+| 
+| <center>Publisher Name</center>
+
+|-
+| 
+| 
+| <center>COMMENTS</center>
+| 
+| 
+| <center>Comments</center>
+
+|-
+| 
+| 
+| <center>KEYWORDS</center>
+| 
+| 
+| <center>Keywords</center>
+
+|-
+| 
+| 
+| <center>DOCDATE</center>
+| 
+| 
+| <center>Document Date</center>
+
+|-
+| 
+| 
+| <center>DOCTYPE</center>
+| 
+| 
+| <center>Document Type</center>
+
+|-
+| 
+| 
+| <center>DOCFORMAT</center>
+| 
+| 
+| <center>Document Format</center>
+
+|-
+| 
+| 
+| <center>DOCIDENT</center>
+| 
+| 
+| <center>Document Identifier</center>
+
+|-
+| 
+| 
+| <center>DOCSOURCE</center>
+| 
+| 
+| <center>Document Source</center>
+
+|-
+| 
+| 
+| <center>DOCLANGINFO</center>
+| 
+| 
+| <center>Document Language Info</center>
+
+|-
+| 
+| 
+| <center>DOCRELATION</center>
+| 
+| 
+| <center>Document Relation</center>
+
+|-
+| 
+| 
+| <center>DOCCOVER</center>
+| 
+| 
+| <center>Document Coverage</center>
+
+|-
+| 
+| 
+| <center>DOCRIGHTS</center>
+| 
+| 
+| <center>Document Rights</center>
+
+|-
+| 
+| 
+| <center>DOCCONTRIB</center>
+| 
+| 
+| <center>Document Contributors</center>
+
+|-
+| 
+| 
+| <center>TITLE</center>
+| 
+| 
+| <center>Document Title</center>
+
+|-
+| 
+| 
+| <center>SUBJECT</center>
+| 
+| 
+| <center>Document Subject</center>
+
+|-
+| 
+| 
+| <center>VHOCH</center>
+| 
+| 
+| <center>SuperScript Value</center>
+
+|-
+| 
+| 
+| <center>VHOCHSC</center>
+| 
+| 
+| <center>Superscript scaling value</center>
+
+|-
+| 
+| 
+| <center>VTIEF</center>
+| 
+| 
+| <center>Subscript value</center>
+
+|-
+| 
+| 
+| <center>VTIEFSC</center>
+| 
+| 
+| <center>Subscript scaling value</center>
+
+|-
+| 
+| 
+| <center>VKAPIT</center>
+| 
+| 
+| <center>Small Caps value</center>
+
+|-
+| 
+| 
+| <center>BASEGRID</center>
+| 
+| 
+| <center>Baseline Grid value</center>
+
+|-
+| 
+| 
+| <center>BASEO</center>
+| 
+| 
+| <center>Baseline Grid offset value</center>
+
+|-
+| 
+| 
+| <center>AUTOL</center>
+| 
+| 
+| <center>Auto Line Spacing</center>
+
+|-
+| 
+| 
+| <center>UnderlinePos</center>
+| 
+| 
+| <center>Underline Displacement Value</center>
+
+|-
+| 
+| 
+| <center>UnderlineWidth</center>
+| 
+| 
+| <center>Underline Width Value</center>
+
+|-
+| 
+| 
+| <center>StrikeThruPos</center>
+| 
+| 
+| <center>Strike Through Displacement Value</center>
+
+|-
+| 
+| 
+| <center>StrikeThruWidth</center>
+| 
+| 
+| <center>Strike Through Width Value</center>
+
+|-
+| 
+| 
+| <center>GROUPC</center>
+| 
+| 
+| <center>Group Counter</center>
+
+|-
+| 
+| 
+| <center>HCMS</center>
+| 
+| 
+| <center>Has CMS</center>
+
+|-
+| 
+| 
+| <center>DPSo</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>DPSFo</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>DPuse</center>
+| 
+| 
+| <center>CMS in Use</center>
+
+|-
+| 
+| 
+| <center>DPgam</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>DPbla</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>DPMo</center>
+| 
+| 
+| <center>Default Monitor Profile</center>
+
+|-
+| 
+| 
+| <center>DPPr</center>
+| 
+| 
+| <center>Default Printer Profile</center>
+
+|-
+| 
+| 
+| <center>DPIn</center>
+| 
+| 
+| <center>Default Image RGB Profile</center>
+
+|-
+| 
+| 
+| <center>DPInCMYK</center>
+| 
+| 
+| <center>Default Image CMYK Profile</center>
+
+|-
+| 
+| 
+| <center>DPIn2</center>
+| 
+| 
+| <center>Default Solid Color RGB Profile</center>
+
+|-
+| 
+| 
+| <center>DPIn3</center>
+| 
+| 
+| <center>Default Solid Color CMYK Profile</center>
+
+|-
+| 
+| 
+| <center>DISc</center>
+| 
+| 
+| <center>Default Indent Colors</center>
+
+|-
+| 
+| 
+| <center>DIIm</center>
+| 
+| 
+| <center>Default Intent Images</center>
+
+|-
+| 
+| 
+| <center>ALAYER</center>
+| 
+| 
+| <center>Active Layer</center>
+
+|-
+| 
+| 
+| <center>LANGUAGE</center>
+| 
+| 
+| <center>Language</center>
+
+|-
+| 
+| 
+| <center>MINWORDLEN</center>
+| 
+| 
+| <center>Minimum Word Length</center>
+
+|-
+| 
+| 
+| <center>HYCOUNT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>AUTOMATIC</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>AUTOCHECK</center>
+| 
+| 
+| <center>Autocheck</center>
+
+|-
+| 
+| 
+| <center>GUIDELOCK</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>SnapToGuides</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>SnapToGrid</center>
+| 
+| 
+| <center>Use Raster</center>
+
+|-
+| 
+| 
+| <center>MINGRID</center>
+| 
+| 
+| <center>Minor Grid Spacing</center>
+
+|-
+| 
+| 
+| <center>MAJGRID</center>
+| 
+| 
+| <center>Major Grid Spacing</center>
+
+|-
+| 
+| 
+| <center>SHOWGRID</center>
+| 
+| 
+| <center>Show Grid</center>
+
+|-
+| 
+| 
+| <center>SHOWGUIDES</center>
+| 
+| 
+| <center>Show Guide</center>
+
+|-
+| 
+| 
+| <center>showcolborders</center>
+| 
+| 
+| <center>Show Color Borders </center>
+
+|-
+| 
+| 
+| <center>SHOWFRAME</center>
+| 
+| 
+| <center>Show Frames</center>
+
+|-
+| 
+| 
+| <center>SHOWLAYERM</center>
+| 
+| 
+| <center>Show Layer Markers</center>
+
+|-
+| 
+| 
+| <center>SHOWMARGIN</center>
+| 
+| 
+| <center>Show Margins</center>
+
+|-
+| 
+| 
+| <center>SHOWBASE</center>
+| 
+| 
+| <center>Show Baseline Grid</center>
+
+|-
+| 
+| 
+| <center>SHOWPICT</center>
+| 
+| 
+| <center>Show Pictures</center>
+
+|-
+| 
+| 
+| <center>SHOWControl</center>
+| 
+| 
+| <center>Show Controls</center>
+
+|-
+| 
+| 
+| <center>SHOWLINK</center>
+| 
+| 
+| <center>Show Links</center>
+
+|-
+| 
+| 
+| <center>rulerMode</center>
+| 
+| 
+| <center>Ruler Mode</center>
+
+|-
+| 
+| 
+| <center>showrulers</center>
+| 
+| 
+| <center>Show Rulers</center>
+
+|-
+| 
+| 
+| <center>showBleed</center>
+| 
+| 
+| <center>Show Bleed</center>
+
+|-
+| 
+| 
+| <center>rulerXoffset</center>
+| 
+| 
+| <center>X Offset of Ruler</center>
+
+|-
+| 
+| 
+| <center>rulerYoffset</center>
+| 
+| 
+| <center>Y Offset of Ruler</center>
+
+|-
+| 
+| 
+| <center>GuideRad</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>GRAB</center>
+| 
+| 
+| <center>Grab Radius</center>
+
+|-
+| 
+| 
+| <center>POLYC</center>
+| 
+| 
+| <center>Polygon Corners( Not Sure)</center>
+
+|-
+| 
+| 
+| <center>POLYF</center>
+| 
+| 
+| <center>Polygon Factor</center>
+
+|-
+| 
+| 
+| <center>POLYR</center>
+| 
+| 
+| <center>Polygon Rotation</center>
+
+|-
+| 
+| 
+| <center>POLYCUR</center>
+| 
+| 
+| <center>Polygon Curvature</center>
+
+|-
+| 
+| 
+| <center>POLYFD</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>POLYS</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>AutoSave</center>
+| 
+| 
+| <center>Document Autosave</center>
+
+|-
+| 
+| 
+| <center>AutoSaveTime</center>
+| 
+| 
+| <center>Document Autosave time</center>
+
+|-
+| 
+| 
+| <center>ScratchBottom</center>
+| 
+| 
+| <center>Scratch Bottom</center>
+
+|-
+| 
+| 
+| <center>ScratchLeft</center>
+| 
+| 
+| <center>Scratch Left</center>
+
+|-
+| 
+| 
+| <center>ScratchRight</center>
+| 
+| 
+| <center>Scratch Right</center>
+
+|-
+| 
+| 
+| <center>ScratchTop</center>
+| 
+| 
+| <center>Scratch Top</center>
+
+|-
+| 
+| 
+| <center>GapHorizontal</center>
+| 
+| 
+| <center>Horizontal Gap</center>
+
+|-
+| 
+| 
+| <center>GapVertical</center>
+| 
+| 
+| <center>Vertical Gap</center>
+
+|-
+| 
+| 
+| <center>StartArrow</center>
+| 
+| 
+| <center>Linestart Arrow</center>
+
+|-
+| 
+| 
+| <center>EndArrow</center>
+| 
+| 
+| <center>LineEnd Arrow</center>
+
+|-
+| 
+| 
+| <center>PEN</center>
+| 
+| 
+| <center>Shape Line Color</center>
+
+|-
+| 
+| 
+| <center>BRUSH</center>
+| 
+| 
+| <center>Shape Fill Color</center>
+
+|-
+| 
+| 
+| <center>PENLINE</center>
+| 
+| 
+| <center>Line Color</center>
+
+|-
+| 
+| 
+| <center>PENTEXT</center>
+| 
+| 
+| <center>Text Color</center>
+
+|-
+| 
+| 
+| <center>StrokeText</center>
+| 
+| 
+| <center>Text Stroke Color</center>
+
+|-
+| 
+| 
+| <center>TextBackGround</center>
+| 
+| 
+| <center>Text Fill Color</center>
+
+|-
+| 
+| 
+| <center>TextLineColor</center>
+| 
+| 
+| <center>Text Line Color</center>
+
+|-
+| 
+| 
+| <center>TextBackGroundShade</center>
+| 
+| 
+| <center>Text fill color shade</center>
+
+|-
+| 
+| 
+| <center>TextLineShade</center>
+| 
+| 
+| <center>Text line color shade</center>
+
+|-
+| 
+| 
+| <center>TextPenShade</center>
+| 
+| 
+| <center>Text Shade</center>
+
+|-
+| 
+| 
+| <center>TextStrokeShade</center>
+| 
+| 
+| <center>Text stroke shade</center>
+
+|-
+| 
+| 
+| <center>STIL</center>
+| 
+| 
+| <center>Shape Line Shade</center>
+
+|-
+| 
+| 
+| <center>STILLINE</center>
+| 
+| 
+| <center>Line Style</center>
+
+|-
+| 
+| 
+| <center>WIDTH</center>
+| 
+| 
+| <center>Shape Line Width</center>
+
+|-
+| 
+| 
+| <center>WIDTHLINE</center>
+| 
+| 
+| <center>Line Width</center>
+
+|-
+| 
+| 
+| <center>PENSHADE</center>
+| 
+| 
+| <center>Shape Line ColorShade</center>
+
+|-
+| 
+| 
+| <center>LINESHADE</center>
+| 
+| 
+| <center>LineColor Shade</center>
+
+|-
+| 
+| 
+| <center>BRUSHSHADE</center>
+| 
+| 
+| <center>Shape Fill Color Shade</center>
+
+|-
+| 
+| 
+| <center>MAGMIN</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>MAGMAX</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>MAGSTEP</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>CPICT</center>
+| 
+| 
+| <center>Image Fill Color</center>
+
+|-
+| 
+| 
+| <center>PICTSHADE</center>
+| 
+| 
+| <center>Image FillColor Shade</center> 
+
+|-
+| 
+| 
+| <center>PICTSCX</center>
+| 
+| 
+| <center>Image Scale X</center>
+
+|-
+| 
+| 
+| <center>PICTSCY</center>
+| 
+| 
+| <center>Image Scale Y</center> 
+
+|-
+| 
+| 
+| <center>PSCALE</center>
+| 
+| 
+| <center>Image Scale Type</center> 
+
+|-
+| 
+| 
+| <center>PASPECT</center>
+| 
+| 
+| <center>Image Aspect Ratio</center> 
+
+|-
+| 
+| 
+| <center>EmbeddedPath</center>
+| 
+| 
+| <center>Image Use embedded path</center>  
+
+|-
+| 
+| 
+| <center>HalfRes</center>
+| 
+| 
+| <center>Image Low Resolution type</center>  
+
+|-
+| 
+| 
+| <center>dispX</center>
+| 
+| 
+| <center>DispX</center>  
+
+|-
+| 
+| 
+| <center>dispY</center>
+| 
+| 
+| <center>Disp Y</center>  
+
+|-
+| 
+| 
+| <center>constrain</center>
+| 
+| 
+| <center>Constrain</center>  
+
+|-
+| 
+| 
+| <center>MINORC</center>
+| 
+| 
+| <center>Minor Grid Color Name</center>  
+
+|-
+| 
+| 
+| <center>MAJORC</center>
+| 
+| 
+| <center>Major Grid Color Name</center>  
+
+|-
+| 
+| 
+| <center>GuideC</center>
+| 
+| 
+| <center>Guide Color Name</center>  
+
+|-
+| 
+| 
+| <center>BaseC</center>
+| 
+| 
+| <center>Baseline Grid Color Name </center>  
+
+|-
+| 
+| 
+| <center>GuideZ</center>
+| 
+| 
+| <center>Guide Rad</center>  
+
+|-
+| 
+| 
+| <center>BACKG</center>
+| 
+| 
+| <center>Guide Placement</center> 
+
+|-
+| 
+| 
+| <center>PAGEC</center>
+| 
+| 
+| <center>Paper Color Name</center> 
+
+|-
+| 
+| 
+| <center>MARGC</center>
+| 
+| 
+| <center>Margin Color Name</center> 
+
+|-
+| 
+| 
+| <center>RANDF</center>
+| 
+| 
+| <center>Margin Colored</center> 
+
+|-
+| 
+| 
+| <center>currentProfile</center>
+| 
+| 
+| <center>Current check profile</center> 
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>CheckProfile</center>
+| 
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>Name</center>
+| 
+| 
+| <center>Check profile name</center> 
+
+|-
+| 
+| 
+| <center>ignoreErrors</center>
+| 
+| 
+| <center>Ignore Errors (int value)</center> 
+
+|-
+| 
+| 
+| <center>autoCheck</center>
+| 
+| 
+| <center>Auto Check (int value)</center> 
+
+|-
+| 
+| 
+| <center>checkGlyphs</center>
+| 
+| 
+| <center>Check Glyphs (int value)</center> 
+
+|-
+| 
+| 
+| <center>checkOrphans</center>
+| 
+| 
+| <center>Check Orphans (int value)</center> 
+
+|-
+| 
+| 
+| <center>checkOverflow</center>
+| 
+| 
+| <center>Check Overflow (int value)</center> 
+
+|-
+| 
+| 
+| <center>checkPictures</center>
+| 
+| 
+| <center>Check Pictures (int value)</center> 
+
+|-
+| 
+| 
+| <center>checkResolution</center>
+| 
+| 
+| <center>Check Resolution (int value)</center> 
+
+|-
+| 
+| 
+| <center>checkTransparency</center>
+| 
+| 
+| <center>Check Transparency (int value)</center> 
+
+|-
+| 
+| 
+| <center>minResolution</center>
+| 
+| 
+| <center>Minimum Resolution</center> 
+
+|-
+| 
+| 
+| <center>maxResolution</center>
+| 
+| 
+| <center>Maximum Resolution</center> 
+
+|-
+| 
+| 
+| <center>checkAnnotations</center>
+| 
+| 
+| <center>Check Annotations (int value)</center> 
+
+|-
+| 
+| 
+| <center>checkRasterPDF</center>
+| 
+| 
+| <center>Check Raster PDF (int value)</center> 
+
+|-
+| 
+| 
+| <center>checkForGIF</center>
+| 
+| 
+| <center>Check For GIF (int value)</center> 
+
+|-
+| 
+| 
+| <center>ignoreOffLayers</center>
+| 
+| 
+| <center>Ignore Off Layers (int value)</center> 
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>MultiLine</center>
+| 
+| 
+| 
+| <center>Line Styles</center> 
+
+|-
+| 
+| 
+| <center>Name</center>
+| 
+| 
+| <center>Name</center> 
+
+|-
+| 
+| 
+| <center>Color</center>
+| 
+| 
+| <center>Color</center> 
+
+|-
+| 
+| 
+| 
+| <center>Shade</center>
+| 
+| <center>Shade</center> 
+
+|-
+| 
+| 
+| 
+| <center>Dash</center>
+| 
+| <center>Dash</center> 
+
+|-
+| 
+| 
+| 
+| <center>LineEnd</center>
+| 
+| <center>Line End</center> 
+
+|-
+| 
+| 
+| 
+| <center>LineJoin</center>
+| 
+| <center>Line Join</center> 
+
+|-
+| 
+| 
+| 
+| <center>Width</center>
+| 
+| <center>Width</center> 
+
+|-
+| 
+| 
+| 
+| <center>Shortcut</center>
+| 
+| <center>Shortcut</center> 
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>Arrows</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>NumPoints</center>
+| 
+|
+
+|-
+| 
+| 
+| 
+| <center>Points</center>
+| 
+| <center>Points</center>  
+
+|-
+| 
+| 
+| 
+| <center>Name</center>
+| 
+| <center>Name</center>  
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>JAVA</center>
+| 
+| 
+| 
+| <center>Javascripts</center>  
+
+|-
+| 
+| 
+| <center>NAME</center>
+| 
+| 
+| <center>Javascript Name</center>  
+
+|-
+| 
+| 
+| <center>SCRIPT</center>
+| 
+| 
+| <center>Script</center> 
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>Bookmark</center>
+| 
+| 
+| 
+| <center>Bookmark Section</center> 
+
+|-
+| 
+| 
+| <center>Title</center>
+| 
+| 
+| <center>Bookmark Title</center>
+
+|-
+| 
+| 
+| <center>Text</center>
+| 
+| 
+| <center>Bookmark Title</center>
+
+|-
+| 
+| 
+| <center>Aktion</center>
+| 
+| 
+| <center>Action</center>
+
+|-
+| 
+| 
+| <center>ItemNr</center>
+| 
+| 
+| <center>Item Number (but not sure)</center>
+
+|-
+| 
+| 
+| <center>Element</center>
+| 
+| 
+| <center>Element</center>
+
+|-
+| 
+| 
+| <center>First</center>
+| 
+| 
+| <center>First</center>
+
+|-
+| 
+| 
+| <center>Last</center>
+| 
+| 
+| <center>Last</center>
+
+|-
+| 
+| 
+| <center>Prev</center>
+| 
+| 
+| <center>Previous</center>
+
+|-
+| 
+| 
+| <center>Next</center>
+| 
+| 
+| <center>Next</center>
+
+|-
+| 
+| 
+| <center>Parent</center>
+| 
+| 
+| <center>Parent</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>COLOR</center>
+| 
+| 
+| 
+| <center>Colors</center>
+
+|-
+| 
+| 
+| <center>NAME</center>
+| 
+| 
+| <center>Color Name</center>
+
+|-
+| 
+| 
+| <center>RGB<sup><nowiki>*</nowiki></sup></center>
+| 
+| 
+| <center>Color Model is RGB</center>
+
+|-
+| 
+| 
+| <center>CMYK<sup><nowiki>*</nowiki></sup></center>
+| 
+| 
+| <center>Color Model is CMYK</center>
+
+|-
+| 
+| 
+| <center>Spot</center>
+| 
+| 
+| <center>Spot</center>
+
+|-
+| 
+| 
+| <center>Register</center>
+| 
+| 
+| <center>Register</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>Gradient</center>
+| 
+| 
+| 
+| <center>Gradient Section</center>
+
+|-
+| 
+| 
+| <center>Name</center>
+| 
+| 
+| <center>Gradient Name</center>
+
+|-
+| 
+| 
+| <center>CSTOP</center>
+| 
+| 
+| <center>Color Stops</center>
+
+|-
+| 
+| 
+| <center>RAMP</center>
+| 
+| 
+| <center>Color Stop Ramp Point</center>
+
+|-
+| 
+| 
+| <center>NAME</center>
+| 
+| 
+| <center>Color Stop name</center>
+
+|-
+| 
+| 
+| <center>SHADE</center>
+| 
+| 
+| <center>Color Stop shade</center>
+
+|-
+| 
+| 
+| <center>TRANS</center>
+| 
+| 
+| <center>Opacity</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>HYPHEN</center>
+| 
+| 
+| 
+| <center>Hyphenator Lists</center>
+
+|-
+| 
+| 
+| <center>EXCEPTION</center>
+| 
+| 
+| <center>Special Words</center>
+
+|-
+| 
+| 
+| <center>WORD</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>HYPHENATED</center>
+| 
+| 
+| <center>Whether Hyphenated</center>
+
+|-
+| 
+| 
+| <center>IGNORE</center>
+| 
+| 
+| <center>Ignored Words</center>
+
+|-
+| 
+| 
+| <center>WORD</center>
+| 
+| 
+| <center>Word</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>STYLE</center>
+| 
+| 
+| 
+| <center>Paragraph Styles</center>
+
+|-
+| 
+| 
+| <center>NAME</center>
+| 
+| 
+| <center>Paragraph Style Name</center>
+
+|-
+| 
+| 
+| <center>PARENT</center>
+| 
+| 
+| <center>Parent Style Name</center>
+
+|-
+| 
+| 
+| <center>DefaultStyle</center>
+| 
+| 
+| <center>Is this a default style? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>ALIGN</center>
+| 
+| 
+| <center>Alignment</center>
+
+|-
+| 
+| 
+| <center>LINESPMode</center>
+| 
+| 
+| <center>Line Spacing Mode</center>
+
+|-
+| 
+| 
+| <center>LINESP</center>
+| 
+| 
+| <center>Line Spacing</center>
+
+|-
+| 
+| 
+| <center>INDENT</center>
+| 
+| 
+| <center>Left Margin</center>
+
+|-
+| 
+| 
+| <center>RMARGIN</center>
+| 
+| 
+| <center>Right Margin</center>
+
+|-
+| 
+| 
+| <center>FIRST</center>
+| 
+| 
+| <center>First Indent</center>
+
+|-
+| 
+| 
+| <center>VOR</center>
+| 
+| 
+| <center>Gap Before</center>
+
+|-
+| 
+| 
+| <center>NACH</center>
+| 
+| 
+| <center>Gap After</center>
+
+|-
+| 
+| 
+| <center>DROP</center>
+| 
+| 
+| <center>Has drop cap</center>
+
+|-
+| 
+| 
+| <center>DROPLIN</center>
+| 
+| 
+| <center>Drop Cap Lines</center>
+
+|-
+| 
+| 
+| <center>DROPDIST</center>
+| 
+| 
+| <center>Drop Cap offset</center>
+
+|-
+| 
+| 
+| <center>OpticalMargins</center>
+| 
+| 
+| <center>Optical Margins</center>
+
+|-
+| 
+| 
+| <center>HyphenationMode</center>
+| 
+| 
+| <center>Hyphenation Mode</center>
+
+|-
+| 
+| 
+| <center>MinWordTrack</center>
+| 
+| 
+| <center>Minimum Word Tracking</center>
+
+|-
+| 
+| 
+| <center>MinGlyphShrink</center>
+| 
+| 
+| <center>Minimum Glyph Extend</center>
+
+|-
+| 
+| 
+| <center>MaxGlyphExtend</center>
+| 
+| 
+| <center>Maximum Glyph Extend</center>
+
+|-
+| 
+| 
+| <center>PSHORTCUT</center>
+| 
+| 
+| <center>Paragraph Style Shortcut</center>
+
+|-
+| 
+| 
+| <center>Tabs</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Type</center>
+| 
+| <center>Tab Type</center>
+
+|-
+| 
+| 
+| 
+| <center>Pos</center>
+| 
+| <center>Tab Position</center>
+
+|-
+| 
+| 
+| 
+| <center>Fill</center>
+| 
+| <center>Tab Fill character</center>
+
+|-
+| 
+| <center>CHARSTYLE</center>
+| 
+| 
+| 
+| <center>Character Style</center>
+
+|-
+| 
+| 
+| <center>CNAME</center>
+| 
+| 
+| <center>Character Style Name</center>
+
+|-
+| 
+| 
+| <center>CPARENT</center>
+| 
+| 
+| <center>Character style parent</center>
+
+|-
+| 
+| 
+| <center>FONT</center>
+| 
+| 
+| <center>Font name</center>
+
+|-
+| 
+| 
+| <center>FONTSIZE</center>
+| 
+| 
+| <center>Font size</center>
+
+|-
+| 
+| 
+| <center>FEATURES</center>
+| 
+| 
+| <center>Character style features</center>
+
+|-
+| 
+| 
+| <center>FCOLOR</center>
+| 
+| 
+| <center>Fill Color</center>
+
+|-
+| 
+| 
+| <center>FSHADE</center>
+| 
+| 
+| <center>Fill shade</center>
+
+|-
+| 
+| 
+| <center>SCOLOR</center>
+| 
+| 
+| <center>Stroke color</center>
+
+|-
+| 
+| 
+| <center>SSHADE</center>
+| 
+| 
+| <center>Stroke shade</center>
+
+|-
+| 
+| 
+| <center>TXTSHX</center>
+| 
+| 
+|<center>Shadow X Offset</center> 
+
+|-
+| 
+| 
+| <center>TXTSHY</center>
+| 
+| 
+| <center>Shadow Y Offset</center>
+
+|-
+| 
+| 
+| <center>TXTOUT</center>
+| 
+| 
+| <center>Outline Width</center>
+
+|-
+| 
+| 
+| <center>TXTULP</center>
+| 
+| 
+| <center>Underline Offset</center>
+
+|-
+| 
+| 
+| <center>TXTULW</center>
+| 
+| 
+| <center>Underline Width</center>
+
+|-
+| 
+| 
+| <center>TXTSTP</center>
+| 
+| 
+| <center>Strike Through offset</center>
+
+|-
+| 
+| 
+| <center>TXTSTW</center>
+| 
+| 
+| <center>Strike Through Width</center>
+
+|-
+| 
+| 
+| <center>SCALEH</center>
+| 
+| 
+| <center>Horizontal Scale</center>
+
+|-
+| 
+| 
+| <center>SCALEV</center>
+| 
+| 
+| <center>Vertical Scale</center>
+
+|-
+| 
+| 
+| <center>BASEO</center>
+| 
+| 
+| <center>Baseline offset</center>
+
+|-
+| 
+| 
+| <center>KERN</center>
+| 
+| 
+| <center>Kerning</center>
+
+|-
+| 
+| 
+| <center>wordTrack</center>
+| 
+| 
+| <center>Word Tracking</center> 
+
+|-
+| 
+| 
+| <center>SHORTCUT</center>
+| 
+| 
+| <center>Character Style shortcut</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>LAYERS</center>
+| 
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>NUMMER</center>
+| 
+| 
+| <center>Layers ID</center>
+
+|-
+| 
+| 
+| <center>LEVEL</center>
+| 
+| 
+| <center>Layer level</center>
+
+|-
+| 
+| 
+| <center>NAME</center>
+| 
+| 
+| <center>Layer Name</center>
+
+|-
+| 
+| 
+| <center>SICHTBAR</center>
+| 
+| 
+| <center>Is viewable ?</center>
+
+|-
+| 
+| 
+| <center>DRUCKEN</center>
+| 
+| 
+| <center>Is printable ?</center>
+
+|-
+| 
+| 
+| <center>EDIT</center>
+| 
+| 
+| <center>Is editable ?</center>
+
+|-
+| 
+| 
+| <center>FLOW</center>
+| 
+| 
+| <center>Flow control</center>
+
+|-
+| 
+| 
+| <center>TRANS</center>
+| 
+| 
+| <center>Transparency</center>
+
+|-
+| 
+| 
+| <center>BLEND</center>
+| 
+| 
+| <center>Blend Mode</center>
+
+|-
+| 
+| 
+| <center>OUTL</center>
+| 
+| 
+| <center>Outline mode</center>
+
+|-
+| 
+| 
+| <center>LAYERC</center>
+| 
+| 
+| <center>Marker color name</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>Printer</center>
+| 
+| 
+| 
+| <center>Printer Options</center>
+
+|-
+| 
+| 
+| <center>firstUse</center>
+| 
+| 
+| <center>First Use</center>
+
+|-
+| 
+| 
+| <center>toFile</center>
+| 
+| 
+| <center>Print to file</center>
+
+|-
+| 
+| 
+| <center>useAltPrintCommand</center>
+| 
+| 
+| <center>Use Alt Print Command</center>
+
+|-
+| 
+| 
+| <center>outputSeparations</center>
+| 
+| 
+| <center>Output separations</center>
+
+|-
+| 
+| 
+| <center>useSpotColors</center>
+| 
+| 
+| <center>Use spot colors</center>
+
+|-
+| 
+| 
+| <center>useColor</center>
+| 
+| 
+| <center>Use color</center>
+
+|-
+| 
+| 
+| <center>mirrorH</center>
+| 
+| 
+| <center>Mirror horizontal</center>
+
+|-
+| 
+| 
+| <center>mirrorV</center>
+| 
+| 
+| <center>Mirror vertical</center>
+
+|-
+| 
+| 
+| <center>useICC</center>
+| 
+| 
+| <center>Use ICC </center>
+
+|-
+| 
+| 
+| <center>doGCR</center>
+| 
+| 
+| <center>Do GCR</center>
+
+|-
+| 
+| 
+| <center>doClip</center>
+| 
+| 
+| <center>Do clip</center>
+
+|-
+| 
+| 
+| <center>setDevParam</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>useDocBleeds</center>
+| 
+| 
+| <center>use document bleeds</center>
+
+|-
+| 
+| 
+| <center>cropMarks</center>
+| 
+| 
+| <center>Crop marks</center>
+
+|-
+| 
+| 
+| <center>bleedMarks</center>
+| 
+| 
+| <center>Bleed marks</center>
+
+|-
+| 
+| 
+| <center>registrationMarks</center>
+| 
+| 
+| <center>Registration marks</center>
+
+|-
+| 
+| 
+| <center>colorMarks</center>
+| 
+| 
+| <center>Color marks</center>
+
+|-
+| 
+| 
+| <center>includePDFMarks</center>
+| 
+| 
+| <center>Include pdf marks</center>
+
+|-
+| 
+| 
+| <center>PSLevel</center>
+| 
+| 
+| <center>PostScript Level</center>
+
+|-
+| 
+| 
+| <center>PDLanguage</center>
+| 
+| 
+| <center>Printer Engine</center>
+
+|-
+| 
+| 
+| <center>markOffset</center>
+| 
+| 
+| <center>Mark Offset</center>
+
+|-
+| 
+| 
+| <center>BleedTop</center>
+| 
+| 
+| <center>Bleed top</center>
+
+|-
+| 
+| 
+| <center>BleedLeft</center>
+| 
+| 
+| <center>Left bleed</center>
+
+|-
+| 
+| 
+| <center>BleedRight</center>
+| 
+| 
+| <center>Right bleed</center>
+
+|-
+| 
+| 
+| <center>BleedBottom</center>
+| 
+| 
+| <center>Bottom bleed</center>
+
+|-
+| 
+| 
+| <center>printer</center>
+| 
+| 
+| <center>Printer</center>
+
+|-
+| 
+| 
+| <center>filename</center>
+| 
+| 
+| <center>Filename</center>
+
+|-
+| 
+| 
+| <center>separationName</center>
+| 
+| 
+| <center>Separation Name</center>
+
+|-
+| 
+| 
+| <center>printerCommand</center>
+| 
+| 
+| <center>Printer Command</center>
+
+|-
+| 
+| 
+| <center>Separation</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Name</center>
+| 
+| 
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>PDF</center>
+| 
+| 
+| 
+| <center>PDF Options</center>
+
+|-
+| 
+| 
+| <center>firstUse</center>
+| 
+| 
+| <center>First Use</center>
+
+|-
+| 
+| 
+| <center>Thumbnails</center>
+| 
+| 
+| <center>Thumbnails</center>
+
+|-
+| 
+| 
+| <center>Articles</center>
+| 
+| 
+| <center>Articles</center>
+
+|-
+| 
+| 
+| <center>Bookmarks</center>
+| 
+| 
+| <center>Bookmarks</center>
+
+|-
+| 
+| 
+| <center>Compress</center>
+| 
+| 
+| <center>Compress</center>
+
+|-
+| 
+| 
+| <center>CMethod</center>
+| 
+| 
+| <center>Compress Method</center>
+
+|-
+| 
+| 
+| <center>Quality</center>
+| 
+| 
+| <center>Quality</center>
+
+|-
+| 
+| 
+| <center>MirrorH</center>
+| 
+| 
+| <center>Mirror Horizontal</center>
+
+|-
+| 
+| 
+| <center>MirrorV</center>
+| 
+| 
+| <center>Mirror Vertical</center>
+
+|-
+| 
+| 
+| <center>Clip</center>
+| 
+| 
+| <center>Do clip</center>
+
+|-
+| 
+| 
+| <center>RotateDeg</center>
+| 
+| 
+| <center>Rotation Degree</center>
+
+|-
+| 
+| 
+| <center>PresentMode</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>RecalcPic</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>Grayscale</center>
+| 
+| 
+| <center>Gray scale</center>
+
+|-
+| 
+| 
+| <center>RGBMode</center>
+| 
+| 
+| <center>RGB Mode</center>
+
+|-
+| 
+| 
+| <center>UseProfiles</center>
+| 
+| 
+| <center>Use Profiles</center>
+
+|-
+| 
+| 
+| <center>UseProfiles2</center>
+| 
+| 
+| <center>Use profiles 2</center>
+
+|-
+| 
+| 
+| <center>Binding</center>
+| 
+| 
+| <center>Binding</center>
+
+|-
+| 
+| 
+| <center>PicRes</center>
+| 
+| 
+| <center>Picture resolution (not sure)</center>
+
+|-
+| 
+| 
+| <center>Resolution</center>
+| 
+| 
+| <center>Resolution</center>
+
+|-
+| 
+| 
+| <center>Version</center>
+| 
+| 
+| <center>PDF Version</center>
+
+|-
+| 
+| 
+| <center>Intent</center>
+| 
+| 
+| <center>Intent</center>
+
+|-
+| 
+| 
+| <center>Intent2</center>
+| 
+| 
+| <center>Intent2</center>
+
+|-
+| 
+| 
+| <center>SolidP</center>
+| 
+| 
+| <center>Solid Profile</center>
+
+|-
+| 
+| 
+| <center>ImageP</center>
+| 
+| 
+| <center>Image Profile</center>
+
+|-
+| 
+| 
+| <center>PrintP</center>
+| 
+| 
+| <center>Print Profile</center>
+
+|-
+| 
+| 
+| <center>InfoString</center>
+| 
+| 
+| <center>Information</center>
+
+|-
+| 
+| 
+| <center>BTop</center>
+| 
+| 
+| <center>Bleed top</center>
+
+|-
+| 
+| 
+| <center>BLeft</center>
+| 
+| 
+| <center>Bleed left</center>
+
+|-
+| 
+| 
+| <center>BRight</center>
+| 
+| 
+| <center>Bleed right</center>
+
+|-
+| 
+| 
+| <center>BBottom</center>
+| 
+| 
+| <center>Bleed bottom</center>
+
+|-
+| 
+| 
+| <center>useDocBleeds</center>
+| 
+| 
+| <center>Use documnet bleeds</center>
+
+|-
+| 
+| 
+| <center>cropMarks</center>
+| 
+| 
+| <center>Crop Marks</center>
+
+|-
+| 
+| 
+| <center>bleedMarks</center>
+| 
+| 
+| <center>Bleed marks</center>
+
+|-
+| 
+| 
+| <center>registrationMarks</center>
+| 
+| 
+| <center>Registration Marks</center>
+
+|-
+| 
+| 
+| <center>colorMarks</center>
+| 
+| 
+| <center>Color marks</center>
+
+|-
+| 
+| 
+| <center>docInfoMarks</center>
+| 
+| 
+| <center>Document information marks</center>
+
+|-
+| 
+| 
+| <center>markOffset</center>
+| 
+| 
+| <centerMark offset></center>
+
+|-
+| 
+| 
+| <center>ImagePr</center>
+| 
+| 
+| <center>Embedded Image</center>
+
+|-
+| 
+| 
+| <center>PassOwner</center>
+| 
+| 
+| <center>Pass Owner</center>
+
+|-
+| 
+| 
+| <center>PassUser</center>
+| 
+| 
+| <center>Pass User</center>
+
+|-
+| 
+| 
+| <center>Permissions</center>
+| 
+| 
+| <center>Permissions</center>
+
+|-
+| 
+| 
+| <center>Encrypt</center>
+| 
+| 
+| <center>Encrypt or not</center>
+
+|-
+| 
+| 
+| <center>UseLayers</center>
+| 
+| 
+| <center>Whether use layers or not</center>
+
+|-
+| 
+| 
+| <center>UseLpi</center>
+| 
+| 
+| <center>Whether use LPI or not</center>
+
+|-
+| 
+| 
+| <center>UseSpotColors</center>
+| 
+| 
+| <center>Use spot colors or not</center>
+
+|-
+| 
+| 
+| <center>doMultiFile</center>
+| 
+| 
+| <center>Do Multi file</center>
+
+|-
+| 
+| 
+| <center>displayBookmarks</center>
+| 
+| 
+| <center>Display bookmarks or not</center>
+
+|-
+| 
+| 
+| <center>displayFullscreen</center>
+| 
+| 
+| <center>Display fullscreen</center>
+
+|-
+| 
+| 
+| <center>displayLayers</center>
+| 
+| 
+| <center>Display Layers</center>
+
+|-
+| 
+| 
+| <center>displayThumbs</center>
+| 
+| 
+| <center>Display Thumbnails</center>
+
+|-
+| 
+| 
+| <center>hideMenuBar</center>
+| 
+| 
+| <center>Hide Menu Bar or not</center>
+
+|-
+| 
+| 
+| <center>hideToolBar</center>
+| 
+| 
+| <center>Hide toolbar or not</center>
+
+|-
+| 
+| 
+| <center>fitWindow</center>
+| 
+| 
+| <center>Fit window or not</center>
+
+|-
+| 
+| 
+| <center>PageLayout</center>
+| 
+| 
+| <center>Page Layout</center>
+
+|-
+| 
+| 
+| <center>openAction</center>
+| 
+| 
+| <center>Open action</center>
+
+|-
+| 
+| 
+| <center>Fonts</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Name</center>
+| 
+| <center>Embedded Font Name</center>
+
+|-
+| 
+| 
+| <center>Subset</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Name</center>
+| 
+| 
+
+|-
+| 
+| 
+| <center>Effekte</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>pageEffectDuration</center>
+| 
+| <center>Page effect duration</center>
+
+|-
+| 
+| 
+| 
+| <center>pageViewDuration</center>
+| 
+| <center>Page view duration</center>
+
+|-
+| 
+| 
+| 
+| <center>effectType</center>
+| 
+| <center>Effect type</center>
+
+|-
+| 
+| 
+| 
+| <center>Dm</center>
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>M</center>
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Di</center>
+| 
+| 
+
+|-
+| 
+| 
+| <center>LPI</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Color</center>
+| 
+| <center>Color</center>
+
+|-
+| 
+| 
+| 
+| <center>Frequency</center>
+| 
+| <center>Frequency</center>
+
+|-
+| 
+| 
+| 
+| <center>Angle</center>
+| 
+| <center>Angle</center>
+
+|-
+| 
+| 
+| 
+| <center>SpotFunction</center>
+| 
+| <center>Spot function</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>DocItemAttributes</center>
+| 
+| 
+| 
+| <center>Document Item attributes</center>
+
+|-
+| 
+| 
+| <center>ItemAttribute</center>
+| 
+| 
+| <center>Item attribute</center>
+
+|-
+| 
+| 
+| 
+| <center>Name</center>
+| 
+| <center>Attribute name</center>
+
+|-
+| 
+| 
+| 
+| <center>Type</center>
+| 
+| <center>Type</center>
+
+|-
+| 
+| 
+| 
+| <center>Value</center>
+| 
+| <center>Value</center>
+
+|-
+| 
+| 
+| 
+| <center>Parameter</center>
+| 
+| <center>Document item parameter</center>
+
+|-
+| 
+| 
+| 
+| <center>Relationship</center>
+| 
+| <center>Document item Relationship</center>
+
+|-
+| 
+| 
+| 
+| <center>RelationshipTo</center>
+| 
+| <center>Relationship to</center>
+
+|-
+| 
+| 
+| 
+| <center>AutoAddTo</center>
+| 
+| <center>Auto add to</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>TablesOfContents</center>
+| 
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>Name</center>
+| 
+| 
+| <center>Table of contents name</center>
+
+|-
+| 
+| 
+| <center>ItemAttributeName</center>
+| 
+| 
+| <center>Item attribute name</center>
+
+|-
+| 
+| 
+| <center>FrameName</center>
+| 
+| 
+| <center>Frame name</center>
+
+|-
+| 
+| 
+| <center>ListNonPrinting</center>
+| 
+| 
+| <center>List non-printing frames</center>
+
+|-
+| 
+| 
+| <center>Style</center>
+| 
+| 
+| <center>Text Style</center>
+
+|-
+| 
+| 
+| <center>NumberPlacement</center>
+| <center>Beginning</center>
+| 
+| <center>Number placement begining</center>
+
+|-
+| 
+| 
+| 
+| <center>End</center>
+| 
+| <center>Number placement end</center>
+
+|-
+| 
+| 
+| 
+| <center>NotShown</center>
+| 
+| <center>Number placement not shown</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>Sections</center>
+| 
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>Section</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Number</center>
+| 
+| <center>Section Number</center>
+
+|-
+| 
+| 
+| 
+| <center>Name</center>
+| 
+| <center>/Section name</center>
+
+|-
+| 
+| 
+| 
+| <center>From</center>
+| 
+| <center>From</center>
+
+|-
+| 
+| 
+| 
+| <center>To</center>
+| 
+| <center>To</center>
+
+|-
+| 
+| 
+| 
+| <center>Type</center>
+| <center>Type_1_2_3</center>
+| 
+
+|-
+| 
+| 
+| 
+| 
+| <center>Type_i_ii_iii</center>
+| 
+
+|-
+| 
+| 
+| 
+| 
+| <center>Type_I_II_III</center>
+| 
+
+|-
+| 
+| 
+| 
+| 
+| <center>Type_a_b_c</center>
+| 
+
+|-
+| 
+| 
+| 
+| 
+| <center>Type_A_B_C</center>
+| 
+
+|-
+| 
+| 
+| 
+| 
+| <center>TypeNone</center>
+| 
+
+|-
+| 
+| 
+| 
+| <center>Start</center>
+| 
+| <center>Start</center>
+
+|-
+| 
+| 
+| 
+| <center>Reversed</center>
+| 
+| <center>Reversed</center>
+
+|-
+| 
+| 
+| 
+| <center>Active</center>
+| 
+| <center>Active or not</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>PageSets</center>
+| 
+| 
+| 
+| <center>Pagesets section</center>
+
+|-
+| 
+| 
+| <center>Set</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Name</center>
+| 
+| <center>Pageset name</center>
+
+|-
+| 
+| 
+| 
+| <center>FirstPage</center>
+| 
+| <center>First Page</center>
+
+|-
+| 
+| 
+| 
+| <center>Rows</center>
+| 
+| <center>Rows</center>
+
+|-
+| 
+| 
+| 
+| <center>Columns</center>
+| 
+| <center>Columns</center>
+
+|-
+| 
+| 
+| 
+| <center>PageNames</center>
+| 
+| <center>Page Names list</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>Name</center>
+| <center>Name</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>Pattern</center>
+| 
+| 
+| 
+| <center>Pattern section</center>
+
+|-
+| 
+| 
+| <center>Name</center>
+| 
+| 
+| <center>Pattern Name</center>
+
+|-
+| 
+| 
+| <center>width</center>
+| 
+| 
+| <center>Width</center>
+
+|-
+| 
+| 
+| <center>height</center>
+| 
+| 
+| <center>Height</center>
+
+|-
+| 
+| 
+| <center>scaleX</center>
+| 
+| 
+| <center>Scale X</center>
+
+|-
+| 
+| 
+| <center>scaleY</center>
+| 
+| 
+| <center>Scale Y</center>
+
+|-
+| 
+| 
+| <center>xoffset</center>
+| 
+| 
+| <center>X Offset</center>
+
+|-
+| 
+| 
+| <center>yoffset</center>
+| 
+| 
+| <center>Y Offset</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>MASTERPAGE / PAGE</center>
+| 
+| 
+| 
+| <center>Pages Section</center>
+
+|-
+| 
+| 
+| <center>PAGEXPOS</center>
+| 
+| 
+| <center>Page X Position</center>
+
+|-
+| 
+| 
+| <center>PAGEYPOS</center>
+| 
+| 
+| <center>Page Y position</center>
+
+|-
+| 
+| 
+| <center>PAGEWIDTH</center>
+| 
+| 
+| <center>Page Width</center>
+
+|-
+| 
+| 
+| <center>PAGEHEIGHT</center>
+| 
+| 
+| <center>Page Height</center>
+
+|-
+| 
+| 
+| <center>BORDERLEFT</center>
+| 
+| 
+| <center>Left Border</center>
+
+|-
+| 
+| 
+| <center>BORDERRIGHT</center>
+| 
+| 
+| <center>Right Border</center>
+
+|-
+| 
+| 
+| <center>BORDERTOP</center>
+| 
+| 
+| <center>Top Border</center>
+
+|-
+| 
+| 
+| <center>BORDERBOTTOM</center>
+| 
+| 
+| <center>Bottom Border</center>
+
+|-
+| 
+| 
+| <center>NUM</center>
+| 
+| 
+| <center>Page Number</center>
+
+|-
+| 
+| 
+| <center>NAM</center>
+| 
+| 
+| <center>Page Name</center>
+
+|-
+| 
+| 
+| <center>MNAM</center>
+| 
+| 
+| <center>Master Page Name</center>
+
+|-
+| 
+| 
+| <center>Size</center>
+| 
+| 
+| <center>Page Size</center>
+
+|-
+| 
+| 
+| <center>Orientation</center>
+| 
+| 
+| <center>Page Orientation</center>
+
+|-
+| 
+| 
+| <center>LEFT</center>
+| 
+| 
+| <center>Left Page</center>
+
+|-
+| 
+| 
+| <center>PRESET</center>
+| 
+| 
+| <center>Margin Preset</center>
+
+|-
+| 
+| 
+| <center>VerticalGuides</center>
+| 
+| 
+| <center>Vertical Guides</center>
+
+|-
+| 
+| 
+| <center>HorizontelGuides</center>
+| 
+| 
+| <center>Horizontel Guides</center>
+
+|-
+| 
+| 
+| <center>AGhorizontalAutoGap</center>
+| 
+| 
+| <center>Horizontal Auto Gap</center>
+
+|-
+| 
+| 
+| <center>AGVerticalAutoGap</center>
+| 
+| 
+| <center>Vertical Auto Gap</center>
+
+|-
+| 
+| 
+| <center>AGhorizontalAutoCount</center>
+| 
+| 
+| <center>Horizontal Auto Count</center>
+
+|-
+| 
+| 
+| <center>AGverticalAutoCount</center>
+| 
+| 
+| <center>Vertical Auto Count</center>
+
+|-
+| 
+| 
+| <center>AGhorizontalAutoRefer</center>
+| 
+| 
+| <center>Horizontal Auto Refer</center>
+
+|-
+| 
+| 
+| <center>AGverticalAutoRefer</center>
+| 
+| 
+| <center>Vertical Auto Refer</center>
+
+|-
+| 
+| 
+| <center>AGSelection</center>
+| 
+| 
+| <center>Selection</center>
+
+|-
+| 
+| 
+| 
+| 
+| 
+| 
+
+|-
+| 
+| <center>ITEXT</center>
+| 
+| 
+| 
+| <center>Item Text</center>
+
+|-
+| 
+| 
+| <center>CH</center>
+| 
+| 
+| <center>Text with smart hyphens</center>
+
+|-
+| 
+| 
+| <center>Unicode</center>
+| 
+| 
+| <center>Unicode</center>
+
+|-
+| 
+| 
+| <center>COBJ</center>
+| 
+| 
+| <center></center>
+
+|-
+| 
+| 
+| <center>tab</center>
+| 
+| 
+| <center>Tab</center>
+
+|-
+| 
+| 
+| <center>breakline</center>
+| 
+| 
+| <center>Line Break</center>
+
+|-
+| 
+| 
+| <center>breakcol</center>
+| 
+| 
+| <center>Column Break</center>
+
+|-
+| 
+| 
+| <center>breakframe</center>
+| 
+| 
+| <center>Frame Break</center>
+
+|-
+| 
+| 
+| <center>nbhyphen</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>nbspace</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>zwnbspace</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>var</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>name</center>
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>pgno</center>
+| 
+| <center>Page number</center>
+
+|-
+| 
+| 
+| 
+| <center>pgco</center>
+| 
+| <center>Page count</center>
+
+|-
+| 
+| <center>MASTEROBJECT / PAGEOBJECT / FRAMEOBJECT / PatternItem</center>
+| 
+| 
+| 
+| <center>Objects Section</center>
+
+|-
+| 
+| 
+| <center>OnMasterPage</center>
+| 
+| 
+| <center>Item on masterpage (type : QString)</center>
+
+|-
+| 
+| 
+| <center>ImageClip</center>
+| 
+| 
+| <center>Image used path</center>
+
+|-
+| 
+| 
+| <center>ImageRes</center>
+| 
+| 
+| <center>Image resolution type (int : 0 = full resolution, 1 = 72dpi, 2 = 36 dpi) </center>
+
+|-
+| 
+| 
+| <center>PageNumber</center>
+| 
+| 
+| <center>Actual Pagenumber</center>
+
+|-
+| 
+| 
+| <center>isInline</center>
+| 
+| 
+| <center>Is embedded</center>
+
+|-
+| 
+| 
+| <center>fillRule</center>
+| 
+| 
+| <center>Fill Rule </center>
+
+|-
+| 
+| 
+| <center>doOverprint</center>
+| 
+| 
+| <center>Do over print or not? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>gXpos</center>
+| 
+| 
+| <center>X Position</center>
+
+|-
+| 
+| 
+| <center>gYpos</center>
+| 
+| 
+| <center>Y Position</center>
+
+|-
+| 
+| 
+| <center>gWidth</center>
+| 
+| 
+| <center>Width</center>
+
+|-
+| 
+| 
+| <center>gHeight</center>
+| 
+| 
+| <center>Height</center>
+
+|-
+| 
+| 
+| <center>pattern</center>
+| 
+| 
+| <center>Pattern</center>
+
+|-
+| 
+| 
+| <center>pScaleX</center>
+| 
+| 
+| <center>Pattern Scale X</center>
+
+|-
+| 
+| 
+| <center>pScaleY</center>
+| 
+| 
+| <center>Pattern Scale Y</center>
+
+|-
+| 
+| 
+| <center>pOffsetX</center>
+| 
+| 
+| <center>Pattern X Offset</center>
+
+|-
+| 
+| 
+| <center>pOffsetY</center>
+| 
+| 
+| <center>Pattern Y Offset</center>
+
+|-
+| 
+| 
+| <center>pRotation</center>
+| 
+| 
+| <center>Pattern Rotation</center>
+
+|-
+| 
+| 
+| <center>GRSTARTX</center>
+| 
+| 
+| <center>Gr Start X</center>
+
+|-
+| 
+| 
+| <center>GRSTARTY</center>
+| 
+| 
+| <center>Gr. Start Y</center>
+
+|-
+| 
+| 
+| <center>GRENDX</center>
+| 
+| 
+| <center>Gr. End X</center>
+
+|-
+| 
+| 
+| <center>GRENDY</center>
+| 
+| 
+| <center>Gr. End Y</center>
+
+|-
+| 
+| 
+| <center>GRNAME</center>
+| 
+| 
+| <center>Gr. Name</center>
+
+|-
+| 
+| 
+| <center>PSTYLE</center>
+| 
+| 
+| <center>Parent Style</center>
+
+|-
+| 
+| 
+| <center>ALIGN</center>
+| 
+| 
+| <center>Alignment</center>
+
+|-
+| 
+| 
+| <center>LAYER</center>
+| 
+| 
+| <center>Layer ID</center>
+
+|-
+| 
+| 
+| <center>BOOKMARK</center>
+| 
+| 
+| <center>Is Bookmark ? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>NEXTITEM</center>
+| 
+| 
+| <center>Next Item</center>
+
+|-
+| 
+| 
+| <center>BACKITEM</center>
+| 
+| 
+| <center>Previous Item</center>
+
+|-
+| 
+| 
+| <center>ImageEffect</center>
+| 
+| 
+| <center>Image effect</center>
+
+|-
+| 
+| 
+| 
+| <center>Code</center>
+| 
+| <center>Image effect code</center>
+
+|-
+| 
+| 
+| 
+| <center>Param</center>
+| 
+| <center>Image effect parameters</center>
+
+|-
+| 
+| 
+| <center>PSDLayer</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Layer</center>
+| 
+| <center>Layer</center>
+
+|-
+| 
+| 
+| 
+| <center>Visible</center>
+| 
+| <center>Whether visible (int value)</center>
+
+|-
+| 
+| 
+| 
+| <center>useMask</center>
+| 
+| <center>Use Mask ? (int value)</center>
+
+|-
+| 
+| 
+| 
+| <center>Opacity</center>
+| 
+| <center>Layer opacity</center>
+
+|-
+| 
+| 
+| 
+| <center>Blend</center>
+| 
+| <center>Layer Blend</center>
+
+|-
+| 
+| 
+| <center>Tabs</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| 
+| <center>Type</center>
+| 
+| <center>Tab Type</center>
+
+|-
+| 
+| 
+| 
+| <center>Pos</center>
+| 
+| <center>Tab Position</center>
+
+|-
+| 
+| 
+| 
+| <center>Fill</center>
+| 
+| <center>Tab Fill character</center>
+
+|-
+| 
+| 
+| <center>CSTOP</center>
+| 
+| 
+| <center>Color Stops</center>
+
+|-
+| 
+| 
+| 
+| <center>RAMP</center>
+| 
+| <center>Ramp Point</center>
+
+|-
+| 
+| 
+| 
+| <center>NAME</center>
+| 
+| <center>Name</center>
+
+|-
+| 
+| 
+| 
+| <center>SHADE</center>
+| 
+| <center>Color Stop Shade</center>
+
+|-
+| 
+| 
+| 
+| <center>TRANS</center>
+| 
+| <center>Color Stop Opacity</center>
+
+|-
+| 
+| 
+| <center>LATEX</center>
+| 
+| 
+| <center>Latex Frame</center>
+
+|-
+| 
+| 
+| 
+| <center>ConfigFile</center>
+| 
+| <center>Configuration file</center>
+
+|-
+| 
+| 
+| 
+| <center>DPI</center>
+| 
+| <center>Dpi</center>
+
+|-
+| 
+| 
+| 
+| <center>USE_PREAMBLE</center>
+| 
+| <center>Use preamble or not</center>
+
+|-
+| 
+| 
+| 
+| <center>PROPERTY</center>
+| 
+| 
+
+|-
+| 
+| 
+| 
+| 
+| <center>name</center>
+| <center>Property name</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>value</center>
+| <center>Property value</center>
+
+|-
+| 
+| 
+| <center>PageItemAttributes</center>
+| 
+| 
+| <center>Page Item Attributes</center>
+
+|-
+| 
+| 
+| 
+| <center>ItemAttribute</center>
+| 
+| <center>Item Attributes</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>Name</center>
+| <center>Name</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>Type</center>
+| <center>Type</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>Value</center>
+| <center>Item attribute value</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>Parameter</center>
+| <center>Parameter</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>Relationship</center>
+| <center>Item attribute relationship</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>RelationshipTo</center>
+| <center>Relationship to</center>
+
+|-
+| 
+| 
+| 
+| 
+| <center>AutoAddTo</center>
+| <center>Auto Add to</center>
+
+|-
+| 
+| 
+| <center>OwnPage</center>
+| 
+| 
+| <center>Own Page</center>
+
+|-
+| 
+| 
+| <center>PTYPE</center>
+| 
+| 
+| <center>Item Type</center>
+
+|-
+| 
+| 
+| <center>XPOS</center>
+| 
+| 
+| <center>X Position</center>
+
+|-
+| 
+| 
+| <center>YPOS</center>
+| 
+| 
+| <center>Y Position</center>
+
+|-
+| 
+| 
+| <center>WIDTH</center>
+| 
+| 
+| <center>Width</center>
+
+|-
+| 
+| 
+| <center>HEIGHT</center>
+| 
+| 
+| <center>Height</center>
+
+|-
+| 
+| 
+| <center>RADRECT</center>
+| 
+| 
+| <center>Corner Radius</center>
+
+|-
+| 
+| 
+| <center>FRTYPE</center>
+| 
+| 
+| <center>Frame Type</center>
+
+|-
+| 
+| 
+| <center>CLIPEDIT</center>
+| 
+| 
+| <center>Whether clip edited ? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>PWIDTH</center>
+| 
+| 
+| <center>Line Width</center>
+
+|-
+| 
+| 
+| <center>PCOLOR</center>
+| 
+| 
+| <center>Fill color</center>
+
+|-
+| 
+| 
+| <center>PCOLOR2</center>
+| 
+| 
+| <center>Line Color</center>
+
+|-
+| 
+| 
+| <center>TXTFILL</center>
+| 
+| 
+| <center>Fill color</center>
+
+|-
+| 
+| 
+| <center>TXTSTROKE</center>
+| 
+| 
+| <center>Stroke color</center>
+
+|-
+| 
+| 
+| <center>TXTSTRSH</center>
+| 
+| 
+| <center>Stroke shade</center>
+
+|-
+| 
+| 
+| <center>TXTFILLSH</center>
+| 
+| 
+| <center>Fill shade</center>
+
+|-
+| 
+| 
+| <center>TXTSCALE</center>
+| 
+| 
+| <center>Horizontal Scale</center>
+
+|-
+| 
+| 
+| <center>TXTSCALEV</center>
+| 
+| 
+| <center>Vertical scale</center>
+
+|-
+| 
+| 
+| <center>TXTBASE</center>
+| 
+| 
+| <center>Baseline Offset</center>
+
+|-
+| 
+| 
+| <center>TXTSHX</center>
+| 
+| 
+| <center>Shadow X Offset</center>
+
+|-
+| 
+| 
+| <center>TXTSHY</center>
+| 
+| 
+| <center>Shadow Y offset</center>
+
+|-
+| 
+| 
+| <center>TXTOUT</center>
+| 
+| 
+| <center>Outline Width</center>
+
+|-
+| 
+| 
+| <center>TXTULP</center>
+| 
+| 
+| <center>Underline offset</center>
+
+|-
+| 
+| 
+| <center>TXTULW</center>
+| 
+| 
+| <center>Underline width</center>
+
+|-
+| 
+| 
+| <center>TXTSTP</center>
+| 
+| 
+| <center>Strike through Offset</center>
+
+|-
+| 
+| 
+| <center>TXTSTW</center>
+| 
+| 
+| <center>Strike Through Width</center>
+
+|-
+| 
+| 
+| <center>TXTKERN</center>
+| 
+| 
+| <center>Tracking</center>
+
+|-
+| 
+| 
+| <center>wordTrack</center>
+| 
+| 
+| <center>Word Tracking</center>
+
+|-
+| 
+| 
+| <center>MinWordTrack</center>
+| 
+| 
+| <center>Minimum Word Tracking</center>
+
+|-
+| 
+| 
+| <center>MinGlyphShrink</center>
+| 
+| 
+| <center>Minimum Glyph Extension</center>
+
+|-
+| 
+| 
+| <center>MaxGlyphExtend</center>
+| 
+| 
+| <center>Maximum Glyph Extension</center>
+
+|-
+| 
+| 
+| <center>OpticalMargins</center>
+| 
+| 
+| <center>Optical Margins</center>
+
+|-
+| 
+| 
+| <center>HyphenationMode</center>
+| 
+| 
+| <center>Hyphenation Mode</center>
+
+|-
+| 
+| 
+| <center>leftMargin</center>
+| 
+| 
+| <center>Left Margin</center>
+
+|-
+| 
+| 
+| <center>rightMargin</center>
+| 
+| 
+| <center>Right Margin</center>
+
+|-
+| 
+| 
+| <center>firstIndent</center>
+| 
+| 
+| <center>First Indent</center>
+
+|-
+| 
+| 
+| <center>COLUMNS</center>
+| 
+| 
+| <center>Columns</center>
+
+|-
+| 
+| 
+| <center>COLGAP</center>
+| 
+| 
+| <center>Column Gap</center>
+
+|-
+| 
+| 
+| <center>NAMEDLST</center>
+| 
+| 
+| <center>Named Line Style</center>
+
+|-
+| 
+| 
+| <center>SHADE</center>
+| 
+| 
+| <center>Fill Shade</center>
+
+|-
+| 
+| 
+| <center>SHADE2</center>
+| 
+| 
+| <center>Line Shade</center>
+
+|-
+| 
+| 
+| <center>GRTYP</center>
+| 
+| 
+| <center>Gr. Type</center>
+
+|-
+| 
+| 
+| <center>ROT</center>
+| 
+| 
+| <center>Rotation</center>
+
+|-
+| 
+| 
+| <center>PLINEART</center>
+| 
+| 
+| <center>Parallel Line Start</center>
+
+|-
+| 
+| 
+| <center>PLINEEND</center>
+| 
+| 
+| <center>Parallel Line end</center>
+
+|-
+| 
+| 
+| <center>PLINEJOIN</center>
+| 
+| 
+| <center>Parallel Line join</center>
+
+|-
+| 
+| 
+| <center>LINESP</center>
+| 
+| 
+| <center>Line Spacing</center>
+
+|-
+| 
+| 
+| <center>LINESPMode</center>
+| 
+| 
+| <center>Line Spacing Mode</center>
+
+|-
+| 
+| 
+| <center>LOCALSCX</center>
+| 
+| 
+| <center>Image X Scale</center>
+
+|-
+| 
+| 
+| <center>LOCALSCY</center>
+| 
+| 
+| <center>Image Y Scale</center>
+
+|-
+| 
+| 
+| <center>LOCALX</center>
+| 
+| 
+| <center>Image X Offset</center>
+
+|-
+| 
+| 
+| <center>LOCALY</center>
+| 
+| 
+| <center>Image Y Offset</center>
+
+|-
+| 
+| 
+| <center>PICART</center>
+| 
+| 
+| <center>Image Shown or not ( boolean value)</center>
+
+|-
+| 
+| 
+| <center>PLTSHOW</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>BASEOF</center>
+| 
+| 
+| <center>Base Offset</center>
+
+|-
+| 
+| 
+| <center>textPathType</center>
+| 
+| 
+| <center>Text path type</center>
+
+|-
+| 
+| 
+| <center>textPathFlipped</center>
+| 
+| 
+| <center>Text Path flipped</center>
+
+|-
+| 
+| 
+| <center>FLIPPEDH</center>
+| 
+| 
+| <center>Image flipped horizontel</center>
+
+|-
+| 
+| 
+| <center>FLIPPEDV</center>
+| 
+| 
+| <center>Image flipped vertical</center>
+
+|-
+| 
+| 
+| <center>IFONT</center>
+| 
+| 
+| <center>Font Name</center>
+
+|-
+| 
+| 
+| <center>ISIZE</center>
+| 
+| 
+| <center>Font Size</center>
+
+|-
+| 
+| 
+| <center>SCALETYPE</center>
+| 
+| 
+| <center>Scale Type or not (boolean value)</center>
+
+|-
+| 
+| 
+| <center>RATIO</center>
+| 
+| 
+| <center>Aspect Ratio (boolean value)</center>
+
+|-
+| 
+| 
+| <center>PRINTABLE</center>
+| 
+| 
+| <center>Whether print enabled ? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>ANNOTATION</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANTYPE</center>
+| 
+| 
+| <center>Annotation type</center>
+
+|-
+| 
+| 
+| <center>ANACTION</center>
+| 
+| 
+| <center>Annotation action</center>
+
+|-
+| 
+| 
+| <center>ANEACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANXACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANDACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANFOACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANBLACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANKACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANFACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANVACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANCACT</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANEXTERN</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANZIEL</center>
+| 
+| 
+| <center>Ziel</center>
+
+|-
+| 
+| 
+| <center>ANACTYP</center>
+| 
+| 
+| <center>Annotation action type</center>
+
+|-
+| 
+| 
+| <center>ANATOOLTIP</center>
+| 
+| 
+| <center>Tool Tip</center>
+
+|-
+| 
+| 
+| <center>ANBWID</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANBSTY</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANFEED</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANFLAG</center>
+| 
+| 
+| <center>Flag</center>
+
+|-
+| 
+| 
+| <center>ANFONT</center>
+| 
+| 
+| <center>Font</center>
+
+|-
+| 
+| 
+| <center>ANFORMAT</center>
+| 
+| 
+| <center>Format</center>
+
+|-
+| 
+| 
+| <center>ANROLL</center>
+| 
+| 
+| <center>Roll Over</center>
+
+|-
+| 
+| 
+| <center>ANDOWN</center>
+| 
+| 
+| <center>Annotation Down</center>
+
+|-
+| 
+| 
+| <center>ANVIS</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANMC</center>
+| 
+| 
+| <center>Maximum characters</center>
+
+|-
+| 
+| 
+| <center>ANCHK</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANAA</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANCHKS</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANBCOL</center>
+| 
+| 
+| <center>Border Color</center>
+
+|-
+| 
+| 
+| <center>ANHTML</center>
+| 
+| 
+| <center>Html</center>
+
+|-
+| 
+| 
+| <center>ANICON</center>
+| 
+| 
+| <center>Use Icons</center>
+
+|-
+| 
+| 
+| <center>ANPLACE</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANSCALE</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>ANNAME</center>
+| 
+| 
+| <center>Annotation Item Name</center>
+
+|-
+| 
+| 
+| <center>TEXTFLOWMODE</center>
+| 
+| 
+| <center>Text flow mode (int value)</center>
+
+|-
+| 
+| 
+| <center>TEXTFLOW</center>
+| 
+| 
+| <center>Text flow around object</center>
+
+|-
+| 
+| 
+| <center>TEXTFLOW2</center>
+| 
+| 
+| <center>Text flow uses bounding box</center>
+
+|-
+| 
+| 
+| <center>TEXTFLOW3</center>
+| 
+| 
+| <center>Text flow uses contour line</center>
+
+|-
+| 
+| 
+| <center>AUTOTEXT</center>
+| 
+| 
+| <center>Is autotext (boolean value)</center>
+
+|-
+| 
+| 
+| <center>EXTRA</center>
+| 
+| 
+| <center>Text to frame left distance</center>
+
+|-
+| 
+| 
+| <center>TEXTRA</center>
+| 
+| 
+| <center>Text to frame top distance</center>
+
+|-
+| 
+| 
+| <center>BEXTRA</center>
+| 
+| 
+| <center>Text to frame bottom distance</center>
+
+|-
+| 
+| 
+| <center>REXTRA</center>
+| 
+| 
+| <center>Text to frame right distance</center>
+
+|-
+| 
+| 
+| <center>FLOP</center>
+| 
+| 
+| <center>First Line Offset</center>
+
+|-
+| 
+| 
+| <center>PFILE</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>isInlineImage</center>
+| 
+| 
+| <center>Is inline image ? (int value)</center>
+
+|-
+| 
+| 
+| <center>inlineImageExt</center>
+| 
+| 
+| <center></center>
+
+|-
+| 
+| 
+| <center>ImageData</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>PFILE</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>PFILE2</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>PFILE3</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>PRFILE</center>
+| 
+| 
+| <center>Image Profile</center>
+
+|-
+| 
+| 
+| <center>EPROF</center>
+| 
+| 
+| <center>Em Profile</center>
+
+|-
+| 
+| 
+| <center>IRENDER</center>
+| 
+| 
+| <center>Image Render</center>
+
+|-
+| 
+| 
+| <center>EMBEDDED</center>
+| 
+| 
+| <center>Use embedded ? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>LOCK</center>
+| 
+| 
+| <center>Locked? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>LOCKR</center>
+| 
+| 
+| <center>Size Locked? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>REVERS</center>
+| 
+| 
+| <center>Is reversed ? (boolean value)</center>
+
+|-
+| 
+| 
+| <center>TransValue</center>
+| 
+| 
+| <center>Fill transparency</center>
+
+|-
+| 
+| 
+| <center>TransValueS</center>
+| 
+| 
+| <center>Line transparency</center>
+
+|-
+| 
+| 
+| <center>TransBlend</center>
+| 
+| 
+| <center>Fill blend mode</center>
+
+|-
+| 
+| 
+| <center>TransBlendS</center>
+| 
+| 
+| <center>Line blend mode</center>
+
+|-
+| 
+| 
+| <center>isTableItem</center>
+| 
+| 
+| <center>Is table item ? (int value)</center>
+
+|-
+| 
+| 
+| <center>TopLine</center>
+| 
+| 
+| <center>Top line</center>
+
+|-
+| 
+| 
+| <center>LeftLine</center>
+| 
+| 
+| <center>Left line</center>
+
+|-
+| 
+| 
+| <center>RightLine</center>
+| 
+| 
+| <center>Right line</center>
+
+|-
+| 
+| 
+| <center>BottomLine</center>
+| 
+| 
+| <center>Bottom line</center>
+
+|-
+| 
+| 
+| <center>TopLINK</center>
+| 
+| 
+| <center>Top link</center>
+
+|-
+| 
+| 
+| <center>LeftLINK</center>
+| 
+| 
+| <center>Left link</center>
+
+|-
+| 
+| 
+| <center>RightLINK</center>
+| 
+| 
+| <center>Right link</center>
+
+|-
+| 
+| 
+| <center>BottomLINK</center>
+| 
+| 
+| <center>Bottom link</center>
+
+|-
+| 
+| 
+| <center>OwnLINK</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>isGroupControl</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>groupsLastItem</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>NUMDASH</center>
+| 
+| 
+| <center>Dash Number</center>
+
+|-
+| 
+| 
+| <center>DASHS</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>DASHOFF</center>
+| 
+| 
+| <center>Dash Offset</center>
+
+|-
+| 
+| 
+| <center>NUMPO</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>POCOOR</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>NUMCO</center>
+| 
+| 
+| <center>Contour Line Size</center>
+
+|-
+| 
+| 
+| <center>COCOOR</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>NUMGROUP</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>GROUPS</center>
+| 
+| 
+| 
+
+|-
+| 
+| 
+| <center>LANGUAGE</center>
+| 
+| 
+| <center>Language</center>
+
+|-
+| 
+| 
+| <center>startArrowIndex</center>
+| 
+| 
+| <center>Start arrow index</center>
+
+|-
+| 
+| 
+| <center>endArrowIndex</center>
+| 
+| 
+| <center>End Arrow index</center>
+
+|}
+
+=Scribus Colour Palettes (XML)=
+
+=Scribus Scrapbooks (SCS)=
+
+=Scribus Keyboard Shortcut Sets (XML)=
+
+=Scribus Unicode Character Palettes (UCP)=
+
+=Scribus Template Files (XML)=
+
+=Scribus Objects (SCE)=
+
+=Scribus Patterns (SCE)=
+
+=Scribus Colour Curves (SCU)=
+
+=Configuration Files for Render Frames (XML)=
+
+=Scribus Sample Text Files (XML)=
+
+=Configuration Files for the Help Browser (XML)=
+

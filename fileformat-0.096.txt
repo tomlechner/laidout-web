@@ -1,0 +1,717 @@
+#Laidout 0.096 File Formats
+
+ # This file describes:
+ #  1. Project files, which contain almost all of the possible Laidout elements
+ #  2. a Laidout Image List file.
+ # The laidoutrc file in ~/.laidout/(version)/laidoutrc documents itself.
+
+ # Throughout this file format, data is grouped according to how much it is indented,
+ # reminiscent of python, and the yaml file format. The format here is kind of a simplified
+ # yaml. Here, there are basically a name and value (together called an attribute), plus any number
+ # of subattributes. A value can be on the same line as the name, or it can span several lines.
+ # If you write "thename \" on one line, then the next several lines that are more indented
+ # than the name line contain the value. Always remember to use spaces for
+ # indents. NEVER tabs, because they cause too much confusion. Comments begin with a '#'
+ # character, and go until the end of the line. If you have a value that has such a character
+ # in it, then simply put double quotes around the value. Finally, everything is case sensitive.
+
+
+#----------------- Laidout Project files ------------------
+
+ # The broadest file of a Laidout document is a Project file,
+ # which contains 0 or more Document files, plus other resources.
+ # For a project, the first line of the file will be (including the '#'):
+
+#Laidout 0.096 Project
+
+ # followed by all the project attributes. A stand alone Document file will start:
+
+#Laidout 0.096 Document
+
+ # followed by Document attributes. This pattern follows for most fragments of
+ # Laidout elements, so for instance, a stand alone Laidout palette file will start:
+ # "#Laidout 0.096 Palette" and will then continue with only palette attributes. Many resources, including
+ # palettes, and window arrangements, can appear at the Project level or the Document level.
+
+ # Without further ado, here are the actual elements, starting at the Project level:
+
+#----------------- (starts on next line) ------------
+#Laidout 0.096 Project
+#You can specify any number of scratch spaces (limbo) that can be attached to views.
+limbo IdOfLimbo
+  object ... #each limbo is really just a Group of objects
+
+#You can contain any number of text objects, maybe used elsewhere as scripts.
+textobject name
+  filename fname #the text can be in this file,
+  text \ #or you can have the text right here
+    ... 
+
+#You can have any number of extra paper groups for special occasions.
+papergroup "Name of paper group"
+  (papergroup attributes)
+
+# Documents can be included in the project file itself, or
+# merely referenced, which is usually the more convenient way.
+# If merely referenced, the line will look like:
+
+Document blah.doc
+
+#and the file, if relative pathname is given, is relative to the project file itself.
+#Any other paths used by objects in the document, if they are within or under the
+#project directory (the directory containing the project file), then the paths
+#are written out as being relative to that project directory.
+
+#If the document is embedded, it follows the normal Document format, as follows:
+
+Document
+  name   Some name for the doc  #any random name you care to give the document
+  saveas /path/to/filename.doc  #The path previously saved as, which
+                                #is currently ignored when reading in again.
+  resources                     #a list of resource objects used in the document, grouped by type
+    ...
+  #A document has only 1 imposition. It can be one of any imposition resources
+  #available, or built from scratch from one of the base imposition types..
+  #These are all the imposition resources currently available:
+  imposition Singles
+  imposition Double Sided Singles
+  imposition Booklet
+  imposition Dodecahedron
+  imposition Cube
+
+  #These are all the base imposition types currently available:
+
+  imposition Singles
+    name "Some name"   #this can be any string you want.
+    description  Single sheets  #Some description beyond just a name.
+                                #name and description are used by the imposition resource mechanism
+    #insets are regions of a paper not taken up by the page
+    insetl 0   #The left inset from the side of a paper
+    insetr 0   #The right inset from the side of a paper
+    insett 0   #The top inset from the side of a paper
+    insetb 0   #The bottom inset from the side of a paper
+    gapx 0     #Gap between tiles horizontally
+    gapy 0     #Gap between tiles vertically
+    tilex 1    #number of times to tile the page horizontally
+    tiley 1    #number of times to tile the page vertically
+    marginl 0   #The default left page margin
+    marginr 0   #The default right page margin
+    margint 0   #The default top page margin
+    marginb 0   #The default bottom page margin
+    numpages 3 #number of pages in the document. This is ignored on readin
+    defaultpapers #default paper group
+      name somename         #a string id. no whitespace
+      Name Descriptive Name #human readable name
+      paper                 #there can be 0 or more paper sections
+        matrix 1 0 0 1 0 0  #transform for the paper to limbo space
+      marks                 #any optional printer marks for the group
+        ...        name Letter     #the name of the paper
+        width 8.5       #in the default units
+        height 11       #in the default units
+        dpi 360         #default dpi for the paper
+        landscape       #could be portrait (the default) instead
+        units in        #(optional) When reading in, width and height are converted from this
+    defaultpagestyle #default page style
+      marginl 0  #amount in from the left or outside for a margin
+      marginr 0  #amount in from the right or inside for a margin
+      margint 0  #amount in from the top   for a margin
+      marginb 0  #amount in from the bottom for a margin
+      toppage    #page is tagged as being on the top in a spread
+      bottompage #page is tagged as being on the bottom in a spread
+      leftpage   #page is tagged as being on the left in a spread
+      rightpage  #page is tagged as being on the right in a spread
+      lrtb       #tag that page has left, right, top, and bottom margins
+      iotb       #tag that page has inside, outside, top, and bottom margins
+      lrio       #tag that page has left, right, inside, and outside margins
+
+  imposition SignatureImposition
+    name "Blah"             #Name of the impostion
+    description "blah blah" #Description
+    numpages 5              #Hint of number of document pages the imposition has to cover
+    showwholecover yes      #yes|no, whether to show front and back of whole thing.
+    signature               #One or more, defines the actual foldings. If defining an insert, this block is called
+                            # "insert" rather than "signature".
+      sheetspersignature 1 #Sheets of paper per signature
+      autoaddsheets false  #Auto add or remove sheets to cover all actual pages
+      automarks            #outer|innerdot: Whether to automatically apply some printer marks.
+      partition            #Sectioning info of the piece of paper
+        paper         #Which paper size to use
+          ... 
+        insettop 0    #Space at the top of a paper before tiling for signatures
+        insetbottom 0 #Space at the bottom of a paper before tiling for signatures
+        insetleft 0   #Space at the left of a paper before tiling for signatures
+        insetright 0  #Space at the right of a paper before tiling for signatures
+        tilex 0       #The number of folding sections horizontally to divide a piece of paper
+        tiley 0       #The number of folding sections vertically to divide a piece of paper
+        tilegapx 0    #How much space to put between folding areas horizontally
+        tilegapy 0    #How much space to put between folding areas vertically
+        work_and_turn #Work and turn
+      pattern              #The folding pattern
+        name "Some name"  #short name of the signature 
+        description "Huh" #a one line description of the signature 
+        numhfolds 0       #The number of horizontal fold lines of a folding pattern 
+        numvfolds 0       #The number of vertical fold lines of a folding pattern 
+        fold 3 Under Left #There will be numhfolds+numvfolds fold blocks. When reading in, the number 
+        fold 2 Top        #of these blocks will override values of numhfolds and numvfolds. 1st number is which
+                          # horizontal or vertical fold, counting from the left or the top The direction Can be right,
+                          # left, top, bottom, under right, under left, under top, under bottom. The "under" values fold
+                          # in that direction, but the fold is behind as you look at it, rather than the default of over
+                          # and on top. 
+        binding left      #left, right, top, or bottom. The side to expect a document to be bound. Any trim value for the
+                          # binding edge will be ignored. 
+        trimtop    0      #How much to trim off the top of a totally folded section 
+        trimbottom 0      #How much to trim off the bottom of a totally folded section 
+        trimleft   0      #How much to trim off the left of a totally folded section 
+        trimright  0      #How much to trim off the right of a totally folded section 
+        margintop    0    #How much of a margin to apply to totally folded pages. 
+        marginbottom 0    #Inside and outside margins are automatically kept track of. 
+        marginleft   0    
+        marginright  0    
+        up top            #When displaying pages, this direction should be toward the top of the screen 
+        positivex right   #(optional) Default is a right handed x axis with the up direction the y axis 
+        positivey top     #(optional) Default to the same direction as up 
+
+  imposition NetImposition
+    numpages 3      #number of pages in the document. This is ignored on readin
+    printnet yes     #whether the net lines get printed out with the page data
+    paper letter      #Paper size to print on.
+    papers           #Alternately, define a particular PaperGroup to use.
+      ...
+    scalingfromnet 1  #any final scaling to apply to a net before mapping
+                      #  onto a spread
+    abstractnet type  #type can be "file" or "Polyhedron" or "simple".
+    abstractnet file  #this block demonstrates abstract nets based on files.
+      filename /path/to/it  #This is used when the abstract net has not been
+                            #modified since being loaded from the file.
+    simplenet         #this is the same as using: abstractnet simple
+                      #It is a basic net definition the same as a Polyhedron (below),
+                      #but using only vertices (with only 2-d vertices) and faces blocks.
+    abstractnet Polyhedron  #this block demonstrates Polyhedron abstract nets.
+      name "Some name"  #whatever name you give the polyhedron
+      vertices \  #a list of 3-d vertices of the polyhedron
+         0 0 0    #the 0th vertex
+         1 0 0    #the 1st vertex
+         0 1 0    #etc
+         0 0 1
+      edge 0 1    #an edge connected those vertices. optional, generated automatically
+      face 0 1 2  #a face, defined by connected vertices 0, 1, and 2
+      set "Some set name"  #extra information for grouping faces
+        faces 0 1  #which faces are in the set (number is order they appear in file)
+        on        #or off. whether faces in this set should be displayed or not
+        color 255 0 0 #color of these faces
+      plane       #optionally define particular planes that things happen on
+                  #planes might contain any number of faces
+        p 0 0 0   #a 3-d point that is in the plane
+        x 0 0 0   #the x direction in the plane
+        y 0 0 0   #the y direction in the plane
+        z 0 0 0   #the normal direction away from the plane
+    net NetType   #There can be none or more nets. If there is no abstractnet, then
+                  #there must be one or more nets. Nets are usually different arrangements
+                  #of an abstract net.
+      name Bent Square    #this is just any name you give the net
+      matrix 1 0 0 1 0 0  # transform to map the net to a paper
+      basenet             #the base abstract net
+      info  333           #general integer info about the net
+      active              #present if the net is supposed to be somehow active.
+                          # the exacte meaning of active is application dependent.
+      tabs no             #(***TODO) whether to put tabs on face edges
+      face               #there can be any number of laid out faces
+        original 3   #the face index in the abstract net corresponding to this face
+        back         #this face is actual the mirror image of the abstract net face
+        matrix 1 0 0 1 0 0  #transform that places points in net space
+        potential           #this face might be, but is not necessarily in the net
+        actual             #this face IS in the net
+        edge              #this is a typical edge for a laidout net
+          toface     4.6  #connects to net face index 4, edge index number 6
+          tooriginal 3    #connects to original face 3
+          potential       #link is to a potential net face
+          actual          #link is to an actual net face
+          facetaken       #link is to an actual face that is somehow connected elsewhere
+          svalue   .5     #for bezier edges, the point of contact with adjacent edge, 0 to 1
+          points \        #point list for this edge. First point must be a vertex point
+            -.5 -.5       # that is actually on the line. following points can be either
+            c -.5 1.5     # polyline points or bezier control points
+            c 1.5 1.5     
+            v 2 2         # the edge's path can be a bezier line of any length, but
+            c 1.5 3.6     # remember to leave out the final vertex point. That point is
+            c 1.8 3.6     # listed in the following edge's point list.
+        edge             #here's a typical edge for a basic abstract net
+          tooriginal 2.1  #connects to original face 2 at edge 1
+          d  M-.5 -.5  L-.5 1.5  L1.5 1.5  L1.5 -.5  #alternate specification of points with svg
+      line               #there can be any number of extra lines
+        tag  3       #tag number for the line. Might be used as class of line
+        points  \   #svg style defined line
+          M-.5 -.5  L-.5 1.5  L1.5 1.5  L1.5 -.5
+        linestyle    #style of line
+          color 10000 0 0 65535  #rgba in range [0..65535]
+          capstyle round         #or miter, projecting, zero
+          joinstyle round        #or miter, bevel, extrapolate
+          miterlimit 100         #means limit is 100*width
+          dotdash 5              #an integer whose bits define an on-off pattern
+          function 3             #***mystery number saying how to combine the fill
+          width 0
+
+
+  #The page labels for a document are defined within zero or more page ranges.
+  #If no page range blocks are given, then the default numbering 0,1,2... is assumed.
+  pagerange
+    name Blah          #optional name of the range
+    start 0            #the starting page index for the range
+    first 2            #amount to add to the index of each page
+    #labelbase is a template used to construct labels:
+    labelbase "#"      #(default) would make normal numbers: 0,1,2,3,...
+    #labelbase "###"   #would make labels with 0 padding: 000,001,...100,...999,1000,...
+    #labelbase "A-#"   #would make: A-0,A-1,A-2,A-3,...
+    decreasing         #make the range count down rather than up
+    labeltype default  #this can instead be one of the following:
+                       # arabic              ->  1,2,3,...
+                       # roman               ->  i,ii,iii,iv,...
+                       # roman_capitals      ->  I,II,III,...
+                       # abc                 ->  a,b,c,...
+                       # ABC                 ->  A,B,C,...
+                       # none                ->  (do not show anything for the label)
+
+
+  #The pages of a document are currently just a collection
+  #of layers containing drawing objects.
+  #The order of the pages in the document is the same as the order listed in the file,
+  #regardless of any label after "Page".
+  page
+    labeltype circle          #Can be circle, square, diamond, triangle, octagon
+    labelcolor rgbf(1.,1.,1.) #color to fill the labeltype
+
+    #Pages contain layers which contain drawable objects.
+    #Layers are really just Group objects whose parent is a page.
+    #Each drawable object has a number of common options, then has object
+    #specific values under "config".
+
+    layer
+      id nameofobject
+      iohints ...       #(optional) object level i/o leftovers from importing
+      metadata ...      #(optional) object level metadata
+      tags tag1 "tag 2" #(optional) list of string tags
+      filters           #(optional) list of filters
+      alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+        ...
+      kids          #child object list...
+        object CaptionData
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+          config
+            matrix 1 0 0 1 0 0   #transform of the whole object
+            fontfamily sans      #Family name of font
+            fontstyle normal     #Style name of font
+            fontfile /path/to/it #File on disk to use. Overrides whatever is in family and style.
+            fontsize 12          #hopefully this is point size
+            linespacing 1        #percentage different from font's default spacing
+            righttoleft no       #yes or no. ***todo: vertical options
+            xcentering 50        #0 is left, 50 is center, 100 is right, or any other number
+            ycentering 50        #0 is top, 50 is center, 100 is bottom, or any other number
+            color rgbaf(1,0,0,1)
+            text \  #The actual text
+              blah
+        object ColorPatchData
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+          config
+            matrix 1 0 0 1 0 0 #the affine matrix affecting the patch
+            griddivisions 10   #number of grid lines to display when not rendering colors
+            xsize 4            #number of points in the x direction
+            ysize 4            #number of points in the y direction
+            style smooth       #when dragging controls do it so patch is still smooth
+            controls full      #can also be linear, coons, or border
+            base_path          #If mesh is defined along path, include this single Path object
+              ...
+            points \           #all xsize*ysize points, a list by rows of: x y r g b a
+              1.0 1.0     0 65535 65535 65535  #patch corners, not control points
+              2.0 1.0                          #have colors assigned to them, with
+              1.0 2.0                          #values that range from 0 to 65535
+              2.0 2.0 65535     0 65535 65535
+              #etc... there are 16 points in the smallest patch
+
+        object EngraverFillData
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+          config
+            mesh             #The mesh used to encase the lines
+              matrix 1 0 0 1 0 0 #the affine matrix affecting the patch
+              griddivisions 10   #number of grid lines to display
+              xsize 4            #number of points in the x direction
+              ysize 4            #number of points in the y direction
+              style smooth       #when dragging controls do it so patch is still smooth
+              controls full      #can also be linear, coons, or border
+              base_path          #If mesh is defined along path, include this single Path object
+                ...
+              points \           #all xsize*ysize points, a list by rows of: x y
+                1.0 1.0
+                2.0 1.0
+                1.0 2.0
+                2.0 2.0
+                #etc... there are 16 points in the smallest patch
+            group            #(1 or more)
+              id 1             #group id number
+              name Name        #some name for 
+              active yes       #yes|no, whether to use this group or not
+              linked yes       #yes|no, whether to warp along with other linked groups
+              type linear      #or radial, circular
+              position (.5,.5) #default origin for the pattern 
+              directionv (1,0) #default direction for the pattern 
+              color rgbaf(1.,1.,1.,1.)  #color of lines in this group
+              default_spacing  .1 #default spacing, in object space, not s,t space 
+              trace            #trace settings. If sharing with a previous group, use "trace with: pgroup-name" 
+                curve "#The value to weight curve"
+                view_opacity "#Opacity of background reference"
+                show_trace true "#Whether to show the trace object at all"
+                continuous true "#Whether to trace continuously"
+                trace "#What to trace from"
+              dashes           #Dash settings
+                dash_length "#This times group->spacing is the length dashes should be between breaks."
+                dash_randomness "#0 for regular spacing, up to 1 how much to randomize spacing."
+                zero_threshhold "#Weights below this value are considered off"
+                broken_threshhold "#Weights below this value are rendered as broken lines."
+                dash_taper "#How much to shrink weight of dashes as zero weight approaches. 0 is all the way, 1 is not at all."
+                density "#The minimum dash density. 0 for all blank at 0, 1 for all solid at 0."
+                indashcaps "#Line cap at the inside start of a dash. Todo!"
+                outdashcaps "#Line cap at the inside end of a dash. Todo!"
+                startcaps "#Line cap at the start of a whole line. Todo!"
+                endcaps "#Line cap at the end of a whole line. Todo!"
+              direction        #Direction settings for auto line creation
+                type "linear      #or radial, circular"
+                position "(.5,.5) #default origin for the pattern "
+                direction "(1,0)  #default direction for the pattern "
+                grow "true        #whether to grow lines, or have predetermined lines"
+                parameter "#extra parameters for the line type"
+              spacing        #Spacing settings
+                type "#default or map"
+                spacing "#The default spacing"
+                map (todo) "#a value map for spacing"
+              line \           #One for each defined line
+                group 3        #(optional) which point group this line belongs to. Must be first line! 0 means use default settings
+                (1.0,2.5) 2 on #Any number of points, 1 per line. Coordinate is within mesh. Format is: (x,y) weight on|off|end|start
+                ...
+
+        object GradientData
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+          config
+            #Gradients lie on the x axis from p1 to p2
+            matrix 1 0 0 1 0 0  #the affine transform affecting this gradient
+            p1 0    #the starting x coordinate
+            p2 1    #the ending x coordinate
+            r1 0    #the starting radius (radial) or the +y extent (linear)
+            r2 0    #the ending radius (radial) or the -y extent (linear)
+            radial  #Specifies a radial gradient
+            linear  #Specifies a linear gradient
+            spot    #There will be at least two gradient data spots, such as this:
+              t 1     #the spot on the x axis to place the color, customarily the spots will
+                      #cover the whole range [0..1] but that is not mandatory
+              rgba 0 255 65535 65535  #the red, green, blue, and alpha components, values from 0 to 65535
+
+        object Group
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+
+        object ImageData
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+          config
+            filename /path/to/file
+            previewfile /path/to/preview/file  #if not absolute, is relative to filename
+            width 100           #in pixels, overriden by the actual dimensions of the image when read in.
+            height 100          #If the file is not found or broken, then these dimensions are used.
+            matrix 1 0 0 1 0 0  #affine transform to apply to the image
+            description "Text description, such as for captions"
+
+        object ImagePatchData
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+          config
+            matrix 1 0 0 1 0 0 #the affine matrix affecting the patch
+            griddivisions 10   #number of grid lines to display
+            xsize 4            #number of points in the x direction
+            ysize 4            #number of points in the y direction
+            style smooth       #when dragging controls do it so patch is still smooth
+            controls full      #can also be linear, coons, or border
+            base_path          #If mesh is defined along path, include this single Path object
+              ...
+            points \           #all xsize*ysize points, a list by rows of: x y
+              1.0 1.0
+              2.0 1.0
+              1.0 2.0
+              2.0 2.0
+              #etc... there are 16 points in the smallest patch
+            filename whicheverfile.jpg  #name of the image used
+            iwidth  100  #width of the image in pixels for a preview sampling
+            iheight 100  #iheight of the image in pixels for a preview sampling
+
+        object MysteryData
+          importer Passepartout  #the name of the importer that created this data
+          name     Raster x.jpg  #some name that the importer gave this data
+          maxx 100               #width of the data
+          maxy 200               #height of the data
+          matrix 1 0 0 1 0 0     #affine transform to apply to the data
+          nativeid 1             #A numeric id grabbed from the original file, if any
+          attributes             #the imported hints for this data
+            ...                  #  what these are depend on the importer
+
+        object PathsData
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+          config
+            linestyle     #default line style
+              ...         #standard linestyle attributes
+            fillstyle
+              ...         #standard fillstyle attributes
+            matrix 1 0 0 1 0 0  #standard transform matrix
+            path          #none or more of these, defines single paths
+            d m 1 1 l 1 2 #paths defined by svg d path string
+            linestyle
+              ...      #standard linestyle attributes
+            closed     #flag to indicate that this path is a closed path
+            points \
+              1 2                   #a vertex point with corner controls
+              vs 1 2                #a vertex point with smooth controls
+              vS 1 2                #a vertex point with really smooth controls
+              vc 1 2                #a vertex point with corner controls
+              ve 1 2                #a vertex point with corner equal controls
+              p 1.5 2.5             #a bezier control point of the previous vertex
+              n 3 5                 #a bezier control point of the next vertex
+            weight 1.5 0 1 0        #zero or more weight nodes.
+                                    #numbers are (t bez parameter) (offset from normal path) (width) (angle, optional)
+            segment controllername  #a non-straight-line and non-bezier segment
+              asbezier p 3 5 n 2 4 5 6  # Important! bezier approximation of the segment.
+                                        # if not present and the controller cannot be found,
+                                        # then this segment is ignored.
+              ...                   #any further attributes defining the segment. exactly what
+                                    #they are is dependent of the actual controller of the segment.
+                                    #If for some reason the segment controller is not found, then
+                                    #the bezier approximation is appended to the path as bezier points
+            cache                   #This is for reference only. Ignored on read in.
+              ...                   #This is for reference only. Ignored on read in.
+
+        object SomeDataRef
+          id nameofobject
+          iohints ...       #(optional) object level i/o leftovers from importing
+          metadata ...      #(optional) object level metadata
+          tags tag1 "tag 2" #(optional) list of string tags
+          filters           #(optional) list of filters
+          alignmentrule align (a1x,a1y) (a2x,a2y)  #(optional) if different than simple matrix
+            ...
+          kids          #child object list...
+          config
+            reference objectid  #a string id of a drawable object
+            matrix 1 0 0 1 0 0  #overriding matrix
+            minx 0 #the min/max are just hints, actual object will overwrite
+            maxx 1
+            miny 0
+            maxy 1
+
+
+
+  view     #There can be 0 or more spread editor views
+    name blah           #the name of the view
+    document blah       #the filename or name of the document this is a view of
+    matrix 1 0 0 1 0 0  #transform between screen and real space
+    pagemap   0 3 1 2   #how document pages map to view pages
+    centerlabels bottom #center, bottom, left, top, right
+    drawthumbnails      #whether to use page thumbnails rather than a blank page outline
+    arrangetype 0       #*** this is in flux, check back later
+
+
+  iohints    #When files are imported, sometimes data that is not recognized by laidout
+    ....     #can still be remembered in case you export to the same format. iohints
+    ....     #contains the document level data of that kind.
+
+  metadata   #Whatever general metadata is attached to the document.
+    ....     #This might be author, copyright, etc.
+
+#Window arrangements can be dumped out. These can be project attributes or Document
+#attributes. If you are working on a project, not just a single Document,
+#then the window attributes in a Document file are ignored when the project is loaded,
+#and forgotten when the document is next saved..
+#If there are no window blocks, then a default window with a view is created.
+
+window
+  xywh 0 0 700 700  #The x,y,width,height of the window on the screen
+  #windows contain 1 or more panes, which contain a subwindow
+  #It is dangerous to try to construct panes yourself, because
+  #the borders must touch without gaps. The programming does not currently
+  #recover well when the panes have improper metrics.
+  #What follows is one pane for each of the installed subwindow types.
+
+  pane
+    xyxy 0 0 700 700  #xmin,ymin, and xmax,ymax of the pane
+    window ViewWindow
+      singlelayout        #put the view mode to singles
+      #pagelayout         #put the view mode to page spreads
+      #paperlayout        #put the view mode to paper spreads
+      #layout Single      #see individual impositions for layout types
+      spread 1            #the index of the spread for the acting imposition
+      page   0            #the document page index of the page to set context to
+      matrix 1 0 0 1 0 0  #transform between screen and real space
+      xbounds -20 20      #what distance a horizontal scrollbar represents
+      ybounds -20 20      #what distance a vertical scrollbar represents
+      limbo name          #limbo name, or subattributes with objects (optional)
+
+  pane
+    xyxy 0 0 700 700  #xmin,ymin, and xmax,ymax of the pane
+    window SpreadEditor
+      document blah      #the name of the document currently viewed
+      matrix 1 0 0 1 0 0 #view area transform
+      view viewname      #the name of the view belonging to the document
+
+        #If the view is a temporary view, then its format is as follows
+      view
+        name blah           #the name of the view
+        document blah       #the filename or name of the document this is a view of
+        matrix 1 0 0 1 0 0  #transform between screen and real space
+        pagemap   0 3 1 2   #how document pages map to view pages
+        centerlabels bottom #center, bottom, left, top, right
+        drawthumbnails      #whether to use page thumbnails rather than a blank page outline
+        arrangetype 0       #*** this is in flux, check back later
+
+  pane
+    xyxy 0 0 700 700  #xmin,ymin, and xmax,ymax of the pane
+    window Help
+      win_x 0
+      win_y 0
+      win_w 600
+      win_h 600
+      win_flags "remember "
+      win_colors default_panel
+
+  pane
+    xyxy 0 0 700 700  #xmin,ymin, and xmax,ymax of the pane
+    window CommandWindow
+      win_x 0
+      win_y 0
+      win_w 0
+      win_h 0
+      win_colors default_edits
+      win_name blah
+      text "> "
+
+  pane
+    xyxy 0 0 700 700  #xmin,ymin, and xmax,ymax of the pane
+    window PaletteWindow
+      win_x 0
+      win_y 0
+      win_w 0
+      win_h 0
+      win_flags "doublebuffer "
+      win_colors default_panel
+
+  pane
+    xyxy 0 0 700 700  #xmin,ymin, and xmax,ymax of the pane
+    window PlainTextWindow
+      win_x 0
+      win_y 0
+      win_w 0
+      win_h 0
+      win_flags "remember "
+      win_colors default_panel
+
+  pane
+    xyxy 0 0 700 700  #xmin,ymin, and xmax,ymax of the pane
+    window ObjectTreeWindow
+      win_x 0
+      win_y 0
+      win_w 400
+      win_h 500
+      win_flags "remember "
+      win_colors default_panel
+
+
+
+#----------------- a Laidout Image List file ------------------
+#Laidout 0.096 Image List
+
+path /blah1/blah2     #any subsequent "./file" becomes "/blah1/blah2/file"
+dpi 600               # default dpi, overridable per image
+
+perPage  asWillFit    # same as -1, put as many as will fit on each page
+#perPage allOnOnePage # same as -2, put all on the same page, may make them fall off the edges
+#perPage 5            #  >0 == exactly that many per page
+
+scaleUpToFit  yes     #for each block of images on a page, scale up to fit target area
+scaleDownToFit no     #for each block of images on a page, only scale down to fit target area
+alignment 50 50       #horizontal and verticalalignment for blocks of images.
+                      #50=center, 0=flush left or top, 100=flush right or bottom
+alignment
+  pagetype Left  x 0   y 100  #for "Left" pagetypes, put on lower left corner
+  pagetype Right x 100 y 100  #for "Right" pagetypes, put on lower right corner
+
+page 3                #change current page to page index 3 (not page label 3)
+
+dir:///path/to/a/directory  #(TODO!) dumps all in dir, no previews, always same dpi
+
+# Note that file and preview fields must begin with "/", "./", "../", or "file://".
+# File listings are file, then preview, then description. If the preview field doesn't
+# start with the above, then it is assumed that everything after the file is the description.
+# The preview and description fields are optional.
+
+file:///aoeuaoen  /path/to/preview/  Description
+"/file/file with spaces"
+./relative/file
+../another/relative/file  file:///path/to/preview/  description
+/some/file                /path/to/preview/         description
+file:///aoeuaoen
+  dpi 300                    #overrides the current dpi for this file
+  xywh 0 0 2 2               #fit image in this box, in page coordinates.
+                             #  overrides dpi if that dpi would make it too big for the box
+  preview /path/to/preview/  #preview and description fields can also be given
+  tags first-tag "tag with spaces" tag3 
+  description \              #as subattributes of the file
+    Blah blah blah
+    blah blah
+
+pagebreak # no more pictures for this page, goes to page 4
+

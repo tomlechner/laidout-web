@@ -1,0 +1,1579 @@
+<html>
+<head>
+<title>Scribus-Current-fileformat.att</title>
+
+<style type="text/css">
+table.formattable {
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 0px;
+	border-style: outset outset outset outset;
+	border-color: gray gray gray gray;
+	border-collapse: collapse;
+	#background-color: white;
+}
+table.formattable th {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: inset inset inset inset;
+	border-color: gray gray gray gray;
+	#background-color: white;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+table.formattable td {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: inset inset inset inset;
+	border-color: gray gray gray gray;
+	padding: 3px 3px 3px 3px;
+	#background-color: white;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+</style>
+</head>
+<body>
+<div>
+
+General Notes
+<br/>
+<br/>
+
+Scribus pages are arranged in a vast scratch space, where 1 unit == 1/72 inch.
+Positive x is to the right, and positive y is downward.
+The positions, width and height in the elements are in scratch space coordinates
+with the exception of POCOOR and COCOOR coordinates, which are in the rotated
+and translated space of a PAGEOBJECT.
+<br/>
+<br/>
+
+Things that are in blue are optional.
+<br/>
+<br/>
+
+Things that are in red and blinking are self explanatory.
+<br/>
+<br/>
+
+</div>
+
+<br/><div>
+<table class="formattable">
+  <tr valign="top">
+    <td colspan="5" align="center"><b>Tags</b></td>
+	   <td><b>Attributes</b></td>
+    <td><b>Meaning</b></td>
+  </tr>
+  <tr>
+    <td colspan="6" style="background:#eeeeee;color:#000000">SCRIBUSUTF8NEW</td>
+    <td colspan="1" style="background:#eeeeee;">Wraps up the whole enchilada</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="5" rowspan="1">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Version</td><td style="background:#ffffff"> "1.4"</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="147">SCRIBUSUTF8NEW</td>
+    <td colspan="5" style="background:#eeeeee;color:#000000">DOCUMENT</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="4" rowspan="146">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">AUTOL</td><td style="background:#ffffff">Automatic line spacing percentage, where 100==100%</td></tr>
+  <tr>
+    <td style="background:#ffffff">AutoSave</td><td style="background:#ffffff">1 if autosave on, else 0</td></tr>
+  <tr>
+    <td style="background:#ffffff">AutoSaveTime</td><td style="background:#ffffff">Time between autosaves, in milliseconds!</td></tr>
+  <tr>
+    <td style="background:#ffffff">BACKG</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BaseC</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BRUSH</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BRUSHSHADE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">ABSTSPALTEN</td><td style="background:#ffffff">Distance between Columns in automatic Textframes</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ALAYER</td><td style="background:#c9e4FF"> Active Layer</td></tr>
+  <tr>
+    <td style="background:#ffffff">ANZPAGES</td><td style="background:#ffffff">Number of Pages</td></tr>
+  <tr>
+    <td style="background:#ffffff">AUTHOR</td><td style="background:#ffffff">Author of the Doc</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">AUTOCHECK</td><td style="background:#c9e4FF"> Automatic Hyphenation during typing 0 = off, 1 = on</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">AUTOMATIC</td><td style="background:#c9e4FF"> Automatic Hyphenation 0 = off, 1 = on</td></tr>
+  <tr>
+    <td style="background:#ffffff">AUTOSPALTEN</td><td style="background:#ffffff">Number of Columns in automatic Textframes</td></tr>
+  <tr>
+    <td style="background:#ffffff">AUTOTEXT</td><td style="background:#ffffff">1 if you want to use automatic textframes, or 0</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BASEGRID</td><td style="background:#c9e4FF"> Width of the Baseline Grid</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BASEO</td><td style="background:#c9e4FF"> Startoffset for the Baseline Grid</td></tr>
+  <tr>
+    <td style="background:#ffffff">BleedTop</td><td style="background:#ffffff">Default of how much to bleed off the top</td></tr>
+  <tr>
+    <td style="background:#ffffff">BleedBottom</td><td style="background:#ffffff">Default of how much to bleed off the bottom</td></tr>
+  <tr>
+    <td style="background:#ffffff">BleedLeft</td><td style="background:#ffffff">Default of how much to bleed off the left</td></tr>
+  <tr>
+    <td style="background:#ffffff">BleedRight</td><td style="background:#ffffff">Default of how much to bleed off the right</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BOOK</td><td style="background:#c9e4FF"> Which PageSet to use</td></tr>
+  <tr>
+    <td style="background:#ffffff">BORDERBOTTOM</td><td style="background:#ffffff">Default bottom margin of a page</td></tr>
+  <tr>
+    <td style="background:#ffffff">BORDERLEFT</td><td style="background:#ffffff">Default left margin of a page</td></tr>
+  <tr>
+    <td style="background:#ffffff">BORDERRIGHT</td><td style="background:#ffffff">Default right margin of a page</td></tr>
+  <tr>
+    <td style="background:#ffffff">BORDERTOP</td><td style="background:#ffffff">Default top margin of a page</td></tr>
+  <tr>
+    <td style="background:#ffffff">COMMENTS</td><td style="background:#ffffff">Comments for the Doc</td></tr>
+  <tr>
+    <td style="background:#ffffff">CPICT</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">currentProfile</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DCOL</td><td style="background:#c9e4FF"> Number of Columns in Textframes</td></tr>
+  <tr>
+    <td style="background:#ffffff">DFONT</td><td style="background:#ffffff">Default Font</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DGAP</td><td style="background:#c9e4FF"> Default Gap between Columns in Textframes</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DIMo</td><td style="background:#c9e4FF"> Default Rendering Intent for the Monitor <br/>
+0 = Perceptual <br/>
+1 = Relative Colorimetric  <br/>
+2 = Saturation <br/>
+3 = Absolute Colorimetric</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DIMo2</td><td style="background:#c9e4FF"> Default Rendering Intent for Images <br/>
+0 = Perceptual  <br/>
+1 = Relative Colorimetric  <br/>
+2 = Saturation  <br/>
+3 = Absolute Colorimetric</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DIPr</td><td style="background:#c9e4FF"> Default Rendering Intent for the Printer <br/>
+0 = Perceptual  <br/>
+1 = Relative Colorimetric  <br/>
+2 = Saturation  <br/>
+3 = Absolute Colorimetric</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCCONTRIB</td><td style="background:#c9e4FF"> Person or organization making contributions to the document</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCCOVER</td><td style="background:#c9e4FF"> Extent of scope of the document</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCDATE</td><td style="background:#c9e4FF"> Date related to life-cycle of the document, YYYY-MM-DD</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCFORMAT</td><td style="background:#c9e4FF"> Physical or digital manifestation of the document</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCIDENT</td><td style="background:#c9e4FF"> An unambigious reference to the document, eg ISBN</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCLANGINFO</td><td style="background:#c9e4FF"> Language of content of document</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCRELATION</td><td style="background:#c9e4FF"> Reference to a related document</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCRIGHTS</td><td style="background:#c9e4FF"> Information about rights held in and over the document, eg copyright</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCSOURCE</td><td style="background:#c9e4FF"> Reference to a document from which this document is derived</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DOCTYPE</td><td style="background:#c9e4FF"> Nature or genre of the content of the document</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">Dpbla</td><td style="background:#c9e4FF"> Use Blackpoint Compensation 0 = off, 1 = on</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">Dpgam</td><td style="background:#c9e4FF"> Mark Colors out of Gamut 0 = off, 1 = on</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DPIn</td><td style="background:#c9e4FF"> Default ICC-Profile for solid Colors</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DPIn2</td><td style="background:#c9e4FF"> Default ICC-Profile for Images</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DPMo</td><td style="background:#c9e4FF"> Default ICC-Profile for the Monitor</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DPPr</td><td style="background:#c9e4FF"> Default ICC-Profile for the Printer</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DPSo</td><td style="background:#c9e4FF"> Simulate the Printer on Screen 0 = off, 1 = on</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">Dpuse</td><td style="background:#c9e4FF"> Use Colormanagement 0 = off, 1 = on</td></tr>
+  <tr>
+    <td style="background:#ffffff">DSIZE</td><td style="background:#ffffff">Default Fontsize</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">FIRSTLEFT</td><td style="background:#c9e4FF"> First page is a left page when this attribute is present</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">FIRSTNUM</td><td style="background:#c9e4FF"> First page number in the Doc</td></tr>
+  <tr>
+    <td style="background:#ffffff">DPInCMYK</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">EmbeddedPath</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">EndArrow</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#c9e4FF">GROUPC</td><td style="background:#c9e4FF"> Counter for Groups in the Doc</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">GUIDELOCK</td><td style="background:#c9e4FF"> Guides locked 0 = off, 1 = on</td></tr>
+  <tr>
+    <td style="background:#ffffff">GRAB</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">GuideC</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">GUIDELOCK</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">GuideRad</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">GuideZ</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#c9e4FF">HCMS</td><td style="background:#c9e4FF"> Colormanagement available 0 = off, 1 = on</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">HYCOUNT</td><td style="background:#c9e4FF"> Number of Hyphens allowed following each other</td></tr>
+  <tr>
+    <td style="background:#ffffff">KEYWORDS</td><td style="background:#ffffff">Keywords for the Doc</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">LANGUAGE</td><td style="background:#c9e4FF"> Language of the Doc</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">MAJGRID</td><td style="background:#c9e4FF"> Distance of the major Gridlines</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">MINGRID</td><td style="background:#c9e4FF"> Distance of the minor Gridlines</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">MINWORDLEN</td><td style="background:#c9e4FF"> Minimum length of a Word to be hyphenated</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ORIENTATION</td><td style="background:#c9e4FF"> Orientation of the Doc 0 = Portrait 1 = Landscape</td></tr>
+  <tr>
+    <td style="background:#ffffff">PAGEHEIGHT</td><td style="background:#ffffff">Height of the Doc</td></tr>
+  <tr>
+    <td style="background:#ffffff">PAGEWITH</td><td style="background:#ffffff">Width of the Doc</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PUBLISHER</td><td style="background:#c9e4FF"> Person or organization responsible for making the document available</td></tr>
+  <tr>
+    <td style="background:#ffffff">HalfRes</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">LINESHADE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MAGMAX</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MAGMIN</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MAGSTEP</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MAJORC</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MARGC</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MINORC</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PAGEC</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PAGESIZE</td><td style="background:#ffffff">Default page name, such as "A4" or "Letter"</td></tr>
+  <tr>
+    <td style="background:#ffffff">PASPECT</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PEN</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PENLINE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PENSHADE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PENTEXT</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PICTSCX</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PICTSCY</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PICTSHADE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">POLYC</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">POLYF</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">POLYFD</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">POLYR</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">POLYS</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PSCALE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">RANDF</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">rulerMode</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">rulerXoffset</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">rulerYoffset</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">ScratchBottom</td><td style="background:#ffffff">Space at the bottom of the scratch space, after the last page</td></tr>
+  <tr>
+    <td style="background:#ffffff">ScratchLeft</td><td style="background:#ffffff">Space at the left of the scratch space</td></tr>
+  <tr>
+    <td style="background:#ffffff">ScratchRight</td><td style="background:#ffffff">Space at the right of the scratch space</td></tr>
+  <tr>
+    <td style="background:#ffffff">ScratchTop</td><td style="background:#ffffff">Space at the top of the scratch space, before the pages</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHOWBASE</td><td style="background:#ffffff">1 to show the baseline grid</td></tr>
+  <tr>
+    <td style="background:#ffffff">showcolborders</td><td style="background:#ffffff">1 to show color borders</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHOWControl</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">SHOWFRAME</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">SHOWGRID</td><td style="background:#ffffff">1 to show ordinary grid</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHOWGUIDES</td><td style="background:#ffffff">1 to show guides</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHOWLINK</td><td style="background:#ffffff">1 to show links</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHOWMARGIN</td><td style="background:#ffffff">1 to show margins</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHOWPICT</td><td style="background:#ffffff">1 to show images</td></tr>
+  <tr>
+    <td style="background:#ffffff">showrulers</td><td style="background:#ffffff">1 to show rulers</td></tr>
+  <tr>
+    <td style="background:#ffffff">SnapToGrid</td><td style="background:#ffffff">1 to snap to grid when editing</td></tr>
+  <tr>
+    <td style="background:#ffffff">SnapToGuides</td><td style="background:#ffffff">1 to snap to guides when editing</td></tr>
+  <tr>
+    <td style="background:#ffffff">StartArrow</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">STIL</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">STILLINE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">StrikeThruPos</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">StrikeThruWidth</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">StrokeText</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TabFill</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TabWidth</td><td style="background:#ffffff">Default width for tabs in text frames</td></tr>
+  <tr>
+    <td style="background:#ffffff">TextBackGround</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TextBackGroundShade</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TextLineColor</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TextLineShade</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TextPenShade</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TextStrokeShade</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TITLE</td><td style="background:#ffffff">Title of the Doc</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">UNITS</td><td style="background:#c9e4FF"> Measurement unit for the Doc 0 = Points 1 = Millimeters 2 = Inches 3 = Picas</td></tr>
+  <tr>
+    <td style="background:#ffffff">VHOCH</td><td style="background:#ffffff">Percentage for Superscript</td></tr>
+  <tr>
+    <td style="background:#ffffff">VHOCHSC</td><td style="background:#ffffff">Percentage for scaling of the Glyphs in Superscript</td></tr>
+  <tr>
+    <td style="background:#ffffff">VKAPIT</td><td style="background:#ffffff">Percentage for scaling of the Glyphs in Small Caps</td></tr>
+  <tr>
+    <td style="background:#ffffff">VTIEF</td><td style="background:#ffffff">Percentage for Subscript</td></tr>
+  <tr>
+    <td style="background:#ffffff">VTIEFSC</td><td style="background:#ffffff">Percentage for scaling of the Glyphs in Subscript</td></tr>
+  <tr>
+    <td style="background:#ffffff">UnderlinePos</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">UnderlineWidth</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">WIDTH</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">WIDTHLINE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="16">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="16">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">CheckProfile</td>
+    <td colspan="1" style="background:#eeeeee;">one or more of these</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="15">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Name</td><td style="background:#ffffff">Name of the profile</td></tr>
+  <tr>
+    <td style="background:#ffffff">ignoreErrors</td><td style="background:#ffffff">Whether to ignore errors</td></tr>
+  <tr>
+    <td style="background:#ffffff">ignoreOffErrors</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">autoCheck</td><td style="background:#ffffff">Whether automatically check as you go, not just at specific times</td></tr>
+  <tr>
+    <td style="background:#ffffff">checkTransparency</td><td style="background:#ffffff">Whether to check for use of transparency</td></tr>
+  <tr>
+    <td style="background:#ffffff">checkResolution</td><td style="background:#ffffff">Whether to check for resolution</td></tr>
+  <tr>
+    <td style="background:#ffffff">minResolution</td><td style="background:#ffffff">Minimum resolution</td></tr>
+  <tr>
+    <td style="background:#ffffff">maxResolution</td><td style="background:#ffffff">Maximum resolution</td></tr>
+  <tr>
+    <td style="background:#ffffff">checkOverflow</td><td style="background:#ffffff">whether to check for text overflowing its frames</td></tr>
+  <tr>
+    <td style="background:#ffffff">checkRasterPDF</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">checkForGIF</td><td style="background:#ffffff">Check for any GIF images</td></tr>
+  <tr>
+    <td style="background:#ffffff">checkGlyphs</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">checkAnnotations</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">checkPictures</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">checkOrphans</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="6">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="6">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">COLOR</td>
+    <td colspan="1" style="background:#eeeeee;">none or more of these</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="5">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">NAME</td><td style="background:#ffffff">Name of the Colour</td></tr>
+  <tr>
+    <td style="background:#ffffff">CMYK</td><td style="background:#ffffff">Value as hexadecimal String, such as "#22bb77ee"</td></tr>
+  <tr>
+    <td style="background:#ffffff">RGB</td><td style="background:#ffffff">Value as hexadecimal String, such as "#11aa55"</td></tr>
+  <tr>
+    <td style="background:#ffffff">Register</td><td style="background:#ffffff">1 if color is registration color, or 0</td></tr>
+  <tr>
+    <td style="background:#ffffff">Spot</td><td style="background:#ffffff">1 if color is a spot color, or 0</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">Gradient</td>
+    <td colspan="1" style="background:#eeeeee;">A gradient</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="1">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">name</td><td style="background:#ffffff">Name of the gradient</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">Gradient</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">CSTOP</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="4">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">NAME</td><td style="background:#ffffff">Name of the stop colour</td></tr>
+  <tr>
+    <td style="background:#ffffff">RAMP</td><td style="background:#ffffff">Position of the colour stop, range from 0.0 till 1.0</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHADE</td><td style="background:#ffffff">Shading of the stop colour in Percent</td></tr>
+  <tr>
+    <td style="background:#ffffff">TRANS</td><td style="background:#ffffff">Transparency of the colour stop, range from 0.0 till 1.0</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="21">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="21">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">STYLE</td>
+    <td colspan="1" style="background:#eeeeee;">A paragraph style</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="20">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">NAME</td><td style="background:#ffffff">Name of the style</td></tr>
+  <tr>
+    <td style="background:#ffffff">PARENT</td><td style="background:#ffffff">Parent style name</td></tr>
+  <tr>
+    <td style="background:#ffffff">DefaultStyle</td><td style="background:#ffffff">Whether this is the default style</td></tr>
+  <tr>
+    <td style="background:#ffffff">ALIGN</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">LINESPMode</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">LINESP</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">INDENT</td><td style="background:#ffffff">Left indent</td></tr>
+  <tr>
+    <td style="background:#ffffff">RMARGIN</td><td style="background:#ffffff">Right margin</td></tr>
+  <tr>
+    <td style="background:#ffffff">FIRST</td><td style="background:#ffffff">First indent</td></tr>
+  <tr>
+    <td style="background:#ffffff">VOR</td><td style="background:#ffffff">Gap before</td></tr>
+  <tr>
+    <td style="background:#ffffff">NACH</td><td style="background:#ffffff">Gap after</td></tr>
+  <tr>
+    <td style="background:#ffffff">DROP</td><td style="background:#ffffff">Has drop cap</td></tr>
+  <tr>
+    <td style="background:#ffffff">DROPLIN</td><td style="background:#ffffff">Number of lines for a drop cap</td></tr>
+  <tr>
+    <td style="background:#ffffff">DROPDIST</td><td style="background:#ffffff">Drop cap offset</td></tr>
+  <tr>
+    <td style="background:#ffffff">OpticalMargins</td><td style="background:#ffffff">Whether to use optical margins</td></tr>
+  <tr>
+    <td style="background:#ffffff">HyphenationMode</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MinWordTrack</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MinGlyphShrink</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MaxGlyphExtend</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PSHORTCUT</td><td style="background:#ffffff">Key shortcut for this style</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="4">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="4">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="4">STYLE</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">Tab</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="3">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Fill</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Pos</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Type</td><td style="background:#ffffff">0 = Left <br/>
+1 = Right  <br/>
+2 = Full Stop  <br/>
+3 = Comma  <br/>
+4 = Center</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="23">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="23">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">CHARSTYLE</td>
+    <td colspan="1" style="background:#eeeeee;">A character style</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="22">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">CNAME</td><td style="background:#ffffff">Name of the style</td></tr>
+  <tr>
+    <td style="background:#ffffff">CPARENT</td><td style="background:#ffffff">Parent style name</td></tr>
+  <tr>
+    <td style="background:#ffffff">FONT</td><td style="background:#ffffff">Font name</td></tr>
+  <tr>
+    <td style="background:#ffffff">FONTSIZE</td><td style="background:#ffffff">Font size</td></tr>
+  <tr>
+    <td style="background:#ffffff">FEATURES</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">FCOLOR</td><td style="background:#ffffff">Fill color</td></tr>
+  <tr>
+    <td style="background:#ffffff">FSHADE</td><td style="background:#ffffff">Fill shade</td></tr>
+  <tr>
+    <td style="background:#ffffff">SCOLOR</td><td style="background:#ffffff">Stroke color</td></tr>
+  <tr>
+    <td style="background:#ffffff">SSHADE</td><td style="background:#ffffff">Stroke shade</td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTSHX</td><td style="background:#ffffff">Text shadow offset horizontally</td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTSHY</td><td style="background:#ffffff">Text shadow offset vertically</td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTOUT</td><td style="background:#ffffff">Outline width</td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTULP</td><td style="background:#ffffff">Underline offset</td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTULW</td><td style="background:#ffffff">Underline width</td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTSTP</td><td style="background:#ffffff">Strikethrough offset</td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTSTW</td><td style="background:#ffffff">Strikethrough width</td></tr>
+  <tr>
+    <td style="background:#ffffff">SCALEH</td><td style="background:#ffffff">Scaling horizontally</td></tr>
+  <tr>
+    <td style="background:#ffffff">SCALEV</td><td style="background:#ffffff">Scaling vertically</td></tr>
+  <tr>
+    <td style="background:#ffffff">BASEO</td><td style="background:#ffffff">Offset from baseline</td></tr>
+  <tr>
+    <td style="background:#ffffff">KERN</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">wordTrack</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">SHORTCUT</td><td style="background:#ffffff">Shortcut for this style</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">HYPHEN</td>
+    <td colspan="1" style="background:#eeeeee;">Hyphenator lists</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="4">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">EXCEPTION</td><td style="background:#ffffff">Special words</td></tr>
+  <tr>
+    <td style="background:#ffffff">WORD</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">HYPHENATED</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">IGNORE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="3">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="3">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">JAVA</td>
+    <td colspan="1" style="background:#eeeeee;">Javascripts</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="2">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">NAME</td><td style="background:#ffffff">Name of a script</td></tr>
+  <tr>
+    <td style="background:#ffffff">SCRIPT</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="12">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="12">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">LAYERS</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="11">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">NUMMER</td><td style="background:#ffffff">Number of the layer</td></tr>
+  <tr>
+    <td style="background:#ffffff">NAME</td><td style="background:#ffffff">Name of the layer</td></tr>
+  <tr>
+    <td style="background:#ffffff">EDIT</td><td style="background:#ffffff">Whether the layer is editable</td></tr>
+  <tr>
+    <td style="background:#ffffff">DRUCKEN</td><td style="background:#ffffff">Flag for printing 0 = Layer is not printed 1 = Layer is printed</td></tr>
+  <tr>
+    <td style="background:#ffffff">LEVEL</td><td style="background:#ffffff">Level of the Layer 0 = Background</td></tr>
+  <tr>
+    <td style="background:#ffffff">SICHTBAR</td><td style="background:#ffffff">Flag for visibility 0 = Layer is not visible 1 = Layer is visible</td></tr>
+  <tr>
+    <td style="background:#ffffff">FLOW</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TRANS</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BLEND</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">OUTL</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">LAYERC</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">MultiLine</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="30">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="30">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">Printer</td>
+    <td colspan="1" style="background:#eeeeee;">Printer options</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="29">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">firstUse</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">toFile</td><td style="background:#ffffff">Print to file</td></tr>
+  <tr>
+    <td style="background:#ffffff">useAltPrintCommand</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">outputSeparations</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">useSpotColors</td><td style="background:#ffffff">Whether to use spot colors</td></tr>
+  <tr>
+    <td style="background:#ffffff">useColor</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">mirrorH</td><td style="background:#ffffff">Mirror printing horizontally</td></tr>
+  <tr>
+    <td style="background:#ffffff">mirrorV</td><td style="background:#ffffff">Mirror printing vertically</td></tr>
+  <tr>
+    <td style="background:#ffffff">useICC</td><td style="background:#ffffff">Use ICC color profiles</td></tr>
+  <tr>
+    <td style="background:#ffffff">doGCR</td><td style="background:#ffffff">Whether to have grey component replacement</td></tr>
+  <tr>
+    <td style="background:#ffffff">doClip</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">setDevParam</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">useDocBleeds</td><td style="background:#ffffff">Use document bleeds</td></tr>
+  <tr>
+    <td style="background:#ffffff">cropMarks</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">bleedMarks</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">registrationMarks</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">colorMarks</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">includePDFMarks</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PSLevel</td><td style="background:#ffffff">The postscript level</td></tr>
+  <tr>
+    <td style="background:#ffffff">PDLanguage</td><td style="background:#ffffff">Which printer description language</td></tr>
+  <tr>
+    <td style="background:#ffffff">markOffset</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BleedTop</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BleedBottom</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BleedLeft</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BleedRight</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">printer</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">filename</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">separationName</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">printerCommand</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">Printer</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">Separation</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="1">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Name</td><td style="background:#ffffff">Name of the separation</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="49">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="49">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">PDF</td>
+    <td colspan="1" style="background:#eeeeee;">pdf export settings</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="48">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Clip</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">displayBookmarks</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">displayFullscreen</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">displayLayers</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">displayThumbs</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">doMultiFile</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Articles</td><td style="background:#ffffff">Flag, set to 1 when use PDF-Articles is checked in the PDF-Options Dialog</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BBottom</td><td style="background:#c9e4FF"> Bottom Distance for the Bleed Box</td></tr>
+  <tr>
+    <td style="background:#ffffff">Binding</td><td style="background:#ffffff">Binding for the PDF-Document 0 = Left Binding 1 = Right Binding</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BLeft</td><td style="background:#c9e4FF"> Left Distance for the Bleed Box</td></tr>
+  <tr>
+    <td style="background:#ffffff">Bookmarks</td><td style="background:#ffffff">Flag, set to 1 when include Bookmarks is checked in the PDF-Options Dialog</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BRight</td><td style="background:#c9e4FF"> Right Distance for the Bleed Box</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BTop</td><td style="background:#c9e4FF"> Top Distance for the Bleed Box</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">CMethod</td><td style="background:#c9e4FF"> Compression Method for Pictures <br/>
+0 = Automatic, Scribus tries to use the best Method <br/>
+1 = JPEG Compression  <br/>
+2 = Flate Compression  <br/>
+3 = No Compression</td></tr>
+  <tr>
+    <td style="background:#ffffff">Compress</td><td style="background:#ffffff">Flag, set to 1 when use Compress Text is checked in the PDF-Options Dialog</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">Encrypt</td><td style="background:#c9e4FF"> Flag, set to 1 when use Encryption is checked in the PDF-Options Dialog</td></tr>
+  <tr>
+    <td style="background:#ffffff">fitWindow</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Grayscale</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">hideMenuBar</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">hideToolBar</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">ImageP</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">ImagePr</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">InfoString</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Intent</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Intent2</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PassOwner</td><td style="background:#c9e4FF"> Owner Password for encrypted PDF's</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PassUser</td><td style="background:#c9e4FF"> User Password for encrypted PDF's</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">Permissions</td><td style="background:#c9e4FF"> Value used for Encryption Settings</td></tr>
+  <tr>
+    <td style="background:#ffffff">PicRes</td><td style="background:#ffffff">Resolution for downsampling Images</td></tr>
+  <tr>
+    <td style="background:#ffffff">PresentMode</td><td style="background:#ffffff">Flag, set to 1 when Presentation effects should be used</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PrintP</td><td style="background:#c9e4FF"> ICC-Profile for the Printer, only used for PDF-X/3 output</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">Quality</td><td style="background:#c9e4FF"> Quality setting for Image Compression <br/>
+0 = Maximum (95%)  <br/>
+1 = High (85%)  <br/>
+2 = Medium (75%)  <br/>
+3 = Low (50%)  <br/>
+4 = Minimum (25%)</td></tr>
+  <tr>
+    <td style="background:#ffffff">RecalcPic</td><td style="background:#ffffff">Flag, set to 1 when Downsample Images is checked in the PDF-Options Dialog</td></tr>
+  <tr>
+    <td style="background:#ffffff">Resolution</td><td style="background:#ffffff">Resolution for embedded EPS-Pictures or PDF's</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">RGBMode</td><td style="background:#c9e4FF"> Flag, set to 1 when Output should be in RGB</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">SolidP</td><td style="background:#c9e4FF"> ICC-Profile for solid colours</td></tr>
+  <tr>
+    <td style="background:#ffffff">Thumbnails</td><td style="background:#ffffff">Flag, set to 1 when Generate Thumbnails is checked in the PDF-Options Dialog</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">UseLpi</td><td style="background:#c9e4FF"> Flag, set to 1 when the informations in the LPI tags should be used for Linescreening</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">UseProfiles</td><td style="background:#c9e4FF"> Flag, set to 1 when ICC-Profiles should be used for solid colours</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">UseProfiles2</td><td style="background:#c9e4FF"> Flag, set to 1 when ICC-Profiles should be used for images</td></tr>
+  <tr>
+    <td style="background:#ffffff">Version</td><td style="background:#ffffff">PDF-Version which should be generated 12 = PDF-X/3 13 = PDF-1.3 14 = PDF-1.4</td></tr>
+  <tr>
+    <td style="background:#ffffff">MirrorH</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MirrorV</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">openAction</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">PageLayout</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">RotateDeg</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">UseLayers</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">UseSpotColors</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">PDF</td>
+    <td colspan="3" style="background:#A9D1FF;color:#000000">LPI</td>
+    <td colspan="1" style="background:#A9D1FF;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#c9e4FF" colspan="2" rowspan="4">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Angle</td><td style="background:#ffffff">Linescreening angle</td></tr>
+  <tr>
+    <td style="background:#ffffff">Color</td><td style="background:#ffffff">Name of the Colour for which these settings are ment</td></tr>
+  <tr>
+    <td style="background:#ffffff">Frequency</td><td style="background:#ffffff">How many lines per Inch are used</td></tr>
+  <tr>
+    <td style="background:#ffffff">SpotFunction</td><td style="background:#ffffff">Code for the used Spotfunction: 0 = Simple Dot 1 = Line 2 = Round 3 = Ellipse</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="7">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="7">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="7">PDF</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">Effekte</td>
+    <td colspan="1" style="background:#eeeeee;">PDF display effects</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="6">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">pageEffectDuration</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">pageViewDuration</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">effectType</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Dm</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">M</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Di</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">DocItemAttributes</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DocItemAttributes</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">ItemAttribute</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="7">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="7">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">TablesOfContents</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="6">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Name</td><td style="background:#ffffff">Name of the contents</td></tr>
+  <tr>
+    <td style="background:#ffffff">ItemAttributeName</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">FrameName</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">ListNonPrinting</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Style</td><td style="background:#ffffff">Text style to use</td></tr>
+  <tr>
+    <td style="background:#ffffff">NumberPlacement</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">Sections</td>
+    <td colspan="1" style="background:#eeeeee;">description of how to number groups of pages</td>
+  </tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="9">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="9">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="9">Sections</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">Section</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="8">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Name</td><td style="background:#ffffff">Any string will do</td></tr>
+  <tr>
+    <td style="background:#ffffff">Active</td><td style="background:#ffffff">1 for show, 0 for not show</td></tr>
+  <tr>
+    <td style="background:#ffffff">Number</td><td style="background:#ffffff">Seems to be a generic index number, redundant?</td></tr>
+  <tr>
+    <td style="background:#ffffff">Type</td><td style="background:#ffffff">can be: Type_A_B_C, Type_a_b_c, Type_1_2_3, Type_I_II_III, Type_i_ii_iii, Type_None (same appearance as Active==0)</td></tr>
+  <tr>
+    <td style="background:#ffffff">From</td><td style="background:#ffffff">Starting page index</td></tr>
+  <tr>
+    <td style="background:#ffffff">To</td><td style="background:#ffffff">Ending page index</td></tr>
+  <tr>
+    <td style="background:#ffffff">Start</td><td style="background:#ffffff">1st page number for range</td></tr>
+  <tr>
+    <td style="background:#ffffff">Reversed</td><td style="background:#ffffff">If the number range should count in opposite direction</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">PageSets</td>
+    <td colspan="1" style="background:#eeeeee;">(none or more of these)</td>
+  </tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="8">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="8">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="8">PageSets</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">Set</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="7">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Columns</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">GapBelow</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Rows</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">FirstPage</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">GapHorizontal</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Name</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">GapVertical</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">PageSets</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">Set</td>
+    <td colspan="2" style="background:#eeeeee;color:#000000">PageNames</td>
+    <td colspan="1" style="background:#eeeeee;">there are Rows*Columns of these</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="1" rowspan="1">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Name</td><td style="background:#ffffff">Name of this page type, eg "Left Page" or "Right Page"</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="8">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="8">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">Pattern</td>
+    <td colspan="1" style="background:#eeeeee;">a pattern definition</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="7">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Name</td><td style="background:#ffffff">Name of the pattern</td></tr>
+  <tr>
+    <td style="background:#ffffff">width</td><td style="background:#ffffff">Width</td></tr>
+  <tr>
+    <td style="background:#ffffff">height</td><td style="background:#ffffff">Height</td></tr>
+  <tr>
+    <td style="background:#ffffff">scaleX</td><td style="background:#ffffff">additional scaling horizontally</td></tr>
+  <tr>
+    <td style="background:#ffffff">scaleY</td><td style="background:#ffffff">additional scaling vertically</td></tr>
+  <tr>
+    <td style="background:#ffffff">xoffset</td><td style="background:#ffffff">Offset horizontally</td></tr>
+  <tr>
+    <td style="background:#ffffff">yoffset</td><td style="background:#ffffff">Offset vertically</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">MASTERPAGE</td>
+    <td colspan="1" style="background:#eeeeee;">Has the same options as PAGE elements (?)</td>
+  </tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="26">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="26">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">PAGE</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="25">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Size</td><td style="background:#ffffff">Name of paper size</td></tr>
+  <tr>
+    <td style="background:#ffffff">NUM</td><td style="background:#ffffff">Page number, 0 is the first page</td></tr>
+  <tr>
+    <td style="background:#ffffff">BORDERTOP</td><td style="background:#ffffff">Top margin</td></tr>
+  <tr>
+    <td style="background:#ffffff">BORDERBOTTOM</td><td style="background:#ffffff">Bottom margin</td></tr>
+  <tr>
+    <td style="background:#ffffff">BORDERLEFT</td><td style="background:#ffffff">Left margin</td></tr>
+  <tr>
+    <td style="background:#ffffff">BORDERRIGHT</td><td style="background:#ffffff">Right margin</td></tr>
+  <tr>
+    <td style="background:#ffffff">NAM</td><td style="background:#ffffff">Page name, blank if not a master page</td></tr>
+  <tr>
+    <td style="background:#ffffff">MNAM</td><td style="background:#ffffff">Name of attached master page</td></tr>
+  <tr>
+    <td style="background:#ffffff">LEFT</td><td style="background:#ffffff">For multipage spreads, which page in the spread is the left most</td></tr>
+  <tr>
+    <td style="background:#ffffff">Orientation</td><td style="background:#ffffff">1 for landscape, 0 for portrait</td></tr>
+  <tr>
+    <td style="background:#ffffff">PAGEHEIGHT</td><td style="background:#ffffff">Height in postscript points (72==1 inch)</td></tr>
+  <tr>
+    <td style="background:#ffffff">PAGEWIDTH</td><td style="background:#ffffff">Width in postscript points (72==1 inch)</td></tr>
+  <tr>
+    <td style="background:#ffffff">PAGEXPOS</td><td style="background:#ffffff">X coordinate of upper right corner of page in scratch space</td></tr>
+  <tr>
+    <td style="background:#ffffff">PAGEYPOS</td><td style="background:#ffffff">Y coordinate of upper right corner of page in scratch space</td></tr>
+  <tr>
+    <td style="background:#ffffff">NumHGuides</td><td style="background:#ffffff">Number of horizontal guides listed in HorizontalGuides</td></tr>
+  <tr>
+    <td style="background:#ffffff">HorizontalGuides</td><td style="background:#ffffff">List of positions of horizontal guides, relative to page origin</td></tr>
+  <tr>
+    <td style="background:#ffffff">NumVGuides</td><td style="background:#ffffff">Number of vertical guides listed in VerticalGuides</td></tr>
+  <tr>
+    <td style="background:#ffffff">VerticalGuides</td><td style="background:#ffffff">List of positions of vertical guides, relative to page origin</td></tr>
+  <tr>
+    <td style="background:#ffffff">AGHorizontalAutoGap</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">AGVerticalAutoGap</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">AGHorizontalAutoCount</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">AGVerticalAutoCount</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">AGHorizontalAutoRefer</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">AGVerticalAutoRefer</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">AGSelection</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">MASTEROBJECT</td>
+    <td colspan="1" style="background:#eeeeee;">Same as a PAGEOBJECT, but is on a MASTERPAGE</td>
+  </tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="147">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="147">DOCUMENT</td>
+    <td colspan="4" style="background:#eeeeee;color:#000000">PAGEOBJECT</td>
+    <td colspan="1" style="background:#eeeeee;">An object that is somehow drawable on a PAGE</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="3" rowspan="146">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#c9e4FF">ALIGN</td><td style="background:#c9e4FF"> Alignment for text when no paragraph style is set <br/>
+0 = No Style, left aligned  <br/>
+1 = Align Text Center  <br/>
+2 = Align Text Right  <br/>
+3 = Align Text Justified  <br/>
+4 = Align Text Forced Justified</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANNAME</td><td style="background:#c9e4FF"> Field name of the Annotation, also used for the object name</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANNOTATION</td><td style="background:#c9e4FF"> Set to 1 if the object is a Annotation or a PDF-Field</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANAA</td><td style="background:#c9e4FF"> Set to 1 if Annotations Action is a JavaScript Action</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANACTION</td><td style="background:#c9e4FF"> Action for the PDF-Field, contains either a URL or a JavaScript</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANACTYP</td><td style="background:#c9e4FF"> Type of the Action for a PDF-Field <br/>
+0 = None  <br/>
+1 = Java Script  <br/>
+2 = Go To  <br/>
+3 = Submit Form  <br/>
+4 = Reset Form  <br/>
+5 = Import Data</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANBCOL</td><td style="background:#c9e4FF"> Name of the border colour of the PDF-Button</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANBLACT</td><td style="background:#c9e4FF"> JavaScript executed when the PDF-Field looses focus</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANBSTY</td><td style="background:#c9e4FF"> Borderstyle for a PDF-Button <br/>
+0 = Solid  <br/>
+1 = Dashed  <br/>
+2 = Underline  <br/>
+3 = Beveled  <br/>
+4 = Inset</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANBWID</td><td style="background:#c9e4FF"> Borderwidth of a PDF-Button <br/>
+0 = None  <br/>
+1 = Thin  <br/>
+2 = Normal  <br/>
+3 = Wide</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANCACT</td><td style="background:#c9e4FF"> JavaScript executed when the PDF-Page is changed</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANCHK</td><td style="background:#c9e4FF"> Set to 1 if the PDF-Checkbox is checked by default</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANCHKS</td><td style="background:#c9e4FF"> Style of the checkmark in a PDF-Checkbox <br/>
+0 = Check  <br/>
+1 = Cross  <br/>
+2 = Diamond  <br/>
+3 = Circle  <br/>
+4 = Star  <br/>
+5 = Square</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANDACT</td><td style="background:#c9e4FF"> JavaScript executed when the mouse button is pressed</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANDOWN</td><td style="background:#c9e4FF"> Text for Button Down of a PDF-Button</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANEACT</td><td style="background:#c9e4FF"> JavaScript executed when the cursor enters the PDF-Field</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANEXTERN</td><td style="background:#c9e4FF"> Path or URL for an external PDF-Link</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANFACT</td><td style="background:#c9e4FF"> JavaScript executed before formatting the PFD-Field</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANFEED</td><td style="background:#c9e4FF"> Feedback for PDF-Button press 0 = None 1 = Invert 2 = Outlined 3 = Push animation</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANFLAG</td><td style="background:#c9e4FF"> Flags for Annotations, value is the bitwise or of the following constants <br/>
+1 = Field is read-only  <br/>
+2 = Field must have a value  <br/>
+4 = Value is not exported  <br/>
+4096 = Field is a multiline Textfield  <br/>
+8192 = Field is a password field  <br/>
+262144 = Field is editable  <br/>
+4194304 = Don't spell check  <br/>
+8388608 = Do not scroll</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANFOACT</td><td style="background:#c9e4FF"> JavaScript executed when the field receives focus</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANFONT</td><td style="background:#c9e4FF"> Font for the PDF-Button or Annotation <br/>
+0 = Courier  <br/>
+1 = Courier Bold  <br/>
+2 = Courier Italic  <br/>
+3 = Courier Bold Italic  <br/>
+4 = Helvetica  <br/>
+5 = Helvetica Bold  <br/>
+6 = Helvetica Italic  <br/>
+7 = Helvetica Bold Italic  <br/>
+8 = Times  <br/>
+9 = Times Bold  <br/>
+10 = Times Italic  <br/>
+11 = Times Bold Italic  <br/>
+12 = Zapf Dingbats  <br/>
+13 = Symbols</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANFORMAT</td><td style="background:#c9e4FF"> Format of the Value in a PDF-Field <br/>
+0 = Plain text  <br/>
+1 = Number  <br/>
+2 = Percentage  <br/>
+3 = Date  <br/>
+4 = Time  <br/>
+5 = Custom format</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANHTML</td><td style="background:#c9e4FF"> Set to 1 if the PDF-Submit Action should send HTML instead of FDF</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANICON</td><td style="background:#c9e4FF"> Set to 1 if the PDF-Button uses icons</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANKACT</td><td style="background:#c9e4FF"> JavaScript for keypresses</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANMC</td><td style="background:#c9e4FF"> Maximum number of characters in a PDF-Textfield</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANPLACE</td><td style="background:#c9e4FF"> How to display the Icon of a PDF-Button <br/>
+0 = Caption only  <br/>
+1 = Icon only  <br/>
+2 = Caption below Icon  <br/>
+3 = Caption above Icon  <br/>
+4 = Caption right to Icon  <br/>
+5 = Caption left to Icon  <br/>
+6 = Caption overlays Icon</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANROLL</td><td style="background:#c9e4FF"> Text for roll over of PDF-Buttons</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANSCALE</td><td style="background:#c9e4FF"> Scaling of Icons on PDF-Buttons <br/>
+0 = Always  <br/>
+1 = When Icon is too small  <br/>
+2 = When Icon is too big  <br/>
+3 = Never</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANTOOLTIP</td><td style="background:#c9e4FF"> Tooltip for the PDF-Field</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANTYPE</td><td style="background:#c9e4FF"> Type of the Annotation or PDF-Field <br/>
+0 = Text annotation  <br/>
+1 = Link annotation  <br/>
+2 = PDF-Button  <br/>
+3 = PDF-Textfield  <br/>
+4 = PDF-Checkbox  <br/>
+5 = PDF-Combobox  <br/>
+6 = PDF-Listbox  <br/>
+7 = External Link  <br/>
+8 = External Weblink</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANVACT</td><td style="background:#c9e4FF"> JavaScript to be performed when the fields value has changed</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANVIS</td><td style="background:#c9e4FF"> The visiblity of the PDF-Field <br/>
+0 = visible  <br/>
+1 = hidden  <br/>
+2 = don't print  <br/>
+3 = don't show, but print</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANXACT</td><td style="background:#c9e4FF"> JavaScript when the mouse pointer leaves the field</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ANZIEL</td><td style="background:#c9e4FF"> Page number of a PDF-Link</td></tr>
+  <tr>
+    <td style="background:#ffffff">AUTOTEXT</td><td style="background:#ffffff">Set to 1 if object is an automatic textframe</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BASEOF</td><td style="background:#c9e4FF"> Offset for the text from its path for text on a path</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BEXTRA</td><td style="background:#c9e4FF"> Distance of text from the bottom edge of the frame</td></tr>
+  <tr>
+    <td style="background:#ffffff">BOOKMARK</td><td style="background:#ffffff">Set to 1 if object is a PDF-Bookmark</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">BookNr</td><td style="background:#c9e4FF"> Number of the Bookmark</td></tr>
+  <tr>
+    <td style="background:#ffffff">BottomLine</td><td style="background:#ffffff">Set to 1 if the table item has a bottom line</td></tr>
+  <tr>
+    <td style="background:#ffffff">BottomLINK</td><td style="background:#ffffff">Number of the object that is below of this object in tables</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">CLIPEDIT</td><td style="background:#c9e4FF"> Set to 1 if the shape was edited</td></tr>
+  <tr>
+    <td style="background:#ffffff">COLGAP</td><td style="background:#ffffff">Gap between text columns</td></tr>
+  <tr>
+    <td style="background:#ffffff">COLUMNS</td><td style="background:#ffffff">Number of columns in text</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">COCOOR</td><td style="background:#c9e4FF"> #Coordinates of the object shape, a list of groups of four points, ordered vertex point - previous bezier control point - vertex point - next bezier control point. However, the list starts with a vertex point - next control, so after those 2 points, the the next 4 relate to the second vertex.</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">DASHOFF</td><td style="background:#c9e4FF"> Offset for the first dash, in points</td></tr>
+  <tr>
+    <td style="background:#ffffff">DASHS</td><td style="background:#ffffff">List of repeating on-off dash lengths in points</td></tr>
+  <tr>
+    <td style="background:#ffffff">doOverprint</td><td style="background:#ffffff">0 for no, 1 for yes to enable overprint detection for this object</td></tr>
+  <tr>
+    <td style="background:#ffffff">endArrowIndex</td><td style="background:#ffffff">0 is none, or nonzero index to list of various types of arrows. As of 1.4 there are 36 kinds.</td></tr>
+  <tr>
+    <td style="background:#ffffff">fillRule</td><td style="background:#ffffff">0 for Non zero winding rule, 1 for Even-Odd winding rule</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">EMBEDDED</td><td style="background:#c9e4FF"> Set to 1 if embedded ICC-Profiles should be used</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">EPROF</td><td style="background:#c9e4FF"> Embedded ICC-Profile for images</td></tr>
+  <tr>
+    <td style="background:#ffffff">EXTRA</td><td style="background:#ffffff">Distance of text from the left edge of the frame</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">EXTRAV</td><td style="background:#c9e4FF"> Kerning value</td></tr>
+  <tr>
+    <td style="background:#ffffff">FLIPPEDH</td><td style="background:#ffffff">Set to an uneven number if object is flipped horizontal</td></tr>
+  <tr>
+    <td style="background:#ffffff">FLIPPEDV</td><td style="background:#ffffff">Set to an uneven number if object is flipped vertical</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">FRTYPE</td><td style="background:#c9e4FF"> Type of the shape of an object <br/>
+0 = Rectangle  <br/>
+1 = Ellipse  <br/>
+2 = Rounded rectangle  <br/>
+3 = Free shape</td></tr>
+  <tr>
+    <td style="background:#ffffff">GROUPS</td><td style="background:#ffffff">List of group identifiers</td></tr>
+  <tr>
+    <td style="background:#ffffff">gHeight</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">gWidth</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">gXpos</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">gYpos</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#c9e4FF">GRTYP</td><td style="background:#c9e4FF"> Type of the gradient fill <br/>
+0 = No gradient fill <br/>
+1 = Horizontal gradient <br/>
+2 = Vertical gradient <br/>
+3 = Diagonal gradient <br/>
+4 = Cross diagonal gradient <br/>
+5 = Radial gradient  <br/>
+6 = Free linear gradient <br/>
+7 = Free radial gradient</td></tr>
+  <tr>
+    <td style="background:#ffffff">ImageClip</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">ImageRes</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">isInline</td><td style="background:#ffffff">0 for is normal object, 1 for is in a text stream</td></tr>
+  <tr>
+    <td style="background:#ffffff">HEIGHT</td><td style="background:#ffffff">Height of the object</td></tr>
+  <tr>
+    <td style="background:#ffffff">IFONT</td><td style="background:#ffffff">Name of the font for text</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">INVERS</td><td style="background:#c9e4FF"> Image is inversed</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">IRENDER</td><td style="background:#c9e4FF"> Rendering Intent for Images <br/>
+0 = Perceptual <br/>
+1 = Relative Colorimetric  <br/>
+2 = Saturation <br/>
+3 = Absolute Colorimetric</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">ISIZE</td><td style="background:#c9e4FF"> Fontsize for text</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">isTableItem</td><td style="background:#c9e4FF"> Set to 1 if the object belongs to a table</td></tr>
+  <tr>
+    <td style="background:#ffffff">LINESPMode</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#c9e4FF">LANGUAGE</td><td style="background:#c9e4FF"> Language of the object</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">LAYER</td><td style="background:#c9e4FF"> Layer number the object belongs to</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">LeftLine</td><td style="background:#c9e4FF"> Set to 1 if the table item has a left line</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">LeftLINK</td><td style="background:#c9e4FF"> Number of the object that is left to this object in tables</td></tr>
+  <tr>
+    <td style="background:#ffffff">LINESP</td><td style="background:#ffffff">Linespacing for text</td></tr>
+  <tr>
+    <td style="background:#ffffff">LOCALSCX</td><td style="background:#ffffff">Scaling of the image in the X-Direction</td></tr>
+  <tr>
+    <td style="background:#ffffff">LOCALSCY</td><td style="background:#ffffff">Scaling of the image in the Y-Direction</td></tr>
+  <tr>
+    <td style="background:#ffffff">LOCALX</td><td style="background:#ffffff">X-Position of the image in the image frame</td></tr>
+  <tr>
+    <td style="background:#ffffff">LOCALY</td><td style="background:#ffffff">Y-Position of the image in the image frame</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">LOCK</td><td style="background:#c9e4FF"> Set ot 1 if the object is locked</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">LOCKR</td><td style="background:#c9e4FF"> Set to 1 if the object is protected against resizing</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">NAMEDLST</td><td style="background:#c9e4FF"> Name of the custom line style</td></tr>
+  <tr>
+    <td style="background:#ffffff">BACKITEM</td><td style="background:#ffffff">Index number of the previous PAGEOBJECT of linked textframe</td></tr>
+  <tr>
+    <td style="background:#ffffff">BACKPAGE</td><td style="background:#ffffff">Number of the page of the previous frame in linked textframes</td></tr>
+  <tr>
+    <td style="background:#ffffff">NEXTITEM</td><td style="background:#ffffff">Index number of the next PAGEOBJECT for linked textframes</td></tr>
+  <tr>
+    <td style="background:#ffffff">NEXTPAGE</td><td style="background:#ffffff">Number of the page of the next frame in linked textframes</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">NUMCO</td><td style="background:#c9e4FF"> Number of coordinates in COCOOR, so twice the number of numbers in COCOOR</td></tr>
+  <tr>
+    <td style="background:#ffffff">NUMDASH</td><td style="background:#ffffff">Number of entries in DASH</td></tr>
+  <tr>
+    <td style="background:#ffffff">NUMGROUP</td><td style="background:#ffffff">Number of grops in GROUPS</td></tr>
+  <tr>
+    <td style="background:#ffffff">NUMPO</td><td style="background:#ffffff">Number of coordinates in POCOOR, so twice the number of numbers in POCOOR</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">OwnLINK</td><td style="background:#c9e4FF"> Number of this object in tables</td></tr>
+  <tr>
+    <td style="background:#ffffff">OnMasterPage</td><td style="background:#ffffff">The name of the MasterPage this object is on. For MASTEROBJECTs.</td></tr>
+  <tr>
+    <td style="background:#ffffff">OwnPage</td><td style="background:#ffffff">The number of the document page this object is on.</td></tr>
+  <tr>
+    <td style="background:#ffffff">PCOLOR</td><td style="background:#ffffff">Name of the colour for fll</td></tr>
+  <tr>
+    <td style="background:#ffffff">PCOLOR2</td><td style="background:#ffffff">Name of the colour for stroke</td></tr>
+  <tr>
+    <td style="background:#ffffff">PFILE</td><td style="background:#ffffff">Filename of the image, saved as relative file</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PFILE2</td><td style="background:#c9e4FF"> Filename of the pressed icon image for PDF-Buttons</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PFILE3</td><td style="background:#c9e4FF"> Filename of the rollover icon image for PDF-Buttons</td></tr>
+  <tr>
+    <td style="background:#ffffff">PICART</td><td style="background:#ffffff">Set to 1 if image should be shown</td></tr>
+  <tr>
+    <td style="background:#ffffff">PLINEART</td><td style="background:#ffffff">How the line is dashed. Including these 5, there are various others up to 37 (as of 1.4), which is custom, and which  triggers the use of DASHES, DASHOFF, and NUMDASH. <br/>
+1 = Solid Line  <br/>
+2 = Dashed Line  <br/>
+3 = Dotted Line  <br/>
+4 = Dash Dot Line  <br/>
+5 = Dash Dot Dot Line</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PLINEEND</td><td style="background:#c9e4FF"> Code for the line end rendering <br/>
+0 = FlatCap  <br/>
+16 = SquareCap  <br/>
+32 = RoundCap</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PLINEJOIN</td><td style="background:#c9e4FF"> Code for the line join rendering 0 = MiterJoin 64 = BevelJoin 128 = RoundJoin</td></tr>
+  <tr>
+    <td style="background:#ffffff">pattern</td><td style="background:#ffffff">which pattern to use</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PLTSHOW</td><td style="background:#c9e4FF"> Set to 1 if the path of a Text on a path should be shown</td></tr>
+  <tr>
+    <td style="background:#ffffff">POCOOR</td><td style="background:#ffffff">Coordinates of the object shape, a list of groups of four points, ordered vertex point - previous bezier control point - vertex point - next bezier control point. However, the list starts with a vertex point - next control, so after those 2 points, the the next 4 relate to the second vertex.</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">PRFILE</td><td style="background:#c9e4FF"> ICC-Profile for the image</td></tr>
+  <tr>
+    <td style="background:#ffffff">PRINTABLE</td><td style="background:#ffffff">Set to 1 if the object should be printed, 0 otherwise</td></tr>
+  <tr>
+    <td style="background:#ffffff">PTYPE</td><td style="background:#ffffff">Type of object 2 = Image 4 = Text 5 = Line 6 = Polygon 7 = Polyline 8 = Text on a path</td></tr>
+  <tr>
+    <td style="background:#ffffff">PWIDTH</td><td style="background:#ffffff">Line width of the object</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">RADRECT</td><td style="background:#c9e4FF"> Corner radius for rounded Rectangles</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">RATIO</td><td style="background:#c9e4FF"> Set to 1 if the image scaling should respect the aspect ratio</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">REVERS</td><td style="background:#c9e4FF"> Text is rendered reverse, eg Arabic</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">REXTRA</td><td style="background:#c9e4FF"> Distance of text from the right edge of the frame</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">RightLine</td><td style="background:#c9e4FF"> Set to 1 if the table item has a right line</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">RightLINK</td><td style="background:#c9e4FF"> Number of the object that is to the right of this object in tables</td></tr>
+  <tr>
+    <td style="background:#ffffff">ROT</td><td style="background:#ffffff">Rotation of the object in degrees</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">SCALETYPE</td><td style="background:#c9e4FF"> How the image can be scaled 0 = Free scaling 1 = Scaling bound to image frame dimensions</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHADE</td><td style="background:#ffffff">Shading for fill</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHADE2</td><td style="background:#ffffff">Shading for stroke</td></tr>
+  <tr>
+    <td style="background:#ffffff">TEXTFLOW</td><td style="background:#ffffff">Set to 1 if text flows around this object</td></tr>
+  <tr>
+    <td style="background:#ffffff">TEXTFLOW2</td><td style="background:#ffffff">Set to 1 if text flows around the bounding box of this object</td></tr>
+  <tr>
+    <td style="background:#ffffff">TEXTFLOW3</td><td style="background:#ffffff">Set to 1 if text flows around the contour line of this object</td></tr>
+  <tr>
+    <td style="background:#ffffff">TEXTFLOWMODE</td><td style="background:#ffffff">0 = Do not cause any text wrapping <br/>
+1 = Use frame shape as text wrap border <br/>
+2 = Use bounding box <br/>
+3 = Use contour line <br/>
+4 = Use image clip path (if available)</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TEXTRA</td><td style="background:#c9e4FF"> Distance of text from the top edge of the frame</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TopLine</td><td style="background:#c9e4FF"> Set to 1 if the table item has a top line</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TopLINK</td><td style="background:#c9e4FF"> Number of the object that is above this object in tables</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TransValue</td><td style="background:#c9e4FF"> Transparency value for fill, in range [0..100]</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TransValueS</td><td style="background:#c9e4FF"> Transparency value for stroke, in range [0..100]</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TXTFILL</td><td style="background:#c9e4FF"> Name of the default text fill colour</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TXTFILLSH</td><td style="background:#c9e4FF"> Default shading for the text fill colour</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TXTSCALE</td><td style="background:#c9e4FF"> Default text scaling</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TXTSTROKE</td><td style="background:#c9e4FF"> Name of the default colour for stroking text</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TXTSTRSH</td><td style="background:#c9e4FF"> Default shading for stroking text</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">TXTSTYLE</td><td style="background:#c9e4FF"> Default character style, value is the bitwise or of these constants: <br/>
+1 = Superscript  <br/>
+2 = Subscript  <br/>
+4 = Outlined <br/>
+8 = Underlined  <br/>
+16 = Strikeout  <br/>
+64 = Small Caps</td></tr>
+  <tr>
+    <td style="background:#ffffff">WIDTH</td><td style="background:#ffffff">Width of the Object</td></tr>
+  <tr>
+    <td style="background:#ffffff">XPOS</td><td style="background:#ffffff">X-Positon of the Object</td></tr>
+  <tr>
+    <td style="background:#ffffff">YPOS</td><td style="background:#ffffff">Y-Position of the Object</td></tr>
+  <tr>
+    <td style="background:#ffffff">startArrowIndex</td><td style="background:#ffffff">0 is none, or nonzero index to list of various types of arrows. As of 1.4 there are 36 kinds.</td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTBASE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTKERN</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">TXTSCALEV</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">PAGEOBJECT</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">PageItemAttributes</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="4">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="4">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="4">PAGEOBJECT</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">Tab</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="3">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">Fill</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Pos</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Type</td><td style="background:#ffffff">0 = Left <br/>
+1 = Right  <br/>
+2 = Full Stop  <br/>
+3 = Comma  <br/>
+4 = Center</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="5">PAGEOBJECT</td>
+    <td colspan="3" style="background:#A9D1FF;color:#000000">CSTOP</td>
+    <td colspan="1" style="background:#A9D1FF;"> A color stop of a gradient</td>
+  </tr>
+  <tr>
+      <td style="background:#c9e4FF" colspan="2" rowspan="4">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">NAME</td><td style="background:#ffffff">Name of the stop colour</td></tr>
+  <tr>
+    <td style="background:#ffffff">RAMP</td><td style="background:#ffffff">Position of the colour stop, range from 0.0 till 1.0</td></tr>
+  <tr>
+    <td style="background:#ffffff">SHADE</td><td style="background:#ffffff">Shading of the stop colour in Percent</td></tr>
+  <tr>
+    <td style="background:#ffffff">TRANS</td><td style="background:#ffffff">Transparency of the colour stop, range from 0.0 till 1.0</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="22">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="22">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="22">PAGEOBJECT</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">ITEXT</td>
+    <td colspan="1" style="background:#eeeeee;">Chunk of text</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="21">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">CAB</td><td style="background:#ffffff">Paragraph style for the character <br/>
+0 = No Style, left aligned  <br/>
+1 = Align Text Center <br/>
+2 = Align Text Right <br/>
+3 = Align Text Justified  <br/>
+4 = Align Text Forced Justified higher values indicate a custom paragraph style</td></tr>
+  <tr>
+    <td style="background:#ffffff">CCOLOR</td><td style="background:#ffffff">Name of the fill colour</td></tr>
+  <tr>
+    <td style="background:#ffffff">CEXTRA</td><td style="background:#ffffff">Value for Kerning</td></tr>
+  <tr>
+    <td style="background:#ffffff">CFONT</td><td style="background:#ffffff">Name of the Font</td></tr>
+  <tr>
+    <td style="background:#ffffff">CH</td><td style="background:#ffffff">The character(s) itself</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">CSCALE</td><td style="background:#c9e4FF"> Scaling in percent</td></tr>
+  <tr>
+    <td style="background:#ffffff">CSHADE</td><td style="background:#ffffff">Shading of the fill colour</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">CSHADE2</td><td style="background:#c9e4FF"> Shading of the stroke colour</td></tr>
+  <tr>
+    <td style="background:#ffffff">CSIZE</td><td style="background:#ffffff">Fontsize in points</td></tr>
+  <tr>
+    <td style="background:#c9e4FF">CSTROKE</td><td style="background:#c9e4FF"> Name of the stroke colour</td></tr>
+  <tr>
+    <td style="background:#ffffff">CSTYLE</td><td style="background:#ffffff">The style of the character, value is the bitwise or of these constants: <br/>
+1 = Superscript  <br/>
+2 = Subscript  <br/>
+4 = Outlined  <br/>
+8 = Underlined  <br/>
+16 = Strikeout <br/>
+64 = Small Caps <br/>
+128 = Word can be hyphenated here</td></tr>
+  <tr>
+    <td style="background:#ffffff">CBASE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">CSTW</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">CULP</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">CKERN</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">COUT</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">CSCALEV</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">CSTP</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">CULW</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">CSHX</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">CSHY</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">PAGEOBJECT</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">var</td>
+    <td colspan="1" style="background:#eeeeee;">Variable text chunk</td>
+  </tr>
+  <tr>
+      <td style="background:#ffffff" colspan="2" rowspan="1">&nbsp;&nbsp;&nbsp;</td>
+    <td style="background:#ffffff">name</td><td style="background:#ffffff">can be "pgno" for page number, or "pgco" for total page count</td></tr>
+</div>
+</table>
+</body>
+</html>

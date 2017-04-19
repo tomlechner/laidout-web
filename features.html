@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<title>Laidout Features</title>
+
+<meta name="description" content="Laidout, desktop publishing software.">
+<meta name="keywords" content="Cartoons, Prints, Drawings, Polyhedra, Polyhedron, Calendar, 
+Desktop, Publishing, Page, Layout, Multipage, Booklet, Books, Imposition, Linux, Software,
+Tensor, Product, Patch, Laidout, Folded, Pamphlet, Screenshots,
+Dodecahedron,">
+
+<link rel="icon" href="laidout-icon-16x16.png" type="image/png">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="whole">
+
+  <div id="side">
+    <ul class='sidenav'>
+	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="images/gplus.png" alt="Google+"/></a></li>
+	   <li><a class="feeds" href="rss.xml"><img src="images/rss.png" alt="RSS feed"/></a></li>
+	   &nbsp;&nbsp;
+      <li><a href="dev.html">Dev</a></li>
+      <li><a href="index.html#download">Download</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="screenshots/">Screenshots</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  
+
+  </div><!-- side -->
+
+  <div id="main">
+
+<h1>Features</h1>
+
+<p>
+Here is a list of the current features of Laidout (version 0.096). 
+Most of these features can be seen in action on the <a href="screenshots/">screenshots</a> page.
+</p><p>
+You might also be interested in <a href="dtpcompare.html">this comparison</a> between various desktop
+publishing and vector graphics programs,
+and also the rough <a href="roadmap.html">Laidout development roadmap</a>.
+</p>
+<br>
+
+<p class="question">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Impositioning</p>
+<p>Impose a document as a collection of single pages, custom folded signature based 
+impositions (folded right on screen) such as booklets, and nets derived from polyhedra,
+possibly based on a dodecahedron, a box, or other polyhedra. Thus, Laidout impositioning is broad 
+enough to allow impositions with pages that don't have to be rectangular, such as a 
+<a href="screenshots/img-triacontahedron-0.03.1-2.html">triacontahedron</a>.<br>
+<br>
+Also, you can define one or more paper arrangements for any kind of layout from any of the impositions. Each paper arrangement
+lets you place the same page, or page spread, or scratch space data across many pieces of paper. This is very useful for postering.
+<br />
+<br />
+<a href="screenshots/img-signatureeditor.html"><img align="top" border="0" src="screenshots/thumbs/signatureeditor-s.png" alt="Signature Editor" width="150" height="120"></a>
+<a href="screenshots/img-papertiler.html"><img border="0" align="top" src="screenshots/thumbs/papertiler-s.jpg" alt="Paper Tiler" width="179" height="144"></a>
+<a href="screenshots/img-triacontahedron-0.03.1-2.html"><img border="0" src="screenshots/thumbs/triacontahedron-0.03.1-2-s.jpg" alt="Nets" width="178" height="135"></a>
+</p>
+<br />
+
+
+
+
+<p class="question">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object Types</p>
+<p>
+<ul>
+<li><b>Images</b></li>
+<li><b>Linear Gradients</b></li>
+<li><b>Radial Gradients</b></li>
+<li><b>Paths</b>, as of version 0.093. Transparency on screen as of 0.096.</li>
+<li><b>Color meshes</b> using full cubic tensor product patches, as seen in Postscript and PDF</li>
+<li><b>Warped images</b>, like color patches, but with image for the color (on a totally unrelated note, you can now do cage warping in the Gimp!)</li>
+<li><b>Engraver fill</b>, twist around fields of lines by distorting a mesh. Change dash patterns, trace images, and more!</li>
+<li><b>Captions</b>, a kind of primitive text object. Each caption object is an unlinked, unstreamed block of text with one font, size, and color. It can 
+be aligned left, right, center, or anything in between. I'm working on a more full featured streaming text system.</li>
+<li><b>Mystery data</b>, which is anything imported from other formats, but not necessarily understood by Laidout.
+		You can reposition this data, and it survives, more or less, when you export to the same kind of file.</li>
+</ul>
+</p><p>
+Objects can be moved, scaled, rotated, and sheared, by themselves or as a group. There is a special 3-point transform, where you can
+define an anchored center of rotation and scaling, then drag another point to scale and rotate. Or you can anchor 2 points,
+and drag the third point to shear the object accordingly. 
+<!-- See <a href="screenshots/videos.html#basics">here</a>
+for a video tutorial of this.  -->
+</p>
+<p>
+If you have a sufficiently new Linux system (meaning since around 2010, must support Xinput2),
+you can use two mice at the same time to do fancy multipoint scaling and rotating.
+</p>
+<p>
+<a href="screenshots/img-monkeypatch.html"><img border="0" align="top" src="screenshots/thumbs/monkeypatch-s.jpg" alt="Color patch gradients" width="170" height="137"></a>
+<a href="screenshots/img-radial-gradients.html"><img border="0" align="top" src="screenshots/thumbs/radial-gradients-s.jpg" alt="Linear and radial gradients" width="148" height="157"></a>
+<a href="screenshots/img-imagepach-0.02.1.html"><img border="0" align="top" src="screenshots/thumbs/imagepach-0.02.1-s.jpg" alt="Image warping" width="155" height="163"></a>
+<a href="screenshots/img-engraver-withpaths-0.095.1.html"><img align="top" border="0" src="screenshots/thumbs/engraver-withpaths-0.095.1-s.png" alt="Engraver Tool" width="240" height="135"></a>
+<a href="screenshots/img-text-tool-start-0.095.1.html"><img border="0" src="screenshots/thumbs/caption-tool-0.095.1-s.jpg" alt="Text in the Caption Tool" width="186" height="125"></a>
+<a href="screenshots/img-paths-0.093.html"><img border="0" align="top" src="screenshots/thumbs/paths-0.093-s.png" alt="Paths" width="175" height="102"></a>
+</p>
+
+<br />
+<p class="question">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exporting</p>
+<p>You can export everything, or just a range of spreads to a single file or multiple files as is possible for the format. 
+You can also export from the command line, without actually starting up a window. The currently supported export 
+formats are:
+<ul>
+<li><strong>Pdf</strong>, cannot export EPS objects</li>
+<li><strong>Svg</strong>, cannot export EPS or image warp objects, has trouble with radial gradients where one circle is not inside the other, </li>
+<li><strong>Scribus</strong>, images, groups, and any imported Scribus mystery data only</li>
+<li><strong>Png images</strong></li>
+<li><strong>Podofoimpose PLAN</strong>, mapping files that 
+	<a href="http://oep-h.com/impose/README.html">podofoimpose</a> can use to impose pdf files</li>
+<li><strong>Passepartout</strong>, images and groups only</li>
+<li><strong>Postscript</strong>. When printing, or exporting to postscript or eps files, images with transparency 
+will be masked based on 50% threshhold of the alpha channel, since postscript does not have transparency. </li>
+<li><strong>EPS</strong></li>
+</ul>
+</p>
+
+
+
+
+
+<br />
+<p class="question">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Importing</p>
+<p>
+When importing, Laidout tries to remember as much as it can from the original file. This allows you to edit a file in Laidout
+and then export back out to the same format, and the mystery objects will be passed through. For instance, you can import
+a Scribus document, reimpose it to a booklet, say, then export back to a Scribus format, even though Laidout cannot (yet)
+handle text blocks, text wrapping, and clip paths.
+<ul>
+<li><strong>EPS</strong>, but only as a whole. You cannot import the components of an EPS.</li>
+<li><strong>Images</strong>, including many images at the same time, at a specified dpi, and you can say how
+				many you want per page.</li>
+<li><strong>Svg</strong>, extremely limited, so limited in fact, that it is not recommended for use of any kind, but you are welcome to help debug!</li>
+<li><strong>Scribus</strong>, with a few severe restrictions. Master pages are converted to normal objects. Images must match their
+					frames, unless imported as pure mystery data.</li>
+<li><strong>Passepartout</strong></li>
+<li><strong><a href="http://shape.cs.princeton.edu/benchmark/documentation/off_format.html">OFF</a></strong>, 
+			You can import these 3-d polyhedra files to use as the basis for a Net Imposition, but be advised the polyhedron
+			sides should not intersect each other</li>
+</ul>
+</p>
+
+
+
+<br />
+<p class="question">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interface Windows</p>
+<p>A splittable window system, reminiscent of Blender and the Ion window manager. You can dock, float, move and temporarily
+maximize the panes of any main split window you have up. The window configuration is also loaded and saved with whatever
+document you are working on. The panes of each splittable window can be:<br>
+<ul>
+<li><b>Page view window</b>, for working on objects within pages</li>
+<li><b>Spread editor</b>, for rearranging the page order</li>
+<li><b>Palette Window</b>. You can import Gimp palettes.</li>
+<li><b>Command prompt window</b>. Run some commands and use it as a basic calculator. Definitely a work in progress.</li>
+<li><b>Plain text editor</b>. You can edit a group of commands to run with the built in interpreter.</li>
+<li><b>Help window</b> (very basic at the moment)</li>
+<!-- li><b>Button window</b>. (non-functioning; It'll work some day!!)</li -->
+</ul>
+</p><p>
+One feature of the Page View and Spread Editor windows is that the whole view can be arbitrarily rotated.
+Normally, programs only allow viewing a page in portrait or landscape orientation.<br>
+</p>
+<p>
+<a href="screenshots/img-basics-0.091.html"><img border="0" align="top" src="screenshots/thumbs/basics-0.091-s.jpg" alt="Viewport and Object Basics" width="169" height="143"></a>
+<a href="screenshots/img-tatamishot.html"><img border=0 src="screenshots/thumbs/tatamishot-s.jpg" alt="Window arrangements" width="168" height="135"></a>
+</p>
+<br />
+<p class="question">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Misc</p>
+<p>
+<ul>
+<li>Simple <a href="screenshots/img-bookletvideo.html">multiple image import</a> by selecting one or more from a directory</li>
+<li>Import images from a list file</li>
+<li>Page Labels, so you can number like: i, ii, iii, 1, 2, 3, A-1, A-2, etc. Since version .092, <a href="https://www.youtube.com/watch?v=6nViHfkPPjE">there is a gui</a> to edit labels.</li>
+<li>Ability to use preview images as stand-ins for your hundreds of 15M tiffs.</li>
+<li>Batch processing. You can import, reimpose, and export files without opening
+up a window, by passing commands to Laidout's interpreter from the command line.</li>
+<li>There's a command line option (<tt>--file-format</tt>) which outputs a sort of mockup of the
+<a href="fileformat.txt">current file format</a>. Hopefully this will help people make extra utilities, and aid batch processing.</li>
+</ul>
+<br>
+<a href="screenshots/img-bookletvideo.html"><img align="top" border="0" src="screenshots/thumbs/bookletvideo.png" alt="How to make booklets" width="192" height="135"></a>
+<a href="screenshots/img-pagerange.html"><img align="top" border="0" src="screenshots/thumbs/pagerange-s.png" alt="Page Range Interface" width="210" height="119"></a>
+</p>
+
+
+
+<p>
+<!-- strong><font size="+1">In progress:</font></strong><br -->
+</p>
+
+<br><br><br>
+
+</div><!-- main -->
+</div><!-- whole -->
+
+
+</body>
+</html>

@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta charset="utf-8">
+
+<meta name="description" content="Laidout, desktop publishing software.">
+<meta name="keywords" content="Cartoons, Prints, Drawings, Polyhedra, Polyhedron, Calendar, 
+Desktop, Publishing, Page, Layout, Multipage, Booklet, Books, Imposition, Linux, Software,
+Tensor, Product, Patch, Laidout, Folded, Pamphlet, Help,
+Dodecahedron, software, open, source, dtp, signature, editor">
+
+<title>Laidout</title>
+
+<link rel="icon" href="laidout-icon-16x16.png" type="image/png">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+
+<style type="text/css">
+  
+  td.Yes {
+    background: #00ff00;
+    text-align: center;
+  }
+  
+  td.No {
+    background: #ffaaaa;
+    text-align: center;
+  }
+  
+  td.planned {
+    background: #dddddd;
+    text-align: center;
+  }
+  
+  td.partial {
+    background: #ddffdd;
+    text-align: center;
+  }
+  
+  td.plugin {
+    background: #ddffff;
+    text-align: center;
+  }
+  
+  span.Yes {
+    background: #00ff00;
+  }
+  
+  span.No {
+    background: #ffaaaa;
+  }
+  
+  span.planned {
+    background: #dddddd;
+  }
+  
+  span.plugin {
+    background: #ddffff;
+  }
+  
+  span.partial {
+    background: #ddffdd;
+  }
+  td.partial a:hover { background-color:aaddaa; }
+  td.plugin  a:hover { background-color:aadddd; }
+  
+  #thetable {
+    padding: 5;
+  }
+  #thetable {
+  	 border:2px solid #bbb;
+  	 padding:0px;
+  	 border-collapse: collapse;
+  }
+  #thetable td {
+    padding:2px;
+    border-bottom: 1px solid #ddd;
+	 border-left: 1px solid #ddd;
+	 border-right: 0px solid #ccc;
+	 border-top: 0px solid #ccc;
+  } 
+  #thetable td.header {
+    background:#ddd;
+    font-weight:bold;
+  }
+  #thetable td.desc {
+    padding-left:1em;
+  }
+  
+  #thetable a {
+    display:block;
+  }
+  #thetable td.desc > a {
+    display: inline;
+  }
+  #thetable tr:hover {
+    background-color: #f0f0f0;
+  }
+</style>
+
+
+</head>
+<body>
+
+<div class="whole">
+
+  <div id="side">
+    <ul class='sidenav'>
+	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="images/gplus.png" alt="Google+"/></a></li>
+	   <li><a class="feeds" href="rss.xml"><img src="images/rss.png" alt="RSS feed"/></a></li>
+	   &nbsp;&nbsp;
+      <li><a href="dev.html">Dev</a></li>
+      <li><a href="index.html#download">Download</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="screenshots/">Screenshots</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  
+
+  </div><!-- side -->
+
+
+
+  <div id="main">
+
+
+<h1>DTP Features</h1>
+
+<p>
+Here is a brief comparison between a few closed and open source vector graphics programs. It is a
+list of features that are not so much a roadmap as things that any
+self respecting desktop publishing software should have. You will note that not much
+of this is currently implemented in Laidout.<br/>
+<br/>
+THIS TABLE IS FAR FROM COMPLETE! Please send me updates, or post on the <a href="https://lists.sourceforge.net/lists/listinfo/laidout-general">Laidout mailing list</a>
+if you see something that is not correct. You might also check out
+ <a href="http://wiki.scribus.net/index.php/Export/Import_capabilities_of_Scribus%2C_OpenOffice.org%2C_Inkscape%2C_GIMP%2C_and_Krita">this comparison</a> 
+ over on the Scribus site about import and export capabilities of Scribus, OpenOffice.org, Inkscape, GIMP, and Krita. Also 
+ <a href="http://en.wikipedia.org/wiki/Comparison_of_vector_graphics_editors">this page about vector graphics</a> editors in Wikipedia, 
+this <a href="http://en.wikipedia.org/wiki/Comparison_of_desktop_publishing_software">dtp comparison on Wikipedia</a>, and also 
+<a href="http://en.wikipedia.org/wiki/List_of_desktop_publishing_software">a plain list</a> of such software.<br/>
+<br/>
+Please note that I have no access to InDesign, Quark, or Illustrator, so the estimation of the capabilities of those programs might be totally wrong.
+They are based mostly on browsing video tutorials for them.
+</p>
+
+<p>* Hover the mouse over a block to see what version the feature first appears in, if known, plus other relevant notes.<br/>
+* If a spot is blank, its status is either not known, or the devs might be vaguely thinking about implementing it some day.<br/>
+<span class="partial">"partial"</span> means the feature exists, but leaves much to be desired.<br/>
+<span class="planned">"planned"</span> means actual coding has begun on it, but it is not yet functional.<br/>
+<span class="plugin">"plugin"</span> means that you can do it in the program, but you need an extra plugin.</p>
+<table id="thetable" border="1" cellspacing="0" bordercolorlight="#333300" bordercolordark="#000066">
+<tr>
+ <td align="center" class="header">Infrastructure Features</td>
+  <td class="header"> <a href="http://www.laidout.org"  ><font color="#000000">Laidout</font></a> </td> 
+  <td class="header"> <a href="http://www.scribus.net"  ><font color="#000000">Scribus</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/indesign/"  ><font color="#000000">InDesign</font></a> </td> 
+  <td class="header"> <a href="http://quark.com"  title="officials might refer to it as QuarkXPress"><font color="#000000">Quark</font></a> </td> 
+  <td class="header"> <a href="http://www.inkscape.org"  ><font color="#000000">Inkscape</font></a> </td> 
+  <td class="header"> <a href="http://www.xara.com"  ><font color="#000000">Xara</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/illustrator/"  ><font color="#000000">Illustrator</font></a> </td> 
+</tr>
+<tr><td class="desc">Impositioning</td>
+  <td class="Yes"  title=".01" >Yes</td>
+  <td class="No"  ><a name="cite1" href="#1">No<sup><span style="font-size:70%">1</span></sup></a></td>
+  <td class="partial"  ><a name="cite2" href="#2">partial<sup><span style="font-size:70%">2</span></sup></a></td>
+  <td class="No"  title="and I ask you, why the hell not??" >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Folding signature based impositioning</td>
+  <td class="Yes"  title=".091" >Yes</td>
+  <td class="No"  >No</td>
+  <td class="partial"  title="booklets only without a plugin" >partial</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Mobius strip impositioning</td>
+  <td class="planned"  title=".098" >planned</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">impositioning involving non-rectangular pages</td>
+  <td class="Yes"  title=".01" >Yes</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Spreading page contents over several pieces of paper, so you can print out a really big layout from your small printer</td>
+  <td class="Yes"  title=".08, click for tutorial!" ><a href="http://www.youtube.com/watch?v=N79bFZmlKLU">Yes</a></td>
+  <td class="partial"  title="something to do with PageSets maybe" ><a name="cite3" href="#3">partial<sup><span style="font-size:70%">3</span></sup></a></td>
+  <td class="Yes"  title="like Illustrator, in a grid with specified overlap value." >Yes</td>
+  <td class="partial"  title="limited to spanning normal page spreads" >partial</td>
+  <td class="No"  >No</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  title="in a grid with specified overlap value. Overlap since 2008-ish?" ><a name="cite4" href="#4">Yes<sup><span style="font-size:70%">4</span></sup></a></td>
+</tr>
+<tr><td class="desc">Math calculations in input boxes</td>
+  <td class="planned"  title="for .1" >planned</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Plugins or scripting</td>
+  <td class="planned"  title="for .1" ><a name="cite5" href="#5">planned<sup><span style="font-size:70%">5</span></sup></a></td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Edge feathering (as seen in Xara), or equivalent blurring</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Metafont-y erase brush, aka a knockout "color" or knockout groups</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Fill applied to stroke</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Editable textwrap path, independent from the actual object</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Editable clip path</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Use objects as mask (softmask in pdf speak)</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  title="1.5 has a new Transparency tab, where you can use patterns as a mask" >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="No"  >No</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Color separations</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Color system capabilities flexible enough for any number of inks (think "deviceN", not just RGB, CMYK, CcMmYK, etc)</td>
+  <td class="planned"  title=".1" >planned</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">ICC color profiles</td>
+  <td class="planned"  title=".1" >planned</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Autotrace images</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="No"  >No</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Spread editor</td>
+  <td class="Yes"  title="much improved as of version 0.095" >Yes</td>
+  <td class="partial"  >partial</td>
+  <td class="partial"  >partial</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">overprinting/trapping on per object basis</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">UCR, BG</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Rotate whole page view on screen by arbitrary degrees, not just portrait/landscape</td>
+  <td class="Yes"  title=".01" >Yes</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="planned"  title="active development 2016ish" >planned</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Preflight verifier</td>
+  <td class="planned"  title=".1" >planned</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Collect for out</td>
+  <td class="planned"  title=".098" >planned</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Record macros, like Pagestream, Vim, or Openoffice!</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="planned"  title="In Scribus 1.3.x Roadmap Extras marked as in progress" >planned</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="No"  >No</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Non-destructive Bezier patch transforms on any object</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Arbitrary f(s,t) transforms, and f(s) or f(t) transforms for paths</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Guides that are arbitrary paths, not just vertical and horizontal lines. </td>
+  <td class="planned"  title="for .1 or .2" >planned</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="Yes"  title="Version 0.46, via snap to path, and rotatable straight guides" >Yes</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Aligning groups of points, text, and/or objects to paths</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Tablet support, stylus, eraser, mouse allowed different functions</td>
+  <td class="planned"  title="for .1" >planned</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="partial"  title="pressure support, but each input is same tool" >partial</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Ability to use odd control surfaces like midi controllers, a la the Gimp</td>
+  <td class="planned"  title="for .1" >planned</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc"><a href="http://www.nuigroup.com/">Multi-touch</a> support, or support for the <a href="http://www.x.org/wiki/XI2">poor person's version</a> using 2 mice and XInput2</td>
+  <td class="partial"  title="0.091" ><a name="cite6" href="#6">partial<sup><span style="font-size:70%">6</span></sup></a></td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td colspan="8">&nbsp;<br/>&nbsp;</td></tr>
+
+<tr>
+ <td align="center" class="header">Non-text Tool Features</td>
+  <td class="header"> <a href="http://www.laidout.org"  ><font color="#000000">Laidout</font></a> </td> 
+  <td class="header"> <a href="http://www.scribus.net"  ><font color="#000000">Scribus</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/indesign/"  ><font color="#000000">InDesign</font></a> </td> 
+  <td class="header"> <a href="http://quark.com"  title="officials might refer to it as QuarkXPress"><font color="#000000">Quark</font></a> </td> 
+  <td class="header"> <a href="http://www.inkscape.org"  ><font color="#000000">Inkscape</font></a> </td> 
+  <td class="header"> <a href="http://www.xara.com"  ><font color="#000000">Xara</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/illustrator/"  ><font color="#000000">Illustrator</font></a> </td> 
+</tr>
+<tr><td class="desc">Images</td>
+  <td class="Yes"  title=".01" >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Linear, and circle color gradients</td>
+  <td class="Yes"  title=".02" >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">On canvas gradient color spot editing</td>
+  <td class="Yes"  title=".02" >Yes</td>
+  <td class="No"  >No</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  title=".46" >Yes</td>
+  <td class="No"  >No</td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Patch gradients (aka mesh gradients)</td>
+  <td class="Yes"  title=".01" >Yes</td>
+  <td class="Yes"  title="1.5svn, colors->gradient->mesh, only 12 point mesh, not full 16" >Yes</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="Yes"  title="dev version since 2015ish, awaiting new SVG spec to make standard" >Yes</td>
+  <td class="No"  >No</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Image mesh distortions</td>
+  <td class="Yes"  title=".03" >Yes</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Lines/polygons</td>
+  <td class="Yes"  title="0.093" >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Engraver fill</td>
+  <td class="Yes"  title="0.094" ><a name="cite7" href="#7">Yes<sup><span style="font-size:70%">7</span></sup></a></td>
+  <td class="No"  >No</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="partial"  ><a name="cite8" href="#8">partial<sup><span style="font-size:70%">8</span></sup></a></td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="plugin"  title="Widthscribe from Astute Graphics looks nice." >plugin</td>
+</tr>
+<tr><td class="desc">Ellipses, arcs, chords</td>
+  <td class="Yes"  title=".093, via '0' to lay bezier points along a circle, then scale to ellipse" >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Paths composed of different types, such as a circular arc to a bezier segment to a straight segment, and still allow specialized editing of such shapes</td>
+  <td class="planned"  title="for .1" >planned</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Beginning/end/middle arrows and such</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Repeater tool along path</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="partial"  title="only works with paths, Path Tools->Path along Path" >partial</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Cloning objects, optionally with link backs to original objects</td>
+  <td class="Yes"  title="0.094" >Yes</td>
+  <td class="partial"  title="Duplicates yes, but referenced clones not yet (see scribus bug 1704)" >partial</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td colspan="8">&nbsp;<br/>&nbsp;</td></tr>
+
+<tr>
+ <td align="center" class="header">Text Features</td>
+  <td class="header"> <a href="http://www.laidout.org"  ><font color="#000000">Laidout</font></a> </td> 
+  <td class="header"> <a href="http://www.scribus.net"  ><font color="#000000">Scribus</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/indesign/"  ><font color="#000000">InDesign</font></a> </td> 
+  <td class="header"> <a href="http://quark.com"  title="officials might refer to it as QuarkXPress"><font color="#000000">Quark</font></a> </td> 
+  <td class="header"> <a href="http://www.inkscape.org"  ><font color="#000000">Inkscape</font></a> </td> 
+  <td class="header"> <a href="http://www.xara.com"  ><font color="#000000">Xara</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/illustrator/"  ><font color="#000000">Illustrator</font></a> </td> 
+</tr>
+<tr><td class="desc">Text. Any text at all. I mean, come on!</td>
+  <td class="Yes"  title="0.096. Simple unlinked, unflowed caption boxes. Each box has to be a single font, orientation, size, and color." >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Text on a line</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Text flowed across linked boxes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Manual layered color fonts (one file per layer), text editable as if it were a single font</td>
+  <td class="Yes"  title="0.096" >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Opentype color fonts</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Opentype feature support</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Mixed right to left, left to right</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="planned"  title="for 1.6, the text engine retwritten from scratch" >planned</td>
+  <td class="Yes"  ><a name="cite9" href="#9">Yes<sup><span style="font-size:70%">9</span></sup></a></td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Vertical text</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Text streams in separate files, comparable to images not being embedded</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Convert Text to editable path</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Math equations support</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="partial"  title="1.3.5 via Render frames and LaTeX" ><a name="cite10" href="#10">partial<sup><span style="font-size:70%">10</span></sup></a></td>
+  <td class="plugin"  title="MathMagic, for instance" >plugin</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Story Editor</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="No"  >No</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Tabstops that lie on arbitrary paths, not just vertical and horizontal lines. Someday will be gone the days of rigidly defined and poorly accessed tabstops!</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Tables</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="planned"  >planned</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Automatic Hyphenation and justification</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Insert sample gibberish text!! Yeah!</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Numbered and unnumbered lists</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Generated pages, for instance for tables of contents, bibliography, index</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td colspan="8">&nbsp;<br/>&nbsp;</td></tr>
+
+<tr>
+ <td align="center" class="header">Export</td>
+  <td class="header"> <a href="http://www.laidout.org"  ><font color="#000000">Laidout</font></a> </td> 
+  <td class="header"> <a href="http://www.scribus.net"  ><font color="#000000">Scribus</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/indesign/"  ><font color="#000000">InDesign</font></a> </td> 
+  <td class="header"> <a href="http://quark.com"  title="officials might refer to it as QuarkXPress"><font color="#000000">Quark</font></a> </td> 
+  <td class="header"> <a href="http://www.inkscape.org"  ><font color="#000000">Inkscape</font></a> </td> 
+  <td class="header"> <a href="http://www.xara.com"  ><font color="#000000">Xara</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/illustrator/"  ><font color="#000000">Illustrator</font></a> </td> 
+</tr>
+<tr><td class="desc">To image</td>
+  <td class="Yes"  title=".08, requires Ghostscript" >Yes</td>
+  <td class="Yes"  title="can mass export each page to separate image files" >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">EPS/Postscript</td>
+  <td class="Yes"  title="ps in .01, eps in .03" >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  title="by printing to a file" >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Html</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="No"  >No</td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">PDF</td>
+  <td class="partial"  title=".08, but not EPS objects" >partial</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+</tr>
+<tr><td class="desc">Scribus</td>
+  <td class="partial"  title=".08, images and groups only" >partial</td>
+  <td class="Yes"  >Yes</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">SVG/Inkscape</td>
+  <td class="partial"  title="0.08, no image warps, not some radial gradients" >partial</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Openoffice.org Draw</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Passepartout</td>
+  <td class="partial"  title="0.07, groups and images only" >partial</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Laidout</td>
+  <td class="Yes"  >Yes</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">TeX/LaTeX</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="partial"  title="you can save as LaTeX with pstricks" >partial</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td colspan="8">&nbsp;<br/>&nbsp;</td></tr>
+
+<tr>
+ <td align="center" class="header">Importing</td>
+  <td class="header"> <a href="http://www.laidout.org"  ><font color="#000000">Laidout</font></a> </td> 
+  <td class="header"> <a href="http://www.scribus.net"  ><font color="#000000">Scribus</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/indesign/"  ><font color="#000000">InDesign</font></a> </td> 
+  <td class="header"> <a href="http://quark.com"  title="officials might refer to it as QuarkXPress"><font color="#000000">Quark</font></a> </td> 
+  <td class="header"> <a href="http://www.inkscape.org"  ><font color="#000000">Inkscape</font></a> </td> 
+  <td class="header"> <a href="http://www.xara.com"  ><font color="#000000">Xara</font></a> </td> 
+  <td class="header"> <a href="http://www.adobe.com/products/illustrator/"  ><font color="#000000">Illustrator</font></a> </td> 
+</tr>
+<tr><td class="desc">Multiple images at the same time</td>
+  <td class="Yes"  title=".05" >Yes</td>
+  <td class="plugin"  ><a name="cite11" href="#11">plugin<sup><span style="font-size:70%">11</span></sup></a></td>
+  <td class="Yes"  title="in CS3, what a clever Place tool!" >Yes</td>
+  <td class="partial"  title="by dragging and dropping from a file browser" >partial</td>
+  <td class="partial"  title="by dragging and dropping from a file browser" >partial</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">EPS</td>
+  <td class="Yes"  title="as a whole, .06" >Yes</td>
+  <td class="Yes"  title="can break down the eps into its parts, has trouble with masked images and patch gradients" >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Html</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="partial"  ><a name="cite12" href="#12">partial<sup><span style="font-size:70%">12</span></sup></a></td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="partial"  >partial</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">PDF</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="partial"  title="pretty sure it's done through importing rasterized pages" >partial</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Scribus</td>
+  <td class="partial"  title=".09, very partial" ><a name="cite13" href="#13">partial<sup><span style="font-size:70%">13</span></sup></a></td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">SVG/Inkscape</td>
+  <td class="partial"  title=".09, images and groups only" >partial</td>
+  <td class="partial"  >partial</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Openoffice.org Draw</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="Yes"  >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Passepartout</td>
+  <td class="partial"  title="0.09, text boxes are imported as mystery data" >partial</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">TeX/LaTeX</td>
+<td class="blank"  > &nbsp;  </td>
+  <td class="partial"  title="1.3.5, via Render frames, rasterized and imported" ><a name="cite14" href="#14">partial<sup><span style="font-size:70%">14</span></sup></a></td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+<tr><td class="desc">Laidout</td>
+  <td class="Yes"  title="in the sense that you open a document, but no partial import" >Yes</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+  <td class="No"  >No</td>
+</tr>
+<tr><td class="desc">Externally rendered formats (for instance, <a href="http://wiki.scribus.net/index.php/Embedding_other_external_tools_into_a_TeX_frame">Scribus render frames</a>)</td>
+  <td class="planned"  title="for .094" >planned</td>
+  <td class="Yes"  title="Render Frames" >Yes</td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+<td class="blank"  > &nbsp;  </td>
+</tr>
+</table>
+<!-- ------------------------ -->
+<br><br>
+<strong>Lower level functions and other neat ideas from other programs, though maybe less vital:</strong>
+
+<ul>
+<li>Auto sync keyboard shortcuts with inkscape/gimp/whatever</li>
+<li>Openclipart integration/scrapbook</li>
+<li>cntl-+/- zooms around object, neat!</li>
+<li>Color selector previews different shades of color with black and white text on it!!! Fab!</li>
+<li>The scribus color wheel is very clever, including allowing preview for various kinds of color blindness!</li>
+</ul>
+<br>
+
+<hr/>
+ <br/> <h2>Notes</h2>
+ <p>
+<br/>
+<a name="1" title="Back" href="#cite1"><strong>[1]</a> Infrastructure Features: Impositioning:<br/>
+&nbsp;&nbsp;Scribus</strong> -- <span class="No"> &nbsp;No&nbsp; </span><br/>You can use use Laidout in limited circumstances to impose Scribus documents. This is done with
+a Scribus script that calls Laidout. See <a href="http://laidout.org/scribus">here</a> for more info.
+A different <a href="http://wiki.scribus.net/index.php/Imposition_Plugin_Discussion">plugin</a>
+was being developed during Google Summer of Code 2007, but it seems to have never been
+completed. Other relevant links include
+<a href="http://wiki.scribus.net/index.php/How_can_I_make_a_booklet_using_Scribus%3F">making booklets
+from Scribus</a>, and
+the <a href="http://bugs.scribus.net/view.php?id=83">imposition bug report</a>,
+in which there is much discussion.
+Other info <a href="http://wiki.scribus.net/index.php/Imposition_Plugin_Discussion">here</a>
+and <a href="http://wiki.scribus.net/index.php/Imposition">here</a>.<br/><br/>
+<a name="2" title="Back" href="#cite2"><strong>[2]</a> Infrastructure Features: Impositioning:<br/>
+&nbsp;&nbsp;InDesign</strong> -- <span class="partial"> &nbsp;partial&nbsp; </span><br/>It seems the built in impositioning of InDesign is quite limited. It can do left/right booklets, and
+fold out style imposing, which is simply several pages placed side by side. You need to get plugins
+for more thorough imposing.<br/><br/>
+<a name="3" title="Back" href="#cite3"><strong>[3]</a> Infrastructure Features: Spreading page contents over several pieces of paper, so you can print out a really big layout from your small printer:<br/>
+&nbsp;&nbsp;Scribus</strong> -- <span class="partial"> &nbsp;partial&nbsp; </span><br/>Scribus is set up to handle several papers right next to each other in a grid.
+In the file, there are PageSet sections. You can copy that and insert new
+PageSets. This allows spreading objects across many papers, but suffers from
+each page having to touch each other
+exactly, which leaves you with gaps if your printer cannot print to the edge
+of the paper. As of 1.3.5svn, There does not appear to be a way to edit these page sets
+in the gui. You have to edit the file manually.<br/><br/>
+<a name="4" title="Back" href="#cite4"><strong>[4]</a> Infrastructure Features: Spreading page contents over several pieces of paper, so you can print out a really big layout from your small printer:<br/>
+&nbsp;&nbsp;Illustrator</strong> -- <span class="Yes"> &nbsp;Yes&nbsp; </span><br/>Appears to be auto laid in a grid with one overlap value, accessed from the Print dialog.<br/><br/>
+<a name="5" title="Back" href="#cite5"><strong>[5]</a> Infrastructure Features: Plugins or scripting:<br/>
+&nbsp;&nbsp;Laidout</strong> -- <span class="planned"> &nbsp;planned&nbsp; </span><br/>Since Version .09, there is a very rudimentary command interpreter. It can process simple
+math and a few commands like Open(), Reimpose(), and Export(). Future versions will have variables,
+looping, and much more access to objects.<br/><br/>
+<a name="6" title="Back" href="#cite6"><strong>[6]</a> Infrastructure Features: <a href="http://www.nuigroup.com/">Multi-touch</a> support, or support for the <a href="http://www.x.org/wiki/XI2">poor person's version</a> using 2 mice and XInput2:<br/>
+&nbsp;&nbsp;Laidout</strong> -- <span class="partial"> &nbsp;partial&nbsp; </span><br/>Only the object tool has this (the poor person's version) in .091. More of that sort of thing
+will be built into future versions.<br/><br/>
+<br/>
+<a name="7" title="Back" href="#cite7"><strong>[7]</a> Non-text Tool Features: Engraver fill:<br/>
+&nbsp;&nbsp;Laidout</strong> -- <span class="Yes"> &nbsp;Yes&nbsp; </span><br/>See <a href="https://www.youtube.com/embed/zgIkkDaj-HA">this</a>, for instance<br/><br/>
+<a name="8" title="Back" href="#cite8"><strong>[8]</a> Non-text Tool Features: Engraver fill:<br/>
+&nbsp;&nbsp;Inkscape</strong> -- <span class="partial"> &nbsp;partial&nbsp; </span><br/>There are several ways to make a series of hatchings in Inkscape. One is the nearness guide, where nearby lines are detected
+and when you draw a new line, it is drawn at a certain distance away. Another way is the
+<a href="https://inkscape.org/en/doc/tutorials/interpolate/tutorial-interpolate.en.html">Interpolate</a> extension, which interpolates
+between two different lines, creating a field like effect.<br/><br/>
+<br/>
+<a name="9" title="Back" href="#cite9"><strong>[9]</a> Text Features: Mixed right to left, left to right:<br/>
+&nbsp;&nbsp;InDesign</strong> -- <span class="Yes"> &nbsp;Yes&nbsp; </span><br/>Complicated history, but looks like CC supports this. Non-cc from CS4 can use the
+World Ready Composer, if you can find it.<br/><br/>
+<a name="10" title="Back" href="#cite10"><strong>[10]</a> Text Features: Math equations support:<br/>
+&nbsp;&nbsp;Scribus</strong> -- <span class="partial"> &nbsp;partial&nbsp; </span><br/>As of 1.3.5 anyway, you can render formulas in Scribus Render Frames, then copy the frame, then paste
+the frame while inside a text stream, from within a text frame. Pasting while in story editor will
+paste a bunch of xml data
+that is used as text rather than as an image. Suffice it to say inline graphics needs a bit of work.<br/><br/>
+<br/>
+<br/>
+<a name="11" title="Back" href="#cite11"><strong>[11]</a> Importing: Multiple images at the same time:<br/>
+&nbsp;&nbsp;Scribus</strong> -- <span class="plugin"> &nbsp;plugin&nbsp; </span><br/><a href="http://wiki.scribus.net/index.php/Automatic_import_of_images:_Versions_not_requiring_Tkinter">These
+plugins</a> allows you to dump in images potentially to multiple pages, but you are restricted to
+a grid of 4, 6, or 12 images per page. If python programming doesn't scare you off, you could modify
+it to be more adaptible.<br/><br/>
+<a name="12" title="Back" href="#cite12"><strong>[12]</a> Importing: Html:<br/>
+&nbsp;&nbsp;Scribus</strong> -- <span class="partial"> &nbsp;partial&nbsp; </span><br/>Using the "Get Text" option in a text frame.
+CSS not supported yet. Text is pulled from the body element, and you can use these tags:
+div, a, p, br, h1, h2, h3, h4, ol, ul, li, pre, code, b, u, i, em, strong, sub, sup, del, u.<br/><br/>
+<a name="13" title="Back" href="#cite13"><strong>[13]</a> Importing: Scribus:<br/>
+&nbsp;&nbsp;Laidout</strong> -- <span class="partial"> &nbsp;partial&nbsp; </span><br/>Scribus import works with mixed results.
+As of .092, master pages and text variables are importable.
+As of .091, linked text and table frames stay linked, even in tiled impositions.
+The best way to use the importer is for reimposing. For this, import all data as mystery
+data, and all that data (other than master pages) will be passed through on export.
+If you do not import all as mystery data, please beware that images whose frames do
+not match exactly with their image
+boundaries are not handled correctly. This will hopefully be handled in .094.<br/><br/>
+<a name="14" title="Back" href="#cite14"><strong>[14]</a> Importing: TeX/LaTeX:<br/>
+&nbsp;&nbsp;Scribus</strong> -- <span class="partial"> &nbsp;partial&nbsp; </span><br/><a href="http://wiki.scribus.net/index.php/Embedding_other_external_tools_into_a_TeX_frame">Scribus
+render frames</a>, in addition to TeX/LaTeX,
+also allow importing many other formats, like gnuplot, lilypond, mathml, as long
+as you have a renderer installed somewhere that can convert those things to an image format
+or PDF that Scribus can import. You can edit the source text within Scribus,
+then have the render frame re-render. The TeX input has a fancy symbol selector, which is convenient.<br/><br/>
+</p>
+<br/>
+<hr>
+<center><span style="font-style:italic; font-size:90%; ">Last updated Mon Apr 10 16:16:40 2017
+</font><br><br></center>
+</div><!-- main -->
+</div><!-- whole -->
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+
+<html lang="en-us">
+<head>
+	<title>Polyptych</title>
+
+
+	<style type="text/css">
+	   body {
+	   	background-color: #aaaaaa;
+	   }
+		.program {
+			text-align: right;
+			font-weight: 600; 
+		}
+	</style>
+</head>
+
+<body>
+
+<center>
+<img src="polyptych-m.png" width="348" height="300" alt="Polyptych" />
+
+
+<br />
+<table cellpadding="5">
+<tr><td class="program">Polyptych</td>     <td>-</td><td> interactive unwrapper</td></tr>
+<tr><td class="program">convertahedron</td><td>-</td><td> convert between off, obj, and polyptych shape file formats</td></tr>
+<tr><td class="program">panolyptych</td>   <td>-</td><td> panorama viewer</td></tr>
+<tr><td class="program">spheretopoly</td>  <td>-</td><td> render to faces of any flat sided shape, from the command line</td></tr>
+<tr><td class="program">spheretocube</td>  <td>-</td><td> render to cube faces, from the command line</td></tr>
+</table>
+</center>
+
+
+<center>
+<table align="center">
+<tr>
+<td>
+<br /><br /><br />
+Polyptych currently lives in the Laidout source. At some point,<br />
+ the things here will most likely be separated from Laidout into its own<br />
+  project, and Laidout will use libraries from that project.<br />
+<br />
+<br />
+You can grab the code with the following. The actual standalone is then in
+laidout/src/polyptych.<br />
+
+<pre>
+git clone https://github.com/Laidout/laidout.git
+</pre>
+
+You will need the most recent development version of the <a href="http://laxkit.sourceforge.net">Laxkit</a>,
+and a few other things:
+ 
+<pre>
+apt-get install libgraphicsmagick++1-dev mesa-common-dev libglu1-mesa-dev libftgl-dev
+</pre>
+Then to compile:
+<pre>
+make polyptych
+make spheretocube
+make spheretopoly
+make convertahedron
+</pre>
+Or on debian based systems:
+<pre>
+dpkg-buildpackage -rfakeroot
+</pre>
+
+
+<br /><br />
+<center>
+See Polyptych in action:<br />
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/tomlechner/3838153212/in/album-72157604986347329/" title="Unwrapping the Snub Cube"><img src="https://c5.staticflickr.com/4/3440/3838153212_671134abe7.jpg" width="400" height="266" alt="Unwrapping the Snub Cube"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</center>
+</td>
+</tr>
+
+</table>
+</center>
+
+
+</body>
+</html>

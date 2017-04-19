@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta charset="utf-8">
+
+<title>Laidout Help</title>
+
+<meta name="description" content="Laidout, desktop publishing software.">
+<meta name="keywords" content="Cartoons, Prints, Drawings, Polyhedra, Polyhedron, Calendar, 
+Desktop, Publishing, Page, Layout, Multipage, Booklet, Books, Imposition, Linux, Software,
+Tensor, Product, Patch, Laidout, Folded, Pamphlet, Help,
+Dodecahedron,">
+
+
+<link rel="icon" href="laidout-icon-16x16.png" type="image/png">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <script src="js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+
+<div class="whole">
+
+  <div id="side">
+    <ul class='sidenav'>
+	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="images/gplus.png" alt="Google+"/></a></li>
+	   <li><a class="feeds" href="rss.xml"><img src="images/rss.png" alt="RSS feed"/></a></li>
+	   &nbsp;&nbsp;
+      <li><a href="dev.html">Dev</a></li>
+      <li><a href="index.html#download">Download</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="screenshots/">Screenshots</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  
+
+  </div><!-- side -->
+
+
+
+  <div id="main">
+
+<div class="qAndA">
+<h1>Help!</h1>
+<h2>Frequently Asked Questions</h2>
+
+Here are some common questions, and some help with basic bugs, deficiencies, and workarounds for Laidout 0.096.
+If you are using an eariler version, you should really consider upgrading.<br>
+<br>
+<br>
+You can also check out:
+<blockquote>
+<a href="screenshots">Screenshots and Video Tutorials</a><br>
+<a href="https://github.com/Laidout/laidout/issues">Issue tracker on github</a><br>
+<a href="http://lists.sourceforge.net/lists/listinfo/laidout-general">Mailing List</a><br>
+<a href="features.html">Feature Overview</a><br>
+<a href="dtpcompare.html">Software Comparison</a><br>
+<a href="roadmap.html">Roadmap</a><br>
+<a href="dev.html">Development</a><br>
+
+<br>
+<a href="KEYDUMP.html">Quick key reference</a> for Laidout. (made with "laidout --helphtml")<br>
+<a href="fileformat.txt">Laidout's current file format.</a> (made with "laidout --file-format")
+</blockquote>
+
+<br>
+
+
+  <div class="qHeader">General Questions</div>
+  <dl>
+	<dt>How can I get involved?</dt>
+	<dd>
+		Trying to make things with Laidout is a good start!  
+		You can post any problems to Laidout's <a href="https://github.com/Laidout/laidout/issues">issue tracker at github</a>, or 
+		post any other comments you have on the 
+		<a href="https://lists.sourceforge.net/lists/listinfo/laidout-general">Laidout mailing list</a>.  
+		If you want to be more directly involved in coding, <a href="dev.html">see this page</a>.  
+		You can also donate money, which is always a nice bonus.
+	</dd>
+	<dt>Under what license is Laidout released?</dt>
+	<dd>
+		It is currently released under the <a href="gpl.txt">GPL 2.0</a>.
+	</dd>
+  </dl>
+  
+  <div class="qHeader">Compiling</div>
+  <dl>
+	<dt>I use Fedora, not Debian, it won't compile!!</dt>
+    <dd>
+		Probably you are missing some packages. You can grab them all by installing with this really long command line:
+		<div class="code">
+		sudo dnf install -y cairo-devel cups-devel fontconfig-devel ftgl-devel glibc-headers harfbuzz-devel imlib2-devel 
+			lcms-devel libpng-devel libX11-devel libXext-devel libXft-devel libXi-devel mesa-libGL-devel mesa-libGLU-devel 
+			openssl-devel readline-devel sqlite-devel xorg-x11-proto-devel zlib-devel GraphicsMagick-c++-devel libstdc++-devel freetype-devel imake
+		</div>
+    </dd>
+	<dt>Compiling breaks, complaining about missing @my_libs@. ?</dt>
+    <dd>
+		This is a problem with the imlib2-dev package. Open up /usr/bin/imlib2-config (or wherever
+		imlib2-config is). There should be a line that looks something like:
+
+		<div class="code">
+			echo $libdirs -lImlib2 @my_libs@
+		</div>
+		<br />
+		Simply remove the @my_libs@. It <a href="http://git.enlightenment.org/legacy/imlib2.git/commit/?id=5dde234b2d3caf067ea827858c53adc5d4c56c13">appears</a> 
+		to be a bug that's been fixed upstream as they say, but has not trickled down to all the distributions yet.
+    </dd>
+  </dl>
+  
+	<div class="qHeader">Using</div>
+	<dl>
+	<dt>How can I change the default units and paper size?</dt>
+    <dd>
+		There are several ways to go about adjusting units.
+		Within the viewport, you can right click on the ruler, and select a different unit.
+		Currently, this will only change the default units during the current session, meaning it will not be remembered when you restart Laidout.
+		If you start Laidout from the command line, you can also pass in the option "--default-units" to temporarily set the units.
+		<br /><br />
+		To permanently change units, you must manually edit the laidoutrc file at ~/.laidout/(version)/laidoutrc.
+		Open with a text editor, and find the line for "defaultunits", simply put in the units you want, as long as they are
+		inches, cm, mm, m, yards, or points. Also, make sure there is no "#" at the beginning of the line. 
+		<br /><br />
+		Also in the laidoutrc file is a line for "defaultpapersize". Change that to A4 (for instance), and Laidout will always
+		start with that size paper.
+		<br /><br />
+		There are plans to make the laidoutrc options editable while running Laidout, but it is currently low priority.
+    </dd>
+	<dt>How do I batch process, such as by exporting by the command line?  And what about scripting?</dt>
+    <dd>
+		You do not have to run the full windowed Laidout, and instead use only the command line.
+		Though, you can also access a command prompt while in a Laidout window by changing the window pane type to "Command Prompt'.
+		Laidout's primitive native scripting ability is superficially similar
+		to javascript, but uses classes, not prototypes, because Laidout prefers to present things in a way that is understandable.
+		My goal is to allow not just processing commands once, but also allow scripting of new tool interfaces,
+		as well as scripting dynamic objects. I hope also to make it easily compatible with python, so you can stick with
+		what you know, rather than having to fudge around with Laidout's weird native dialect.
+		<br /><br />
+		Scripting is currently not very well debugged or documented, and the various Laidout object types
+		are not all accessible, but exporting seems to work ok.
+		You can pass in a series of commands and read commands from a file like this:
+		<div class="code">
+			laidout --command "show"<br />
+			laidout --script /path/to/file/with/commands/n/stuff<br />
+		</div>
+		<p>
+		There are extra command line options specifically for exporting.
+		You can list the various ways Laidout can export a document, and see format specific options with the following.
+		Specifying export formats with these options does a caseless search for the format, so for instance the svg format
+		name is "Svg 1.1", but will be matched by "svg", "SVG", or "Svg 1.1". 
+		</p>
+		<div class="code">
+			laidout --export-format<br />
+			laidout --list-export-options SVG<br />
+		</div>
+		<p>
+		So say you have a 10 page Laidout document, and you want to export pages 4, 5, and 6 to svg files, with powerstroked lines,
+		you could do something like this (first page in a document is page 0):
+		</p>
+		<div class="code">
+			laidout --export 'format=svg  start=3  end=5  use_powerstroke=yes  tofiles="exported##.svg"' original-10page-file.laidout
+		</div>
+    </dd>
+	<dt>How do I activate color management? Your "dtp program" is totally freaking worthless without it!</dt>
+    <dd>
+		The most reliable way is to wait a sufficient amount of time during which it can be finally implemented.
+		In the meantime, unfortunately, Laidout will not be able to help you glory in the splendor of the many-hued sparkle bathing
+		the land beyond a bland and gaunt 8 bit RGB colorspace tunnel, which is littered with page after page of color theory tutorials,
+		mysterious color profiles and faulty assumptions about your hardware. Or you can export to Scribus and do
+		your color management there. 
+    </dd>
+	<dt>Someone told me I could use Laidout to make booklets from Scribus. Is he off his meds or what?</dt>
+    <dd>
+		Indeed you can with or without pharmaceuticals, but with some limitations.
+		You can import a Scribus file, reimpose it, then export to a Scribus file, and viola! Booklet city! If you find any problems,
+		please let me know, as I haven't tested it beyond a few relatively simple test files.
+		 See <a href="scribus/index.html">here</a> for more info about the limitations using a combination of Laidout and Scribus.
+    </dd>
+	<dt>How can I bypass the new document dialog?</dt>
+    <dd>
+		You can pass in a few arguments from the command line such as the following. All the ones with the '-n' 
+		option create a new document according to your comma separated specifications. If you have spaces in your
+		spec, you should put quotes around it. You can specify the type of imposition 
+		(singles, booklet, net, or other saved imposition resources), the paper size (letter, legal, ...), the number of
+		pages, and whether it is supposed to be portrait or landscape:
+		<div class="code">
+		&gt; laidout --help<br />
+		&gt; laidout --version<br />
+		&gt; laidout file1.doc file2.doc<br />
+		&gt; laidout -n 'letter, 2 pages'<br />
+		&gt; laidout -n 'net, a4, landscape, 40'<br />
+		&gt; laidout -n 'legal, landscape, booklet, 44'<br />
+		&gt; laidout -n 'box 1 2 3, 6 pages'<br />
+		</div>
+		</p><p>
+		Alternately, in your laidoutrc file you can specify a default template to load when Laidout starts. The first time you run
+		Laidout, a laidoutrc file is created that has descriptions of things that you can put in it. This file gets put in
+		~/.laidout/(version)/laidoutrc. Put a line in there that says something like:
+		<div class="code">
+		default_template blah.laidout
+		</div>
+		</p><p>
+		If it is not an absolute path, then the name you give will be searched for in your ~/.laidout/(version)/templates directory.
+		So for instance, if you have a file named ~/.laidout/(version)/templates/blah.laidout, then Laidout will default to that when starting.
+		You can also specify a template from the command line:
+		<div class="code">
+		&gt; laidout --template blah.laidout
+		</div>
+		</p><p>
+		If you have defined a default template and instead want to go straight to the new document dialog without using that
+		default template, run Laidout like this:
+		<div class="code">
+		&gt; laidout -N
+		</div>
+    </dd>
+	<dt>Selecting objects seems really screwy. Is this human error, or a design flaw?</dt>
+    <dd>
+		While object selection and moving got some much needed attention in 0.092, there are unfortunately still some
+		terrible temporary design flaws. You may currently select an object and its parent, and moving those is really bad news.
+		Also moving objects that are nested will not currently update the parent group's bounding box, which is silly.
+		These things will, that is to say should, be
+		corrected by the next release (I know I keep saying that!!).
+    </dd>
+	<dt>I click print, and it says "To file:" or "By command:". Isn't that terribly limiting?</dt>
+    <dd> 
+		<p>I know it's rather silly to have a 'desktop publishing program' and not have a decent way to send things
+		to the printer, like printing with a certain default DPI and other settings, but what do you want for a 'Version 0.097'?
+		There are many plans for it by version 0.1. If you have Cups, you can "print by command" with "lp" as the command.
+		Laidout creates a temporary postscript (at some point I will change this to be pdf, to allow printing with transparency)
+		file, and sends that to the command. If you print to a file, you could do
+		the same thing manually like this:</p>
+		<div class="code">lp output.ps
+		</div>
+		<p>It is useful to consult the man pages for <tt>lp</tt> and <tt>lpoptions</tt>. You can set up
+		different settings in your ~/.cups/lpoptions file to print at different resolutions, and on different
+		paper. It took me forever to figure that out when trying to print things from Inkscape decently. So
+		for instance if you have the proper line in your lpoptions file, then you could use it in
+		the "print by command":</p>
+		<div class="code">lp -d theprinter/matte360dpi
+		</div>
+		<p>after you set appropriate options with lpoptions. The following commands will set some options,
+		usually this will change ~/.cups/lpoptions:</p>
+		<div class="code">
+		lpstat -a                   #list available printers and their status<br />
+		lpoptions -d theprinter -l  #list the available options for the current printer<br />
+		lpoptions -d theprinter/matte360dpi -o MediaType=Matte -o Resolution=360dpi -o PageMedia=Tabloid<br />
+		</div> 
+    </dd>
+	<dt>I just pulled out half my hair trying to undo! How can I undo???</dt>
+    <dd>
+		It is not advisable to make mistakes. See also "Laidout doesn't do what I want!" below.</a>.
+    </dd>
+	<dt>When I export or print documents, how can I tell if Laidout is working, or is just frozen?</dt>
+    <dd>
+		Yes, that is a bit irritating, and it is because I have not really implemented progress dialogs yet. In the meantime, you can
+		run a system monitor such as <a href="http://www.gkrellm.net">gkrellm</a>. When the cpu box is going full bore, that's probably 
+		a good sign. except those rare occasions when it is stuck in an infinite loop. 
+    </dd>
+	<dt>I exported to pdf, and the file is stupendously enormous. Do you think I like wasting space?</dt>
+    <dd>
+		Pdf optimization doesn't quite exist in Laidout yet. Dpi is not adequately taken into account,
+		and if you have multiple instances of the same image,
+		the image is copied into the pdf for each instance, rather than just once, and image data is not currently compressed,
+		which is really stupid, I agree. I'll fix it some day, I swear.
+		But seriously, in this day and age, drive space is cheap. 
+    </dd>
+	<dt>What is all that stuff scrolling by on the terminal when I run the program? It slows things down a lot!</dt>
+    <dd>
+		<p>
+		That stuff is debugging info written to stderr. The easiest way to get that stuff to go away is to run
+		the program like this:</p>
+		<div class="code">laidout 2&gt; /dev/null</div>
+		<p>The harder way to get that stuff to go away is to remember to run</p> 
+		<div class="code">make hidegarbage</div>
+		<p>before compiling Laidout. Even before that, you must do the same thing to the Laxkit before compiling it.
+		The precompiled deb package has done this already.
+		</p>
+    </dd>
+	<dt>When I choose Net, it's always a dodecahedron. Wtf?</dt>
+    <dd>
+		<p>
+		You may specify a 3-d model to be used as the basis for unwrapping. Currently, the polyhedron will be automatically
+		unwrapped. As of 0.094, you can unwrap in 3-d by using Polyptych, called from the "Edit current document settings" under
+		the document button in the upper left, then
+		"Edit imposition", then (finally)"Edit with Polyptych". Laidout must have been compiled with opengl to make this work. When starting Laidout,
+		you can enter the filename of an <a href="http://shape.cs.princeton.edu/benchmark/documentation/off_format.html">OFF</a>
+		file to be used as the basis of the imposition. You might use the fabulous <a href="http://www.antiprism.com/">Antiprism</a> programs to generate 
+		a plethora of polyhedra to use, but beware that Laidout is currently geared only for definitions
+		of polyhedra where the sides do not intersect each other.<br />
+		<br />
+		Alternately, you can start Laidout with something like:
+		<div class="code">
+		&gt; laidout -n 'box 1 2 3, 6 pages'
+		</div>
+		</p>
+
+		<p>which will create an unwrapped box with sides proportional to 1,2,3 with 6 pages.
+		<br /><br />
+		What follows is an imposition based on a cube. It is a simple list of vertices
+		and faces defined by referencing those vertices. Please note that this is very much subject to change.
+		 The imposition framework is still undergoing
+		an overhaul, so it may change in future versions!
+		</p>
+		<pre class="code">
+        #Laidout 0.096 Document
+		imposition NetImposition
+		  defaultpaperstyle
+			name Letter
+			width 8.5
+			height 11
+			dpi 360
+			portrait
+		  abstractnet Polyhedron  
+			name Laid out Cube
+			vertices \
+			  1 1 1    #vertex 0
+			  -1 1 1   #vertex 1
+			  -1 -1 1  #vertex 2
+			  1 -1 1   #vertex 3
+			  -1 1 -1  #vertex 4
+			  1 1 -1   #vertex 5
+			  1 -1 -1  #vertex 6
+			  -1 -1 -1 #vertex 7
+			face 0 1 2 3
+			face 1 0 5 4
+			face 2 1 4 7
+			face 0 3 6 5
+			face 3 2 7 6
+			face 4 5 6 7
+		page 0
+		  pagestyle PageStyle
+			width 11.44122806
+			height 0.8221181412
+			pageclips
+		  layer 0
+			visible
+			prints
+		</pre>
+		</p>
+    </dd>
+	<dt>Why are there so many red and green corners all over the place?</dt>
+    <dd>
+		Those designate axes for the various objects. Red is the X axis, green is the Y (you can
+		remember this by thinking RGB -&gt; XYZ). The
+		corner is the origin. You can toggle the displaying of axes and/or bounding boxes by pressing 'D' (meaning shift-'d').
+    </dd>
+	<dt>Why are there awful ugly ridges in my gradients? They should be smooth as silk!!</dt>
+    <dd>
+		The colors in the gradients are currently computed from a linearly interpolated stitching function,
+		which basically means you are stuck with stinking, itchy burlap rather than silk. The adventurous might read up on
+		the various export formats and modify the
+		outputted files to instead use more arbitrary sampled functions. This feature might appear in Laidout someday.
+    </dd>
+	<dt>I just spent 9 hours making layouts with a lot of page bleeding and it prints all wrong! Where can I get a
+	voodoo doll of you to stick things in?</dt>
+    <dd>
+		Page bleeding is not implemented properly. The current actual bleeding can be seen in whichever view you are exporting. This
+		is a big problem. I am in the process of
+		rewriting impositions to be able to do complex nets and bleed properly, so that bleeding will even
+		wrap properly across net impositions that are derived from polyhedra. You're on your own about the dolls.
+    </dd>
+	<dt>Laidout doesn't do what I want! What's up with that?</dt>
+    <dd>
+		The huge development team, currently consisting almost entirely of one (1) person, me, <a href="http://www.tomlechner.com">Tom Lechner</a>, can only type so fast!
+		You are more than welcome to post critiques on the <a href="http://lists.sourceforge.net/lists/listinfo/laidout-general">Laidout mailing list</a>,
+		flame Laidout in your own personal blog, or <a href="dev.html">get involved with development</a>. Also, you might consult the current 
+		<a href="features.html">Features</a> page, the development <a href="roadmap.html">Roadmap</a> and also the software <a href="dtpcompare.html">comparison page</a>.
+		If there is something that you just have to have, you are welcome to shower me with money (or otherwise let me know what you are interested in)!  
+    </dd>
+	<dt>Why is Laidout's interface totally unuseable?</dt>
+    <dd>
+		<p>The interface works for me! Besides, what do you want for a version "0.097", in the "Mostly does what I want on my machine" 
+		stage of development? I mean who uses version numbers like "0.097" anyway?
+		In future versions, the interface will be much more explanatory and configurable. Maybe.</p>
+		<p>
+		The entire interface of Laidout, as well as basically all of its code is experimental.
+		In any case, as time goes on, I will be developing a more formal specification of
+		the <strong>Laidout Human Interface and Usability Guidelines</strong>, which will not be referred to as the LHIAUG, because 
+		experts say that that acronym is totally unusable, but will be referred to collectively as <strong>Ligaments</strong>, which refers symbolically to the 
+		glue that binds us all together as a species. </p>
+		<p>A current first principle, or Ligament, is that speed of use and providing all the 
+		functions I need to make my art books trump all other concerns, as long as I am the only confirmed developer and user of Laidout.
+		Another Ligament is that programs should be able to start up from scratch in <strong><em>no more than</em></strong> one or two seconds. Some allowance may
+		be made if the document one is trying to open is enormous, but starting the program, even complex, full featured programs,
+		should be very rapid, such as with <a href="http://www.blender.org">Blender</a>. Furthermore, control-w 
+		is <b>NOT A SUBSTITUTE</b> for control-q!! Also, developers should NEVER EVER say that their program or 
+		distribution "just works", because when it inevitably does not "just work",
+		then, in the eyes of users, the developers become <strong>PURVEYORS OF LIES</strong>, whether they know about the problem or not.
+		This is "just fact".
+    </dd>
+	</dl>
+
+	<br>
+	<br>
+</div>
+
+<br><br>
+
+	<script> 
+		$('.qAndA dt').click(function() {
+			$(this).next().slideToggle('fast');
+			//$(this).find('span').toggle();
+		}); //.next().append("<br><br><hr>");
+		
+	</script> 
+
+
+
+</div><!-- main -->
+</div><!-- whole -->
+
+
+</body>
+</html>

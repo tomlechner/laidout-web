@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<title>Laidout Development</title>
+
+<meta name="description" content="Laidout, desktop publishing software.">
+<meta name="keywords" content="Cartoons, Prints, Drawings, Polyhedra, Polyhedron, Calendar, 
+Desktop, Publishing, Page, Layout, Multipage, Booklet, Books, Imposition, Linux, Software,
+Tensor, Product, Patch, Laidout, Folded, Pamphlet, Help,
+Dodecahedron">
+
+
+<link rel="icon" href="laidout-icon-16x16.png" type="image/png">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+</head>
+<body>
+
+<div class="whole">
+
+  <div id="side">
+    <ul class='sidenav'>
+	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="images/gplus.png" alt="Google+"/></a></li>
+	   <li><a class="feeds" href="rss.xml"><img src="images/rss.png" alt="RSS feed"/></a></li>
+	   &nbsp;&nbsp;
+      <li><a href="dev.html">Dev</a></li>
+      <li><a href="index.html#download">Download</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="screenshots/">Screenshots</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  
+
+  </div><!-- side -->
+
+
+
+  <div id="main">
+  
+<h1>Laidout Development</h1>
+
+
+<p>
+Here is some general information about the development of Laidout. As with any project, testers and coders are
+certainly encouraged to test and code!
+</p>
+<p>Some general links which might be relevant:</p>
+<p>
+<a href="https://github.com/Laidout/laidout">Laidout on Github</a><br />
+<a href="roadmap.html">The Roadmap</a><br>
+<!-- a href="https://github.com/Laidout/laidout/blob/master/src/LEFT---OFF">Roadmap from the trenches</a><br -->
+<a href="https://lists.sourceforge.net/lists/listinfo/laidout-general">The Mailing List</a><br>
+</p>
+
+
+<br><div class="section">Bugs and Feature Requests</div>
+<p>If there is something that you think is a bug, irritation, or missing feature, you can
+<a href="https://github.com/Laidout/laidout/issues">post an issue on Laidout's github</a>,
+or search the <a href="faq.html">help page</a> for mention of it. Lastly,
+you could post about it on the 
+<a href="https://lists.sourceforge.net/lists/listinfo/laidout-general">mailing list</a>.
+
+
+</p>
+
+
+
+<br>
+<div class="section">Development Source Code</div>
+<p>Laidout has so far been coded by one person, <a href="http://www.tomlechner.com">Tom Lechner</a>, along with a 
+few patches and a translation submitted by various people. It would be pleasant if more people were involved!
+</p>
+
+<p>Laidout is built on the <a href="http://laxkit.sourceforge.net">Laxkit</a>, whose sole purpose for
+existence at the moment is to be the windowing backbone of Laidout.
+Anything said about Laidout applies just as much to the Laxkit.</p>
+
+<p>There is copius <a href="http://www.doxygen.org">doxygen</a> style source code documentation for you to whet your appetite, which is easily accessible by
+running "make docs", which basically just tells doxygen to do its thing. Running "make alldocs" will build all the
+documentation for Laidout and for the Laxkit, as long as you have a link in the top Laidout directory pointing to
+wherever you have the Laxkit source files. For release tarballs, the Laxkit is there already.</p>
+
+<p>You can download the cutting edge, latest and (ideally) greatest version of Laidout 
+from the git repository with this command:</p>
+<div class="code">
+  git clone https://github.com/Laidout/laidout.git<br>
+</div> 
+
+
+<br /><br />
+<div class="section">Compiling the Development Source Code</div>
+<br />
+Compiling directly from the dev source has a couple more steps then compiling a normal release.
+It is assumed that those compiling from dev source like pain.
+In a nut shell, you must install dependencies, download Laidout source, download Laxkit source, configure, compile, 
+then make the icons.
+<br /><br />
+
+<ul>
+<li> <b>Install dependencies</b><br />
+On debian systems, you can use the following command to install everything for all current extensions:
+<br /><br />
+<div class="code">
+apt-get install g++ pkg-config libpng12-dev libreadline-dev libx11-dev libxext-dev libxi-dev libxft-dev libcups2-dev libimlib2-dev libfontconfig-dev libfreetype6-dev libssl-dev xutils-dev libcairo2-dev libharfbuzz-dev libsqlite3-dev libgraphicsmagick++1-dev mesa-common-dev libglu1-mesa-dev libftgl-dev zlib1g-dev<br>
+</div>
+<br />
+On Fedora, you can install these with:
+<br /><br />
+<div class="code">
+    sudo dnf install -y cairo-devel cups-devel fontconfig-devel ftgl-devel glibc-headers harfbuzz-devel imlib2-devel lcms-devel libpng-devel libX11-devel libXext-devel libXft-devel libXi-devel mesa-libGL-devel mesa-libGLU-devel openssl-devel readline-devel sqlite-devel xorg-x11-proto-devel zlib-devel GraphicsMagick-c++-devel libstdc++-devel freetype-devel imake
+</div>&nbsp;
+<br/>
+</li>
+
+<li><b>Compile everything</b><br />
+Hopefully, this will run without errors:
+<br /><br />
+<div class="code">
+  git clone https://github.com/Laidout/laidout.git<br />
+  cd laidout<br />
+  git clone http://github.com/Laidout/laxkit.git laxkit<br />
+  cd laxkit<br />
+  ./configure<br />
+  make depends<br />
+  cd ..<br />
+  ./configure --laxkit=`pwd`/laxkit/lax<br />
+  make<br />
+</div>
+<br />
+At this point, Laidout is ready to run. You don't actually have to install it anywhere to make it run,
+you can just run "src/laidout", though icons may not show up automatically without installing. You can modify
+~/.config/laidout/(version)/laidoutrc to point to an icon directory that contains the icons (i.e. /path/to/laidout/src/icons).
+<br /><br />
+You may notice tons of garbage outputting to the console when you run this development source. This is info that is sometimes helpful for debugging.
+You can hide all this by running "make hidegarbage" before running "make".
+<br /><br />
+</li>
+
+<li><b>Render the icons</b><br />
+Icons are currently created in laidout/src/icons and laidout/laxkit/src/icons.
+Making them requires that you have <a href="http://inkscape.org">Inkscape</a> installed on your system. icons.svg is scanned
+and broken down into individual icon pngs.
+<br /><br />
+<div class="code">
+  cd (laidout)/src/icons<br />
+  make<br />
+  cd ../../laxkit/lax/icons/<br />
+  make<br />
+  cd ../../..<br />
+  cp -f laxkit/lax/icons/*png src/icons<br /> 
+</div>
+</li>
+</ul>
+
+
+
+
+<br>
+<a name="Translations"></a>
+<div class="section">Translations</div>
+<p>
+Any translations done for either messages in
+Laidout itself, or of the Laidout web pages are greatly appreciated. 
+</p>
+<p>
+Translating Laidout to new languages is mainly a matter of translators translating a
+couple thousand little words and phrases
+from a file called <a href="https://raw.githubusercontent.com/Laidout/laidout/master/src/po/laidout.pot">laidout.pot</a>.
+Normally, you take that file, rename it to es.po (a spanish translation, for example), and then update all the strings in it.
+You can do this by hand, or you might use a program like
+<a href="http://kbabel.kde.org/">kbabel</a> or <a href="http://www.poedit.net/">poedit</a>.
+<br /><br />
+Once translated, the whatever.po needs to end up in the src/po directory of the Laidout source code.
+There is a README file in that directory with a lot more of the nitty gritty details for dealing with translation files, such
+as how to merge a new translation with an old one.
+</p>
+<p>
+<b>Current Translations</b> (french and spanish translations getting very out of date)<br>
+<ul>
+<li>American (that is to say U.S.) English</li>
+<li>Spanish.&nbsp;&nbsp; With my slight knowledge of Spanish, and google translations, I've made a Spanish translation.</li>
+<li>French.&nbsp;&nbsp; by Nabyl Bennouri</li>
+</ul>
+</p>
+<br>
+
+
+<div class="section">The Laidout File Format</div>
+<p>Documentation for the Laidout file format is gotten easily through running:</p>
+<div class="code">
+laidout --file-format
+</div>
+<p>
+This will dump out a pseudo-Laidout file with copious comments about each of the possible
+Laidout file elements, arranged in the order they appear in real Laidout files.
+ The format itself is an indented data file format, sort of in the same spirit of 
+<a href="http://www.yaml.org">yaml</a>, but is slightly more ad-hoc, making it even easier to read and figure out,
+in this developer's opinion. Laidout's indented format is simply a collection of nested name-value pairs, where both are scanned
+in as strings, at which point it is up to the application to decipher the strings into integers, points, and whatnot.
+</p>
+<p>Please <a href="fileformat.txt">click here</a> for the current file format description.
+If you do not find it explanatory enough, or it is flat out wrong, please say so. 
+</p>
+
+
+<br><br>
+
+</div><!-- main -->
+</div><!-- whole -->
+
+
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta charset="utf-8">
+
+<title>Laidout Roadmap</title>
+
+<meta name="description" content="Laidout, desktop publishing software.">
+<meta name="keywords" content="Cartoons, Prints, Drawings, Polyhedra, Polyhedron, Calendar, 
+Desktop, Publishing, Page, Layout, Multipage, Booklet, Books, Imposition, Linux, Software,
+Tensor, Product, Patch, Laidout, Folded, Pamphlet, Help,
+Dodecahedron, software, open, source, dtp, signature, editor">
+
+<link rel="icon" href="laidout-icon-16x16.png" type="image/png">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+</head>
+<body>
+
+<div class="whole">
+
+  <div id="side">
+    <ul class='sidenav'>
+	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="images/gplus.png" alt="Google+"/></a></li>
+	   <li><a class="feeds" href="rss.xml"><img src="images/rss.png" alt="RSS feed"/></a></li>
+	   &nbsp;&nbsp;
+      <li><a href="dev.html">Dev</a></li>
+      <li><a href="index.html#download">Download</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="screenshots/">Screenshots</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  
+
+  </div><!-- side -->
+
+
+
+  <div id="main">
+
+ 
+<h1>Laidout Roadmap</h1>
+
+
+<!-- div>
+Things to do before the next release.
+This is a very rough draft of a roadmap, and is by no means the final word.
+</div -->
+
+Things to do before the next release.
+This is a very rough draft of a roadmap, and is by no means the final word.
+<table>
+
+<tr><td colspan=3><br><h2>Version 0.097 -- </h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>debug previous version at least slightly!</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool grow point mode</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, resolution cut mode</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, blockout needs to be more precise</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver tool, fix non-live updates when tweaking various parameters</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, fully test tool effects when many objects selected</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clean up symmetry clone interface, not easy to use currently</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Allow setting custom default exported file name (via a line in laidoutrc)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Text on path tool</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>text objects: harfbuzz based</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>layers (object tree) palette</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Add more save options: save a copy, save incremented, save as template, autosave settings</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Moving selected things in group contents does not update group bounds</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>should not be able to select both group and group contents at same time</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>double click on group should change selection area to group contents like inkscape?</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Allow permanently changing units and default paper via a control in a window, not just by editing laidoutrc</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug svg in</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>fix tooltips</td></tr>
+<tr><td colspan=3><br><h2>Version 0.098 -- </h2></td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug previous version!</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tools should remember their settings</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>option to specify alignment of different size signature stacks</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug line outline cache, especially for joins</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Finish implementing anchor tool. maybe gss compatibility?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Masking, clip paths and/or softmask</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Fix object bleeding across pages for signatures and nets</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>export preview</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Externally rendered objects, similar to Scribus render frames</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom alignments to parents, not just affine transform to parent</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Merge EpsData with normal images</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Import Images dialog needs total reprogramming</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>In image properties dialog, be able to select from various default preview configs</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>lock down color backend.. it's currently a series of weak hacks based on 8-bit screen rgb</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up patch controls</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up project load/save internals and dialogs</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Object and resource tags interface</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Finish implementing double sided net impositions</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>allow inserting net impositions as foldouts in regular Signature Imposition stacks</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug Net imposition interactive unwrapper, via optional opengl Polyptych</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Net imposition build net interface</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tool scripting</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom line caps</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Undo/Redo</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clone Pattern Builder</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>color styles, so objects can refer to a named color, just change that named to change all</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Soup up the color box so one can recall previous colors, and/or integration with palette window</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make PathInterface extrapolate line join work</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Signature editor: detect non staplable binding edge, show red rather than green</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>fix object transform handles for really small objects (handles should still be accessible)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scribus import should try to do something appropriate with page spreads >= 2 pages wide</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scribus import should do something meaningful with original Scribus page bleed values</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Collect for out</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>PDF in, at least as 1 image per page, for purposes of imposition</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>pdf export, unicode capable</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Optimize pdf export to rescale to target dpi, and compress image data</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>drag-n-drop text to and from the various text edits</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>drag-n-drop with system, like drag images into viewwindow from an external file browser</td></tr>
+<tr><td colspan=3><br><h2>Version 0.1 -- </h2></td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>First and foremost, need copious testing by people who are not me.</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>implement command line language tag</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Full internationalization support (via harfbuzz) in window controls for input and output, including rtl/mixed text?  </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>SpreadEditor: be able to eject a page into limbo, for creation threads, connect, then insert as a group</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>When importing from an image list file, should be able to say if and when to auto-make previews</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>pick and choose export range, not single "from:start to:end", but like "1-3,5,19-20"</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Basic infrastructure for most things should be in place.</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Must be Stable, not merely "Stable"</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Creep management controls</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>graphical shell should also help find and set key shortcuts</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Construct an adequate command core, so that no X connection necessary for batch processing</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Improve open from template to be able to use names (defined in a file), not just filenames</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>perhaps have image open window pane for main split window? drag and drop in images? that would be AWESOME</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Change cursor or otherwise indicate what will happen as mouse moves around</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Should have option to print/see or not print/see big, preview, or no images, per image</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>When adjusting things with the object tool, must have option to be temporarily a little transparent</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>All the pdf 1.4 group combine properties, like most importantly transparency</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Configurable icon panel/menu system, make the button box actually function</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Linear (including curvilinear) guides</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Have imagepatch be a transform you can apply to any object</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Allow objects to have any number of various kinds of transforms applied to it</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Some sort of basic scripting infrastructure allowing easy addition of other scripting language plugins. Swig?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Plugin infrastructure should be in place: add objects, panes, commands, interfaces, resources, command-line-options?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>allow for easy method for runaround area determination</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Full color management implemented, floating point or integer. Got to keep up with Krita and Gimp!</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>CieLab color space</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Resource manager/style edit window</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>a real PrintDialog that can configure itself based on printer info</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>non-hacky new document box that can retrieve printer capabilities, and adjust accordingly (ie grok ppds)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>all things must define their styledefs</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Low level tree editor, akin to the xml editor in inkscape</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make it easy to add/remove/prioritize/replace import/export filters</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>support for the svg filters?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Provide some kind of visual feedback while doing lengthy operations</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Improve and/or make new logo and splash image, and generate icons from a laidout doc</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Somehow combine the ViewWindow and SpreadEditor to optionally allow the sort of 'infinite scroll'</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Be able to interact with patches in a way reminiscent of Inkscape's node sculpting</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Object and page templates, aka master pages</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Pages with curved edges, to allow nets for shapes resulting from intersecting cylinders, for instance</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Optional Midi controller usage</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Able to select and transform nodes from different objects at the same time</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Color channel density control, to not overdo CMYK mix, for instance</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Allow accessing scribus image cache, or try to spin off a non project specific general image cache</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Backwards compatibility with previous Laidout versions, without extra utilities, starting with 0.1</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>update french and spanish translations, if possible</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Paper sizes should be translated strings</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Implement poor man's multi-contact interface for all appropriate interfaces</td></tr>
+<tr><td colspan=3><br><h2>Version 0.2 -- </h2></td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Flowed text tool</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Opentype feature support (other than multicolor stuff)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Opentype color font support: COLR/CPAL, SVG</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Mixed left/right/vertical text in text streams</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Numbered lists</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Tables </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: hanging punctuation</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Automatic table of contents</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Bibliography</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Footnotes</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: auto track chapter/section</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Automatic, yet overrideable hyphenation</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: layout inside anything that provides an 'area' and runaround facility.  </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: math mode</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Full multi-contact, blob and pressure sensitive touch with tuio,touchlib(?). See www.nuigroup.com/touchlib for diy surfaces</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>partial Laidout export</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>implement export even/odd, batches, and paper rotation for other exporters: ps eps plan ppt </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Figure out best way to expose laidout functions to other program's scripters (ie inkscape and scribus)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Bezier color patch freeform, rather than just grid.</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Possibly allow pure function gradients, and redefining the functions for the other gradients..</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Maybe bez part of path interface should have segment move like inkscape</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Somehow be able to do simulated add-ins/foldouts from within any page of an imposition</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>use any path as a kind of tab stop</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Optional multi-key shortcuts?  </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Decide on adequate rendering backend: going with cairo for now, but that's only 8bit. gegl? antigrain? antigrain/freetype/harfbuzz/gm?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>GraphicsMagick/ImageMagick plugin or integration: benefits: a gazillion file formats, including EPS, and color profiles Imlib chokes on really big image files, whereas this would not</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>svgfont/cairo user font support.. too special of a case?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>gmic filter plugin</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>full TeX importer</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Would be nice to have tex/latex text and equation reader</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Would be nice to be able to handle metapost/metafun sort of things</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Would be nice to be able to handle lilypond sort of things</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Load/save various gimp/inkscape/etc things like gradients, palettes, and paths, perhaps extract from/to xcf</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Maybe have ability to break apart and use parts of gimp.xcf/inkscape.svg/scribus.sla, and put them back in?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Stream/Story editor, maybe html export from streameditor?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>for plain postscript, there's bitmask, but no transparency. maybe optionally do simulation with dithered bitmask</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Cooperate with photo programs like KPhotoalbum, f-spot</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make nets cooperate with Hugin/Enblend: plugin for panorama projection to/from nets?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Work and turn/work and tumble</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>openoffice files import</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Uniconverter support</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Super import place tool, including recursive placement</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>The other Postscript/Pdf gradients?: Triangle strip and Triangle Mesh</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>fore edge printing</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>fore edge sculpting</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>hdr color support</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Vx support?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Verse support?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Content version control?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>dbus?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>3-d/vr interface support (mainly for hedron unwrapper)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>port to other os</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>port to tablet, or subset functionality, like check out to tablet, work on lower res version, to later import to system with full resources</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Net/polyhedron layout 3-d previewer extra (maybe?? software BSP tree? opengl?) pdf 1.6 can embed rotatable 3-d</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Perhaps have animation support/mode, 1 page=1 frame or separate time slider and keyframes</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Akin to animation mode, have movie/sound objects available to html export, for instance?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>a FlexibleImposition for html/streamed output target?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>JDF,JTAPI support?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Saveable undo stack(?) see http://people.csail.mit.edu/sarasu/history/ for inspiration. Also Xara has this.</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Implement cross platform</td></tr>
+<tr><td colspan=3><br><h2>Version 1.0 -- </h2></td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>End world hunger</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Stabilize the biosphere without causing mass extinction</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Neutralize all nuclear waste</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Visit Pluto</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Visit Pluto (in person)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>While i'm at it, I'd like a pony.</td></tr>
+<tr><td colspan="3" align="center"><hr/><br/><h2>Old Releases</h2></td></tr>
+<tr><td colspan=3><br><h2>Version 0.096 -- released 18 December 2015!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Finish Implementing cairo renderer, make meshes finally render faster, plus general rendering niceness</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Text for god's sake!! It's been what, 10 years!? </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>text: layered color fonts, each layer has to be a separate font file</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Caption text tool</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Caption tool, export svg: done, but due to svg, problem specifying colorfont fonts</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Caption tool, scribus -> done-ish, font naming problem for color fonts, and a sizing discrepancy</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Caption tool, pdf -> done sort of, fails for text outside latin-1, because fonts in pdf are a terrible headache.</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>reprogram file dialog to have adequate presentation of recent and bookmarks</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>fix viewport zoom and rotate wigging out on right click mouse move</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>make window maximize work in gnome (magically seems to work again in recent gnome, resize also seems to work again in recent gnome)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>autosave for autorecover -> done, but you have to set manually in ~/.config/laidout/(version)/laidoutrc</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>test new export even/odd, batches, and paper rotation for major exporters: svg image pdf scribus, not done: ps eps plan ppt </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>export option alternate each paper 180 deg</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>export option rotate every paper by increments of 90</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>export option, put out in reverse order</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Infrastructure for resource sharing between objects</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver tool, fix blockout! how did it break?!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver, allow work on multiple objects at once, including tracing</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Re-fix cut and paste from system clipboard</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Re-Re-fix paste from system clipboard. I swear it was working.</td></tr>
+<tr><td colspan=3><br><h2>Version 0.095 -- released 23 April 2015!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>be able to trace images in engraver tool</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver tool point groups to trace from same object to different trace settings</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver tool linear, radial, or circular line fills</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver tool, implement dashes</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>allow editing meshes based on a path</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface varying width lines, offsets, and different kinds of line joins (bevel, round, miter)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface subpaths for hole making should work: check exports (ignoring eps and ps for now)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Cache transforms to optimize ColorPatch/ImagePatchData point lookup</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>allow export even or odd</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>allow export in batches</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Freehand drawing with tablet pressure support</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clickable page numbers to select markers</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>impose-only mode should allow access to all imposition types, not just signatures</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Scribus import of doc with 2 page spreads on export imposes incorrect object positions</td></tr>
+<tr><td colspan=3><br><h2>Version 0.094 -- released 20 February 2014!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>need partial Laidout import</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>should probably put laidout stuff in its own namespace, just to be polite</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Rough draft of Custom alignments to parents, not just affine transform to parent</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Cloning</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clone Tiler</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Shortcuts editor dialog</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Signature editor needs option to preview pages while folding</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Signature editor: have variable num of pages per signature</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Optimize pdf export to not duplicate images</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: insert blanks, delete pages</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: working with >100 image heavy pages does strange hangs, and starts really slow. Fix!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Color sliders, when double clicking on color box</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>implement scale pages to new imposition when reimposing</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>graphical shell, kind of a searching calculator and function caller</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Laidout application icon for window manager paging seems to be broken</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>More robust scripting: loops, variables, functions, classes (still a bit buggy, but much has been done)</td></tr>
+<tr><td colspan=3><br><h2>Version 0.093 -- released 17 July 2012!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>On canvas flip controls</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Align tool</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Nup tool</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Fully configurable shortcuts (editable through config file)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface must be improved</td></tr>
+<tr><td colspan=3><br><h2>Version 0.092 -- released 30 December 2011!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Debug enough to hopefully not be too embarrassing</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Actually implement path exporting. Make that path icon mean something this time!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>At bare minimum, path interface use should not cause a seg fault</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Fix broken paper tiling interface</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Ability to add custom printer marks</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Fix multi-object selection move when crossing page boundaries</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Gui for modifying Page Labels</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Scribus import must support master pages</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Scribus import/export should support PageRange <-> Section conversion on import</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Units, especially Allow changing units in rulers</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Add proper .desktop and application icons installation</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Use ~/.config/laidout, instead of ~/.laidout</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Implement wavefront obj file format in/out for polyhedra</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>from laxkit: clear up focus handling which currently REALLY SUCKS especially when dialogs or menus are up (maybe done)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>from laxkit: clean up pop up menus which currently REALLY SUCK -> now deletes menus when clicking outside them</td></tr>
+<tr><td colspan=3><br><h2>Version 0.091 -- released 13 November 2010!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Well, maybe done: Debug enough to not be too embarrassing</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>impose-only mode, so as to allow easy plugin in access, to for instance do booklets inside scribus</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Do a poor man's multi-contact touch screen interface with 2 mice and Xinput2: object tool only, so far</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Images should maintain their aspect ratio by default when scaling</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Scribus import must make sure linked text and linked table mystery data behave properly on export</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Export PLAN files for podofoimpose</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Generic fold and trim imposition</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to load imposition instances, a form of resource</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Import images as flow/centered within page margins, not within page outline</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Import images with alignment per page type into the page margin region</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: improvements: re-re-fix auto layout</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: load/ save many spread editor views with doc (including marker placement, other settings)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: editor should allow changing working document</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: be able to change marks of many pages at once</td></tr>
+<tr><td colspan=3><br><h2>Version 0.09 -- released 21 February 2010!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Test, test, test! from fresh install to print out, make booklet, portrait, landscape</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>More libintl support, means finally adapting laxkit and laidout to utf8 internally, no small task!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Add, delete, and rename limbos</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Load, save, add, delete paper groups</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Finish implementing project based setup, particularly being able to save a project, not just load one   </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Use the freedesktop recommended ~/.recently-used (on laxkit's todo also)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>NetImposition needs to be able to import 3-d models such as from OFF files</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Debug net impositions!!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Selected region out to image(s), regions optionally remembered (done via custom papergroups)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>be able to reimpose a document from gui and command (from command mostly works)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Import(), Export(), NewDocument() commands</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Make commands actually available in the command prompt window</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>command line option to pass in commands, like "import blah; reimpose box; export blah2"</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>plain text edit window for notes/scripts/whatever save with project or doc or its own file</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Image and Color patches, gradients should allow transparent colors</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>When importing, need infrastructure to preserve mystery data as possible, to be later exported back out</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Passepartout import</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>(very, very partially, anyway) Svg import</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>(very partially, anyway) Scribus import </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>fix the memory hole (in papergroups?)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>fix the other memory hole (triggered by importing images?), something in paperinterface, too</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>for some reason, podofobrowser doesn't like laidout produced pdfs, but they're fine with xpdf. huh!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>control-q quits now rather than plain 'q'</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>from laxkit: Fix cut and paste from system clipboard</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>mouse releasing grab when crossing window control boundaries, makes color box unusable. address this!!!</td></tr>
+<tr><td colspan=3><br><h2>Version 0.08 -- released 15 September 2007!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Test, test, test! from fresh install to print out, make booklet, portrait, landscape</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>fix hard to trace crash in importimages dialog for shift select range of files</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>(sort of, load but not save) Finish implementing project based setup, especially when loading</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>limbos should be selectable, and saved independently of windows</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Basic libintl support, latin-1 translations only!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Paper tiler interface</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Zoom handles screw up viewer transform aspect. Fix it!!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Fix linear/radial gradient editing when object is sheared</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Dialogs should remember their placements</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Standardize the import/export mechanism</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>PDF out</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>svg out</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Export all/current paper/paper range, by singles, page layout, or paper layout to any filter</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Export to various things from command line to allow batch processing</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Export as a Scribus document</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Print/export to images (via ghostscript)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Find and fix the damn memory hole (at least it currently slowly eats memory rather than crashing) (fixed PageStyle mess up, now problem in viewwindow->curobj probably)</td></tr>
+<tr><td colspan=3><br><h2>Version 0.07 -- released 2 June 2007!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Have command line option to output to a file a pseudocode mockup of the file format</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>EPS out booklet landscape is broken, fix it!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Implement all preview config options, namely auto preview files over a certain size</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to search for existing previews in ~/.thumbnails/large and normal</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Document selector button up in corner should work</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clean up image import dialog</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Fix icons/makeimages.py!! "from xml.sax import saxexts" somehow stopped working</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Eye dropper-ish color grabber, ideally grab any color anywhere on the screen</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>(sort of) Make the select by dragging out a rectangle work</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>limbo objects should save with the document, instead of just disappearing!!!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Linear and radial Gradients should have vastly better interfaces</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Image and Color patches should have vastly better interfaces</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>(but only because I can't reproduce it any more for some mysterious reason) from laxkit:  fix tooltips: seems laxkit accidentally allows multiple tooltips on rare occasions</td></tr>
+<tr><td colspan=3><br><h2>Version 0.06 -- released 25 April 2007!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>parent/child nesting and interface for that: nesting, and grouping: layer trees</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>New document creation from templates</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to work with preview images more easily</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Basic EPS import, would open up all kinds of down and dirty tricks using other programs:latex,lilypond,...</td></tr>
+<tr><td colspan=3><br><h2>Version 0.05 -- released 4 November 2006!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Build a features.html for the webpage</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to work with preview images, rather than hundreds of 15M tiffs</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Show adjacent pages in Net Singles view (prelude to being able to unwrap shapes any way they can)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Use a ~/.laidout/0.05/laidoutrc</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: re-fix auto arranging</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>ObjectInterface for selecting and resizing multiple stuff</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Import images from a list file</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Make ImageInterface scaling suck less, and distinguish between no image and broken image</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>autoconfiscate or cmake or (this one)have simple "configure" thingy</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Should be able to 'Open Document' without restarting Laidout!!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Improve internal icon management</td></tr>
+<tr><td colspan=3><br><h2>Version 0.04 -- released 4 September 2006!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Palette Window</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>RSS feed for website</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>A style manager, which is Not dependent on laxkit::refcounter, which is being removed</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>from laxkit: SplitWindow: swap window positions</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Simple multiple image import by selecting one or more from a directory</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Allow for window docking, floating, swapping panes, and temporary pane maximize</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Page Ranges controlling page number labels</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Make workspace bounds and popup panner save with the document</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Fix page/spread flip by number</td></tr>
+<tr><td colspan=3><br><h2>Version 0.03 -- released 13 May 2006!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>(but needs serious optimizing) Bezier patch with image for the color (this would be HOT for the gimp! a side project..)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>if an image is selected, should be able to import an image to it</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>printing: produce masked images based on 50% threshhold of alpha channel of images</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>When loading files from the command line, should understand: 'file:///path/to/it'</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Whoops! Change reference from LGPL to GPL in source code!! Crap!!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Load and save window configurations</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>EPS out to file###.eps by page not paper</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to print a paper range</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>an About window</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>command prompt window</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Get rid of vertical white stripe toward bottom of the laidout webpage</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: drag to viewer to work on that page or spread</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>SpreadEditor: fix auto arranging</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Make doc tree changes sanely update the various windows</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to DEselect all objects!!</td></tr>
+<tr><td colspan=3><br><h2>Version 0.02 -- released 8 April 2006!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Rename Disposition to Imposition. Why oh why did I call it Disposition??</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Insert some way to turn off debug info dumped to cout (done in a convoluted way, perhaps)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Linear Gradients edit, save, and printout</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Circle Gradients edit, save, and printout</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Color patches should work better than in 0.01</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Overall windowing setup using Laxkit::SplitWindows, </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>from laxkit: replacement of 'datastack' should be complete, do same here</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Popup tool selector</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>ObjectInterface for resizing and shearing</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Make Save/Save As dialog box suck less: 'test/1.doc' should mean cd test, save '1.doc'</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Make it easy to make deb packages from source</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>extremely basic print dialog: print to file (ask on overwrite) or send via shell command</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>make the directory spot in viewer keep updated current directory</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>debug SpreadEditor thumbnail updating, and clip thumb to page</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>A help button to popup a list of all the otherwise unmentioned key shortcuts</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Debug 'Delete Page'</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Button for pageclips</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Implement SpreadEditor Reset button</td></tr>
+<tr><td colspan=3><br><h2>Version 0.01 -- released 12 March 2006!</h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clean up web page a bit.</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>TILING MUST WORK!!!!!!! for booklets also </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Get NetDisposition sort of going</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Implement page clipping for display AND for printing..</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Images should work well</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Color patches should work enough to be getting on with</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>in the laxkit: menuselector,</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>tooltips IMPORTANT!!,</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>and set said tooltips for the mystery numbers in ViewWindow </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Add copyright notice to source files</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Add and Delete Page buttons</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Throw together a quick key-stroke cheat sheet</td></tr>
+</table>
+<br/>
+<br/>
+Last change: Mon Apr 10 16:52:53 2017
+
+
+</div><!-- main -->
+</div><!-- whole -->
+
+</body>
+</html>

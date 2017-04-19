@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta charset="utf-8">
+
+<link rel="icon" href="../laidout-icon-16x16.png" type="image/png">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+
+<title>Color patch gradients</title>
+<link rel="contents" href="index.html">
+<link rel="next" href=img-radial-gradients.html>
+<link rel="previous" href=img-papertiler.html>
+
+<meta name="description" content="Laidout, desktop publishing software.">
+<meta name="keywords" content="Cartoons, Prints, Drawings, Polyhedra, Polyhedron, Calendar, 
+Desktop, Publishing, Page, Layout, Multipage, Booklet, Books, Imposition, Linux, Software,
+Tensor, Product, Patch, Laidout, Folded, Pamphlet, Screenshots,
+Dodecahedron,">
+
+
+<style type="text/css">
+  table {
+    background: #dddddd;
+  }
+  td.slide {
+    background: #dddddd;
+  }
+</style>
+
+<script language="javascript">
+      //navigation images
+	navimages=new Array()
+	navimages[0]=new Image()
+	navimages[0].src="../arrows/prev.png"
+	navimages[1]=new Image()
+	navimages[1].src="../arrows/next.png"
+	navimages[2]=new Image()
+	navimages[2].src="../arrows/up.png"
+	navimages[3]=new Image()
+	navimages[3].src="../arrows/prevh.png"
+	navimages[4]=new Image()
+	navimages[4].src="../arrows/nexth.png"
+	navimages[5]=new Image()
+	navimages[5].src="../arrows/uph.png"
+
+	function  hleft() { document.eyel1.src=navimages[3].src;  document.eyel2.src=navimages[3].src; }
+	function   left() { document.eyel1.src=navimages[0].src;  document.eyel2.src=navimages[0].src; }
+	function hright() { document.eyer1.src=navimages[4].src;  document.eyer2.src=navimages[4].src; }
+	function  right() { document.eyer1.src=navimages[1].src;  document.eyer2.src=navimages[1].src; } 
+	function    hup() { document.eyeu1.src=navimages[5].src;  document.eyeu2.src=navimages[5].src; }
+	function     up() { document.eyeu1.src=navimages[2].src;  document.eyeu2.src=navimages[2].src; } 
+	function  prevslide() { document.write("img-papertiler.html"); }
+	function  nextslide() { document.write("img-radial-gradients.html"); }
+	function  indexfile() { document.write("index.html"); }
+</script>
+
+</head>
+<body class="gray">
+
+<div class="whole2">
+
+  <div id="side">
+    <ul class='sidenav'>
+	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="../images/gplus.png" alt="Google+"/></a></li>
+	   <li><a class="feeds" href="../rss.xml"><img src="../images/rss.png" alt="RSS feed"/></a></li>
+	   &nbsp;&nbsp;
+      <li><a href="../dev.html">Dev</a></li>
+      <li><a href="../index.html#download">Download</a></li>
+      <li><a href="../links.html">Links</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+      <li><a href="../screenshots/">Screenshots</a></li>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+  
+
+  </div><!-- side -->
+
+
+
+  <div id="main">
+
+
+    <p class="center">
+<a href="img-papertiler.html"><img name="eyel1" onMouseOut="left()" onMouseOver="hleft()" src="../arrows/prev.png" title="Previous image..." alt="Previous" border="0"></a>
+<a href="index.html"><img name="eyeu1" onMouseOut="up()" onMouseOver="hup()" src="../arrows/up.png" title="Home..." alt="Up" border="0"></a>
+<a href="img-radial-gradients.html"><img name="eyer1" onMouseOut="right()" onMouseOver="hright()" src="../arrows/next.png" title="Next image..." alt="Next" border="0"></a>
+    </p>
+
+    <div>
+      <table bgcolor="#000000" cellspacing=0 cellpadding=4>
+        <tr>
+          <td class="slide">
+
+		    (12/17)<br>
+			<map name="imgmap">
+				<area shape="rect" coords="0,0 330.5,534" 
+					  onMouseOver="hleft()" onMouseOut="left()" href="img-papertiler.html"
+					  title="Previous image" />
+				<area shape="rect" coords="330.5,0 661,534" 
+					  onMouseOver="hright()" onMouseOut="right()" href="img-radial-gradients.html"
+					  title="Next image" />
+			</map>
+			<img name="slide" usemap="#imgmap" src="images/monkeypatch.png" width="661" height="" border="0"><br/>
+			<br/>
+			<font size="-1"><em>(version 0.07)</em></font><br/><br/>
+
+			<strong>Color patch gradients</strong><br/>
+			 The newly improved patch editing interface is getting to the point where it is actually a useful tool! At version 0.07, it's still
+ more or less at the proof of concept stage of development. In another couple of versions, it should get easier and easier to use.<br>
+ <br>
+ Version 0.07 saw major enhancements to the patch controls, but much work needs to be done still. The basic controls are
+ as follows. Hovering over an outer
+ edge, then click and drag lets you drag that edge around. Shift-click-drag adds a new row or column off the side. Inside,
+ control-hover lets you select which inner edges you want to delete, and shift-control-hover shows where to subdivide a row
+ and/or column. Pressing 'j' (for jagged) toggles whether dragging vertex points will also drag the adjacent control points.
+ Pressing 'd' will toggle between various ways to display control decorations. Finally, 'b' will toggle through various ways
+ to interpolate controls so that you don't have to.
+
+
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+
+
+
+
+
+
+
+<br><br><br>
+
+</div><!-- main -->
+</div><!-- whole -->
+
+
+
+</body>
+</html>
