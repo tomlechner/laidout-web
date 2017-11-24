@@ -1,4 +1,4 @@
-LAXDIR=/home/tom/other/p/github/laxkit/lax
+LAXDIR=`pwd`/laxkit/lax
 CPPFLAGS = -g -I.  -I.. -I$(LAXDIR)/.. -L$(LAXDIR)
 
 dtpcompare: withlax
