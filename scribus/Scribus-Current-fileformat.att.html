@@ -383,7 +383,7 @@ Things that are in red and blinking are self explanatory.
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="16">SCRIBUSUTF8NEW</td>
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="16">DOCUMENT</td>
     <td colspan="4" style="background:#eeeeee;color:#000000">CheckProfile</td>
-    <td colspan="1" style="background:#eeeeee;">one or more of these</td>
+    <td colspan="1" style="background:#eeeeee;">&nbsp;</td>
   </tr>
   <tr>
       <td style="background:#ffffff" colspan="3" rowspan="15">&nbsp;&nbsp;&nbsp;</td>
@@ -419,11 +419,11 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="6">SCRIBUSUTF8NEW</td>
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="6">DOCUMENT</td>
-    <td colspan="4" style="background:#eeeeee;color:#000000">COLOR</td>
-    <td colspan="1" style="background:#eeeeee;">none or more of these</td>
+    <td colspan="4" style="background:#A9D1FF;color:#000000">COLOR</td>
+    <td colspan="1" style="background:#A9D1FF;">&nbsp;</td>
   </tr>
   <tr>
-      <td style="background:#ffffff" colspan="3" rowspan="5">&nbsp;&nbsp;&nbsp;</td>
+      <td style="background:#c9e4FF" colspan="3" rowspan="5">&nbsp;&nbsp;&nbsp;</td>
     <td style="background:#ffffff">NAME</td><td style="background:#ffffff">Name of the Colour</td></tr>
   <tr>
     <td style="background:#ffffff">CMYK</td><td style="background:#ffffff">Value as hexadecimal String, such as "#22bb77ee"</td></tr>
@@ -459,24 +459,31 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td style="background:#ffffff">TRANS</td><td style="background:#ffffff">Transparency of the colour stop, range from 0.0 till 1.0</td></tr>
   <tr>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="21">SCRIBUSUTF8NEW</td>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="21">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="46">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="46">DOCUMENT</td>
     <td colspan="4" style="background:#eeeeee;color:#000000">STYLE</td>
-    <td colspan="1" style="background:#eeeeee;">A paragraph style</td>
+    <td colspan="1" style="background:#eeeeee;">A paragraph style. Attributes need not appear if inherited from PARENT.</td>
   </tr>
   <tr>
-      <td style="background:#ffffff" colspan="3" rowspan="20">&nbsp;&nbsp;&nbsp;</td>
+      <td style="background:#ffffff" colspan="3" rowspan="45">&nbsp;&nbsp;&nbsp;</td>
     <td style="background:#ffffff">NAME</td><td style="background:#ffffff">Name of the style</td></tr>
   <tr>
     <td style="background:#ffffff">PARENT</td><td style="background:#ffffff">Parent style name</td></tr>
   <tr>
-    <td style="background:#ffffff">DefaultStyle</td><td style="background:#ffffff">Whether this is the default style</td></tr>
+    <td style="background:#ffffff">DefaultStyle</td><td style="background:#ffffff">Whether this is the default style, 0 or 1</td></tr>
   <tr>
-    <td style="background:#ffffff">ALIGN</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+    <td style="background:#ffffff">ALIGN</td><td style="background:#ffffff">0 = Left <br/>
+1 = Center <br/>
+2 = Right <br/>
+3 = Justify <br/>
+4 = Force justify</td></tr>
   <tr>
-    <td style="background:#ffffff">LINESPMode</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+    <td style="background:#ffffff">LINESPMode</td><td style="background:#ffffff">Line spacing mode, fixed, auto, or align to baseline. <br/>
+0 = fixed line spacing <br/>
+1 = auto line spacing <br/>
+2 = align to baseline mode</td></tr>
   <tr>
-    <td style="background:#ffffff">LINESP</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+    <td style="background:#ffffff">LINESP</td><td style="background:#ffffff">Value for fixed line spacing in points</td></tr>
   <tr>
     <td style="background:#ffffff">INDENT</td><td style="background:#ffffff">Left indent</td></tr>
   <tr>
@@ -488,17 +495,67 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td style="background:#ffffff">NACH</td><td style="background:#ffffff">Gap after</td></tr>
   <tr>
+    <td style="background:#ffffff">ParagraphEffectCharStyle</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">ParagraphEffectOffset</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">ParagraphEffectIndent</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
     <td style="background:#ffffff">DROP</td><td style="background:#ffffff">Has drop cap</td></tr>
   <tr>
     <td style="background:#ffffff">DROPLIN</td><td style="background:#ffffff">Number of lines for a drop cap</td></tr>
   <tr>
     <td style="background:#ffffff">DROPDIST</td><td style="background:#ffffff">Drop cap offset</td></tr>
   <tr>
-    <td style="background:#ffffff">OpticalMargins</td><td style="background:#ffffff">Whether to use optical margins</td></tr>
+    <td style="background:#ffffff">Bullet</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">BulletStr</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">Numeration</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationFormat</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationName</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationLevel</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationPrefix</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationSuffix</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationStart</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationRestart</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationOther</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">NumerationHigher</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">OpticalMargins</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
   <tr>
     <td style="background:#ffffff">HyphenationMode</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
   <tr>
     <td style="background:#ffffff">MinWordTrack</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MinGlyphShrink</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MaxGlyphExtend</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">KeepLinesStart</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">KeepLinesEnd</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">KeepWithNext</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">KeepTogether</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">OpticalMargins</td><td style="background:#ffffff">Whether to use optical margins</td></tr>
+  <tr>
+    <td style="background:#ffffff">HyphenationMode</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">MinWordTrack</td><td style="background:#ffffff">Ratio for minimum word tracking. 1.0 is normal.</td></tr>
+  <tr>
+    <td style="background:#ffffff">wordTrack</td><td style="background:#ffffff">Ratio for tracking. 1.0 is normal (character advance)</td></tr>
   <tr>
     <td style="background:#ffffff">MinGlyphShrink</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
   <tr>
@@ -524,30 +581,44 @@ Things that are in red and blinking are self explanatory.
 3 = Comma  <br/>
 4 = Center</td></tr>
   <tr>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="23">SCRIBUSUTF8NEW</td>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="23">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="26">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="26">DOCUMENT</td>
     <td colspan="4" style="background:#eeeeee;color:#000000">CHARSTYLE</td>
     <td colspan="1" style="background:#eeeeee;">A character style</td>
   </tr>
   <tr>
-      <td style="background:#ffffff" colspan="3" rowspan="22">&nbsp;&nbsp;&nbsp;</td>
+      <td style="background:#ffffff" colspan="3" rowspan="25">&nbsp;&nbsp;&nbsp;</td>
     <td style="background:#ffffff">CNAME</td><td style="background:#ffffff">Name of the style</td></tr>
   <tr>
     <td style="background:#ffffff">CPARENT</td><td style="background:#ffffff">Parent style name</td></tr>
   <tr>
-    <td style="background:#ffffff">FONT</td><td style="background:#ffffff">Font name</td></tr>
+    <td style="background:#ffffff">DefaultStyle</td><td style="background:#ffffff">Whether this is the default style, 0 or 1</td></tr>
   <tr>
-    <td style="background:#ffffff">FONTSIZE</td><td style="background:#ffffff">Font size</td></tr>
+    <td style="background:#ffffff">FONT</td><td style="background:#ffffff">Name of the Font, usually "font-family font-style"</td></tr>
   <tr>
-    <td style="background:#ffffff">FEATURES</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+    <td style="background:#ffffff">FONTSIZE</td><td style="background:#ffffff">Fontsize in points</td></tr>
   <tr>
     <td style="background:#ffffff">FCOLOR</td><td style="background:#ffffff">Fill color</td></tr>
   <tr>
+    <td style="background:#ffffff">KERN</td><td style="background:#ffffff">Percentage to kern</td></tr>
+  <tr>
     <td style="background:#ffffff">FSHADE</td><td style="background:#ffffff">Fill shade</td></tr>
+  <tr>
+    <td style="background:#ffffff">EFFECTS</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">EFFECT</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">FEATURES</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
   <tr>
     <td style="background:#ffffff">SCOLOR</td><td style="background:#ffffff">Stroke color</td></tr>
   <tr>
     <td style="background:#ffffff">SSHADE</td><td style="background:#ffffff">Stroke shade</td></tr>
+  <tr>
+    <td style="background:#ffffff">SCALEH</td><td style="background:#ffffff">Percentage scaling horizontally</td></tr>
+  <tr>
+    <td style="background:#ffffff">SCALEV</td><td style="background:#ffffff">Percentage scaling vertically</td></tr>
+  <tr>
+    <td style="background:#ffffff">BASEO</td><td style="background:#ffffff">Offset from baseline</td></tr>
   <tr>
     <td style="background:#ffffff">TXTSHX</td><td style="background:#ffffff">Text shadow offset horizontally</td></tr>
   <tr>
@@ -563,15 +634,7 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td style="background:#ffffff">TXTSTW</td><td style="background:#ffffff">Strikethrough width</td></tr>
   <tr>
-    <td style="background:#ffffff">SCALEH</td><td style="background:#ffffff">Scaling horizontally</td></tr>
-  <tr>
-    <td style="background:#ffffff">SCALEV</td><td style="background:#ffffff">Scaling vertically</td></tr>
-  <tr>
-    <td style="background:#ffffff">BASEO</td><td style="background:#ffffff">Offset from baseline</td></tr>
-  <tr>
-    <td style="background:#ffffff">KERN</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
-  <tr>
-    <td style="background:#ffffff">wordTrack</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+    <td style="background:#ffffff">LANGUAGE</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
   <tr>
     <td style="background:#ffffff">SHORTCUT</td><td style="background:#ffffff">Shortcut for this style</td></tr>
   <tr>
@@ -923,8 +986,8 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
-    <td colspan="4" style="background:#eeeeee;color:#000000">PageSets</td>
-    <td colspan="1" style="background:#eeeeee;">(none or more of these)</td>
+    <td colspan="4" style="background:#A9D1FF;color:#000000">PageSets</td>
+    <td colspan="1" style="background:#A9D1FF;">&nbsp;</td>
   </tr>
   <tr>
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="8">SCRIBUSUTF8NEW</td>
@@ -1050,13 +1113,13 @@ Things that are in red and blinking are self explanatory.
     <td colspan="1" style="background:#eeeeee;">Same as a PAGEOBJECT, but is on a MASTERPAGE</td>
   </tr>
   <tr>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="147">SCRIBUSUTF8NEW</td>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="147">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="148">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="148">DOCUMENT</td>
     <td colspan="4" style="background:#eeeeee;color:#000000">PAGEOBJECT</td>
     <td colspan="1" style="background:#eeeeee;">An object that is somehow drawable on a PAGE</td>
   </tr>
   <tr>
-      <td style="background:#ffffff" colspan="3" rowspan="146">&nbsp;&nbsp;&nbsp;</td>
+      <td style="background:#ffffff" colspan="3" rowspan="147">&nbsp;&nbsp;&nbsp;</td>
     <td style="background:#c9e4FF">ALIGN</td><td style="background:#c9e4FF"> Alignment for text when no paragraph style is set <br/>
 0 = No Style, left aligned  <br/>
 1 = Align Text Center  <br/>
@@ -1119,7 +1182,11 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td style="background:#c9e4FF">ANFACT</td><td style="background:#c9e4FF"> JavaScript executed before formatting the PFD-Field</td></tr>
   <tr>
-    <td style="background:#c9e4FF">ANFEED</td><td style="background:#c9e4FF"> Feedback for PDF-Button press 0 = None 1 = Invert 2 = Outlined 3 = Push animation</td></tr>
+    <td style="background:#c9e4FF">ANFEED</td><td style="background:#c9e4FF"> Feedback for PDF-Button press <br/>
+0 = None <br/>
+1 = Invert <br/>
+2 = Outlined <br/>
+3 = Push animation</td></tr>
   <tr>
     <td style="background:#c9e4FF">ANFLAG</td><td style="background:#c9e4FF"> Flags for Annotations, value is the bitwise or of the following constants <br/>
 1 = Field is read-only  <br/>
@@ -1251,6 +1318,11 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td style="background:#ffffff">FLIPPEDV</td><td style="background:#ffffff">Set to an uneven number if object is flipped vertical</td></tr>
   <tr>
+    <td style="background:#ffffff">FLOP</td><td style="background:#ffffff">First text line offset type <br/>
+0 = Maximum ascent for characters in first line <br/>
+1 = the font's ascent value <br/>
+2 = the line spacing</td></tr>
+  <tr>
     <td style="background:#c9e4FF">FRTYPE</td><td style="background:#c9e4FF"> Type of the shape of an object <br/>
 0 = Rectangle  <br/>
 1 = Ellipse  <br/>
@@ -1295,11 +1367,14 @@ Things that are in red and blinking are self explanatory.
 2 = Saturation <br/>
 3 = Absolute Colorimetric</td></tr>
   <tr>
-    <td style="background:#c9e4FF">ISIZE</td><td style="background:#c9e4FF"> Fontsize for text</td></tr>
+    <td style="background:#c9e4FF">ISIZE</td><td style="background:#c9e4FF"> Basically default fontsize for this pageobject. Can be overridden by individual ITEXT elements.</td></tr>
   <tr>
     <td style="background:#c9e4FF">isTableItem</td><td style="background:#c9e4FF"> Set to 1 if the object belongs to a table</td></tr>
   <tr>
-    <td style="background:#ffffff">LINESPMode</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+    <td style="background:#ffffff">LINESPMode</td><td style="background:#ffffff">Line spacing mode, fixed, auto, or align to baseline. See also CHARSTYLE->LINESPMode <br/>
+0 = fixed line spacing <br/>
+1 = auto line spacing <br/>
+2 = align to baseline mode</td></tr>
   <tr>
     <td style="background:#c9e4FF">LANGUAGE</td><td style="background:#c9e4FF"> Language of the object</td></tr>
   <tr>
@@ -1429,7 +1504,7 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td style="background:#c9e4FF">TransValueS</td><td style="background:#c9e4FF"> Transparency value for stroke, in range [0..100]</td></tr>
   <tr>
-    <td style="background:#c9e4FF">TXTFILL</td><td style="background:#c9e4FF"> Name of the default text fill colour</td></tr>
+    <td style="background:#c9e4FF">TXTFILL</td><td style="background:#c9e4FF"> Name of the default text fill colour for this object</td></tr>
   <tr>
     <td style="background:#c9e4FF">TXTFILLSH</td><td style="background:#c9e4FF"> Default shading for the text fill colour</td></tr>
   <tr>
@@ -1502,14 +1577,14 @@ Things that are in red and blinking are self explanatory.
   <tr>
     <td style="background:#ffffff">TRANS</td><td style="background:#ffffff">Transparency of the colour stop, range from 0.0 till 1.0</td></tr>
   <tr>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="22">SCRIBUSUTF8NEW</td>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="22">DOCUMENT</td>
-    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="22">PAGEOBJECT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="24">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="24">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="24">PAGEOBJECT</td>
     <td colspan="3" style="background:#eeeeee;color:#000000">ITEXT</td>
-    <td colspan="1" style="background:#eeeeee;">Chunk of text</td>
+    <td colspan="1" style="background:#eeeeee;">Chunk of text. These can have CHARSTYLE attributes, which will override default character style values.  </td>
   </tr>
   <tr>
-      <td style="background:#ffffff" colspan="2" rowspan="21">&nbsp;&nbsp;&nbsp;</td>
+      <td style="background:#ffffff" colspan="2" rowspan="23">&nbsp;&nbsp;&nbsp;</td>
     <td style="background:#ffffff">CAB</td><td style="background:#ffffff">Paragraph style for the character <br/>
 0 = No Style, left aligned  <br/>
 1 = Align Text Center <br/>
@@ -1563,6 +1638,17 @@ Things that are in red and blinking are self explanatory.
     <td style="background:#ffffff">CSHX</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
   <tr>
     <td style="background:#ffffff">CSHY</td><td style="background:#ffaaaa"><blink>DOCUMENT ME!!</blink></td></tr>
+  <tr>
+    <td style="background:#ffffff">FONT</td><td style="background:#ffffff">Name of the Font, usually "font-family font-style"</td></tr>
+  <tr>
+    <td style="background:#ffffff">FONTSIZE</td><td style="background:#ffffff">Fontsize in points</td></tr>
+  <tr>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">SCRIBUSUTF8NEW</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">DOCUMENT</td>
+    <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="1">PAGEOBJECT</td>
+    <td colspan="3" style="background:#eeeeee;color:#000000">para</td>
+    <td colspan="1" style="background:#eeeeee;">A paragraph break. See DOCUMENT.STYLE for paragraph style options</td>
+  </tr>
   <tr>
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">SCRIBUSUTF8NEW</td>
     <td valign="top" style="background:#eeeeee;color:#aaaaaa" rowspan="2">DOCUMENT</td>

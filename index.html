@@ -16,22 +16,11 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 
 
-  <!-- link rel="stylesheet" href="js/screen.css"   type="text/css" media="screen" / -->
-  <link rel="stylesheet" href="js/lightbox.css" type="text/css" media="screen" />
-  <script src="js/jquery-1.7.2.min.js"></script>
-  <script src="js/jquery-ui-1.8.18.custom.min.js"></script>
-  <script src="js/jquery.smooth-scroll.min.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script type="text/javascript" >
-        function jumpstart() {
-            Lightbox.start();
-            /*var $ = jQuery;
-            var $lightbox;
-            $lightbox = $('#lightbox');
-            $lightbox.changeImage(0);*/
-        }
-        
-  </script>
+  <script src="js/jquery-3.0.0.min.js"></script>
+
+  <link rel="stylesheet" href="js/scrim.css" type="text/css" media="screen" />
+  <script src="js/scrim.js"></script>
+  <script type="text/javascript"> Scrim.Options({ auto: true }); </script>
 
 
 
@@ -46,7 +35,7 @@ Dodecahedron, software, open, source, dtp, signature, editor">
   <div id="side">
     <ul class='sidenav'>
 	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="images/gplus.png" alt="Google+"/></a></li>
-	   <li><a class="feeds" href="rss.xml"><img src="images/rss.png" alt="RSS feed"/></a></li>
+	   <!-- li><a class="feeds" href="rss.xml"><img src="images/rss.png" alt="RSS feed"/></a></li -->
 	   &nbsp;&nbsp;
       <li><a href="dev.html">Dev</a></li>
       <li><a href="index.html#download">Download</a></li>
@@ -78,6 +67,36 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 	<br />
 
 
+   <span style="font-size:80%"><em>3 December 2017</em></span><br>
+	<b>Work in progress...</b><br />
+	<br>
+	Here's a sneak peak of features I've been working on, to distract myself from the toil of debugging my text tools.
+	For instance, in order to use the engraving tool to its fullest potential, cross linking image tracing sources needs to be easy. This is a bit
+	difficult to do with the current control box, so I started to work on a node based system of controls. I'm implementing this
+	in part with the <a href="http://gegl.org/">gegl</a> library, which is lower level, but still node based and,
+	as it turns out, rather easy to map to an interface.
+	<br><br>	
+	<a data-scrim="img" href="screenshots/images/nodes-0.096.1.png"><img src="screenshots/images/nodes-0.096.1-s.png" width="116" height="100" alt="Nodes!"></a>
+	<br><br>	
+	 These nodes will some day also be used for per object vector or raster based filters as well. If per object filters exist, then it would
+	be nice to transform by a perspective grid, for instance, among so many other things: 
+	<br><br>	
+	<a data-scrim="img" href="screenshots/images/perspective-0.096.1.png"><img src="screenshots/images/perspective-0.096.1-s.png" width="130" height="100" alt="Perspective"></a>
+	<br><br>
+	Also sometimes useful for built textures are voronoi fields, which usually are
+	difficult to manually construct.
+	<br><br>
+	<a data-scrim="img" href="screenshots/images/voronoi-0.096.1.png"><img src="screenshots/images/voronoi-0.096.1-s.png" width="133" height="100" alt="Voronoi"></a>
+	<br><br>   
+	Please note these are only at proof of concept stage and not quite usable yet! I hope to show fully functioning versions
+	at <a href="https://www.socallinuxexpo.org/scale/16x">Scale 16x</a> in Pasadena, March 9, and hopefully also
+	this year's <a href="http://www.libregraphicsmeeting.org">Libre Graphics Meeting</a> in Seville, Spain in late April.
+   <br><br>
+   <hr>
+
+   <br><br>
+
+	
 	<span style="font-size:80%"><em>15 April 2017</em></span><br>
 	<b>Spring...</b><br />
 	<br>
@@ -238,7 +257,7 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 	when a picture is worth a thousand words?<br>
 	<br>
 	Laidout, together with the <a href="http://laxkit.sourceforge.net">Laxkit</a> backend,
-	aim is to make a well documented, very modular, expandable, and configurable desktop publishing program, 
+	aims to make a well documented, very modular, expandable, and configurable desktop publishing program, 
 	with an emphasis on developing tools not commonly found in other programs, as long as they are useful.
 	A side project is to foster the ability to share these tools with other software.
 	<br>
