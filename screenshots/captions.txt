@@ -181,9 +181,7 @@ tatamishot.png ---- ---- ---- 2010 11 12 7:26:33 ---- Window arrangements
 #>smallcaption=(version 0.05)
 #... Here is a shot that shows various features of Laidout, including a splittable main window, shown as a tatami mat sort of layout.
 #... You'll notice in the upper left that the whole view of the page is a bit rotated. In Laidout, you are not restricted to viewing pages 
-#... as only portrait or landscape, like every other program in existence [note: there's been a
-#... <a href="http://sourceforge.net/mailarchive/forum.php?thread_name=8d5721e60704240754u26ac4f79rf6d5be33224855ee%40mail.gmail.com&forum_name=inkscape-devel">recent flurry</a> on Inkscape's dev mailing list in April 2007 about
-#... adding this feature]. 
+#... as only portrait or landscape. 
 #... Also in the upper left is the Object tool, which allows scaling, shearing, and rotating of multiple objects.
 #... It has handles to drag around, as seen in Inkscape, but there is also what I call a three point transform, in which you can define the
 #... center of scaling/rotation (control-left click), then click and drag any

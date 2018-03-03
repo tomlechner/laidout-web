@@ -21,6 +21,13 @@
  version: $Id: scribus-call-laidout-to-impose.py 436 2010-11-13 21:27:35Z tomlechner $
 """
 
+#
+# change as necessary:
+# 
+path_to_laidout = "/usr/bin/laidout"
+
+
+
 
 import sys
 
@@ -60,7 +67,7 @@ def main(argv):
 
 
     try:
-        os.system("/home/tom/p/sourceforge/laidout/src/laidout")
+        os.system(path_to_laidout)
         #os.system(thecommand)
 
     except:
