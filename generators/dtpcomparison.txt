@@ -86,7 +86,7 @@ item  "impositioning involving non-rectangular pages"
 item  "Spreading page contents over several pieces of paper, so you can print out a really big layout from your small printer"
     Laidout      "yes, .08, click for tutorial!"
         url   http://www.youtube.com/watch?v=N79bFZmlKLU
-    Scribus      "partial, something to do with PageSets maybe"
+    Scribus      partial
         note  \
               Scribus is set up to handle several papers right next to each other in a grid.
               In the file, there are PageSet sections. You can copy that and insert new
@@ -187,7 +187,7 @@ item  Color system capabilities flexible enough for any number of inks (think "d
     Inkscape    
     Xara        
     Illustrator 
-item  "ICC color profiles"
+item  "Color management, whether ICC color profiles or other system"
     Laidout     planned, .1
     Scribus     yes
     InDesign    yes
@@ -259,20 +259,20 @@ item  "Record macros, like Pagestream, Vim, or Openoffice!"
     Inkscape    
     Xara        
     Illustrator 
-item  "Non-destructive Bezier patch transforms on any object"                            
+item  "Non-destructive transforms of image objects"
     Laidout      
     Scribus      
     InDesign     
     Quark       
-    Inkscape    
+    Inkscape    yes, via SVG filters
     Xara        
     Illustrator 
-item  "Arbitrary f(s,t) transforms, and f(s) or f(t) transforms for paths"                            
+item  "Non-destructive transforms of vector objects"
     Laidout      
     Scribus      
     InDesign     
     Quark       
-    Inkscape    
+    Inkscape    yes, via Live Path Effects
     Xara        
     Illustrator 
 item  "Guides that are arbitrary paths, not just vertical and horizontal lines. "                            
@@ -284,6 +284,33 @@ item  "Guides that are arbitrary paths, not just vertical and horizontal lines. 
     Xara        no
     Illustrator no
 item  "Aligning groups of points, text, and/or objects to paths"                            
+    Laidout     partial, Only objects
+    Scribus      
+    InDesign     
+    Quark       
+    Inkscape    
+    Xara        
+    Illustrator 
+item  "Pressure sensitive drawing tablet support"                            
+    Laidout      partial, Only engraving tool detects pressure
+    Scribus      
+    InDesign     
+    Quark       
+    Inkscape     partial, pressure support, but each input is same tool
+    Xara        
+    Illustrator 
+item  Multi-touch support, or support for the poor person's version using 2 mice
+    Laidout      partial
+        note \
+            Since 0.091, but only the object tool has this (the poor person's version) in .091. More of that sort of thing
+            may be built into future versions.
+    Scribus      
+    InDesign     
+    Quark       
+    Inkscape    
+    Xara        
+    Illustrator 
+item  "Ability to use odd control surfaces like midi controllers, a la the Gimp"                            
     Laidout      
     Scribus      
     InDesign     
@@ -291,27 +318,8 @@ item  "Aligning groups of points, text, and/or objects to paths"
     Inkscape    
     Xara        
     Illustrator 
-item  "Tablet support, stylus, eraser, mouse allowed different functions"                            
-    Laidout      planned, for .1
-    Scribus      
-    InDesign     
-    Quark       
-    Inkscape     partial, pressure support, but each input is same tool
-    Xara        
-    Illustrator 
-item  "Ability to use odd control surfaces like midi controllers, a la the Gimp"                            
-    Laidout      planned, for .1
-    Scribus      
-    InDesign     
-    Quark       
-    Inkscape    
-    Xara        
-    Illustrator 
-item  "<a href=\"http://www.nuigroup.com/\">Multi-touch</a> support, or support for the <a href=\"http://www.x.org/wiki/XI2\">poor person's version</a> using 2 mice and XInput2"
-    Laidout      partial, 0.091
-        note \
-            Only the object tool has this (the poor person's version) in .091. More of that sort of thing
-            will be built into future versions.
+item  Long document support, such as one document's chapters in separate files.
+    Laidout      
     Scribus      
     InDesign     
     Quark       
@@ -322,7 +330,7 @@ item  "<a href=\"http://www.nuigroup.com/\">Multi-touch</a> support, or support 
 
 
 
-section    Non-text Tool Features
+section    Non-text Objects
 item  Images                            
     Laidout      yes, .01
     Scribus      yes
@@ -384,7 +392,7 @@ item  "Engraver fill"
           <a href="https://inkscape.org/en/doc/tutorials/interpolate/tutorial-interpolate.en.html">Interpolate</a> extension, which interpolates
           between two different lines, creating a field like effect.  
     Xara         
-	Illustrator  plugin, Widthscribe from Astute Graphics looks nice.
+    Illustrator  plugin, Widthscribe from Astute Graphics looks nice.
 item  "Ellipses, arcs, chords"                            
     Laidout      yes, .093, via '0' to lay bezier points along a circle, then scale to ellipse
     Scribus      yes
@@ -419,7 +427,9 @@ item  "Repeater tool along path"
     Illustrator 
 item  "Cloning objects, optionally with link backs to original objects"                            
     Laidout     yes, 0.094
-    Scribus     partial, Duplicates yes, but referenced clones not yet (see scribus bug 1704)
+    Scribus     partial
+      note \
+        Symbols come closest. Ssee <a href="https://bugs.scribus.net/view.php?id=1704">Scribus bug 1704</a>.
     InDesign     
     Quark       
     Inkscape    yes
@@ -438,7 +448,7 @@ item  "Text. Any text at all. I mean, come on!"
     Xara        yes
     Illustrator yes
 item  "Text on a line"                            
-    Laidout      
+    Laidout      partial, 0.097, very buggy
     Scribus      yes
     InDesign     yes
     Quark        yes
@@ -446,14 +456,14 @@ item  "Text on a line"
     Xara         yes
     Illustrator  yes
 item  "Text flowed across linked boxes"                            
-    Laidout      
+    Laidout      planned, .2
     Scribus      yes
     InDesign     yes
     Quark        yes
     Inkscape     yes
     Xara         yes
     Illustrator  yes
-item  "Manual layered color fonts (one file per layer), text editable as if it were a single font"
+item  "Color fonts via layers (one font file per layer), text editable as if it were a single font"
     Laidout      yes, 0.096
     Scribus      
     InDesign     
@@ -461,25 +471,33 @@ item  "Manual layered color fonts (one file per layer), text editable as if it w
     Inkscape    
     Xara        
     Illustrator 
-item  "Opentype color fonts"
+item  "Color fonts via Opentype"
     Laidout      
     Scribus      
-    InDesign     
-    Quark       
+    InDesign     partial, svg, sbix. Beta in CC 2018
+    Quark        yes, svg, sbix, colr. Since 2018
     Inkscape    
     Xara        
-    Illustrator 
+    Illustrator  yes, svg,sbix in CC 2018
 item  "Opentype feature support"
     Laidout      
-    Scribus      
-    InDesign     
+    Scribus     yes, 1.5.3svn
+    InDesign    
     Quark       
-    Inkscape    
+    Inkscape    yes, 
     Xara        
     Illustrator 
+item  "Variable width font support"
+    Laidout      
+    Scribus     
+    InDesign    
+    Quark       
+    Inkscape    yes, 2018 development
+    Xara        
+    Illustrator yes, 2018
 item  "Mixed right to left, left to right"
     Laidout
-    Scribus    planned, for 1.6, the text engine retwritten from scratch
+    Scribus    yes, 1.5.3svn
     InDesign   yes
       note \
         Complicated history, but looks like CC supports this. Non-cc from CS4 can use the 
@@ -505,7 +523,7 @@ item  "Text streams in separate files, comparable to images not being embedded"
     Xara         
     Illustrator  
 item  "Convert Text to editable path"                            
-    Laidout      
+    Laidout      yes, 0.097
     Scribus      yes
     InDesign     yes
     Quark        yes
@@ -729,7 +747,8 @@ item  Scribus
           data, and all that data (other than master pages) will be passed through on export.
           If you do not import all as mystery data, please beware that images whose frames do
           not match exactly with their image
-          boundaries are not handled correctly. This will hopefully be handled in .094.
+          boundaries are not handled correctly. This will be handled once proper
+          clipping is implemented.
     Scribus      yes
     InDesign     
     Quark       
@@ -784,7 +803,7 @@ item  Laidout
     Xara         no
     Illustrator  no
 item Externally rendered formats (for instance, <a href="http://wiki.scribus.net/index.php/Embedding_other_external_tools_into_a_TeX_frame">Scribus render frames</a>)
-    Laidout      planned, for .094
+    Laidout      planned, for .1
     Scribus      yes, Render Frames
     InDesign     
     Quark        

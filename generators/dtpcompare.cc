@@ -155,38 +155,52 @@ int main(int argc, char **argv)
 "  td.partial a:hover { background-color:aaddaa; }\n"
 "  td.plugin  a:hover { background-color:aadddd; }\n"
 "  \n"
-"  #thetable {\n"
+"  .thetable {\n"
 "    padding: 5;\n"
 "  }\n"
-"  #thetable {\n"
+"  .thetable {\n"
 "  	 border:2px solid #bbb;\n"
 "  	 padding:0px;\n"
 "  	 border-collapse: collapse;\n"
 "  }\n"
-"  #thetable td {\n"
+"  .thetable td {\n"
 "    padding:2px;\n"
 "    border-bottom: 1px solid #ddd;\n"
 "	 border-left: 1px solid #ddd;\n"
 "	 border-right: 0px solid #ccc;\n"
 "	 border-top: 0px solid #ccc;\n"
 "  } \n"
-"  #thetable td.header {\n"
+"  .thetable td div { display: none; }\n"
+"  .thetable td:hover div { display: block; }\n"
+"  .thetable td.header {\n"
 "    background:#ddd;\n"
 "    font-weight:bold;\n"
 "  }\n"
-"  #thetable td.desc {\n"
+"  .thetable td.desc {\n"
 "    padding-left:1em;\n"
 "  }\n"
 "  \n"
-"  #thetable a {\n"
+"  .thetable a {\n"
 "    display:block;\n"
 "  }\n"
-"  #thetable td.desc > a {\n"
+"  .thetable td.desc > a {\n"
 "    display: inline;\n"
 "  }\n"
-"  #thetable tr:hover {\n"
+"  .thetable tr:hover {\n"
 "    background-color: #f0f0f0;\n"
 "  }\n"
+"  .floatingNote {\n"
+"    position: absolute;\n"
+"    left: 50%;\n"
+"    padding: .5em;\n"
+"    max-width: 90%;\n"
+"    background: white;\n"
+"    border: 1px solid #bbb;\n"
+"    box-shadow: 0px 0px 40px #555;\n"
+"    text-align: left;\n"
+"  }\n"
+"  .floatingNote a { display: inline-block; }\n"
+"  \n"
 "</style>\n"
 "\n"
 "\n"
@@ -262,7 +276,7 @@ int main(int argc, char **argv)
 
 	char *sectionname=NULL;
 	int notenumber=1;
-	stringstream notestream;
+	//stringstream notestream;
 
 	for (; c<comparison.attributes.n; c++) {
 		if (!strcasecmp(comparison.attributes.e[c]->name,"section")) {
@@ -270,7 +284,7 @@ int main(int argc, char **argv)
 			if (!sectionname) {
 				 //first time, create the table
 				sectionname=newstr(comparison.attributes.e[c]->value);
-				cout <<"<table id=\"thetable\" border=\"1\" cellspacing=\"0\" "
+				cout <<"<table class=\"thetable\" border=\"1\" cellspacing=\"0\" "
 						"bordercolorlight=\"#333300\" bordercolordark=\"#000066\">\n";
 			} else {
 				 //close off old section
@@ -281,7 +295,8 @@ int main(int argc, char **argv)
 			cout <<	"<tr>\n"
 					" <td align=\"center\" class=\"header\">"<<sectionname<<"</td>\n"
 					<< programheader.str() <<"</tr>\n";
-			notestream<<"<br/>\n";
+			//notestream<<"<br/>\n";
+
 		} else if (!strcasecmp(comparison.attributes.e[c]->name,"item")) {
 			//continue section
 			
@@ -338,30 +353,46 @@ int main(int argc, char **argv)
 							 //add title if any
 							if (title && *title) cout <<"title=\""<<title<<"\" ";
 							cout <<">";
+
 							 //add url --OR-- link to note then ---Yes|No|Planned---
 							urlatt=pinfo->find("url");
 							noteatt=pinfo->find("note");
-							if (!urlatt && !noteatt) cout << yesno;
-							else if (urlatt && !noteatt) {
+
+							if (!urlatt && !noteatt) {
+								cout << yesno;
+
+							} else if (urlatt && !noteatt) {
 								 //add url link to yesno
 								cout <<"<a href=\""<<urlatt->value<<"\">"<<yesno<<"</a>";
+
 							} else {
 								 //add note link to yesno
 								cout <<"<a name=\"cite"<< notenumber
-									 <<"\" href=\"#"<<notenumber<<"\">"<<yesno
-									 <<"<sup><span style=\"font-size:70%\">"<<notenumber<<"</span></sup></a>";
-								
-								notestream <<"<a name=\""<<notenumber<<"\" title=\"Back\" href=\"#cite"<<notenumber<<"\">"
-									<<"<strong>["<<notenumber<<"]</a> "
-									<<sectionname<<": "<<item->value<<":<br/>\n&nbsp;&nbsp;"
-									<<pinfo->name<<"</strong> -- "
-									<<"<span class=\""<<yesno<<"\"> &nbsp;"<<yesno<<"&nbsp; </span><br/>"
-									<<noteatt->value;
-								if (urlatt) {
-									notestream <<"<br/><br/><a href=\""<<urlatt->value<<"\">Further info here.</a>\n";
-								} 
-								notestream<<"<br/><br/>\n";
+									 <<"\" href=\"#"<<notenumber<<"\">"
+									 <<yesno
+									 //<<"<sup><span style=\"font-size:70%\">"<<notenumber<<"</span></sup>"
+									 <<"<sup><span style=\"font-size:70%\">*</span></sup>"
+									 <<"</a>"<<endl
 
+									 <<"  <div class=\"floatingNote\">\n"
+									 <<"    <strong>"<< pinfo->name << "</strong> -- "
+									 <<"<span class=\""<<yesno<<"\"> &nbsp;"<<yesno<<"&nbsp; </span><br/><span style=\"font-size: 50%\">&nbsp;</span><br>"
+									 <<noteatt->value
+									 <<"  </div>"<<endl
+									;
+								
+								//notestream <<"<a name=\""<<notenumber<<"\" title=\"Back\" href=\"#cite"<<notenumber<<"\">"
+								//	<<"<strong>["<<notenumber<<"]</a> "
+								//	<<sectionname<<": "<<item->value<<":<br/>\n&nbsp;&nbsp;"
+								//	<<pinfo->name<<"</strong> -- "
+								//	<<"<span class=\""<<yesno<<"\"> &nbsp;"<<yesno<<"&nbsp; </span><br/>"
+								//	<<noteatt->value;
+
+								//if (urlatt) {
+								//	notestream <<"<br/><br/><a href=\""<<urlatt->value<<"\">Further info here.</a>\n";
+								//} 
+								//notestream<<"<br/><br/>\n";
+                                
 								notenumber++;
 							}
 
@@ -405,9 +436,9 @@ int main(int argc, char **argv)
 
 
 	//----------output notes;
-	cout <<"<hr/>\n <br/> <h2>Notes</h2>\n <p>\n"
-		 << notestream.str()
-		 <<"</p>\n<br/>\n";
+//	cout <<"<hr/>\n <br/> <h2>Notes</h2>\n <p>\n"
+//		 << notestream.str()
+//		 <<"</p>\n<br/>\n";
 
 
 
