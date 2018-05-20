@@ -123,6 +123,20 @@ item  "Plugins or scripting"
     Inkscape    yes
     Xara
     Illustrator
+item  "Node based object filtering"
+    Laidout     partial
+        note \
+            Since 0.097, there is a node based editor, however much needs to be done to properly
+            integrate as a useful filter editor.
+    Scribus     no
+    InDesign    no
+    Quark       no
+    Inkscape    partial
+        note \
+            Via the very compact SVG Filter Editor. You can also try out the Inkscape extension included
+            with Laidout that lets you edit the SVG filters with Laidout's node editor.
+    Xara        no
+    Illustrator no
 item  "Edge feathering (as seen in Xara), or equivalent blurring"
     Laidout
     Scribus
@@ -429,7 +443,7 @@ item  "Cloning objects, optionally with link backs to original objects"
     Laidout     yes, 0.094
     Scribus     partial
       note \
-        Symbols come closest. Ssee <a href="https://bugs.scribus.net/view.php?id=1704">Scribus bug 1704</a>.
+        Symbols come closest. See <a href="https://bugs.scribus.net/view.php?id=1704">Scribus bug 1704</a>.
     InDesign     
     Quark       
     Inkscape    yes
@@ -620,14 +634,6 @@ item  "To image"
     Inkscape     yes
     Xara         yes
     Illustrator  yes
-item  EPS/Postscript                            
-    Laidout      yes, ps in .01, eps in .03
-    Scribus      yes
-    InDesign     
-    Quark        yes
-    Inkscape     yes, by printing to a file
-    Xara         yes
-    Illustrator 
 item  Html
     Laidout      
     Scribus     
@@ -668,14 +674,6 @@ item  "Openoffice.org Draw"
     Inkscape     yes
     Xara        
     Illustrator 
-item  Passepartout
-    Laidout      partial, 0.07, groups and images only
-    Scribus      no
-    InDesign     no
-    Quark        no
-    Inkscape     no
-    Xara         no
-    Illustrator  no
 item  Laidout
     Laidout      yes
     Scribus      no
@@ -684,6 +682,22 @@ item  Laidout
     Inkscape     no
     Xara         no
     Illustrator  no
+item  Passepartout
+    Laidout      partial, 0.07, groups and images only
+    Scribus      no
+    InDesign     no
+    Quark        no
+    Inkscape     no
+    Xara         no
+    Illustrator  no
+item  EPS/Postscript                            
+    Laidout      yes, ps in .01, eps in .03
+    Scribus      yes
+    InDesign     
+    Quark        yes
+    Inkscape     yes, by printing to a file
+    Xara         yes
+    Illustrator 
 item  TeX/LaTeX                            
     Laidout      no
     Scribus      no
