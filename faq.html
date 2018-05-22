@@ -18,6 +18,26 @@ Dodecahedron,">
 
   <script src="js/jquery-1.7.2.min.js"></script>
 
+<style type="text/css">
+ .expand {
+	float: right;
+	display:block;
+	background-color:#eee;
+	color: #888;
+	padding: .5em;
+	border-width: 1px;
+	border-radius: 1em;
+	border-color: #ccc;
+	border-style: solid;
+	font-size: .9em;
+ }
+ .expand:hover {
+   background-color: #777;
+	border-color: #777;
+   color: #fff;
+ }
+</style>
+
 </head>
 <body>
 
@@ -65,6 +85,9 @@ You can also check out:
 <a href="KEYDUMP.html">Quick key reference</a> for Laidout. (made with "laidout --helphtml")<br>
 <a href="fileformat.txt">Laidout's current file format.</a> (made with "laidout --file-format")
 </blockquote>
+
+<div class="expand">Expand all</div>
+
 
 <br>
 
@@ -416,6 +439,17 @@ You can also check out:
 			//$(this).find('span').toggle();
 		}); //.next().append("<br><br><hr>");
 		
+		$('.expand').click(function() {
+			console.log("expand all");
+			
+			if ($(this).text() == "Expand all") {
+				$('.qAndA dd').slideDown('fast');
+				$(this).text("Collapse all");
+			} else {
+				$('.qAndA dd').slideUp('fast');
+				$(this).text("Expand all");
+			}
+		});
 	</script> 
 
 
