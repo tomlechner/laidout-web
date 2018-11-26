@@ -58,13 +58,48 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 	</div>
 
 
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:110%">Version 0.096</span>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:110%">Version 0.097</span>
 	<br>
 
 	<br>
 	<span style="font-size:110%"><strong><em>News</em></strong></span><br>
 
 	<br />
+
+
+
+<span style="font-size:80%"><em>25 November 2018</em></span><br>
+	<b>Laidout 0.097 Released!</b><br />
+	<br>
+	At long last, Laidout 0.097 is now released! Three years since the last release is really not that long compared to the age
+of the Earth, and to show for it, we now have:
+<br>
+<ul>
+	<li><b>Node Tool</b><br />
+	At the moment, the <a href="https://www.youtube.com/watch?v=GPz3BniLSFw">node tool</a> only lets you change Laidout object transforms, but this tool will, in the fullness of time,
+	become more integrated into many features of Laidout, to allow easier editing of
+	parametric objects, and potentially animation. It is also a testbed for a new plugin backend by way of
+	<a href="http://gegl.org">Gegl</a> based nodes to allow access to a variety of image processing abilities in
+	a convenient node based interface.
+	</li><br />
+	
+   <li><b>Save menu</b><br />
+	Previously, the save button only saved. Now that button is a menu that lets you Save, Save As, Save a copy, Save a copy with
+	an incremented number, Save as a template, or Save as the default template. Also in this menu are some settings to control
+	automatic backup settings, to auto save after a specified time.
+	</li><br />
+		
+	<li><b>General debugging and backend developement</b><br />
+	Numerous bugs are fixed, and fresh new bugs introduced, for instance by using <a href="https://github.com/harfbuzz/harfbuzz">Harfbuzz</a>
+	and <a href="http://freetype.org">Freetype</a> for the text tools. This allows much greater font support internally, though much
+	work still needs to be done in Laidout to adapt the new text framework to export nicely to various file formats.
+	
+	</li><br />
+</ul>
+
+
+<hr>
+<br>
 
 
 <span style="font-size:80%"><em>20 May 2018</em></span><br>
@@ -90,203 +125,6 @@ as long as I can stick to that list and not implement new tools instead!</p>
    <br><br>
 
 
-
-<span style="font-size:80%"><em>24 April 2018</em></span><br>
-	<b>Snapshot</b><br />
-	<br>
-	Almost just in time for the Libre Graphics Meeting, here's a development snapshot of Laidout. It should be slightly easier to
-	set up than having to compile all the way from git:
-	<br><br>
-
-	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.96.1/laidout-0.096.1.tar.bz2">laidout-0.096.1.tar.bz2</a> (the source code with Laxkit included)<br> <br>
-	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.96.1/laidout_ubuntu16.04_0.096.1_amd64.deb">laidout_ubuntu16.04_0.096.1_amd64.deb</a> <br><br>
-   <hr>
-
-   <br><br>
-
-<span style="font-size:80%"><em>20 March 2018</em></span><br>
-	<b>Libre Graphics Meeting</b><br />
-	<br>
-	Laidout will be present at this year's <a href="http://libregraphicsmeeting.org/2018/2018-edition/">Libre Graphics Meeting</a>
-	in Seville, Spain, in the form of a node based ui workshop called "In The Nodes".
-	The meeting will be held April 26-30, schedule to be determined.
-	The workshop will explore the good, bad, and ugly about node based interfaces, including (in no particular order)
-	what I'm trying to do with nodes in Laidout, as well as Blender, Natron, and the Godot game engine.
-	Come on down and let's talk!
-   <br><br>
-    In the meantime, here's my recent talk about Laidout at the Scale16x Linux Expo:
-   <br><br>
-   <p><iframe width="250" height="140" src="https://www.youtube.com/embed/sR0S4hzExVE?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
-   <hr>
-
-   <br><br>
-
-	
-	
-<span style="font-size:80%"><em>28 February 2018</em></span><br>
-	<b>Node Things</b><br />
-	<br>
-	Here's a demo of how to use the new node tool to do some light animation, with the help of gegl (<a href="http://gegl.org">gegl.org</a>) based
-	nodes. To play around with this, you need to compile the development source code, and run with <tt>laidout -E</tt>. Needs a lot of testing!
-	 
-	<br><br>   
-	If you are in Pasadena on March 9 at 10 am, you can see me talk about it 
-	at <a href="https://www.socallinuxexpo.org/scale/16x">Scale 16x</a>!
-   <br><br>
-   <iframe width="280" height="157" src="https://www.youtube.com/embed/GPz3BniLSFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-   <br><br>
-   <hr>
-
-   <br><br>
-
-	
-	
-
-
-
-   <span style="font-size:80%"><em>3 December 2017</em></span><br>
-	<b>Work in progress...</b><br />
-	<br>
-	Here's a sneak peak of features I've been working on, to distract myself from the toil of debugging my text tools.
-	For instance, in order to use the engraving tool to its fullest potential, cross linking image tracing sources needs to be easy. This is a bit
-	difficult to do with the current control box, so I started to work on a node based system of controls. I'm implementing this
-	in part with the <a href="http://gegl.org/">gegl</a> library, which is lower level, but still node based and,
-	as it turns out, rather easy to map to an interface.
-	<br><br>	
-	<a data-scrim="img" href="screenshots/images/nodes-0.096.1.png"><img src="screenshots/images/nodes-0.096.1-s.png" width="116" height="100" alt="Nodes!"></a>
-	<br><br>	
-	 These nodes will some day also be used for per object vector or raster based filters as well. If per object filters exist, then it would
-	be nice to transform by a perspective grid, for instance, among so many other things: 
-	<br><br>	
-	<a data-scrim="img" href="screenshots/images/perspective-0.096.1.png"><img src="screenshots/images/perspective-0.096.1-s.png" width="130" height="100" alt="Perspective"></a>
-	<br><br>
-	Also sometimes useful for built textures are voronoi fields, which usually are
-	difficult to manually construct.
-	<br><br>
-	<a data-scrim="img" href="screenshots/images/voronoi-0.096.1.png"><img src="screenshots/images/voronoi-0.096.1-s.png" width="133" height="100" alt="Voronoi"></a>
-	<br><br>   
-	Please note these are only at proof of concept stage and not quite usable yet! I hope to show fully functioning versions
-	at <a href="https://www.socallinuxexpo.org/scale/16x">Scale 16x</a> in Pasadena, March 9, and hopefully also
-	this year's <a href="http://www.libregraphicsmeeting.org">Libre Graphics Meeting</a> in Seville, Spain in late April.
-   <br><br>
-   <hr>
-
-   <br><br>
-
-	
-	<span style="font-size:80%"><em>15 April 2017</em></span><br>
-	<b>Spring...</b><br />
-	<br>
-	Here's a short video tour of a freshly debugged clone tiler in Laidout. Unfortunately,
-	I am unable to attend the <a href="http://www.libregraphicsmeeting.org">Libre Graphics Meeting</a> this year, so instead, in sympathy I'm doing a 
-	bit of a debugging sprint. Next on the list is debugging the new text tools, and	implementing proper file exporters for them.<br>
-	<br>
-	<iframe width="280" height="157" src="https://www.youtube.com/embed/p7QHnWeN-Ys" frameborder="0" allowfullscreen></iframe>
-   <br><br><br>
-
-   <hr>
-   <br><br>
-
-	<span style="font-size:80%"><em>10 May 2016</em></span><br>
-	<b>Libre Graphics Meeting Recap</b><br />
-	This year's <a href="http://www.laidout.org">LGM</a> in London has come and gone. It's always
-	interesting to see what other projects are working on, and get a feel for how things
-	can interoperate.
-	<br /><br />
-
-	Thanks to everyone who came to the Laidout Engraving
-	workshop! A few glitches, but at least a few people were able to get Laidout running enough to play
-	around with. It was a lesson to me to not take things for granted, and thoroughly test the stuff
-	you will present, not just expect things that have worked for years to still be working! 
-	<br /><br />
-
-	I also presented the new text tools I've been working on, particularly the brand new text on path tool.
-	Just in the nick of time, I was able to make variable width stroking adjust text glyph heights. Now I
-	need to smooth out all the shortcuts I took making the tool, and make it work properly with the
-	rest of Laidout. Also in the works was color font usage. I didn't quite get my opentype svg color font
-	functional before LGM, and I'm still working on it. Special thanks to Hin-Tak Leung, who figured
-	out what was going wrong with my font (obscure unicode mapping difficulties), and also offered
-	many pointers on how to make Laidout's build process a little more streamlined. 
-	<br /><br />
-
-
-
-
-
-	<br /><br /><br />
-
-	<font size="-1"><em>18 December 2015</em></font><br>
-	<b>Laidout 0.096 Released! Wa-hoo!</b><br />
-	<br />
-	The biggest change this time is finally switching to <a href="http://cairographics.org">cairo</a> for rendering,
-	instead of cobbling together hideous Xlib based methods. 
-	This opens up a variety of rendering finesse, such as the ability for transparent paths, and perhaps more interestingly, a text tool.
-	I'm sure there are many cairo rendering related bugs hiding out around the edges of Laidout, so please let me know if and when you find them! 
-	<br /><br />
-
-	<ul>
-	<li><b>Text caption tool</b><br />
-	After a mere 10 years of Laidout's existence, there is now a native text tool! It is a bit of a prototype right now. Expect
-	major improvements as I learn to navigate the huge mass of issues surrounding encoding, rendering, and
-	exporting text. Currently, each text object must have the same font, color, and size. Exporting to SVG works best. Export to
-	PDF and Scribus is mediocre, as those suffer from text sizing issues I haven't figured out yet.
-	</li><br />
-
-	<li><b>More export arrangement options</b><br />
-	Now there are options to export only even or odd spread numbers, as well as rotate each 
-	by 90 degree increments or rotate every other spread by 180 degrees. Also, you can export
-	in reverse order.
-	</li><br />
-
-	<li><b>Engraver tool</b><br />
-	This tool has numerous refinements, such as being able to use the different modes on many engraver objects at once.
-	The group stacking has more control over visibility, and groups can now more easily share style resources, like dash patterns
-	and tracing. Also new is a kind of random field offset applied to the auto line types like radial, circular, linear, and the
-	new spiral type. One bad thing about the switch to cairo is that the engraver tool is slightly less responsive. The old fast xlib 
-	screen render does not translate to a fast cairo render, and I need to totally reprogram the previewer.
-	 That'll have to wait for the next release. 
-	</li><br />
-
-	<li><b>Spread Editor enhancements</b><br />
-	The spread editor is now a little more flexible with page number markers. You can now easily tag pages with markers of different shapes
-	and colors for simple visual cues to indicate how done you are as you work on them.
-	</li><br />
-
-	<li><b>New file dialog</b><br />
-	The File Dialog has been totally reprogrammed, and hopefully is easier to use now, with clearer access to
-	recent files and bookmarks, and allowing easy change to the preview window size. 
-	</li><br />
-
-	</ul> 
-
-	Here are some tutorials demonstrating the new features:
-	<br />
-	<br />
-	<a href="https://www.youtube.com/watch?v=7i0uhAjtQm4"><img align="middle" src="screenshots/images/colorfonts-0.095.1.png" border="1" width="232" height="130" alt="Another text tool video demo" /></a>
-	<a href="https://www.youtube.com/watch?v=SjSixSxBW_g"><img align="middle" src="screenshots/images/text-tool-start-0.095.1.png" border="1" width="232" height="130" alt="Simple text tool video demo" /></a>
-	<a href="https://www.youtube.com/watch?v=3hBUz89N1q0&list=PL22F7148142927C13" title="Booklet demo"><img align="middle" border="2" src="images/bookletvideo.png" width="200" height="140" alt="Booklet demo" /></a>
-	<a href="screenshots/img-engraver-update-0.095.1.html"><img align="middle" border="0" src="screenshots/thumbs/engraver-update-0.095.1-s.png" alt="Engraver Tool, part 2" width="212" height="120"></a>
-	<a href="screenshots/img-engraver-withpaths-0.095.1.html"><img align="middle" border="0" src="screenshots/thumbs/engraver-withpaths-0.095.1-s.png" alt="Engraver Tool" width="240" height="135"></a>
-
-	<!-- iframe width="280" height="157" src="https://www.youtube.com/embed/3hBUz89N1q0" frameborder="0" allowfullscreen></iframe>
-	<iframe width="280" height="157" src="https://www.youtube.com/embed/zgIkkDaj-HA" frameborder="0" allowfullscreen></iframe --> 
-
-	<br /><br /><br />
-
-	<b>What's Next?</b><br />
-	When I started Laidout 10 years ago, I never really intended it to be a full featured editing environment, but as time goes on,
-	I wish for more such things, like having adequate object management features. Having cairo in place now is
-	definitely a good incentive to work more on these things.
-	<br /><br />
-	Otherwise, I'll keep plugging away to more fully integrate net impositions to allow more unusual stacking arrangements.
-	The clone tiling interface also needs some attention. Finally, I want to keep
-	working toward some kind of tool sharing regime, to allow easy sharing of tool interfaces among different software.
-	This is a non-trivial task!
-	No matter how well any one program does something, it will never do everything someone wants. Sharing interfaces would 
-	at least let users use their favorite interfaces, despite working on different types of data.
-
-
-	<br /><br /><br />
 
 	<br />
 	<br />
@@ -354,9 +192,9 @@ as long as I can stick to that list and not implement new tools instead!</p>
 	<br>
 
 	&nbsp;&nbsp;&nbsp;<b>&quot;Stable&quot;</b><br>
-	The current release is Version 0.096, though this is getting quite old! Please compile from git if possible
-	(icons <a href="https://github.com/Laidout/laidout/releases/download/0.096/laidout-icons.zip">here</a> if necessary).
-	I will post a more current snapshot soon.<br/>
+	The current release is Version 0.097.
+	(icons <a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout-icons.zip">here</a> if necessary).
+	<br>
 	<br>
 	You can help
 	turn Laidout into something stable (without quotes) by posting feedback on your experiences with it to the
@@ -365,27 +203,27 @@ as long as I can stick to that list and not implement new tools instead!</p>
 	or by <a href="#contact">dropping me a line</a>.<br>
 	<br>
 	In any case, you can get Laidout in source code form, or as a deb package for debian based amd 64bit systems. 
-	With 0.096, github is now the place to go for code and release binaries. The main 0.096 download area is
-	<a href="https://github.com/Laidout/laidout/releases/tag/0.096">here</a>.<br>
+	The main 0.097 download area is
+	<a href="https://github.com/Laidout/laidout/releases/tag/0.097">here</a>.<br>
 	<br>
 													  
-	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.096/laidout-0.096.tar.bz2">laidout-0.096.tar.bz2</a> (the source code)<br>
-	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.096/laidout_0.096_amd64.deb">laidout_0.096_amd64.deb</a> (binary, should work on Debian Unstable, and recent Ubuntu)<br>
-	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.096/laidout-ubuntu14.04_0.096_amd64.deb">laidout-ubuntu14.04_0.096_amd64.deb</a> (binary, should work Ubuntu 14.04 LTS)<br><br>
+	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout-0.097.tar.bz2">laidout-0.097.tar.bz2</a> (the source code)<br>
+	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_amd64.deb">laidout_0.097_amd64.deb</a> (binary, should work on Debian Unstable)<br>
+	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_ubuntu1804_amd64.deb">laidout_0.097_ubuntu1804_amd64.deb</a> (binary, should work Ubuntu 18.04 LTS)<br><br>
 
 
 	&nbsp;&nbsp;&nbsp;<b>Compiling from "stable" source</b><br>
 	If you download the source code form, you must compile and install from the command line. First, as root or with "sudo", install dependencies:<br /> 
 	<br />
 	<div class="code">
-	apt-get install g++ pkg-config libpng12-dev libreadline-dev libx11-dev libxext-dev libxi-dev libxft-dev libcups2-dev libimlib2-dev libfontconfig-dev libfreetype6-dev libssl-dev xutils-dev libcairo2-dev libharfbuzz-dev libsqlite3-dev libgraphicsmagick++1-dev zlib1g-dev mesa-common-dev libglu1-mesa-dev libftgl-dev
+	apt-get install g++ pkg-config libpng-dev libgegl-dev libreadline-dev libx11-dev libxext-dev libxi-dev libxft-dev libcups2-dev libimlib2-dev libfontconfig-dev libfreetype6-dev libssl-dev xutils-dev libcairo2-dev libharfbuzz-dev libsqlite3-dev libgraphicsmagick++1-dev zlib1g-dev mesa-common-dev libglu1-mesa-dev libftgl-dev
 	</div>
 	<br />
 	And then:<br />
 	<br />
 	<div class="code">
-	tar xvfj laidout-0.096.tar.bz2<br />
-	cd laidout-0.096<br />
+	tar xvfj laidout-0.097.tar.bz2<br />
+	cd laidout-0.097<br />
 	./configure --prefix=/usr/local<br />
 	make<br />
 	make install<br />
@@ -393,30 +231,34 @@ as long as I can stick to that list and not implement new tools instead!</p>
 	<br />
 	Some of the dependencies above (from mesa-common-dev on) are for the unstable polyhedron unwrapper. 
 	You don't need them if you disable the opengl based unwrapper by passing --nogl to the configure line above. The unwrapper exists also in
-	a standalone version in laidout-0.096/src/polyptych.
+	a standalone version in laidout-0.097/src/polyptych.
 	<br /><br />
 	Instead of compiling as above, you can build a deb package from the source tar like the following. You'll need to have dpkg-dev and fakeroot packages installed.
 	This will create an installable deb package. If you try this and it doesn't work, please let me know. It is supposed to work!!<br />
 	<br />
 	<div class="code">
-	tar xvfj laidout-0.096.tar.bz2<br />
+	tar xvfj laidout-0.097.tar.bz2<br />
 	cd laidout-0.096<br />
 	dpkg-buildpackage -rfakeroot<br/>
 	</div>
 
+
 	<br>
 	<br>
 	&nbsp;&nbsp;&nbsp;<b>Development</b><br>
-	Please note that as of October 10, 2015, the development source code is now hosted at github.
-	You can browse the git repository
+
+   If you think you might like to help develop Laidout, please see <a href="dev.html">this page</a>.<br>
+   <br>
+	Development source code is currently hosted at github. You can browse the git repository
 	<a href="https://github.com/Laidout/laidout/">here</a>,
 	or you can grab a copy from the repository with this command:<br>
+	<br>
 	<div class="code">git clone https://github.com/Laidout/laidout.git<br>
 	</div> 
 	<br>
 	To actually compile from this git source, see the further instructions in the <b>Compiling From Development Git</b> section
 	of the <a href="https://github.com/Laidout/laidout/blob/master/README.md">README</a>.
-	If you think you might like to help develop Laidout, please see <a href="dev.html">this page</a>.<br>
+	
 	<br>
 	<br>
 

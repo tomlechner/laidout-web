@@ -55,34 +55,19 @@ Things to do before the next release.
 This is a very rough draft of a roadmap, and is by no means the final word.
 <table>
 
-<tr><td colspan="3"><br><h2>Version 0.097 -- </h2></td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>debug previous version at least slightly!</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>experimental Delauny/voronoi lines tool</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver tool, fix non-live updates when tweaking various parameters</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clean up symmetry clone interface, not easy to use currently</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Allow setting custom default exported file name (via a line in laidoutrc)</td></tr>
+<tr><td colspan="3"><br><h2>Version 0.098 -- </h2></td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Text on path tool</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>text objects: harfbuzz based</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Add more save options: save a copy, save incremented, save as template, autosave settings</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug svg in</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make sure scribus can export to 1.5</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Moving selected things in group contents does not update group bounds</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>should not be able to select both group and group contents at same time</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>double click on group should change selection area to group contents like inkscape?</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Allow permanently changing units and default paper via a control in a window, not just by editing laidoutrc</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug svg in</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>svg out default to 96dpi</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make sure scribus can export to 1.5</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Experimental perspective transform interface</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Experimental voronoi interface</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Experimental node interface</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>fix tooltips</td></tr>
-<tr><td colspan="3"><br><h2>Version 0.098 -- </h2></td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug previous version!</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool grow point mode</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, resolution cut mode</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, blockout needs to be more precise</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, fully test tool effects when many objects selected</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>double click on group should change selection area to group contents like inkscape?</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>layers (object tree) palette</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Connect node interface for use with object filters</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Perspective transform object filter</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tools should remember their settings</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>option to specify alignment of different size signature stacks</td></tr>
@@ -105,6 +90,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug Net imposition interactive unwrapper, via optional opengl Polyptych</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Net imposition build net interface</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tool scripting</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scripted plugin interface</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom line caps</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Undo/Redo</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clone Pattern Builder</td></tr>
@@ -238,6 +224,22 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Visit Pluto (in person)</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>While i'm at it, I'd like a pony.</td></tr>
 <tr><td colspan="3" align="center"><hr/><br/><h2>Old Releases</h2></td></tr>
+<tr><td colspan="3"><br><h2>Version 0.097 -- </h2></td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>debug previous version at least slightly!</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>experimental Delauny/voronoi lines tool</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver tool, fix non-live updates when tweaking various parameters</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clean up symmetry clone interface, not easy to use currently</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Allow setting custom default exported file name (via a line in laidoutrc)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>text objects: harfbuzz based</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Add more save options: save a copy, save incremented, save as template, autosave settings</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Allow permanently changing units and default paper via a control in a window, not just by editing laidoutrc</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>svg out default to 96dpi</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Implement c++ plugin infrastructure</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Experimental perspective transform interface</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Experimental voronoi interface</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Experimental node interface (done aside from large todo list)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>fix tooltips</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Connect node interface for use with object filters</td></tr>
 <tr><td colspan="3"><br><h2>Version 0.096 -- released 18 December 2015!</h2></td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Finish Implementing cairo renderer, make meshes finally render faster, plus general rendering niceness</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Text for god's sake!! It's been what, 10 years!? </td></tr>
@@ -464,7 +466,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 </table>
 <br/>
 <br/>
-Last change: Mon Feb  5 12:38:10 2018
+Last change: Sun Nov 25 21:01:36 2018
 
 
 </div><!-- main -->
