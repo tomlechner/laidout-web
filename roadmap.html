@@ -56,32 +56,33 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <table>
 
 <tr><td colspan="3"><br><h2>Version 0.098 -- </h2></td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Text on path tool</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug svg in</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make sure scribus can export to 1.5</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug previous version a bit</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clip paths</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clip path in place editing</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Convert backend to using Theme objects for easier adjusting in the future</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 12" href="https://github.com/Laidout/laidout/issues/12">Issue #12:</a> Fix object bleeding across pages for signatures and nets </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Replace ancient Imlib image loading with GraphicsMagick</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Debug Text on path tool</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make laidout.org twitterable with an image card</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>lock down color backend.. it's currently a series of weak hacks based on 8-bit screen rgb</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Moving selected things in group contents does not update group bounds</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>should not be able to select both group and group contents at same time</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug previous version!</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>fix object transform handles for really small objects (handles should still be accessible)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>double click on group should change selection area to group contents like inkscape?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>layers (object tree) palette</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tools should remember their settings</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Import Images dialog needs total reprogramming</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>In image properties dialog, be able to select from various default preview configs</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Undo/Redo</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool grow point mode</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, resolution cut mode</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, blockout needs to be more precise</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, fully test tool effects when many objects selected</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>double click on group should change selection area to group contents like inkscape?</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>layers (object tree) palette</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Perspective transform object filter</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tools should remember their settings</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>option to specify alignment of different size signature stacks</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug line outline cache, especially for joins</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Finish implementing anchor tool. maybe gss compatibility?</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Masking, clip paths and/or softmask</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Fix object bleeding across pages for signatures and nets</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>export preview</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Externally rendered objects, similar to Scribus render frames</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom alignments to parents, not just affine transform to parent</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make PathInterface extrapolate line join work</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Perspective transform object filter</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Node based image "importer"</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Merge EpsData with normal images</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Import Images dialog needs total reprogramming</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>In image properties dialog, be able to select from various default preview configs</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>lock down color backend.. it's currently a series of weak hacks based on 8-bit screen rgb</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up patch controls</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up project load/save internals and dialogs</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Object and resource tags interface</td></tr>
@@ -89,24 +90,35 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>allow inserting net impositions as foldouts in regular Signature Imposition stacks</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug Net imposition interactive unwrapper, via optional opengl Polyptych</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Net imposition build net interface</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Signature editor: detect non staplable binding edge, show red rather than green</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Signature editor: option to specify alignment of different size signature stacks</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tool scripting</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scripted plugin interface</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom line caps</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Undo/Redo</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clone Pattern Builder</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>color styles, so objects can refer to a named color, just change that named to change all</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Soup up the color box so one can recall previous colors, and/or integration with palette window</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make PathInterface extrapolate line join work</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Signature editor: detect non staplable binding edge, show red rather than green</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>fix object transform handles for really small objects (handles should still be accessible)</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug svg in</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Collect for out</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>export preview</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make sure scribus can export to 1.5</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scribus import should try to do something appropriate with page spreads >= 2 pages wide</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scribus import should do something meaningful with original Scribus page bleed values</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Collect for out</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>PDF in, at least as 1 image per page, for purposes of imposition</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>pdf export, unicode capable</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Optimize pdf export to rescale to target dpi, and compress image data</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>drag-n-drop text to and from the various text edits</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>drag-n-drop with system, like drag images into viewwindow from an external file browser</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 6" href="https://github.com/Laidout/laidout/issues/6">Issue #6:</a> Figure out what on earth is to be done about color font processing </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 11" href="https://github.com/Laidout/laidout/issues/11">Issue #11:</a> Invistigate Flatpak creation </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 10" href="https://github.com/Laidout/laidout/issues/10">Issue #10:</a> Investigate AppImage creation </td></tr>
+<tr><td colspan="3"><br><h2>Version 0.099 -- </h2></td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>color styles, so objects can refer to a named color, just change that named to change all</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom line caps</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Finish implementing anchor tool. maybe gss compatibility?</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom alignments to parents, not just affine transform to parent</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Externally rendered objects, similar to Scribus render frames</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Softmask</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>GraphicsMagick nodes</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Gmic nodes plugin</td></tr>
 <tr><td colspan="3"><br><h2>Version 0.1 -- </h2></td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>First and foremost, need copious testing by people who are not me.</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>implement command line language tag</td></tr>
@@ -466,7 +478,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 </table>
 <br/>
 <br/>
-Last change: Sun Nov 25 21:01:36 2018
+Last change: Thu Dec  6 23:30:15 2018
 
 
 </div><!-- main -->
