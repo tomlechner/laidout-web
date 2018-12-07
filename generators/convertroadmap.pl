@@ -161,12 +161,12 @@ while (defined($line = <ROADMAP>)) {
 		break;
 	}
 
-	if ($line =~ /bug #(\d*)/) { $bug=$1; } else { $bug=""; }
+	if ($line =~ /\(issue #(\d*)\)/) { $bug=$1; } else { $bug=""; }
 	#$bug=$1;
 	if ($bug ne "") { 
 		# $bug contains the number of the bug
-		$bugtext="<a title=\"Laidout bug number $bug\" "
-			."href=\"http://******\">bug #$bug</a>, ";
+		$bugtext="<a title=\"Laidout bug number $bug\" href=\"https://github.com/Laidout/laidout/issues/$bug\">Issue #$bug:</a> ";
+		$line =~ s/\(issue #(\d*)\)//;
 	} else {
 		$bug="";
 		$bugtext="";
