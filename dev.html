@@ -191,14 +191,13 @@ as how to merge a new translation with an old one.
 
 
 <div class="section">The Laidout File Format</div>
-<p>Documentation for the Laidout file format is gotten easily through running:</p>
+<p>Documentation for the Laidout file format is found easily through running:</p>
 <div class="code">
 laidout --file-format
 </div>
 <p>
 This will dump out a pseudo-Laidout file with copious comments about each of the possible
-Laidout file elements, arranged in the order they appear in real Laidout files.
- The format itself is an indented data file format, sort of in the same spirit of 
+Laidout file elements. The format itself is an indented data file format, sort of in the same spirit of 
 <a href="http://www.yaml.org">yaml</a>, but is slightly more ad-hoc, making it even easier to read and figure out,
 in this developer's opinion. Laidout's indented format is simply a collection of nested name-value pairs, where both are scanned
 in as strings, at which point it is up to the application to decipher the strings into integers, points, and whatnot.
