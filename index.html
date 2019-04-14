@@ -49,7 +49,6 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 
   <div id="side">
     <ul class='sidenav'>
-	   <li><a class="feeds" href="http://plus.google.com/u/0/b/117350226436132405223/117350226436132405223"><img src="images/gplus.png" alt="Google+"/></a></li>
 	   <!-- li><a class="feeds" href="rss.xml"><img src="images/rss.png" alt="RSS feed"/></a></li -->
 	   &nbsp;&nbsp;
       <li><a href="dev.html">Dev</a></li>
@@ -83,6 +82,52 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 
 
 
+<span style="font-size:80%"><em>14 April 2019</em></span><br>
+<b>Development Update</b>
+<br><br>
+This year's <a href="https://libregraphicsmeeting.org/2019/">Libre Graphics Meeting</a> will be in Saarbrücken, Germany, May 29 to June 2. I'll be giving a workshop about comic book workflows
+with open source software. We'll discuss best methods and software for making comic books, from the sketching and illustration phase
+to the printing phase, whether actual print or the web, using a variety of software (including Laidout). To that end, here are a couple of new features in development that may help.
+<br>
+<ul>
+<li>
+	<b>Clip paths</b><br />
+	<br>
+	You may now apply editable clipping paths around objects.
+	Attach and detach paths that clip the objects by selecting a path and the object, then right click to choose how to clip
+	The clipping path once applied can also be edited in place. If you select two paths, then the context menu gives you the choice of which should clip the other.
+	<br><br>
+	Related to clipping, and also new is a better tracking of how objects stretch over onto other pages. Now, when an object crosses page boundaries in the Page
+	View, the Singles and Paper views will now properly show the clipped objects that overlap with the current page.
+	At the moment, only objects on pages immediately adjacent will display correctly, so crazy polyhedron unwrappings that are several pages
+	across do not (yet) overlap correctly in Paper views.
+	<br><br>
+	<a href="screenshots/images/laidout-clipping-0.097.1.mp4">
+	<video controls loop width="300">
+		<source src="screenshots/images/laidout-clipping-0.097.1.mp4" type="video/mp4">
+		Sorry, your browser doesn't like this video!
+	</video>
+	<br>
+	<span style="font-style:italic;font-size:80%">Click here for full size</span>
+	</a>
+<br><br>
+</li>
+<li>
+	<b>HTML Image Gallery Export</b>
+	<br><br>
+	This is a new exporter that lets you immediately export your book pages to a static html file. Previously in my own work, this was a completely
+	different, finicky step I needed to go through to publish comics to the web. Now with this, directly from within Laidout, I can render and output page images
+	with thumbnails right into a static html gallery. You may define your own html template to accept your images as well.
+</li>
+</ul>
+
+<br><br>
+<hr>
+<br>
+
+
+	
+	
 <span style="font-size:80%"><em>25 November 2018</em></span><br>
 	<b>Laidout 0.097 Released!</b><br />
 	<br>
