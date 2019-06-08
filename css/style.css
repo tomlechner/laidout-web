@@ -71,6 +71,13 @@ code {
   		border-width: 1px;
   		padding: 5px;
 }
+span.code {
+  		background: #eeeeee;
+  		border-color: #000000;
+  		border-width: 1px;
+  		padding: 1px;
+  		font-family: courier;
+}
 div.code {
   		background: #eeeeee;
   		border-color: #000000;

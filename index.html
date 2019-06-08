@@ -127,6 +127,75 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 	<br />
 
 
+<span style="font-size:80%"><em>8 June 2019</em></span><br>
+<b>Libre Graphics Meeting Recap</b>
+<br><br>
+This year's <a href="https://libregraphicsmeeting.org/2019/">Libre Graphics Meeting</a> in Saarbrücken, Germany has finished. There are always a lot of interesting
+talks, meetings, and other random conversations about everything concerning making art with open source software, and this year was no different.
+<br><br>
+One big announcement was <a href="http://inkscape.org">Inkscape</a> 1.0, or at least the application of the git tag live at the meeting. You can't download 1.0 directly off Inkscape's website yet.
+The tagging is a kind of abstract developer convenience, but just trust me, it's a major milestone. Congratulations to Inkscape!
+<br><br>
+Speaking of milestones, <a href="https://www.darktable.org/">Darktable</a> turned 10 years old. Really I didn't realize it had been around for so long. Almost as long as Laidout! Darktable is a great way to mass edit
+photos, making it easy to apply a ton of high bit depth effects on large numbers of photos all at once. Although, just about every time I use it, I end up spending what seems like a really long time
+trying to figure out where the final "export" button is that actually does the exporting, as Darktable loves big masses of controls filled with tiny text.
+<br><br>
+There was a great talk about a color mesh interface from Pieter Barendrecht, for use with svg, and maybe Inkscape soon? A big problem with meshes is that when editing, they quickly become
+an unbearable, dense tangle of mesh outlines. This new interface allows local subdivision of only the parts of the mesh you want to
+subdivide, making the ui much less cluttered and easy to work with. He also demonstrated an interface for editing <a href="http://maverick.inria.fr/Publications/2009/Orz09/">diffusion curves</a>, a very interesting
+method of defining complex color fields with a few simple curve points. 
+<br><br>
+One very interesting development is a <a href="https://raphlinus.github.io/curves/2018/12/21/new-spline.html">new curve type</a> 
+from <a href="https://levien.com/">Raph Levien</a>, famous for <a href="https://levien.com/spiro/">spiro</a> curves, among other things like a brand new font editor project.
+This new curve, like his older spiro curves, potentially reduces
+the clutter of editing bezier curves with handles, and provides nicer and easier methods of producing smooth curves.
+I had not included his older spiro curves in Laidout due to its
+incompatibility with the LGPL that part of Laidout's path tool uses, but not long ago, he revised the license to Apache2 or MIT, which is great news. This
+new license type also applies to the new curve type. So now, I look forward to adding this new curve to Laidout. 
+<br><br>
+Raph, with Colin Rofls and others, is also involved with making a 2-d UI toolkit native to <a href="https://www.rust-lang.org/">Rust</a>, that uses the GPU for rendering. 
+This seems like a natural progression for a widget toolkit, as shaders and other creation tools normally found in 3-d software have a lot of potential
+for 2-d graphics production. 
+<br><br>
+
+One new project was <a href="https://github.com/pasbi/ommpfritt">ommpfritt</a> by Pascal Bies, which elevates cloning and other effects to being first class objects that affect their child objects, allowing
+somewhat easy specification of procedural modeling for 2-d vector graphics. 
+This allows things like clearly structured template objects,
+where you can define an abstract arrangement, create many instances of this arrangement maybe based on a big list of data loaded via a python script, like a mail merge for instance.
+Then you are able to change just the "template", and have changes propagate to all the imported instances, avoiding the need to manually adjust those instances one by one.
+Some kind of similar template functionality is something Laidout needs as well! That would make master pages easy.
+<br><br>
+
+One workshop I attended was about <a href="https://www.blender.org/">Blender's</a> DNA system, which theoretically allows extreme levels of forward and backward file compatibility. Essentially, a description of the entire Blender low level 
+data structure is saved with each blend file. This allows any version of Blender to at least load and save every bit of data in any blend file, past, present, and future. In practice,
+the user interface or custom scripts still need to know what to do with the data to really make use of that in a meaningful way, but having the potential for such data preservation
+can be useful. This was quite unique when written
+decades ago, and remains quite unique today. A nearly empty Blender scene still means a somewhat large file since it stores the whole data model description, but Blender files tend to be large,
+complicated, and not meant for realtime network transfer anyway, so that file size overhead is very acceptable. 
+<br><br>
+A file format approach I've taken in Laidout is to allow the file format description to be exported directly from
+the runtime (with <span class="code">laidout --file-format</span>). This makes it easier to match a file to its format, rather than needing to hunt for it on a website somewhere. This file format description
+is meant to be parsed by humans that might be responsible for programming converters, and not currently meant to be directly parsed by machines. Blender's DNA 
+takes the approach of keeping the underlying data model very simple, rooted primarily in basic, well known data types, 
+plus you don't even need the runtime to figure out what is in a file you come across. The DNA system is also a big part of what makes Blender files load so quickly, since there
+is very little difference between how the data is stored on disk, and how it is stored in memory.
+In summary, Blender never fails to impress.
+<br><br>
+Speaking of workshops, thanks to everyone who came to my Comic Book Workflows workshop! My own takeaway is that I really need to play around with Krita more. I hadn't known what Krita's
+<a href="https://docs.krita.org/en/reference_manual/layers_and_masks/filter_masks.html">filter masks</a> were all about,
+ for instance. I also gave a tour of the various tools in Laidout. Some of these tools I haven't really worked on in years, so it strikes me I need to do
+some work polishing Laidout's tool set, rather than blasting ahead with new tools instead. I'll do that right after I finish adding the new spiro curve type, as well as.. oh never mind.
+<br><br>
+There were lots of other talks, that hopefully soon you will be able to watch online if you missed them.
+Keep an eye out on the <a href="https://libregraphicsmeeting.org/">LGM site</a> for those, and also make
+plans to travel to Rennes, France for LGM 2020!
+
+<br><br>
+<hr>
+
+
+
+
 <span style="font-size:80%"><em>23 May 2019</em></span><br>
 <b>Gif to flipbook</b>
 <br><br>
