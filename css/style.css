@@ -186,6 +186,15 @@ td.padded {
 		padding:0;
 		position:relative;
 		}
+
+	#smallbanner {
+		height:0px;
+		max-width:90%;
+		width:300px;
+		height:132px;
+		padding:0;
+		position:relative;
+		}
 	
 
 
