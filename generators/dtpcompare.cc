@@ -305,7 +305,8 @@ int main(int argc, char **argv)
 
 
 			char *p,*tag;
-			cchar *yesno,*yesnotext=NULL;
+			cchar *yesno;
+			string yesnotext;
 			for (int c2=0; c2<programs.n; c2++) {
 				 //get yes or no per program in order
 				p=programs.e[c2]->name;
@@ -314,9 +315,10 @@ int main(int argc, char **argv)
 					if (!strcasecmp(p,item->attributes.e[c3]->name)) {
 						pinfo=item->attributes.e[c3];
 						tag=item->attributes.e[c3]->value;
-						title=NULL;
-						yesno=NULL;
-						if (tag==NULL) {
+						title = nullptr;
+						yesno = nullptr;
+						yesnotext = "";
+						if (isblank(tag)) {
 							yesno=NULL;
 						} else if (!strncasecmp(tag,"yes",3)) {
 							yesno="Yes";
@@ -333,18 +335,27 @@ int main(int argc, char **argv)
 						} else if (!strncasecmp(tag,"plugin",6)) {
 							yesno="plugin";
 							title=tag+6;
-						} else yesno=NULL;
+						} else { //maybe like 0.098, other text
+							yesno = "Yes";
+							char *comma = strchr(tag, ',');	
+							if (comma) {
+								yesnotext = string(tag, comma-tag);
+								title = comma+1;
+							} else {
+								yesnotext = tag;
+								//title = tag;
+							}
+						}
 						if (title) {
 							if (*title==',' || *title==':') title++;
 							while (isspace(*title)) title++;
 						}
 
-						//makestr(yesnotext,yesno);
+						if (yesno && yesnotext.empty()) yesnotext = yesno;
 
 						// //**** make text of yes or no be something other then class tag
 						//while (isspace(title[0])) title++;
 						//if (title[0]=='(');
-
 
 						if (yesno) {
 							cout <<"  <td class=\""<<yesno<<"\"  ";
@@ -357,11 +368,11 @@ int main(int argc, char **argv)
 							noteatt=pinfo->find("note");
 
 							if (!urlatt && !noteatt) {
-								cout << yesno;
+								cout << yesnotext;
 
 							} else if (urlatt && !noteatt) {
 								 //add url link to yesno
-								cout <<"<a href=\""<<urlatt->value<<"\">"<<yesno<<"</a>";
+								cout <<"<a href=\""<<urlatt->value<<"\">"<<yesnotext<<"</a>";
 
 							} else {
 								 //add note link to yesno
@@ -374,7 +385,7 @@ int main(int argc, char **argv)
 
 									 <<"  <div class=\"floatingNote\">\n"
 									 <<"    <strong>"<< pinfo->name << "</strong> -- "
-									 <<"<span class=\""<<yesno<<"\"> &nbsp;"<<yesno<<"&nbsp; </span><br/><span style=\"font-size: 50%\">&nbsp;</span><br>"
+									 <<"<span class=\""<<yesno<<"\"> &nbsp;"<<yesnotext<<"&nbsp; </span><br/><span style=\"font-size: 50%\">&nbsp;</span><br>"
 									 <<noteatt->value
 									 <<"  </div>"<<endl
 									;

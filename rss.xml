@@ -215,8 +215,8 @@ Laidout Version 0.094 is at last
 amd64 precompiled deb package, for you to experiment with. As always, Laidout is very much a work in progress.
 I finally stopped myself from starting to implement more new tools, in order to squeeze out this release.
 Consequently this release is more like a rough draft of many new things. Save often.
-I try to fix any bugs people tell me about, so when you find some, you can let me know via &lt;a href=&quot;https://lists.sourceforge.net/lists/listinfo/laidout-general&quot;&gt;the mailing list&lt;/a&gt;, 
-or &lt;a href=&quot;#contact&quot;&gt;email&lt;/a&gt;.
+I try to fix any bugs people tell me about, so when you find some, please let me know at
+&lt;a href=&quot;#contact&quot;&gt;email&lt;/a&gt;.
 &lt;br /&gt;
 &lt;br/&gt;
 This release has taken so long on account of a lot of under the hood refactoring, and investigating its potential.

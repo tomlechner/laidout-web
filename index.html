@@ -79,6 +79,9 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 		font-size: 125%;
 		font-weight: bold;
 	}
+	ul li {
+		margin-bottom: .5em;
+	}
   </style>
 
   <script src="parallax/js/parallax.js"></script>
@@ -125,6 +128,70 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 	<span style="font-size:110%"><strong><em>News</em></strong></span><br>
 
 	<br />
+
+
+
+<span style="font-size:80%"><em>5 July 2020</em></span><br>
+<b>Quarantine Updates</b>
+<br><br>
+Thanks to coronavirus among other things, I suddenly find myself with some free time,
+some of which I've spent working on Laidout. For instance:<br>
+<br>
+
+<b>Svg importer and gradient fills</b><br>
+<br>
+Svg importing is now considerably better. Numerous bugs have been worked out,
+such as nested transform probems and gradients. Paths with gradient fills can now be imported,
+with the gradient fills being a special child object of the path object. For this,
+gradient objects now have various ways to fill parents (currently only path parents),
+including spread methods. This, along with variable width lines can all be
+imported and exported with svg, including exports to Inkscape's powerstroke path effect.
+
+Still to do is implementing svg-esque stroke fills, but for now, only main fill is implemented.
+
+<br><br>
+<b>Icon Generation</b><br>
+<br>
+A long time problem when building Laidout is that generating icons took so long. This
+was done with a script that called Inkscape to extract individual icons from master
+SVG files that contain many icons. This process took a very long time, as it required
+Inkscape to start up for each and every icon. Now, thanks to improvements in Laidout's
+svg importer, icons can be generated from the master icon files with Laidout itself,
+and what used to take nearly ten minutes now takes about three seconds!
+
+<br><br>
+<b>Paper group tool</b><br>
+<br>
+Paper group interface now has snapping to other already placed papers.
+*** There is also an option to define different export options per paper in the group,
+to simplify batch exporting of areas. This lets you define multiple export settings per
+paper, so you can batch export the same area with different settings, such
+as different dpi bitmaps and an svg, all in one go!
+
+<br><br>
+<b>Centerline tracer</b><br>
+<br>
+In other news, I'm am also working on a centerline tracer, that can trace not only the centerline
+of strokes, but also the stroke widths. Most tracers have a lot of trouble at stroke intersections,
+and end up choosing paths that don't follow the original strokes. This new tracer
+aims to guess a little better. As you can see in the following comparison, it seems to do ok.<br>
+<br>
+This method is essentially:
+<ul>
+ <li>Take a threshhold of a grayscale version of the original image</li>
+ <li>Perform a slight variation of the Zhang-Suen thining algorithm, the variation being to be nice to
+   certain kinds of diagonal lines. This thining procedure results in an image composed of single
+   pixel lines, surrounded by a kind of gradient of how thick the surrounding original areas were.</li>
+ <li>Walk along each line, building up a vector path. There is special attention on branching points,
+   which is where most centerline tracers falter. This method tries to walk in a preferred direction
+   first, and spawn other lines for branching paths. This cuts down on a lot of problems, but
+   there is still a problem with crossing lines that are near each other. To deal with this,
+   a kind of thickness search around branch points happens to move the branch position to
+   a more reasonable place.</li>
+ <li>Finally, simplify the path as much as possible by reducing the high number of points. Done!</li>
+</ul>
+<br><br>
+<hr>
 
 
 
@@ -472,8 +539,7 @@ as long as I can stick to that list and not implement new tools instead!</p>
 	<br>
 	<br>
 	You can help
-	turn Laidout into something stable (without quotes) by posting feedback on your experiences with it to the
-	<a href="https://lists.sourceforge.net/lists/listinfo/laidout-general">Laidout mailing list</a>,
+	turn Laidout into something stable (without quotes) by posting issues to the
 	<a href="https://github.com/Laidout/laidout/issues">issue tracker at github</a>,
 	or by <a href="#contact">dropping me a line</a>.<br>
 	<br>
@@ -546,8 +612,7 @@ as long as I can stick to that list and not implement new tools instead!</p>
 
 	<a name="contact"></a>
 	<b><font size=+1>Contact</font></b><br>
-	You can try Laidout's <a href="https://github.com/Laidout/laidout/issues">issue tracker at github</a>, or
-	there is a general purpose mailing list <a href="https://lists.sourceforge.net/lists/listinfo/laidout-general">here</a>.<br>
+	For most things, you can post an issue at Laidout's <a href="https://github.com/Laidout/laidout/issues">issue tracker at github</a>.
 	<br>
 	Currently, the only developer is Tom Lechner</a>,
 	and he has been hacking away at Laidout to help make his <a href="http://www.tomlechner.com">artwork</a>.

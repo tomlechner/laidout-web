@@ -123,7 +123,7 @@ item  "Plugins or scripting"
     Inkscape    yes
     Xara
     Illustrator
-item  "Node based object filtering"
+item  "Non-destructive object filtering"
     Laidout     partial
         note \
             Since 0.097, there is a node based editor, however much needs to be done to properly
@@ -170,7 +170,7 @@ item  "Editable textwrap path, independent from the actual object"
     Xara         yes
     Illustrator  yes
 item  "Editable clip path"
-    Laidout      
+    Laidout      yes, 0.098
     Scribus      yes
     InDesign     yes
     Quark        yes
@@ -770,7 +770,10 @@ item  Scribus
     Xara        
     Illustrator 
 item  SVG/Inkscape                            
-    Laidout      partial, .09, images and groups only
+    Laidout      partial,
+      note \
+        .098: filled paths with gradients, powerstroked paths, meshes.<br>
+        .09: images and groups only
     Scribus      partial
     InDesign     
     Quark       
