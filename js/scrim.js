@@ -1,4 +1,11 @@
 
+// HOW TO
+//
+// For auto collection of images:
+//  - Initialize with: <script type="text/javascript"> Scrim.Options({ auto: true }); </script>
+//  - Set up images: <a data-scrim="img" scr"full/image"><img src="thumb/nail"></a>
+
+
 //TO DO
 //-----
 //one offs
