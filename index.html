@@ -80,6 +80,10 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 		font-weight: bold;
 	}
 	ul li {
+		margin-bottom: .75em;
+	}
+	ul.qlist b {
+		display: block;
 		margin-bottom: .5em;
 	}
   </style>
@@ -121,7 +125,11 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 	</div>
 
 
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:110%">Version 0.097</span>
+	  <br>
+	  <span style="font-size:110%">
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DTP, and experimental vector graphics tools<br>
+	  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version 0.097
+	  </span>
 	<br>
 
 	<br>
@@ -131,45 +139,79 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 
 
 
-<span style="font-size:80%"><em>5 July 2020</em></span><br>
-<b>Quarantine Updates</b>
+<span style="font-size:80%"><em>22 July 2020</em></span><br>
+<b>Quarantine updates from the zone</b>
 <br><br>
 Thanks to coronavirus among other things, I suddenly find myself with some free time,
-some of which I've spent working on Laidout. For instance:<br>
+some of which I've spent working on Laidout. Mostly I've finally had enough
+continuous time to fix various nuts and bolts that have been bugging me for a long time.
+In particular:<br>
 <br>
 
-<b>Svg importer and gradient fills</b><br>
-<br>
-Svg importing is now considerably better. Numerous bugs have been worked out,
-such as nested transform probems and gradients. Paths with gradient fills can now be imported,
-with the gradient fills being a special child object of the path object. For this,
-gradient objects now have various ways to fill parents (currently only path parents),
-including spread methods. This, along with variable width lines can all be
+<ul class="qlist">
+
+<li>
+<b>Improved SVG importer and gradient fills</b>
+SVG importing is now considerably better. Paths with gradient fills can now be imported,
+with the gradient fills becoming a special child object of the path object. Since the gradients
+are child objects, you can also layer up many different fill gradients. Gradient objects 
+also now have various ways to fill parents (currently only path parents),
+including pad, reflect, and repeat spread methods. This, along with variable width lines can all be
 imported and exported with svg, including exports to Inkscape's powerstroke path effect.
+You can <a href="https://twitter.com/TomsArtStuff/status/1274919449661865984">see gradients in action here!</a>
 
 Still to do is implementing svg-esque stroke fills, but for now, only main fill is implemented.
 
-<br><br>
-<b>Icon Generation</b><br>
-<br>
-A long time problem when building Laidout is that generating icons took so long. This
-was done with a script that called Inkscape to extract individual icons from master
-SVG files that contain many icons. This process took a very long time, as it required
-Inkscape to start up for each and every icon. Now, thanks to improvements in Laidout's
-svg importer, icons can be generated from the master icon files with Laidout itself,
-and what used to take nearly ten minutes now takes about three seconds!
+</li>
+<li>
+<b>Icon Generation during build is 200 times faster</b>
+<img src="screenshots/images/someicons.png" width="165" style="float:right">
+When compiling, making the icons now takes 3 seconds, instead of about 10 minutes!
+This has been bugging me for years, and thanks to the improved SVG importer,
+this can now be done with Laidout itself. Previously, it required
+a script that called Inkscape to extract individual icons from master
+SVG files that contain a couple hundred icons. This process took a very long time, as it required
+Inkscape to start up for each and every icon.
+</li>
+<li><b>New scale and rotate indicators.</b>
+	<video controls loop width="300" style="float:right">
+		<source src="screenshots/images/matrixwidgets-0.097.1.mp4" type="video/mp4">
+		Sorry, your browser doesn't like this video!
+	</video>
+	The object tool has new indicators for when you click on something,
+	and drag the mouse with control (scaling), or control+shift (rotating). They now allow numerical
+	input for your precision needs, and also angle snapping for rotation. Still to do is incorporate
+	this mechanic wherever it is used, not just the object tool. <br>
 
-<br><br>
-<b>Paper group tool</b><br>
-<br>
-Paper group interface now has snapping to other already placed papers.
-*** There is also an option to define different export options per paper in the group,
-to simplify batch exporting of areas. This lets you define multiple export settings per
-paper, so you can batch export the same area with different settings, such
-as different dpi bitmaps and an svg, all in one go!
+</li>
+<li><b>Empties.</b>
+Ability to create empty group objects, to use as an easy base for objects that are actually built from node graphs. Speaking of:</li>
 
+<li><b>Path nodes.</b>
+New path generation nodes to create rectangles, circles, or even math functions as y=f(x) or p = x(t),y(t).</li>
+
+<a data-scrim="img" style="float:right" href="screenshots/images/Find-0.97.1.png"><img src="screenshots/images/Find-0.97.1.png" width="200px"></a>
+<li><b>Find interface.</b>
+Now there's a roughed out panel that lets you search for objects with a google-esque pattern, or a regex.</li>
+
+<li><b>Flexible page range input.</b>
+Now when importing and exporting, instead of having a single start and end for ranges, you
+    can instead specify something like "2-5, 10-15, 20:-1", to select the ranges 2-5, 10-15, and 20-(the end).
+	A range like "5-2" will export pages in order 5,4,3,2.
+</li>
+<li><b>Dedicated paper size window.</b>
+After seeing a post about Gimp's new document dialog,
+where if you put in "1:2" in a width or height field, it auto computes that width or height according
+to that aspect ratio and the other value! That is such an amazing thing, I had to incorporate it into
+the paper window.
+</li>
+<li><b>Paper group snapping.</b>
+The paper group interface now has snapping to other already placed papers, making it
+much easier to snap papers exactly next to each other.
+</ul>
 <br><br>
-<b>Centerline tracer</b><br>
+
+<!-- b>Centerline tracer</b><br>
 <br>
 In other news, I'm am also working on a centerline tracer, that can trace not only the centerline
 of strokes, but also the stroke widths. Most tracers have a lot of trouble at stroke intersections,
@@ -179,7 +221,7 @@ aims to guess a little better. As you can see in the following comparison, it se
 This method is essentially:
 <ul>
  <li>Take a threshhold of a grayscale version of the original image</li>
- <li>Perform a slight variation of the Zhang-Suen thining algorithm, the variation being to be nice to
+ <li>Perform a slight variation of the Zhang-Suen thinning algorithm, the variation being to be nice to
    certain kinds of diagonal lines. This thining procedure results in an image composed of single
    pixel lines, surrounded by a kind of gradient of how thick the surrounding original areas were.</li>
  <li>Walk along each line, building up a vector path. There is special attention on branching points,
@@ -188,9 +230,19 @@ This method is essentially:
    there is still a problem with crossing lines that are near each other. To deal with this,
    a kind of thickness search around branch points happens to move the branch position to
    a more reasonable place.</li>
- <li>Finally, simplify the path as much as possible by reducing the high number of points. Done!</li>
+ <li>Finally, simplify the path as much as possible by reducing the high number of points.</li>
+ <li>Done!</li -->
 </ul>
 <br><br>
+
+
+<b>More to come!</b><br>
+<br>
+...assuming the virus, societal collapse, or eviction doesn't kill me!
+<br>
+<br>
+<br>
+
 <hr>
 
 
