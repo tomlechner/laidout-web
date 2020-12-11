@@ -55,7 +55,6 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <table>
 
 <tr><td colspan="3"><br><h2>Version 0.098 -- </h2></td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug previous version a bit</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Animated gif import</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Clip paths</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Clip path in place editing</td></tr>
@@ -69,40 +68,43 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Gradients able to fill parents with none,pad,reflect,repeat spread methods</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Debug gradient radial controls</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to generate icons from source svg directly</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Way to export pages as svg embedded into html</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Page Atlas exporter</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Way to export pages as svg embedded into html</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 16" href="https://github.com/Laidout/laidout/issues/16">Issue #16:</a> Fix icon/text/thin line sizing issues for high dpi monitors </td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Moving selected things in group contents does not update group bounds</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>should not be able to select both group and group contents at same time</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>fix object transform handles for really small objects (handles should still be accessible)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Moving selected things in group contents does not update group bounds</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>should not be able to select both group and group contents at same time</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>If curobj, select siblings first. If no curobj, select direct children of context first</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>double click on group should change selection area to group contents like inkscape?</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>layers (object tree) palette</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tools should remember their settings</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Find interface</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Import Images dialog needs total reprogramming</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>In image properties dialog, be able to select from various default preview configs</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Empty objects that can be parents, or whose contents are defined by nodes</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Perspective transform object filter</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Node based image "importer"</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>layers palette (object tree)</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Find object interface</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Empty objects that can be parents, or whose contents are defined by nodes</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Perspective transform object filter, proof of concept for hybrid interface/node workflow</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Node based image "importer"</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>More nodes: global var access, any drawable object, expressions, path generators, reroute</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Even more nodes: point set creators and converters, path endpoints, path extrema</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Yet ever more nodes: set element, subset, getdocument, export, "basics", objectfunction</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool grow point mode</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, resolution cut mode</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, blockout needs to be more precise</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, fully test tool effects when many objects selected</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug line outline cache, especially for joins</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug and optimize line outline cache, especially for joins</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make PathInterface extrapolate line join work</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface: adding point hint</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface: Mouse based delete segments</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Debug Text on path tool</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up patch controls</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up mesh controls</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>debug svg in enough to be able to load icons.svg</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>svg in/out with powerstroke</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>svg in/(done)out with meshes</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>svg in/(done)out with meshes, at miminum round trip export/import should work</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Import svg gradients with proper filling of parent</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Collect for out</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>export preview</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make sure scribus export works with 1.5, and can handle new clipping features</td></tr>
 <tr><td colspan="3"><br><h2>Version 0.099 -- </h2></td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug previous version a bit</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Undo/Redo</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>PDF in, at least as 1 image per page, for purposes of imposition</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>pdf export, unicode capable</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Optimize pdf export to rescale to target dpi, and compress image data</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tools should remember their settings</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Import Images dialog needs total reprogramming</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tool scripting</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scripted plugin interface</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clone Pattern Builder</td></tr>
@@ -115,6 +117,8 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>drag-n-drop text to and from the various text edits</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>drag-n-drop with system, like drag images into viewwindow from an external file browser</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 6" href="https://github.com/Laidout/laidout/issues/6">Issue #6:</a> Figure out what on earth is to be done about color font processing </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>In image properties dialog, be able to select from various default preview configs</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>fix object transform handles for really small objects (handles should still be accessible)</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>lock down color backend.. currently it's mostly a series of terrible hacks based on 8-bit screen rgb</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Soup up the color box so one can recall previous colors, and/or integration with palette window</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up project load/save internals and dialogs</td></tr>
@@ -125,11 +129,15 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom alignments to parents, not just affine transform to parent</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Externally rendered objects, similar to Scribus render frames</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Softmask</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Stroke fill</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>GraphicsMagick nodes</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Gmic nodes plugin</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Merge EpsData with normal images, since they can be previewed with gm now</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make a laxkit.pc</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make a laxkit.pc and use it in Laidout build to simplify build process</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Python plugin</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Collect for out</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>export preview</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Make sure scribus export works with 1.5, and can handle new clipping features</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scribus import should try to do something appropriate with page spreads >= 2 pages wide</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scribus import should do something meaningful with original Scribus page bleed values</td></tr>
 <tr><td colspan="3"><br><h2>Version 0.1 -- </h2></td></tr>
@@ -180,7 +188,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>update french and spanish translations, if possible</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Paper sizes should be translated strings</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Implement poor man's multi-contact interface for all appropriate interfaces</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 11" href="https://github.com/Laidout/laidout/issues/11">Issue #11:</a> Flatpak creation </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 11" href="https://github.com/Laidout/laidout/issues/11">Issue #11:</a> Flatpak creation, submit for Flathub </td></tr>
 <tr><td colspan="3"><br><h2>Version 0.2 -- </h2></td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Flowed text tool</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Opentype feature support (other than multicolor stuff)</td></tr>
@@ -492,7 +500,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 </table>
 <br/>
 <br/>
-Last change: Thu Jul  9 15:20:03 2020
+Last change: Thu Dec 10 23:13:51 2020
 
 
 </div><!-- main -->
