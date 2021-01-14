@@ -40,11 +40,6 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 
 
   <style type="text/css">
-	#sectionhead {
-			font-size: 120%;
-			/*font-style: italic;*/
-			font-weight: bold;
-	}
 	.comicsContainer {
 		margin: 1em;
 		border-width: 5px;
@@ -85,6 +80,86 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 	ul.qlist b {
 		display: block;
 		margin-bottom: .5em;
+	}
+
+	table.downloadchart {
+		border-spacing: .1em;
+		border-collapse: collapse;
+	}
+	.downloadchart thead th {
+		text-align: left;
+		background: #eef;
+		padding: .5em;
+	    border: 1px solid #ccd2ff;
+	}
+	.downloadchart tr:hover {
+	    background: #f2f3ff;
+	}
+	.downloadchart td {
+		border-width: 1px 1px 1px 1px;
+		border-color: #ddd;
+		border-style: solid;
+		/*padding: .5em;*/
+	}
+	.downloadchart td:first-child {
+		border-width: 1px 0px 1px 1px;
+	}
+	.downloadchart td:last-child {
+		border-width: 1px 1px 1px 0px;
+	}
+	.downloadchart a {
+		display:flex;
+		padding: .5em;
+		/*text-decoration:none;*/
+		color: inherit;
+	}
+	.downloadchart td:first-child > a { 
+   	    color: rgb(0,0,0);
+	}
+	.downloadchart td:last-child > a { 
+   	    color: #cc0000;
+	}
+	.downloadchart a:hover {
+	    background: #f2f3ff;
+	}
+
+	#unstableDL thead th {
+		background: #fdd;
+	}
+	#unstableDL tr:hover, #unstableDL a:hover {
+		background: #fee;
+	}
+
+	.gridTable {
+		display:inline-block;
+	}
+	.tableRow {
+	  display: grid;
+	  text-decoration: none;
+	  color: inherit;
+	  grid-template-columns: repeat(2);
+	  border: 2px solid #ccd2ff;
+	  border-bottom: none;
+	  cursor: pointer;
+	  /*height: 2em;*/
+	}
+	
+	.tableRow:hover, .tableRow:focus {
+	    background: #f2f3ff;
+	    outline: none;
+	}
+	
+	.tableRow:last-child {
+	    border-bottom: 2px solid #ccd2ff;
+	}
+	
+	.tableCell {
+	  padding: .5em;
+	  border-right: 2px solid #ccd2ff;
+	}
+	
+	.tableCell:last-child {
+	    border-right: none;
 	}
   </style>
 
@@ -138,6 +213,61 @@ Dodecahedron, software, open, source, dtp, signature, editor">
 	<br />
 
 
+<!-- li>
+<b>Color font helper script</b>
+I recently added an Opentype-SVG font creation helper script (not directly part of Laidout yet),
+designed to aid chopping a
+chart of glyphs into a font. Still rudimentary in that it only works for Ascii characters,
+and can't handle gradients yet. See <a href="">this tutorial</a> that uses Blender, Inkscape,
+this script, and ttx to create a font out of 3D Blender objects.
+<br><br>
+<img width=100 height=100>
+</li>
+<li>
+<b>Making an Ascii chart with nodes</b>
+And speaking of Ascii, here is a tutorial for how to make a chart 
+that fits onto a page, purely with nodes in Laidout!
+<br><br>
+<img width=100 height=100>
+</li -->
+
+<span style="font-size:80%"><em>13 January 2021</em></span><br>
+<b>More quarantine updates from the zone</b>
+<br><br>
+In celebration of 2020 sort of being over, here is some of what has been going on with Laidout development,
+   as I <a href="roadmap.html">slowly inch toward</a> another "Stable" release:
+
+<ul class="qlist">
+<li>
+<b>More nodes</b>
+There are a number of new nodes that allow you to create and maniplate vector graphics objects.
+Among them:<br><br>
+ <ul>
+ <li>Global variable access</li>
+ <li>Resource object references</li>
+ <li>NewObject, ModifyObject to instance and modify any object type that Laidout knows about internally</li>
+ <li>Export node</li>
+ <li>Point sets and associated transforms</li>
+ <li>Make a bar chart out of a point set</li>
+ <li>Path information like corners, extrema, and end points</li>
+ <li>Extrude path</li>
+ <li>Operations on sets of things</li>
+ <li>Expression node that detects unknown names and creates links for them</li>
+ <li>Reroute node to keep down the spaghettiness</li>
+ <li>Debugged Frames to semantically group your nodes, and easily change the frame color</li>
+ </ul>
+Of course, with so many new things, there are suddenly lots of new issues to deal with,
+particularly how to optimize node execution which is currently way too slow.
+</li>
+</ul>
+<br>
+<video controls loop width="300">
+	<source src="screenshots/images/LeafNodes-0.097.1.mp4" type="video/mp4">
+	Sorry, your browser doesn't like this video!
+</video>
+
+
+<br><br><br>
 
 <span style="font-size:80%"><em>30 August 2020</em></span><br>
 <b>Quarantine updates from the zone</b>
@@ -233,7 +363,7 @@ This method is essentially:
  <li>Finally, simplify the path as much as possible by reducing the high number of points.</li>
  <li>Done!</li -->
 </ul>
-<br><br>
+<br>
 
 
 <b>More to come!</b><br>
@@ -537,9 +667,8 @@ as long as I can stick to that list and not implement new tools instead!</p>
 	<img src="dot.png" width="40" height="40" border="0" alt="">
 	<br>
 
-	<b><font size=+1>What the hell?</font></b><br>
+	<div class="section">What the hell?</div>
 
-	<br>
 	Laidout is desktop publishing software built from the ground up with imposition in mind. Currently one may arrange
 	 pages into various cut and folded impositions, such as a booklet, or even a dodecahedron. You can fill pages with images, 
 	 gradients (linear, radial, and mesh), mesh transformed images, engraving-like fill objects, and some basic text.
@@ -579,35 +708,89 @@ as long as I can stick to that list and not implement new tools instead!</p>
 	<br />
 	Laidout only works on variations of Linux for now. It should work on Macs after a small amount of hacking,
 	but I don't have access to a Mac to make it so. 
-	<br /><br />
+	<br />
+	<br />
 
 
 	<a name="download"></a>
-	<b><font size=+1>Download</font></b><br>
+	<div class="section">Download</div>
 	<br>
 
-	&nbsp;&nbsp;&nbsp;<b>&quot;Stable&quot;</b><br>
-	The current release is Version 0.097.
+	<table class="downloadchart">
+	<thead>
+	  <tr><th colspan="2">"Stable" (November 2018)</th></tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td><a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_amd64.deb">Debian Unstable (2018)</a></td>
+		<td><a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_amd64.deb">laidout_0.097_amd64.deb</a></td>
+		</tr>
+		<tr>
+		<td><a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_ubuntu1804_amd64.deb">Ubuntu 18.04</a></td>
+		<td><a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_ubuntu1804_amd64.deb">laidout_0.097_ubuntu1804_amd64.deb</a></td>
+		</tr>
+		<tr>
+		<td><a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout-0.097.tar.bz2">Source code<br>(requires compilation)</a></td>
+		<td><a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout-0.097.tar.bz2">laidout-0.097.tar.bz2</a></td>
+		</tr>
+	</tbody>
+	</table>
 	<br>
-	<br>
-	You can help
-	turn Laidout into something stable (without quotes) by posting issues to the
+
+	<table id="unstableDL" class="downloadchart">
+	<thead>
+	  <tr><th colspan="2">Unstable</th></tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td><a href="https://github.com/Laidout/laidout/releases/tag/continuous">Development snapshots</a></td>
+		<td><a href="https://github.com/Laidout/laidout/releases/tag/continuous">AppImages...</a></td>
+		</tr>
+		<tr>
+		<td><a href="https://github.com/Laidout/laidout">Development repository</a></td>
+		<td><a href="https://github.com/Laidout/laidout">github.com/Laidout/laidout</a></td>
+		</tr>
+	</tbody>
+	</table>
+
+	<br><br>
+
+	<!-- div class="gridTable">
+	  <div class="tableHeader">"Stable"</div>
+	  <a class="tableRow" href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_amd64.deb">
+		<div class="tableCell">Debian Unstable</div><div class="tableCell">laidout_0.097_amd64.deb</div>
+	  </a>
+	  <a class="tableRow" href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_ubuntu1804_amd64.deb">
+		<div class="tableCell">Ubuntu 18.04</div><div class="tableCell">laidout_0.097_ubuntu1804_amd64.deb</div>
+	  </a>
+	  <a class="tableRow" href="https://github.com/Laidout/laidout/releases/download/0.097/laidout-0.097.tar.bz2">
+		<div class="tableCell">Source code<br>(requires compilation)</div><div class="tableCell">laidout-0.097.tar.bz2</div>
+	  </a>
+	</div>
+	<br><br>
+
+	<div class="gridTable">
+	  <div class="tableHeader">Unstable</div>
+	  <a class="tableRow" href="https://github.com/Laidout/laidout/releases/tag/continuous">
+		<div class="tableCell">AppImage development snapshots...</div>
+	  </a>
+	  <a class="tableRow" href="https://github.com/Laidout/laidout">
+		<div class="tableCell">Development source repository...</div>
+	  </a>
+	</div>
+
+	<br><br -->
+
+	Yes, I realize the "Stable" version is rather old. I'm <a href="roadmap.html">working on it</a>.
+	You can help turn Laidout into something stable (without quotes) by posting issues to the
 	<a href="https://github.com/Laidout/laidout/issues">issue tracker at github</a>,
 	or by <a href="#contact">dropping me a line</a>.<br>
 	<br>
-	In any case, you can get Laidout in source code form, or as a deb package for debian based amd 64bit systems. 
-	The main 0.097 download area is
-	<a href="https://github.com/Laidout/laidout/releases/tag/0.097">here</a>.<br>
+	The main <a href="https://github.com/Laidout/laidout/releases/tag/0.097">0.097 download area is here</a>.<br>
 	<br>
-													  
-	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout-0.097.tar.bz2">laidout-0.097.tar.bz2</a> (the source code)<br>
-	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_amd64.deb">laidout_0.097_amd64.deb</a> (binary, should work on Debian Unstable)<br>
-	&nbsp;&nbsp;&nbsp;<a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout_0.097_ubuntu1804_amd64.deb">laidout_0.097_ubuntu1804_amd64.deb</a> (binary, should work Ubuntu 18.04 LTS)<br><br>
-	If there is a problem with icons, you can use prebuilt icons from 
-	<a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout-icons.zip">laidout-icons.zip</a>.
-	<br><br>
+	
 
-	&nbsp;&nbsp;&nbsp;<b>Compiling from "stable" source</b><br>
+	<div class="section">Compiling from "stable" source</div>
 	If you download the source code form, you must compile and install from the command line. First, as root or with "sudo", install dependencies:<br /> 
 	<br />
 	<div class="code">
@@ -625,8 +808,11 @@ as long as I can stick to that list and not implement new tools instead!</p>
 	</div>
 	<br />
 	Some of the dependencies above (from mesa-common-dev on) are for the unstable polyhedron unwrapper. 
-	You don't need them if you disable the opengl based unwrapper by passing --nogl to the configure line above. The unwrapper exists also in
-	a standalone version in laidout-0.097/src/polyptych.
+	You don't need them if you disable the opengl based unwrapper by passing <span class="code">--nogl</span> to the configure line above. The unwrapper exists also in
+	a standalone version in <span class="code">laidout-0.097/src/polyptych</span>.
+	<br /><br />
+	If there is a problem with missing icons, you can use prebuilt icons from 
+	<a href="https://github.com/Laidout/laidout/releases/download/0.097/laidout-icons.zip">laidout-icons.zip</a>.
 	<br /><br />
 	Instead of compiling as above, you can build a deb package from the source tar like the following. You'll need to have dpkg-dev and fakeroot packages installed.
 	This will create an installable deb package. If you try this and it doesn't work, please let me know. It is supposed to work!!<br />
@@ -640,14 +826,13 @@ as long as I can stick to that list and not implement new tools instead!</p>
 
 	<br>
 	<br>
-	&nbsp;&nbsp;&nbsp;<b>Development</b><br>
+	<div class="section">Development</div>
 
 	The unstable development branch of Laidout is continuously built into <a href="https://github.com/Laidout/laidout/releases/tag/continuous">AppImages to test out here</a>.
 	<br><br>
    If you think you might like to help develop Laidout, please see <a href="dev.html">this page</a>.<br>
    <br>
-	Development source code is currently hosted at github. You can browse the git repository
-	<a href="https://github.com/Laidout/laidout/">here</a>,
+	Development source code is currently hosted at github. You can browse <a href="https://github.com/Laidout/laidout/">the git repository here</a>,
 	or you can grab a copy from the repository with this command:<br>
 	<br>
 	<div class="code">git clone https://github.com/Laidout/laidout.git<br>
@@ -663,11 +848,12 @@ as long as I can stick to that list and not implement new tools instead!</p>
 	<br>
 
 	<a name="contact"></a>
-	<b><font size=+1>Contact</font></b><br>
+	<div class="section">Contact</div>
 	For most things, you can post an issue at Laidout's <a href="https://github.com/Laidout/laidout/issues">issue tracker at github</a>.
 	<br>
 	Currently, the only developer is Tom Lechner</a>,
-	and he has been hacking away at Laidout to help make his <a href="http://www.tomlechner.com">artwork</a>.
+	and he has been hacking away at Laidout to help make his <a href="http://www.tomlechner.com">artwork</a>
+	and otherwise experiment with interface design.
 	<br><br>
 
 	<img src="laidout-logo-s.jpg" width="184" height="150" border="0" alt="Laidout Logo"><br>

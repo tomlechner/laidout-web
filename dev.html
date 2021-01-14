@@ -128,26 +128,24 @@ Hopefully, this will run without errors:
 </div>
 <br />
 At this point, Laidout is ready to run. You don't actually have to install it anywhere to make it run,
-you can just run "src/laidout", though icons may not show up automatically without installing. You can modify
-~/.config/laidout/(version)/laidoutrc to point to an icon directory that contains the icons (i.e. /path/to/laidout/src/icons).
+you can just run <span class="code">src/laidout</span>, though icons may not show up automatically without installing (see next section).
 <br /><br />
 You may notice tons of garbage outputting to the console when you run this development source. This is info that is sometimes helpful for debugging.
-You can hide all this by running "make hidegarbage" before running "make".
+You can hide all this by running "make hidegarbage" before running "make", or by running with <span class="code">./laidout 2&gt; /dev/null</span>.
 <br /><br />
 </li>
 
-<li><b>Render the icons</b><br />
-Icons are currently created in laidout/src/icons and laidout/laxkit/src/icons.
-Making them requires that you have <a href="http://inkscape.org">Inkscape</a> installed on your system. icons.svg is scanned
-and broken down into individual icon pngs.
+<li><b>Icons</b><br />
+You can modify <span class="code">~/.config/laidout/(version)/laidoutrc</span> to point to an icon directory that contains 
+the icons (i.e. /path/to/laidout/src/icons).
+<br><br>
+If you need to generate the icons, they are currently created from source svg files in <span class="code">laidout/src/icons</span>
+and <span class="code">laidout/laxkit/src/icons</span>.
+Each source svg is scanned and broken down into individual icon pngs. You need to have compiled Laidout already, then:
 <br /><br />
 <div class="code">
   cd (laidout)/src/icons<br />
-  make<br />
-  cd ../../laxkit/lax/icons/<br />
-  make<br />
-  cd ../../..<br />
-  cp -f laxkit/lax/icons/*png src/icons<br /> 
+  make all-with-lax<br />
 </div>
 </li>
 </ul>

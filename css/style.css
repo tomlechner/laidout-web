@@ -92,6 +92,7 @@ div.section {
   		padding: 5;*/
       font-size: 110%;
       font-weight: bold;
+	  padding: 1em 0em .5em 0em;
 }
 pre {
   		background: #eeeeee;
