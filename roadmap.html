@@ -73,7 +73,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>pick and choose export range, not single "from:start to:end", but like "1-3,5,19-20"</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>drag-n-drop from system, like drag images into viewwindow from an external file browser</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Show/hide objects</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 16" href="https://github.com/Laidout/laidout/issues/16">Issue #16:</a> Fix icon/text/thin line sizing issues for high dpi monitors </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td><a title="Laidout bug number 16" href="https://github.com/Laidout/laidout/issues/16">Issue #16:</a> Address icon/text/thin line sizing issues for high dpi monitors </td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Moving selected things in group contents does not update group bounds</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>should not be able to select both group and group contents at same time</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>If curobj, select siblings first. If no curobj, select direct children of context first</td></tr>
@@ -92,7 +92,6 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, blockout needs to be more precise</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, fully test tool effects when many objects selected</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug and optimize line outline cache, especially for joins</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make PathInterface extrapolate line join work</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface: adding point hint</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface: Mouse based delete segments</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Debug Text on path tool</td></tr>
@@ -107,6 +106,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>PDF in, at least as 1 image per page, for purposes of imposition</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>pdf export, unicode capable</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Optimize pdf export to rescale to target dpi, and compress image data</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Global Settings window, so you don't have to tinker with laidoutrc</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tools should remember their settings</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Import Images dialog needs total reprogramming</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tool scripting</td></tr>
@@ -128,6 +128,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up project load/save internals and dialogs</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Object and resource tags interface</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom line caps</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make PathInterface extrapolate line join work</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Finish implementing anchor tool</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom alignments to parents, not just affine transform to parent</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Externally rendered objects, similar to Scribus render frames</td></tr>
@@ -499,7 +500,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 </table>
 <br/>
 <br/>
-Last change: Sun Mar  7 14:59:58 2021
+Last change: Thu Mar 18 14:06:13 2021
 
 
 </div><!-- main -->
