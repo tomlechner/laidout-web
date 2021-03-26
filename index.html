@@ -231,7 +231,35 @@ that fits onto a page, purely with nodes in Laidout!
 <img width=100 height=100>
 </li -->
 
+
+<span style="font-size:80%"><em>25 March 2021</em></span><br>
+
+<b>Building for Gentoo</b>
+<br><br>
+Brief development update to mention that <b>madsl</b> put together something that lets
+<a href="https://www.gentoo.org/">Gentoo</a> users build Laidout!
+This is done using <a href="https://gitlab.com/madsl/fol4/-/tree/master/app-editors/laidout">this build script</a>.
+Simply add the fol4 repository either by eselect:<br>
+<br>
+<div class="code">eselect repository enable fol4</div><br>
+or by layman:<br><br>
+<div class="code">layman -fa fol4</a></div><br>
+and install by running <span class="code">emerge -av laidout</span></a>.
+
+<br><br><br>
+<b>Scaling the UI</b>
+<br><br>
+One new feature in progress is being able to scale the UI. When you run, use the option
+<span class="code">laidout --uiscale 2</span> to scale up the ui by 2 (for instance). I'm working
+on being able to scale the UI while running Laidout in a global settings window, instead of
+having to fuss with command line options or manually editing the <span class="code">laidoutrc</span>,
+but that's not quite done yet.
+
+<br><br><br>
+
+
 <span style="font-size:80%"><em>13 January 2021</em></span><br>
+
 <b>More quarantine updates from the zone</b>
 <br><br>
 In celebration of 2020 sort of being over, here is some of what has been going on with Laidout development,
