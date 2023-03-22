@@ -55,63 +55,65 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <table>
 
 <tr><td colspan="3"><br><h2>Version 0.098 -- </h2></td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Animated gif import</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clip paths</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clip path in place editing</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Convert backend to using Theme objects for easier adjusting in the future</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td><a title="Laidout bug number 12" href="https://github.com/Laidout/laidout/issues/12">Issue #12:</a> Fix object bleeding across pages for signatures and nets </td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Make Imlib2 dependency optional, prepare replacement image loading with GraphicsMagick</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Replace x11-dev makedepend with custom script</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>make laidout.org twitterable with an image card</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td><a title="Laidout bug number 10" href="https://github.com/Laidout/laidout/issues/10">Issue #10:</a> Investigate AppImage creation </td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Html gallery output with optional template</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Gradients able to fill parents with none,pad,reflect,repeat spread methods</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Debug gradient radial controls</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to generate icons from source svg directly</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Page Atlas exporter</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Way to export pages as svg embedded into html</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>pick and choose export range, not single "from:start to:end", but like "1-3,5,19-20"</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>drag-n-drop from system, like drag images into viewwindow from an external file browser</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Show/hide objects</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td><a title="Laidout bug number 16" href="https://github.com/Laidout/laidout/issues/16">Issue #16:</a> Address icon/text/thin line sizing issues for high dpi monitors </td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Moving selected things in group contents does not update group bounds</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>should not be able to select both group and group contents at same time</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>If curobj, select siblings first. If no curobj, select direct children of context first</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>double click on group should change selection area to group contents like inkscape?</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>layers palette (object tree)</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Find object interface</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Empty objects that can be parents, or whose contents are defined by nodes</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Perspective transform object filter, proof of concept for hybrid interface/node workflow</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Node based image "importer"</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>More nodes: global var access, any drawable object, expressions, path generators, reroute</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Even more nodes: point set creators and converters, path endpoints, path extrema</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Yet ever more nodes: set element, subset, getdocument, export, "basics", objectfunction</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>Animation play/stop overlay, with node hooks</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool grow point mode</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, resolution cut mode</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, blockout needs to be more precise</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>engraver tool, fully test tool effects when many objects selected</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug and optimize line outline cache, especially for joins</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface: adding point hint</td></tr>
-<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface: Mouse based delete segments</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Debug Text on path tool</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clean up mesh controls</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 11" href="https://github.com/Laidout/laidout/issues/11">Issue #11:</a> Flatpak creation, submit for Flathub </td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Be able to import/export new Inkscape multipage art boards</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>debug svg in enough to be able to load icons.svg</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>svg in/out with powerstroke</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>svg in/(done)out with meshes, at miminum round trip export/import should work</td></tr>
 <tr><td align="center" valign="top">(done)&nbsp;</td><td>Import svg gradients with proper filling of parent</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Animated gif import</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Page Atlas exporter</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Way to export pages as svg embedded into html</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>pick and choose export range, not single "from:start to:end", but like "1-3,5,19-20"</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clip paths</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clip path in place editing</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Gradients able to fill parents with none,pad,reflect,repeat spread methods</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Debug gradient radial controls</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Show/hide objects</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Object tree window, at least allow toggling locked, visible, and select from list.</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Find object interface</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Empty objects that can be parents, or whose contents are defined by nodes</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Perspective transform object filter, proof of concept for hybrid interface/node workflow</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>engraver tool, fix so that current render is not rerendering every frame</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface: adding point hint</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>PathInterface: Mouse based delete segments</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Debug Text on path tool a little</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Clean up mesh controls</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Node based image "importer"</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>More nodes: global var access, any drawable object, expressions, path generators, reroute</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Even more nodes: point set creators and converters, path endpoints, path extrema</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Yet even more nodes: set element, subset, getdocument, export, "basics", objectfunction</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Mirror node, coupled with a Mirror Interface</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Animation play/stop overlay, with node hooks</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Convert backend to using Theme objects for easier adjusting in the future</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td><a title="Laidout bug number 12" href="https://github.com/Laidout/laidout/issues/12">Issue #12:</a> Fix object bleeding across pages for signatures and nets </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Make Imlib2 dependency optional, prepare replacement image loading with GraphicsMagick</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Replace x11-dev makedepend with custom script</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td><a title="Laidout bug number 10" href="https://github.com/Laidout/laidout/issues/10">Issue #10:</a> Investigate AppImage creation </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Be able to generate icons from source svg directly</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>drag-n-drop from system, like drag images into viewwindow from an external file browser</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td><a title="Laidout bug number 16" href="https://github.com/Laidout/laidout/issues/16">Issue #16:</a> Address icon/text/thin line sizing issues for high dpi monitors </td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>System to manage external tools, like print command or image editor</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Moving selected things in group contents does not update group bounds</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>should not be able to select both group and group contents at same time</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>If curobj, select siblings first. If no curobj, select direct children of context first</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>double click on group should change selection area to group contents like inkscape?</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>make laidout.org twitterable with an image card</td></tr>
+<tr><td align="center" valign="top">(done)&nbsp;</td><td>Html gallery output with optional template</td></tr>
 <tr><td colspan="3"><br><h2>Version 0.099 -- </h2></td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug previous version a bit</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Undo/Redo</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td> engraver tool grow point mode engraver tool, resolution cut mode engraver tool, blockout needs to be more precise engraver tool, fully test tool effects when many objects selected</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>PDF in, at least as 1 image per page, for purposes of imposition</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>pdf export, unicode capable</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Optimize pdf export to rescale to target dpi, and compress image data</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Global Settings window, so you don't have to tinker with laidoutrc</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Global Settings window, so you don't have to manually tinker with laidoutrc</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tools should remember their settings</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Import Images dialog needs total reprogramming</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Tool scripting</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Scripted plugin interface</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Clone Pattern Builder</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Object tree window, allow rename, rearrange</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Finish implementing double sided net impositions</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>allow inserting net impositions as foldouts in regular Signature Imposition stacks</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug Net imposition interactive unwrapper, via optional opengl Polyptych</td></tr>
@@ -129,6 +131,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Object and resource tags interface</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom line caps</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>make PathInterface extrapolate line join work</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>debug and optimize line outline cache, especially for joins</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Finish implementing anchor tool</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Custom alignments to parents, not just affine transform to parent</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Externally rendered objects, similar to Scribus render frames</td></tr>
@@ -187,7 +190,6 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>update french and spanish translations, if possible</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Paper sizes should be translated strings</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Implement poor man's multi-contact interface for all appropriate interfaces</td></tr>
-<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td><a title="Laidout bug number 11" href="https://github.com/Laidout/laidout/issues/11">Issue #11:</a> Flatpak creation, submit for Flathub </td></tr>
 <tr><td colspan="3"><br><h2>Version 0.2 -- </h2></td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Flowed text tool</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Opentype feature support (other than multicolor stuff)</td></tr>
@@ -203,6 +205,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: Automatic, yet overrideable hyphenation</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: layout inside anything that provides an 'area' and runaround facility.  </td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>text: math mode</td></tr>
+<tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Implement .obj file material import</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>Full multi-contact, blob and pressure sensitive touch for possible tablet interface</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>partial Laidout export</td></tr>
 <tr><td align="center" valign="top"><span style="color:red;font-weight=bold;">&bull;</span></td><td>implement export even/odd, batches, and paper rotation for other exporters: ps eps plan ppt </td></tr>
@@ -500,7 +503,7 @@ This is a very rough draft of a roadmap, and is by no means the final word.
 </table>
 <br/>
 <br/>
-Last change: Thu Mar 18 14:06:13 2021
+Last change: Thu Mar  9 13:55:17 2023
 
 
 </div><!-- main -->
